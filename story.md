@@ -1,109 +1,41 @@
 ---
-layout: default
-title: "Story"
+layout: page
+title: Story
 ---
 
-## Opening Hook
-Every week, investors confidently declare what the market will do over the next six months: **bullish**, **bearish**, or **neutral**.  
-These predictions shape headlines, fuel strategies, and justify billions in trades.
+Two Competing Stories
+There are two radically different worlds hiding in the data:
+World 1 — Beliefs Create Reality
+Investors look ahead.
+Their expectations influence today’s decisions.
+Capital flows turn forecasts into self-fulfilling prophecies.
+In this world, sentiment is power.
+World 2 — Reality Creates Beliefs
+Markets react to fundamentals, shocks, and liquidity.
+Investors adjust their outlook afterward.
+Predictions are rationalizations, not signals.
+In this world, sentiment is a mirror.
+Only one of these worlds can dominate — and the data reveals which one
 
-{% include callout.html text="<strong>The uncomfortable question:</strong> what if investors aren’t predicting the future at all — but narrating the past? Or are those predictions a force that can tilt the market’s path?" %}
+To understand whether investors lead markets or follow them, we first need to understand how investor sentiment behaves on its own. Using weekly AAII survey data, we track how investors classify their six-month outlook as Bullish, Neutral, or Bearish.
+Before looking at what investors actually believe, take a moment to answer the same question they face every week.
+Where do you think the market is headed over the next six months?
+Buttons for prediction
 
----
+Whatever your choice, you’ve just joined millions of investors who make this call regularly. What’s interesting is not just whether they’re right, but which answer most people tend to give. When we look across decades of survey data, a clear pattern emerges: investors are, on average, more optimistic than pessimistic.
+A Market That Leans Optimistic
 
-## The Mystery
-Financial markets feel like a collective mind: prices move, beliefs shift, confidence rises, fear spreads.  
-Yet it’s unclear who is leading this dance.
+Plot pie chart
 
-- Do investors’ expectations **pull** the market in a certain direction?  
-- Or do markets move first, with investors scrambling to explain what already happened?
+Across the full sample, bullish sentiment is the most common state, accounting for roughly 38% of all observations, while neutral and bearish views each represent about 31%. This asymmetry suggests a structural optimism: investors tend to expect growth more often than decline.
+Plot boxplot
+Distributional plots reinforce this picture. Bullish sentiment has a higher median and a wider spread, with occasional surges above 60%. Bearish sentiment, while present, is typically more contained, with extreme pessimism appearing only in isolated episodes rather than persisting over time.
+To move beyond levels, we study how sentiment transitions from week to week. By assigning each week to its dominant sentiment state, we construct a transition matrix that reveals how sticky beliefs are.
+Plot transition matrix
+The results show strong persistence: bullish sentiment remains bullish 77% of the time, neutral stays neutral 59%, and bearish remains bearish 64%. However, when sentiment does change, pessimism is less sticky than optimism. Bearish states are more likely to flip directly to bullish than the reverse, suggesting that negative beliefs tend to unwind faster than positive ones.
+This persistence matters: it means that large sentiment changes are rare, and therefore informative.
 
-This project treats the market not as a black box, but as a **conversation between belief and reality**.
+If most weeks look similar, the most revealing moments are the exceptions. To capture these, we identify the largest week-to-week changes in bullish, neutral, and bearish sentiment. These jumps represent moments when investors rapidly reassess their outlook
+Plot suddenchange time series
+Bar charts of the largest sentiment jumps allow us to pinpoint exact calendar dates where beliefs shifted abruptly. These dates become critical reference points for the rest of the analysis: they let us compare when beliefs move relative to when markets move.
 
-{% include plot_card.html
-  title="The market has moods (regimes)"
-  tag="Regime view"
-  src="assets/plots/regimes_overlay.html"
-  caption="NASDAQ index (or a return-index) with bull/neutral/bear regimes overlaid. This makes “market state” tangible."
-%}
-
----
-
-## Two Competing Stories
-There are two radically different worlds hiding in the data.
-
-<div class="grid">
-  <div class="col-6">
-    {% include callout.html text="<strong>World 1 — Beliefs Create Reality.</strong><br/>Investors look ahead. Their expectations influence today’s decisions. Capital flows can turn forecasts into self-fulfilling prophecies. In this world, sentiment is <em>power</em>." %}
-  </div>
-  <div class="col-6">
-    {% include callout.html text="<strong>World 2 — Reality Creates Beliefs.</strong><br/>Markets react to shocks, fundamentals, and liquidity. Investors update their outlook afterward. Predictions are rationalizations, not signals. In this world, sentiment is a <em>mirror</em>." %}
-  </div>
-</div>
-
-Only one of these worlds can dominate — and the data should reveal which one is more consistent with timing and direction.
-
----
-
-## The Data as a Time Machine
-We combine:
-- **NASDAQ stock and ETF data**, capturing how the market actually moved  
-- **Investor sentiment forecasts**, looking six months into the future
-
-By aligning beliefs and outcomes on a timeline, we ask a simple but powerful question:
-
-{% include callout.html text="<strong>Who moves first?</strong><br/>If expectations consistently shift <em>before</em> market regimes change, investors lead. If expectations shift <em>after</em>, investors follow." %}
-
-{% include plot_card.html
-  title="Investors have beliefs — and they swing"
-  tag="Beliefs"
-  src="assets/plots/sentiment_area.html"
-  caption="Stacked area: % bullish / neutral / bearish over time. This shows the belief system is dynamic, not static."
-%}
-
----
-
-## What Makes This Interesting
-This isn’t just about prediction accuracy. It’s about psychology under uncertainty:
-
-- Do investors sense danger before crashes — or panic late?  
-- Do they chase optimism after rallies — or anticipate them?  
-- Are bearish beliefs early warnings, or simply a reaction to drawdowns?
-
-{% include plot_card.html
-  title="Beliefs vs reality on the same timeline"
-  tag="Confrontation"
-  src="assets/plots/returns_vs_sentiment.html"
-  caption="Market returns/regime compared with sentiment (e.g., bullish minus bearish). The visual question: who turns first?"
-%}
-
----
-
-## Timing the Conversation
-To go beyond “they correlate,” we look at **lead–lag patterns**: does sentiment correlate most with *future* returns (leading), or *past* returns (lagging)?
-
-{% include plot_card.html
-  title="Lead–lag correlation profile"
-  tag="Timing"
-  src="assets/plots/lead_lag_heatmap.html"
-  caption="Heatmap across lags: negative lag means sentiment leads, positive lag means market leads. Peaks indicate who tends to move first."
-%}
-
----
-
-## Why You Should Care
-If investor sentiment truly leads markets, it becomes a **strategic signal**.  
-If it follows markets, sentiment-based strategies may be little more than hindsight dressed as insight.
-
-Understanding this dynamic reshapes how we interpret:
-- market forecasts,
-- financial news,
-- and our own confidence in “knowing what comes next.”
-
----
-
-## Final Thought
-Markets don’t just move — they tell stories.  
-The question is whether investors are the **authors** of those stories… or just their loudest commentators.
-
-This project lets the data decide.

@@ -1,10 +1,96 @@
-title: "Do Markets Listen to Investors  or Are Investors Just Echoing the Market?”?"
-description: "NASDAQ regimes vs 6-month investor expectations: who leads whom?"
-theme: minima
-markdown: kramdown
+###########################################################
+# --- Site information ---
+###########################################################
 
-header_pages:
-  - story.md
-  - results.md
-  - methods.md
-  - about.md
+title: "Do Markets Listen to Investors?"
+author: "Empanada Group"
+description: >
+  A data-driven exploration of sentiment, prices,
+  and feedback loops in financial markets.
+
+###########################################################
+# --- Navigation bar ---
+###########################################################
+
+navbar-links:
+  Home: "/"
+  Introduction: "intro"
+  Story: "story"
+
+###########################################################
+# --- Branding ---
+###########################################################
+
+# Optional logo (top-left)
+# avatar: "/assets/img/logo.png"
+round-avatar: true
+
+###########################################################
+# --- Footer / social links ---
+###########################################################
+
+social-network-links:
+  github: empanada-project
+  # linkedin: yourname
+  # twitter: yourname
+
+rss-description: >
+  This website was created as part of the EPFL
+  CS-401 Applied Data Analysis course.
+
+###########################################################
+# --- Appearance ---
+###########################################################
+
+page-col: "#ffffff"
+text-col: "#2d3748"
+link-col: "#667eea"
+hover-col: "#5568d3"
+
+navbar-col: "#ffffff"
+navbar-text-col: "#2d3748"
+navbar-border-col: "#e2e8f0"
+
+footer-col: "#f8f9fa"
+footer-text-col: "#718096"
+footer-link-col: "#4a5568"
+footer-hover-col: "#2d3748"
+
+###########################################################
+# --- Behaviour ---
+###########################################################
+
+title-on-all-pages: true
+post_search: false
+edit_page_button: false
+navbar-var-length: true
+
+###########################################################
+# --- Markdown & build ---
+###########################################################
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+
+permalink: pretty
+timezone: Europe/Zurich
+
+###########################################################
+# --- Defaults ---
+###########################################################
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+###########################################################
+# --- Plugins ---
+###########################################################
+
+plugins:
+  - jekyll-sitemap
