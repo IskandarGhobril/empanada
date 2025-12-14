@@ -11,17 +11,11 @@ title: ""
     </figure>
   </div>  
 
-<div class="story-section" id="intro">
-  {% include_relative _sections/intro.md %}
-</div>
-<div class="story-section" id="story1">
+<div class="longform">
+
+{% include_relative _sections/intro.md %}
 {% include_relative _sections/story1.md %}
-</div>
-
-<div class="story-section" id="story2">
 {% include_relative _sections/story2.md %}
-</div>
+{% include_relative _sections/results.md %}
 
-<div class="story-section" id="results">
-  {% include_relative _sections/results.md %}
 </div>
