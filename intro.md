@@ -23,6 +23,3 @@ Rather than chasing prediction accuracy, we focus on something more revealing: *
 </div>
 
 <div class="section alt-bg" id="research">
-
-
-{{< include _includes/widget.html >}}
