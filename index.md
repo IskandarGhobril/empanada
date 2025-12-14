@@ -1,14 +1,24 @@
 ---
 layout: page
 title: ""
+css:
+  - assets/css/style.css
+  - assets/css/index.css
 ---
-<figure class="plot-figure">
+
+<!-- FULL-WINDOW IMAGE -->
+<section class="index-hero">
   <img src="{{ site.baseurl }}/assets/img/title.jpg"
        alt="Clustered market regimes"
-       class="plot">
-  <figcaption>Market regimes identified through unsupervised clustering</figcaption>
-</figure>
+       class="hero-image">
+</section>
 
+<!-- TITLE BELOW IMAGE -->
+<section class="index-title">
+  <h1>Do Markets Listen to Investors — or Are Investors Just Echoing the Market?</h1>
+</section>
+
+<!-- NORMAL LONGFORM CONTENT -->
 <div class="longform">
 
 {% capture s %}{% include_relative _sections/intro.md %}{% endcapture %}

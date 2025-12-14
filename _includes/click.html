@@ -1,66 +1,214 @@
-<div class="interactive-container">
-  <h2>🎯 What's Your Market Outlook?</h2>
-  <p class="subtitle">Select your prediction for the market over the next six months</p>
+<style>
+.sentiment-widget {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
 
-  <div class="sentiment-options">
-    <div class="sentiment-card bullish" data-sentiment="bullish">
-      <span class="sentiment-icon">📈</span>
-      <div class="sentiment-label">Bullish</div>
-      <div class="sentiment-description">Markets will rise</div>
+.sentiment-widget h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+.widget-subtitle {
+    text-align: center;
+    color: #4a5568;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.sentiment-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 1 200px;
+    padding: 2rem 1rem;
+    background: white;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card.active {
+    border-width: 3px;
+}
+
+.card.bullish.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+.card.neutral.active {
+    border-color: #6b7280;
+    background: #f9fafb;
+}
+
+.card.bearish.active {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.submit-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-btn {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: #667eea;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background: #d1fae5;
+    border: 1px solid #10b981;
+    border-radius: 6px;
+    text-align: center;
+    color: #065f46;
+    display: none;
+}
+
+.result.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sentiment-widget {
+        padding: 2rem 1.5rem;
+    }
+    
+    .sentiment-cards {
+        gap: 1rem;
+    }
+    
+    .card {
+        flex: 1 1 140px;
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+}
+</style>
+
+<div class="sentiment-widget">
+    <p class="widget-subtitle">Select your prediction for the market over the next six months</p>
+    
+    <div class="sentiment-cards">
+        <div class="card bullish" onclick="selectCard('bullish')">
+            <div class="card-icon">&#9650;</div>
+            <div class="card-title">Bullish</div>
+            <div class="card-desc">Markets will rise</div>
+        </div>
+        
+        <div class="card neutral" onclick="selectCard('neutral')">
+            <div class="card-icon">&#9472;</div>
+            <div class="card-title">Neutral</div>
+            <div class="card-desc">Markets will stay flat</div>
+        </div>
+        
+        <div class="card bearish" onclick="selectCard('bearish')">
+            <div class="card-icon">&#9660;</div>
+            <div class="card-title">Bearish</div>
+            <div class="card-desc">Markets will fall</div>
+        </div>
     </div>
-
-    <div class="sentiment-card neutral" data-sentiment="neutral">
-      <span class="sentiment-icon">⚖️</span>
-      <div class="sentiment-label">Neutral</div>
-      <div class="sentiment-description">Markets will stay flat</div>
+    
+    <div class="submit-section">
+        <button class="submit-btn" id="submitButton" onclick="submitPrediction()" disabled>
+            Submit Your Prediction
+        </button>
     </div>
-
-    <div class="sentiment-card bearish" data-sentiment="bearish">
-      <span class="sentiment-icon">📉</span>
-      <div class="sentiment-label">Bearish</div>
-      <div class="sentiment-description">Markets will fall</div>
-    </div>
-  </div>
-
-  <div class="submit-container">
-    <button class="submit-btn" id="submitBtn">Submit Your Prediction</button>
-  </div>
-
-  <div class="result-message" id="resultMessage"></div>
+    
+    <div class="result" id="resultBox"></div>
 </div>
 
-{% raw %}
 <script>
-const cards = document.querySelectorAll('.sentiment-card');
-const submitBtn = document.getElementById('submitBtn');
-const resultMessage = document.getElementById('resultMessage');
 let selectedSentiment = null;
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    cards.forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
-    selectedSentiment = card.dataset.sentiment;
-    submitBtn.classList.add('active');
-    resultMessage.classList.remove('show');
-  });
-});
+function selectCard(sentiment) {
+    // Remove active class from all cards
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+    
+    // Add active class to selected card
+    event.currentTarget.classList.add('active');
+    
+    // Store selection
+    selectedSentiment = sentiment;
+    
+    // Enable submit button
+    document.getElementById('submitButton').disabled = false;
+    
+    // Hide result
+    document.getElementById('resultBox').classList.remove('show');
+}
 
-submitBtn.addEventListener('click', () => {
-  if (!selectedSentiment) return;
-
-  const stats = {
-    bullish: '63%',
-    neutral: '31%',
-    bearish: '6%'
-  };
-
-  resultMessage.innerHTML = `
-    <span class="checkmark">✓</span>
-    <strong>Submitted!</strong>
-    You join the ${stats[selectedSentiment]} of investors who predicted the market will be ${selectedSentiment}.
-  `;
-  resultMessage.classList.add('submitted', 'show');
-});
+function submitPrediction() {
+    if (!selectedSentiment) return;
+    
+    const stats = {
+        'bullish': '63%',
+        'neutral': '31%',
+        'bearish': '6%'
+    };
+    
+    const resultBox = document.getElementById('resultBox');
+    resultBox.innerHTML = '<strong>Submitted!</strong> You join the ' + stats[selectedSentiment] + ' of investors who predicted the market will be ' + selectedSentiment + '.';
+    resultBox.classList.add('show');
+}
 </script>
-{% endraw %}
