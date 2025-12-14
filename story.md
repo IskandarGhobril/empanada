@@ -11,8 +11,6 @@ Before looking at what investors actually believe, take a moment to answer the s
 
 ### Where do you think the market is headed over the next six months?
 
-<!-- {% include sentiment-widget.html %} -->
-
 ---
 
 Whatever your choice, you've just joined millions of investors who make this call regularly. What's interesting is not just whether they're right, but **which answer most people tend to give**. When we look across decades of survey data, a clear pattern emerges: investors are, on average, more optimistic than pessimistic.
