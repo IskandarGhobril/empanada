@@ -1,348 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Sentiment Selector</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<div class="interactive-container">
+  <h2>🎯 What's Your Market Outlook?</h2>
+  <p class="subtitle">Select your prediction for the market over the next six months</p>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 2rem;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .interactive-container {
-            max-width: 800px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(10px);
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #2d3748;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #4a5568;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-        }
-
-        .sentiment-options {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .sentiment-card {
-            background: white;
-            border: 3px solid #e2e8f0;
-            border-radius: 15px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            flex: 0 1 220px;
-            min-width: 200px;
-        }
-
-        .sentiment-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .sentiment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .sentiment-card:hover::before {
-            opacity: 1;
-        }
-
-        .sentiment-card.selected {
-            border-color: currentColor;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transform: translateY(-8px);
-        }
-
-        .sentiment-card.bullish {
-            color: #10b981;
-        }
-
-        .sentiment-card.bullish.selected {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            border-color: #10b981;
-        }
-
-        .sentiment-card.neutral {
-            color: #6b7280;
-        }
-
-        .sentiment-card.neutral.selected {
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-            border-color: #6b7280;
-        }
-
-        .sentiment-card.bearish {
-            color: #ef4444;
-        }
-
-        .sentiment-card.bearish.selected {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            border-color: #ef4444;
-        }
-
-        .sentiment-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .sentiment-label {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .sentiment-description {
-            font-size: 0.95rem;
-            color: #718096;
-            line-height: 1.5;
-        }
-
-        .submit-container {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem 3rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .submit-btn.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .submit-btn.active:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-        }
-
-        .submit-btn.active:active {
-            transform: translateY(-1px);
-        }
-
-        .result-message {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
-
-        .result-message.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .result-message.submitted {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #065f46;
-            border: 2px solid #10b981;
-        }
-
-        .checkmark {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #10b981;
-            color: white;
-            line-height: 30px;
-            margin-right: 0.5rem;
-            animation: scaleIn 0.5s ease;
-        }
-
-        @keyframes scaleIn {
-            0% {
-                transform: scale(0);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .interactive-container {
-                padding: 2rem 1.5rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .sentiment-options {
-                gap: 1rem;
-            }
-
-            .sentiment-card {
-                flex: 1 1 150px;
-                min-width: 140px;
-                padding: 1.5rem 1rem;
-            }
-
-            .sentiment-icon {
-                font-size: 2.5rem;
-            }
-
-            .sentiment-label {
-                font-size: 1.2rem;
-            }
-
-            .sentiment-description {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="interactive-container">
-        <h2>🎯 What's Your Market Outlook?</h2>
-        <p class="subtitle">Select your prediction for the market over the next six months</p>
-
-        <div class="sentiment-options">
-            <div class="sentiment-card bullish" data-sentiment="bullish">
-                <span class="sentiment-icon">📈</span>
-                <div class="sentiment-label">Bullish</div>
-                <div class="sentiment-description">Markets will rise</div>
-            </div>
-
-            <div class="sentiment-card neutral" data-sentiment="neutral">
-                <span class="sentiment-icon">⚖️</span>
-                <div class="sentiment-label">Neutral</div>
-                <div class="sentiment-description">Markets will stay flat</div>
-            </div>
-
-            <div class="sentiment-card bearish" data-sentiment="bearish">
-                <span class="sentiment-icon">📉</span>
-                <div class="sentiment-label">Bearish</div>
-                <div class="sentiment-description">Markets will fall</div>
-            </div>
-        </div>
-
-        <div class="submit-container">
-            <button class="submit-btn" id="submitBtn">Submit Your Prediction</button>
-        </div>
-
-        <div class="result-message" id="resultMessage"></div>
+  <div class="sentiment-options">
+    <div class="sentiment-card bullish" data-sentiment="bullish">
+      <span class="sentiment-icon">📈</span>
+      <div class="sentiment-label">Bullish</div>
+      <div class="sentiment-description">Markets will rise</div>
     </div>
 
-    <script>
-        const cards = document.querySelectorAll('.sentiment-card');
-        const submitBtn = document.getElementById('submitBtn');
-        const resultMessage = document.getElementById('resultMessage');
-        let selectedSentiment = null;
+    <div class="sentiment-card neutral" data-sentiment="neutral">
+      <span class="sentiment-icon">⚖️</span>
+      <div class="sentiment-label">Neutral</div>
+      <div class="sentiment-description">Markets will stay flat</div>
+    </div>
 
-        // Handle card selection
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Remove selected class from all cards
-                cards.forEach(c => c.classList.remove('selected'));
-                
-                // Add selected class to clicked card
-                card.classList.add('selected');
-                
-                // Store selected sentiment
-                selectedSentiment = card.dataset.sentiment;
-                
-                // Enable submit button
-                submitBtn.classList.add('active');
-                
-                // Hide result message if showing
-                resultMessage.classList.remove('show');
-            });
-        });
+    <div class="sentiment-card bearish" data-sentiment="bearish">
+      <span class="sentiment-icon">📉</span>
+      <div class="sentiment-label">Bearish</div>
+      <div class="sentiment-description">Markets will fall</div>
+    </div>
+  </div>
 
-        // Handle submit
-        submitBtn.addEventListener('click', () => {
-            if (selectedSentiment) {
-                // Define statistics for each sentiment
-                const stats = {
-                    'bullish': '63%',
-                    'neutral': '31%',
-                    'bearish': '6%'
-                };
-                
-                const percentage = stats[selectedSentiment];
-                
-                // Show submitted message with percentage
-                resultMessage.innerHTML = `
-                    <span class="checkmark">✓</span>
-                    <strong>Submitted!</strong> You will be part of the ${percentage} of investors who predicted the market will be ${selectedSentiment}.
-                `;
-                resultMessage.classList.add('submitted', 'show');
-                
-                // Optionally: disable further selection
-                // cards.forEach(card => card.style.pointerEvents = 'none');
-                // submitBtn.style.pointerEvents = 'none';
-                
-                // You can add code here to send the data to a backend
-                console.log('User selected:', selectedSentiment);
-            }
-        });
-    </script>
-</body>
-</html>
+  <div class="submit-container">
+    <button class="submit-btn" id="submitBtn">Submit Your Prediction</button>
+  </div>
+
+  <div class="result-message" id="resultMessage"></div>
+</div>
+
+{% raw %}
+<script>
+const cards = document.querySelectorAll('.sentiment-card');
+const submitBtn = document.getElementById('submitBtn');
+const resultMessage = document.getElementById('resultMessage');
+let selectedSentiment = null;
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    cards.forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedSentiment = card.dataset.sentiment;
+    submitBtn.classList.add('active');
+    resultMessage.classList.remove('show');
+  });
+});
+
+submitBtn.addEventListener('click', () => {
+  if (!selectedSentiment) return;
+
+  const stats = {
+    bullish: '63%',
+    neutral: '31%',
+    bearish: '6%'
+  };
+
+  resultMessage.innerHTML = `
+    <span class="checkmark">✓</span>
+    <strong>Submitted!</strong>
+    You join the ${stats[selectedSentiment]} of investors who predicted the market will be ${selectedSentiment}.
+  `;
+  resultMessage.classList.add('submitted', 'show');
+});
+</script>
+{% endraw %}

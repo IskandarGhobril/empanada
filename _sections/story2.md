@@ -1,9 +1,8 @@
 
 
-<div class="chapter-header">
-  <span class="chapter-icon">🔍</span>
-  <h1>From Opinions to Attention: Reading the Market Through Google Searches</h1>
-</div>
+
+## From Opinions to Attention: Reading the Market Through Google Searches</h1>
+
 
 <div class="intro-box">
   <p>Survey data tells us what investors <strong>say</strong> they believe. But beliefs are not always fully articulated—sometimes they show up indirectly, through what people search for when they are worried, curious, or excited.</p>
@@ -18,7 +17,7 @@ Every week, millions of searches reveal what market participants are paying atte
 To make this usable, we classify search queries into three sentiment categories based on their economic meaning. Queries associated with growth, investing, and markets are labeled bullish; those linked to downturns and macroeconomic stress are labeled bearish; and broad index-related searches are treated as neutral. Aggregating these weekly search intensities gives us a second, independent measure of market sentiment, one that comes from behavior rather than self-reporting.
 
 <figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/bull_bear_wordcloud_improved.png"
+  <img src="{{ site.baseurl }}/assets/img/bull.jpg"
        alt="Bull vs Bear Google Trends word cloud"
        class="plot">
   <figcaption>Search-based sentiment measures reveal attention patterns during market cycles</figcaption>

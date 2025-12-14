@@ -6,10 +6,8 @@
 
 ## Introduction
 
-Financial markets are often described as forward-looking. Every week, investors confidently state what they believe the market will do over the next six months: **bullish**, **bearish**, or **neutral**. These expectations shape headlines, influence portfolio decisions, and justify billions in capital flows.
-But beneath this apparent foresight lies a deeper and rarely examined question: **who is actually leading whom?**
-Do investors' predictions pull the market in a certain direction? Or are they largely reactions to market movements that have already begun? Understanding this relationship has profound implications for how we interpret market forecasts, investment strategies, and our confidence in predicting financial outcomes.
----
+Financial markets are often described as forward-looking. Every week, investors confidently state what they believe the market will do over the next six months: **bullish**, **bearish**, or **neutral**. These expectations shape headlines, influence portfolio decisions, and justify billions in capital flows. But beneath this apparent foresight lies a deeper and rarely examined question: **who is actually leading whom?** Do investors’ predictions *pull* the market in a certain direction? or are they largely reactions to market movements that have already begun? Financial markets feel like a collective mind yet it's unclear who is leading the dance.
+
 
 
 ## Two Competing Stories
@@ -44,7 +42,7 @@ Do investors' predictions pull the market in a certain direction? Or are they la
   </div>
 </div>
 
-<p class="conclusion-text">Only one of these worlds can dominate — and the data reveals which one.</p>
+<p class="conclusion-text">Only one of these worlds can dominate and the data reveals which one.</p>
 
 ---
 
@@ -71,6 +69,6 @@ This project investigates the temporal relationship between investor sentiment a
 
 By tracking these signals through bull, neutral, and bear regimes, we aim to answer one fundamental question: **who moves first?**
 
-Rather than chasing prediction accuracy, we focus on something more revealing: **timing**. When do beliefs change relative to market regimes? When does sentiment lead, and when does it lag?
+Other than chasing prediction accuracy, we focus on something as revealing: **timing**. When do beliefs change relative to market regimes? When does sentiment lead, and when does it lag?
 
 ---
