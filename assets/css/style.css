@@ -3,6 +3,17 @@
    - Theme global styles remain intact
    - All content typography scoped to .longform
    ============================================ */
+/* ============================================
+   OVERRIDE THEME WIDTH (Longform pages only)
+   ============================================ */
+
+.longform-page .container,
+.longform-page .container-lg,
+.longform-page .page-content,
+.longform-page .markdown-body {
+  max-width: 1400px !important;
+  width: 100%;
+}
 
 /* === GLOBAL (safe) === */
 * { box-sizing: border-box; }

@@ -1,10 +1,12 @@
 ---
 layout: page
 title: ""
+body-class: longform-page
 css:
   - assets/css/style.css
   - assets/css/index.css
 ---
+
 
 <!-- FULL-WINDOW IMAGE -->
 <section class="index-hero">
