@@ -1,7 +1,3 @@
----
-layout: page
-title: Story1
----
 
 ## Understanding Investor Sentiment
 

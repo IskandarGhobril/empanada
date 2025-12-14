@@ -6,6 +6,9 @@ html, body {
     height: 100%;
     margin: 0;
 }
+.story-section { margin: 3rem 0; }
+.story-section h2 { margin-top: 0; }
+
 
 body {
     overflow: hidden; /* no scroll on landing */

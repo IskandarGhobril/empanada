@@ -1,7 +1,4 @@
----
-layout: page
-title: Story2
----
+
 
 <div class="chapter-header">
   <span class="chapter-icon">🔍</span>
@@ -140,4 +137,3 @@ Once market states are defined this way, we can place them on the **same timelin
 </div>
 
 ---
-

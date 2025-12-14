@@ -1,7 +1,4 @@
----
-layout: page
-title: Introduction
----
+
 
 <div class="hero-intro">
   <p class="lead-question">What came first, the chicken or the egg?</p>
@@ -77,4 +74,3 @@ By tracking these signals through bull, neutral, and bear regimes, we aim to ans
 Rather than chasing prediction accuracy, we focus on something more revealing: **timing**. When do beliefs change relative to market regimes? When does sentiment lead, and when does it lag?
 
 ---
-
