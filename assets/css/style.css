@@ -6,13 +6,15 @@
 /* ============================================
    OVERRIDE THEME WIDTH (Longform pages only)
    ============================================ */
-
-.container,
-.container-lg,
-.page-content,
-.markdown-body {
-  max-width: 1400px !important;
-  width: 100%;
+/* 🔓 BREAK OUT OF BEAUTIFUL JEKYLL WIDTH */
+/* Wide layout ONLY for longform pages */
+body.longform-page .container,
+body.longform-page .container-md,
+body.longform-page .container-lg,
+body.longform-page .page-content,
+body.longform-page .markdown-body {
+  max-width: 1600px !important;
+  width: 100% !important;
 }
 
 /* === GLOBAL (safe) === */
@@ -72,7 +74,7 @@ body {
   z-index: 3;
   text-align: center;
   color: white;
-  max-width: 1200px;
+  max-width: 1600px;
   padding: 2rem;
 }
 
@@ -131,11 +133,12 @@ body {
    LONGFORM WRAPPER (your included sections)
    ============================================ */
 
-.longform {
-  max-width: 1300px;       /* match “nice reading width” */
+body.longform-page .longform {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 3rem;
 }
+
 
 /* === TYPOGRAPHY (scoped) === */
 .longform h1 {
