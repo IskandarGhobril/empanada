@@ -1,4 +1,10 @@
 ###########################################################
+# --- Theme (REQUIRED) ---
+###########################################################
+
+remote_theme: daattali/beautiful-jekyll
+
+###########################################################
 # --- Site information ---
 ###########################################################
 
@@ -15,13 +21,14 @@ description: >
 navbar-links:
   Home: "/"
   Introduction: "intro"
-  Story: "story"
+  Story1: "story1"
+  Story2 : "story2"
+  Results: "results"
 
 ###########################################################
 # --- Branding ---
 ###########################################################
 
-# Optional logo (top-left)
 # avatar: "/assets/img/logo.png"
 round-avatar: true
 
@@ -31,8 +38,6 @@ round-avatar: true
 
 social-network-links:
   github: empanada-project
-  # linkedin: yourname
-  # twitter: yourname
 
 rss-description: >
   This website was created as part of the EPFL
@@ -89,10 +94,15 @@ defaults:
       layout: page
 
 ###########################################################
-# --- Plugins ---
+# --- Plugins (GitHub Pages–safe) ---
 ###########################################################
 
 plugins:
   - jekyll-sitemap
+
+###########################################################
+# --- Custom CSS ---
+###########################################################
+
 site-css:
   - "/assets/css/style.css"
