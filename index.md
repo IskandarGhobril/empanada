@@ -15,7 +15,7 @@ css:
 
 <!-- TITLE BELOW IMAGE -->
 <section class="index-title">
-  <h1>Do Markets Listen to Investors — or Are Investors Just Echoing the Market?</h1>
+  <h1>Do Markets Listen to Investors  or Are Investors Just Echoing the Market?</h1>
 </section>
 
 <!-- NORMAL LONGFORM CONTENT -->

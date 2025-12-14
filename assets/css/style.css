@@ -121,9 +121,9 @@ body {
    ============================================ */
 
 .longform {
-  max-width: 1200px;       /* match “nice reading width” */
+  max-width: 1300px;       /* match “nice reading width” */
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2.5rem;
 }
 
 /* === TYPOGRAPHY (scoped) === */
