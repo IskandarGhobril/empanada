@@ -22,6 +22,7 @@ title: ""
 
     <a class="index-cta" href="{{ site.baseurl }}/intro">
       Start Reading →
+      ALOOOOOOOOOOOOOOOOOOOO
     </a>
 
   </div>
