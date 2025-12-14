@@ -18,52 +18,14 @@ To capture this more implicit layer of sentiment, we turn to **Google Trends**.
 
 Every week, millions of searches reveal what market participants are paying attention to: concerns about **recession**, interest in **stocks**, curiosity about **ETFs**, or anxiety around **inflation**. Unlike surveys, these searches are not framed as predictions. They are spontaneous, often emotional, and can therefore reflect shifts in mood **before** they are consciously labeled as "bullish" or "bearish."
 
-### Classifying Search Behavior
+To make this usable, we classify search queries into three sentiment categories based on their economic meaning. Queries associated with growth, investing, and markets are labeled bullish; those linked to downturns and macroeconomic stress are labeled bearish; and broad index-related searches are treated as neutral. Aggregating these weekly search intensities gives us a second, independent measure of market sentiment, one that comes from behavior rather than self-reporting.
 
-<div class="classification-grid">
-  <div class="sentiment-category bullish-cat">
-    <div class="cat-header">
-      <span class="cat-icon">📈</span>
-      <h3>Bullish Searches</h3>
-    </div>
-    <ul class="search-terms">
-      <li>Investment</li>
-      <li>Stock market</li>
-      <li>Exchange-traded fund</li>
-      <li>Growth stocks</li>
-    </ul>
-    <p class="cat-meaning">Queries associated with growth, investing, and market participation</p>
-  </div>
-  
-  <div class="sentiment-category neutral-cat">
-    <div class="cat-header">
-      <span class="cat-icon">📊</span>
-      <h3>Neutral Searches</h3>
-    </div>
-    <ul class="search-terms">
-      <li>S&P 500</li>
-      <li>NASDAQ</li>
-      <li>Market index</li>
-      <li>Federal Reserve</li>
-    </ul>
-    <p class="cat-meaning">Broad index-related searches showing general market attention</p>
-  </div>
-  
-  <div class="sentiment-category bearish-cat">
-    <div class="cat-header">
-      <span class="cat-icon">📉</span>
-      <h3>Bearish Searches</h3>
-    </div>
-    <ul class="search-terms">
-      <li>Recession</li>
-      <li>Unemployment</li>
-      <li>Inflation</li>
-      <li>Market crash</li>
-    </ul>
-    <p class="cat-meaning">Queries linked to downturns and macroeconomic stress</p>
-  </div>
-</div>
-
+<figure class="plot-figure">
+  <img src="{{ site.baseurl }}/assets/img/bull_bear_wordcloud_improved.png"
+       alt="Bull vs Bear Google Trends word cloud"
+       class="plot">
+  <figcaption>Search-based sentiment measures reveal attention patterns during market cycles</figcaption>
+</figure>
 Aggregating these weekly search intensities gives us a **second, independent measure** of market sentiment—one that comes from behavior rather than self-reporting.
 
 ---
@@ -71,17 +33,13 @@ Aggregating these weekly search intensities gives us a **second, independent mea
 ## Search Patterns Over Time
 
 <figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/google_trends_sentiment.png"
+  <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
        alt="Google Trends sentiment classification over time"
        class="plot">
   <figcaption>Search-based sentiment measures reveal attention patterns during market cycles</figcaption>
 </figure>
 
 When plotted over time, these search-based sentiment measures show **clear structure**: optimism builds gradually during expansions, while spikes in bearish searches tend to appear sharply during periods of stress. 
-
-<div class="insight-box">
-  <p><strong>Key Observation:</strong> These spikes are often short-lived, suggesting that fear-driven attention surges quickly and then dissipates.</p>
-</div>
 
 ### Two Windows Into Sentiment
 
@@ -119,7 +77,7 @@ When plotted over time, these search-based sentiment measures show **clear struc
   </table>
 </div>
 
-<p class="key-insight">When both move together, sentiment is likely <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
+<p class="key-insight">Google Trends does not replace investor surveys, it complements them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is likely <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 
 ---
 
@@ -133,7 +91,7 @@ When plotted over time, these search-based sentiment measures show **clear struc
 Using NASDAQ stocks and ETFs, we compute returns and group periods with similar behavior using **clustering**. These data-driven regimes become our definition of market states—the benchmark against which investor sentiment will be tested.
 
 <figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/favicon.png"
+  <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
        alt="Market returns over time"
        class="plot">
   <figcaption>Weekly NASDAQ returns revealing distinct behavioral patterns</figcaption>

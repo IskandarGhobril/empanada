@@ -87,7 +87,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 <div class="plot-text-container">
   <div class="plot-side">
     <figure>
-      <img src="{{ site.baseurl }}/assets/img/sentiment_pie.png"
+      <img src="{{ site.baseurl }}/assets/img/sentiment_state_pie_chart.png"
            alt="Pie chart showing distribution of sentiment states">
       <figcaption>Distribution of investor sentiment across all observations</figcaption>
     </figure>
@@ -103,7 +103,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 <div class="plot-text-container reverse">
   <div class="plot-side">
     <figure>
-      <img src="{{ site.baseurl }}/assets/img/sentiment_boxplot.png"
+      <img src="{{ site.baseurl }}/assets/img/sentiment_box_violin_plots.png"
            alt="Sentiment distribution boxplot">
       <figcaption>Distribution of sentiment levels showing median and spread</figcaption>
     </figure>
@@ -127,7 +127,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 <div class="plot-text-container">
   <div class="plot-side">
     <figure>
-      <img src="{{ site.baseurl }}/assets/img/transition_matrix.png"
+      <img src="{{ site.baseurl }}/assets/img/sentiment_state_transition_matrix.png"
            alt="Sentiment state transition matrix">
       <figcaption>Week-to-week sentiment transition probabilities</figcaption>
     </figure>
@@ -153,7 +153,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 <div class="plot-text-container reverse">
   <div class="plot-side">
     <figure>
-      <img src="{{ site.baseurl }}/assets/img/sudden_changes.png"
+      <img src="{{ site.baseurl }}/assets/img/sentiment_distribution.png"
            alt="Largest sentiment changes over time">
       <figcaption>Top sudden sentiment shifts identifying critical market moments</figcaption>
     </figure>
