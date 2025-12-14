@@ -7,10 +7,10 @@
    OVERRIDE THEME WIDTH (Longform pages only)
    ============================================ */
 
-.longform-page .container,
-.longform-page .container-lg,
-.longform-page .page-content,
-.longform-page .markdown-body {
+.container,
+.container-lg,
+.page-content,
+.markdown-body {
   max-width: 1400px !important;
   width: 100%;
 }
