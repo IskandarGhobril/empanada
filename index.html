@@ -48,10 +48,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="index-hero">
-<p>Do Markets Listen to Investors — <br> or Are Investors Just Echoing the Market?</p>
-<p>A data-driven exploration of sentiment, prices, and feedback loops</p>
-<p>Start Reading →</p>
+<div class="plot-text-container">
+<div class="plot-side">
+<pre><code>&lt;figure&gt;
+  &lt;img src="{{ site.baseurl }}/assets/img/title.png"
+       alt="Pie chart showing distribution of sentiment states"&gt;
+  &lt;figcaption&gt;Distribution of investor sentiment across all observations&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+</div>
+<p>{% include_relative _sections/intro.md %} {% include_relative _sections/story1.md %} {% include_relative _sections/story2.md %} {% include_relative _sections/results.md %}</p>
 </div>
 
 </main>

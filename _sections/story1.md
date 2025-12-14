@@ -5,78 +5,79 @@ title: Story1
 
 ## Understanding Investor Sentiment
 
-To understand whether investors lead markets or follow them, we first need to understand how investor sentiment behaves on its own. Using weekly AAII survey data, we track how investors classify their six-month outlook as **Bullish**, **Neutral**, or **Bearish**.
-Before looking at what investors actually believe, take a moment to answer the same question they face every week.
+To understand whether investors lead markets or follow them, we first need to
+understand how investor sentiment behaves on its own. Using weekly AAII survey
+data, we track how investors classify their six-month outlook as **Bullish**,
+**Neutral**, or **Bearish**.
+
+Before looking at what investors actually believe, take a moment to answer the
+same question they face every week.
 
 ### Where do you think the market is headed over the next six months?
 
 <div class="sentiment-widget">
-  <p class="widget-subtitle">Select your prediction for the market over the next six months</p>
-  
+  <p class="widget-subtitle">
+    Select your prediction for the market over the next six months
+  </p>
+
   <div class="sentiment-cards">
-    <div class="card bullish" onclick="selectCard('bullish')">
+    <div class="card bullish" onclick="selectCard(this, 'bullish')">
       <div class="card-icon">▲</div>
       <div class="card-title">Bullish</div>
       <div class="card-desc">Markets will rise</div>
     </div>
-    
-    <div class="card neutral" onclick="selectCard('neutral')">
+
+    <div class="card neutral" onclick="selectCard(this, 'neutral')">
       <div class="card-icon">━</div>
       <div class="card-title">Neutral</div>
       <div class="card-desc">Markets will stay flat</div>
     </div>
-    
-    <div class="card bearish" onclick="selectCard('bearish')">
+
+    <div class="card bearish" onclick="selectCard(this, 'bearish')">
       <div class="card-icon">▼</div>
       <div class="card-title">Bearish</div>
       <div class="card-desc">Markets will fall</div>
     </div>
   </div>
-  
+
   <div class="submit-section">
     <button class="submit-btn" id="submitButton" onclick="submitPrediction()" disabled>
       Submit
     </button>
   </div>
-  
+
   <div class="result" id="resultBox"></div>
 </div>
 
+{% raw %}
 <script>
 let selectedSentiment = null;
 
-function selectCard(sentiment) {
-  // Remove active class from all cards
+function selectCard(card, sentiment) {
   document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-  
-  // Add active class to selected card
-  event.currentTarget.classList.add('active');
-  
-  // Store selection
+  card.classList.add('active');
   selectedSentiment = sentiment;
-  
-  // Enable submit button
   document.getElementById('submitButton').disabled = false;
-  
-  // Hide result
   document.getElementById('resultBox').classList.remove('show');
 }
 
 function submitPrediction() {
   if (!selectedSentiment) return;
-  
+
   const stats = {
-    'bullish': '63%',
-    'neutral': '31%',
-    'bearish': '6%'
+    bullish: '63%',
+    neutral: '31%',
+    bearish: '6%'
   };
-  
+
   const resultBox = document.getElementById('resultBox');
-  resultBox.textContent = `Submitted! You join the ${stats[selectedSentiment]} of investors who predicted the market will be ${selectedSentiment}.`;
+  resultBox.textContent =
+    `Submitted! You join the ${stats[selectedSentiment]} of investors who predicted the market will be ${selectedSentiment}.`;
   resultBox.classList.add('show');
 }
 </script>
----
+{% endraw %}
+
 
 Whatever your choice, you've just joined millions of investors who make this call regularly. What's interesting is not just whether they're right, but **which answer most people tend to give**. When we look across decades of survey data, a clear pattern emerges: investors are, on average, more optimistic than pessimistic.
 
