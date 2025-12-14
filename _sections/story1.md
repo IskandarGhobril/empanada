@@ -1,3 +1,4 @@
+<div id="story1"></div>
 
 ## Understanding Investor Sentiment
 
@@ -9,7 +10,7 @@ data, we track how investors classify their six-month outlook as **Bullish**,
 Before looking at what investors actually believe, take a moment to answer the
 same question they face every week.
 
-### Where do you think the market is headed over the next six months?
+#### Where do you think the market is headed over the next six months?
 
 
 {% include click.html %}
@@ -18,7 +19,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 
 ---
 
-## A Market That Leans Optimistic
+### A Market That Leans Optimistic
 
 <div class="plot-text-container">
   <div class="plot-side">
@@ -51,7 +52,7 @@ Whatever your choice, you've just joined millions of investors who make this cal
 
 ---
 
-## How Sentiment Transitions
+### How Sentiment Transitions
 
 <div class="section-intro-text">
   <p>To move beyond levels, we study how sentiment transitions from week to week. By assigning each week to its dominant sentiment state, we construct a transition matrix that reveals how sticky beliefs are.</p>
@@ -72,7 +73,7 @@ This persistence matters: it means that large sentiment changes are rare, and th
 
 ---
 
-## Identifying Critical Moments
+### Identifying Critical Moments
 
 <div class="section-intro-text">
   <p>If most weeks look similar, the most revealing moments are the exceptions. To capture these, we identify the largest week-to-week changes in bullish, neutral, and bearish sentiment. These jumps represent moments when investors rapidly reassess their outlook.</p>

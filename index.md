@@ -2,7 +2,12 @@
 layout: page
 title: ""
 ---
-
+<figure class="plot-figure">
+  <img src="{{ site.baseurl }}/assets/img/title.jpg"
+       alt="Clustered market regimes"
+       class="plot">
+  <figcaption>Market regimes identified through unsupervised clustering</figcaption>
+</figure>
 
 <div class="longform">
 

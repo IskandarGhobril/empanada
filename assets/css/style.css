@@ -61,7 +61,7 @@ body {
   z-index: 3;
   text-align: center;
   color: white;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 2rem;
 }
 
@@ -121,7 +121,7 @@ body {
    ============================================ */
 
 .longform {
-  max-width: 900px;       /* match “nice reading width” */
+  max-width: 1200px;       /* match “nice reading width” */
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -791,4 +791,40 @@ figcaption {
   .data-card,
   .world-card,
   .sentiment-category { padding: 1.25rem; }
+}
+
+
+.thesis-break {
+  max-width: 1000px;
+  margin: 8rem auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.thesis-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.thesis-text {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 1.25rem;
+}
+
+.thesis-sub {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.thesis-sub .dot {
+  color: #cbd5e1;
+  margin: 0 0.5rem;
 }

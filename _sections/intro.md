@@ -1,4 +1,5 @@
 
+<div id="intro"></div>
 
 <div class="hero-intro">
   <p class="lead-question">What came first, the chicken or the egg?</p>
@@ -10,7 +11,7 @@ Financial markets are often described as forward-looking. Every week, investors 
 
 
 
-## Two Competing Stories
+### Two Competing Stories
 
 <p class="section-intro">There are two radically different worlds hiding in the data:</p>
 
@@ -46,7 +47,7 @@ Financial markets are often described as forward-looking. Every week, investors 
 
 ---
 
-### Our Investigation
+#### Our Investigation
 
 This project investigates the temporal relationship between investor sentiment and market regimes by placing beliefs and prices on the same timeline. We combine three complementary datasets:
 
