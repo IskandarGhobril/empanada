@@ -20,11 +20,10 @@ description: >
 
 navbar-links:
   Home: "/"
-  Introduction: "intro"
-  Story1: "story1"
-  Story2 : "story2"
-  Results: "results"
-
+  Introduction: "/#intro"
+  Story1: "/#story1"
+  Story2: "/#story2"
+  Results: "/#results"
 ###########################################################
 # --- Branding ---
 ###########################################################
