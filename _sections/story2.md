@@ -16,7 +16,7 @@ Every week, millions of searches reveal what market participants are paying atte
 
 To make this usable, we classify search queries into three sentiment categories based on their economic meaning. Queries associated with growth, investing, and markets are labeled bullish; those linked to downturns and macroeconomic stress are labeled bearish; and broad index-related searches are treated as neutral. 
 <figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/bull.jpg"
+  <img src="{{ site.baseurl }}/assets/img/bull.png"
        alt="Bull vs Bear Google Trends word cloud"
        class="plot">
   <figcaption>Search-based sentiment measures reveal attention patterns during market cycles</figcaption>
