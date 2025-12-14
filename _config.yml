@@ -94,3 +94,5 @@ defaults:
 
 plugins:
   - jekyll-sitemap
+site-css:
+  - "/assets/css/style.css"
