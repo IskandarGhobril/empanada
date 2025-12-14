@@ -1,0 +1,16 @@
+<div class="plot-card">
+  <div class="plot-head">
+    <div class="plot-title">{{ include.title }}</div>
+    {% if include.tag %}<div class="meta-pill">{{ include.tag }}</div>{% endif %}
+  </div>
+
+  <iframe
+    src="{{ include.src | relative_url }}"
+    height="{{ include.height | default: 520 }}"
+    loading="lazy">
+  </iframe>
+
+  {% if include.caption %}
+    <div class="plot-caption">{{ include.caption }}</div>
+  {% endif %}
+</div>

@@ -1,9 +1,10 @@
-theme: jekyll-theme-minimal
-title: ADA Template Website
-description: A template website for empanADA
-show_downloads: False
-navigation:
-  - title: Home
-    url: /
-  - title: Example
-    url: example
+title: "Do Markets Listen to Investors  or Are Investors Just Echoing the Market?”?"
+description: "NASDAQ regimes vs 6-month investor expectations: who leads whom?"
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - story.md
+  - results.md
+  - methods.md
+  - about.md
