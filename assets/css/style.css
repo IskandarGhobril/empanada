@@ -5,8 +5,6 @@
 
 /* === GLOBAL RESET === */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -866,4 +864,107 @@ pre code {
 
 html {
     scroll-behavior: smooth;
+}
+
+
+/* Section intro text */
+.section-intro-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(102, 126, 234, 0.05);
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+}
+
+.section-intro-text p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+/* Plot with text side-by-side layout */
+.plot-text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin: 3rem 0;
+}
+
+.plot-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.plot-side figure {
+  margin: 0;
+}
+
+.plot-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.plot-side figcaption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #718096;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.text-side {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-side p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.text-side p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reverse layout (text left, plot right) */
+.plot-text-container.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.plot-text-container.reverse .plot-side {
+  order: 2;
+}
+
+.plot-text-container.reverse .text-side {
+  order: 1;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .plot-text-container,
+  .plot-text-container.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .plot-text-container.reverse .plot-side,
+  .plot-text-container.reverse .text-side {
+    order: initial;
+  }
+  
+  .text-side {
+    padding: 0;
+  }
+  
+  .text-side p {
+    text-align: left;
+  }
 }
