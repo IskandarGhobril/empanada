@@ -5,7 +5,9 @@ title: ""
 
 <div class="index-hero">
 
-  <img src="/plots/title.jpg" alt="Market sentiment illustration" class="index-hero-img">
+  <img src="{{ site.baseurl }}/plots/title.jpg"
+       alt="Market sentiment illustration"
+       class="index-hero-img">
 
   <div class="index-content">
 
@@ -18,7 +20,7 @@ title: ""
       A data-driven exploration of sentiment, prices, and feedback loops
     </p>
 
-    <a class="index-cta" href="/intro">
+    <a class="index-cta" href="{{ site.baseurl }}/intro">
       Start Reading →
     </a>
 
