@@ -2,19 +2,26 @@
 layout: page
 title: ""
 ---
+
 <div class="index-hero">
- 
 
+  <img src="/plots/title.jpg" alt="Market sentiment illustration" class="index-hero-img">
 
-Do Markets Listen to Investors — <br>
-or Are Investors Just Echoing the Market?
+  <div class="index-content">
 
-   
-A data-driven exploration of sentiment, prices, and feedback loops
- 
+    <h1>
+      Do Markets Listen to Investors — <br>
+      or Are Investors Just Echoing the Market?
+    </h1>
 
+    <p class="index-subtitle">
+      A data-driven exploration of sentiment, prices, and feedback loops
+    </p>
 
-Start Reading →
+    <a class="index-cta" href="/intro">
+      Start Reading →
+    </a>
 
-
+  </div>
+</div>
 
