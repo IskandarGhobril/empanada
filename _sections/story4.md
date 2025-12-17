@@ -6,15 +6,6 @@
   <p class="session-subtitle">Differential Diagnosis</p>
 </div>
 
-<!-- IMAGE: Multiple Personalities -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border">
-    <p class="placeholder-label">Image: sector-personalities.png</p>
-    <p class="placeholder-desc">The Market as a figure with multiple faces/personalities emerging: Technology (digital, glowing circuits), Healthcare (medical symbols, calm blue), Energy (flames, industrial), Finance (gold coins, buildings), Consumer (shopping bags, bright colors). Each "personality" occupies a segment of the figure. Style: Surrealist portrait meets sector iconography, like a modern take on "The Many Faces" concept.</p>
-  </div>
-  <figcaption>The Market's many personalities — each sector has its own character</figcaption>
-</figure>
-
 <div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🔬</span>
@@ -234,15 +225,6 @@
   <p>We use interaction terms in regression models and chi-square tests on sector-specific transition matrices.</p>
 </div>
 
-<!-- IMAGE: Sector Comparison -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: sector-comparison-bars.png</p>
-    <p class="placeholder-desc">Horizontal bar chart comparing sectors on key metrics: correlation strength, information gain, lag pattern. Sectors ordered from strongest to weakest sentiment relationship. Technology at top (strongest), Utilities/Energy at bottom (weakest). Use gradient colors from green (strong) to red (weak). Style: Clean data visualization with sector icons.</p>
-  </div>
-  <figcaption>Not all sectors respond equally to sentiment</figcaption>
-</figure>
-
 <div class="stats-placeholder reveal">
   <h4>Sector Comparison Results</h4>
   <p class="placeholder-note">Statistical test results to be added from sector-specific analysis. Should include:</p>
@@ -260,15 +242,6 @@
 <div class="bias-analysis reveal">
   <h3>The Question</h3>
   <p>When forming their market outlook, do retail investors overweight certain sectors? If so, AAII sentiment should correlate more strongly with "exciting" sectors like Technology than with "boring" sectors like Utilities.</p>
-
-  <!-- IMAGE: Attention Bias -->
-  <figure class="mood-illustration">
-    <div class="image-placeholder mood-card gradient-border">
-      <p class="placeholder-label">Image: attention-bias.png</p>
-      <p class="placeholder-desc">Visualization of investor attention: A large eye or spotlight focused heavily on glowing Tech stocks (AAPL, MSFT, GOOGL prominent), while other sectors (utilities, industrials) sit dimly in the periphery. The attention beam creates a dramatic contrast. Style: Dramatic lighting, editorial illustration, emphasis on the attention disparity.</p>
-    </div>
-    <figcaption>Where investors look vs. where they should look</figcaption>
-  </figure>
 
   <div class="bias-finding reveal gradient-border">
     <h4>Potential Finding</h4>

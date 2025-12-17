@@ -597,12 +597,14 @@
 
 /* ============================================
    REVEAL ON SCROLL (Intersection Observer)
+   Elements start hidden and fade in when scrolled into view.
+   Requires main.js for the IntersectionObserver logic.
    ============================================ */
 
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal.revealed {
@@ -613,7 +615,7 @@
 .reveal-left {
   opacity: 0;
   transform: translateX(-50px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-left.revealed {
@@ -624,12 +626,45 @@
 .reveal-right {
   opacity: 0;
   transform: translateX(50px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-right.revealed {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Fallback for users with JS disabled or if script fails to load */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* No-JS fallback using noscript detection isn't possible in pure CSS,
+   but we add a small delay so content appears after page load even without JS */
+.reveal,
+.reveal-left,
+.reveal-right {
+  animation: fallback-reveal 0.1s ease-out 2s forwards;
+}
+
+@keyframes fallback-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* When JS adds the revealed class, cancel the fallback animation */
+.reveal.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed {
+  animation: none;
 }
 
 /* ============================================

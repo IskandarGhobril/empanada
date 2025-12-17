@@ -1,0 +1,186 @@
+/* ============================================
+   MAIN.JS - Scroll Animations & Interactions
+   The Market Goes to Therapy
+   ============================================ */
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ============================================
+  // REVEAL ON SCROLL - Intersection Observer
+  // ============================================
+
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // Optional: stop observing after revealed (better performance)
+        // revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,  // Trigger when 10% of element is visible
+    rootMargin: '0px 0px -50px 0px'  // Trigger slightly before element enters viewport
+  });
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ============================================
+  // SMOOTH SCROLL FOR ANCHOR LINKS
+  // ============================================
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // ============================================
+  // SCROLL INDICATOR CLICK (Hero section)
+  // ============================================
+
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', function() {
+      const firstSection = document.querySelector('.longform') || document.querySelector('.section');
+      if (firstSection) {
+        firstSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+    scrollIndicator.style.cursor = 'pointer';
+  }
+
+  // ============================================
+  // STAT COUNTER ANIMATION
+  // ============================================
+
+  const statCounters = document.querySelectorAll('.stat-counter');
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statCounters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+
+  function animateCounter(element) {
+    const text = element.textContent;
+    const match = text.match(/[\d,.]+/);
+    if (!match) return;
+
+    const targetNum = parseFloat(match[0].replace(/,/g, ''));
+    const suffix = text.replace(match[0], '');
+    const prefix = text.substring(0, text.indexOf(match[0]));
+    const hasDecimal = match[0].includes('.');
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Easing function (ease-out)
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = targetNum * easeOut;
+
+      if (hasDecimal) {
+        element.textContent = prefix + current.toFixed(1) + suffix;
+      } else {
+        element.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = text; // Restore original text
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // ============================================
+  // PULSE ON HOVER - Add interaction feedback
+  // ============================================
+
+  document.querySelectorAll('.pulse-on-hover').forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.02)';
+      this.style.transition = 'transform 0.3s ease';
+    });
+    el.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+
+  // ============================================
+  // NAVBAR SCROLL EFFECT (if applicable)
+  // ============================================
+
+  let lastScroll = 0;
+  const navbar = document.querySelector('.navbar, nav, header');
+
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      lastScroll = currentScroll;
+    });
+  }
+
+  // ============================================
+  // ACTIVE SECTION HIGHLIGHTING
+  // ============================================
+
+  const sections = document.querySelectorAll('.section[id]');
+
+  if (sections.length > 0) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Update URL hash without scrolling
+          const id = entry.target.getAttribute('id');
+          history.replaceState(null, null, `#${id}`);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '-20% 0px -60% 0px'
+    });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  }
+
+  console.log('Main.js loaded - scroll animations active');
+});

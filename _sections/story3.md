@@ -6,15 +6,6 @@
   <p class="session-subtitle">Identifying States</p>
 </div>
 
-<!-- IMAGE: Mood Cycles -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border">
-    <p class="placeholder-label">Image: mood-cycles.png</p>
-    <p class="placeholder-desc">A circular/cyclical visualization showing market moods transitioning: Euphoria (bright gold) → Optimism (green) → Complacency (pale green) → Anxiety (yellow) → Fear (orange) → Panic (red) → Capitulation (dark red) → Depression (gray) → Hope (light blue) → Relief (cyan) → back to Euphoria. The cycle is shown as a glowing ring with the Market (represented as a figure or abstract form) moving along it. Style: Modern infographic meets emotional psychology chart.</p>
-  </div>
-  <figcaption>The Market's emotional journey — a perpetual cycle of mood states</figcaption>
-</figure>
-
 <div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🔄</span>
@@ -98,15 +89,6 @@
   <p>Given the transition matrix, we can compute the <strong>long-run equilibrium</strong> — the fraction of time the market spends in each state if the process runs forever.</p>
   <p>We then compare this theoretical distribution to the <strong>empirical frequencies</strong> we actually observed.</p>
 </div>
-
-<!-- IMAGE: Stationary Distribution -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: stationary-distribution.png</p>
-    <p class="placeholder-desc">Side-by-side comparison visualization: Left shows "Theoretical" equilibrium distribution as elegant pie/bar chart, right shows "Observed" actual frequencies. The two should look very similar. Use green for Bull (largest slice), gray for Neutral, red for Bear (smallest slice). Style: Clean data visualization with subtle glow effects.</p>
-  </div>
-  <figcaption>Theory meets reality: The Markov model accurately describes market behavior</figcaption>
-</figure>
 
 <div class="distribution-result reveal">
   <h4>Finding: Close Match</h4>
@@ -228,15 +210,6 @@
 ---
 
 ### Conditional Markov Analysis: Google Trends
-
-<!-- IMAGE: Google Trends Conditional Matrices -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border">
-    <p class="placeholder-label">Image: google-conditional-matrices.png</p>
-    <p class="placeholder-desc">Same three-panel heatmap format as AAII, but for Google Trends sentiment. The matrices should show MORE visible differences between panels (indicating Google has more predictive power). Highlight the cells where probabilities differ most dramatically. Style: Data visualization with emphasis on the contrast.</p>
-  </div>
-  <figcaption>Google Trends shows more variation in conditional transitions</figcaption>
-</figure>
 
 <div class="conditional-results google-conditional reveal">
   <h3>Google Trends Conditional Analysis Results</h3>

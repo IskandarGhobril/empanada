@@ -6,15 +6,6 @@
   <p class="session-subtitle">Two Perspectives on the Patient</p>
 </div>
 
-<!-- IMAGE: The Two Witnesses -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: two-witnesses.png</p>
-    <p class="placeholder-desc">Split composition: Left side shows a focused investor at a desk with charts (warm lighting, professional), right side shows abstract crowd silhouettes with glowing search bars floating above their heads (cool digital tones). The two halves merge in the center. Style: Modern editorial illustration.</p>
-  </div>
-  <figcaption>The Inner Circle vs. The General Public — two different windows into market psychology</figcaption>
-</figure>
-
 <div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🔍</span>
@@ -158,27 +149,9 @@
 
 <p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points — we'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
 
-<!-- IMAGE: Anxious Investor -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card pulse-red">
-    <p class="placeholder-label">Image: sentiment-shock.png</p>
-    <p class="placeholder-desc">A nervous investor surrounded by multiple glowing screens showing red numbers and downward charts. Expression shows anxiety. Background has abstract fear indicators (falling arrows, red gradients). The screens reflect on their face. Style: Moody, cinematic lighting, digital art.</p>
-  </div>
-  <figcaption>When fear arrives, it arrives fast</figcaption>
-</figure>
-
 ---
 
 ## Part B: The General Public Under the Microscope
-
-<!-- IMAGE: Google Search Collective -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border">
-    <p class="placeholder-label">Image: collective-search.png</p>
-    <p class="placeholder-desc">Abstract visualization of millions of people connected by glowing search queries floating above them. The queries form patterns like neural networks or constellations. Some queries glow red (fear-related), some green (opportunity-related), some neutral blue. Bird's eye view perspective. Style: Data visualization meets surrealist art.</p>
-  </div>
-  <figcaption>The crowd's unconscious mind — revealed through search behavior</figcaption>
-</figure>
 
 <div class="therapist-note reveal">
   <div class="note-header">

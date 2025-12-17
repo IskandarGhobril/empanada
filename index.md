@@ -2,6 +2,8 @@
 layout: page
 title: ""
 body-class: longform-page
+hide_header: true
+hide_footer: true
 css:
   - assets/css/style.css
   - assets/css/animations.css

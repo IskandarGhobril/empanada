@@ -33,12 +33,10 @@
   </div>
 </div>
 
-<!-- IMAGE: The Patient -->
 <figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: the-patient-market.png</p>
-    <p class="placeholder-desc">An abstract humanoid figure made of stock charts sitting on a therapy couch, with a glowing bull/bear symbol where the heart would be. Contemplative, data-streams flowing from body.</p>
-  </div>
+  <img src="{{ site.baseurl }}/assets/img/the-patient-market.png"
+       alt="The Market personified as a patient on a therapy couch"
+       class="section-image">
   <figcaption>The Market — our most complex patient</figcaption>
 </figure>
 

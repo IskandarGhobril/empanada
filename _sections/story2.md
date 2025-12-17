@@ -6,15 +6,6 @@
   <p class="session-subtitle">Who Moves First?</p>
 </div>
 
-<!-- IMAGE: The Race - Who Moves First -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card pulse-purple">
-    <p class="placeholder-label">Image: who-moves-first.png</p>
-    <p class="placeholder-desc">A dramatic split-second race visualization: On the left, an abstract representation of "Sentiment" (crowd of figures, thought bubbles) and on the right, "The Market" (bull/bear symbols, price charts). Between them, a glowing timeline with question marks. Style: Dynamic, motion blur, competitive energy. Think sports photography meets financial data art.</p>
-  </div>
-  <figcaption>The critical question: Does sentiment lead, follow, or move with the market?</figcaption>
-</figure>
-
 <div class="therapist-note dramatic reveal">
   <div class="note-header">
     <span class="note-icon">⚡</span>
@@ -68,15 +59,6 @@
     <p>Lower/negative returns, heightened volatility. Stress and drawdowns.</p>
   </div>
 </div>
-
-<!-- IMAGE: Market Regime Clusters -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border">
-    <p class="placeholder-label">Image: regime-clusters.png</p>
-    <p class="placeholder-desc">3D visualization of market regime clusters: Three distinct cloud formations in space - green/bullish cluster (upward trending, confident), gray/neutral cluster (sideways, indecisive), red/bearish cluster (downward, volatile). Data points as glowing particles. Style: Scientific visualization meets abstract art, dark background with luminous clusters.</p>
-  </div>
-  <figcaption>GMM identifies three distinct market personalities</figcaption>
-</figure>
 
 ---
 
@@ -180,15 +162,6 @@
   </div>
   <p>The coefficients tell us: How much does lagged sentiment affect current returns? And vice versa?</p>
 </div>
-
-<!-- IMAGE: VAR Flow Diagram -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: var-flow.png</p>
-    <p class="placeholder-desc">Elegant flow diagram showing the VAR relationship: A large bold arrow from "Returns" to "Sentiment" (labeled ~1395), and a tiny hairline arrow from "Sentiment" to "Returns" (labeled ~0.000001). The visual disparity should be striking. Style: Clean infographic, dark background, glowing arrows with different thicknesses.</p>
-  </div>
-  <figcaption>The asymmetry revealed: Markets move sentiment, not vice versa</figcaption>
-</figure>
 
 <div class="var-results reveal">
   <h3>VAR Model Results</h3>
@@ -316,15 +289,6 @@
     <p class="critical-finding"><strong>AAII sentiment is REACTIVE, not predictive.</strong></p>
   </div>
 </div>
-
-<!-- IMAGE: The 6-Month Mirror -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card pulse-purple">
-    <p class="placeholder-label">Image: six-month-mirror.png</p>
-    <p class="placeholder-desc">A person looking into a mirror, but instead of their reflection, they see a stock chart from 6 months ago. The mirror has "6 MONTHS" etched at the top. The person is dressed as an investor (business attire). Surreal, contemplative mood. Style: Magritte-inspired surrealism meets financial imagery.</p>
-  </div>
-  <figcaption>The 6-Month Mirror Effect: When asked about the future, investors describe the past</figcaption>
-</figure>
 
 <div class="lead-lag-results google-results reveal">
   <h3>Google Trends: Lead-Lag Results</h3>

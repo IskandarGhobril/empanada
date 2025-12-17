@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "empanADA" }}</title>
+
+  <!-- Base styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- Page-specific CSS -->
+  {% if page.css %}
+    {% for css_file in page.css %}
+      <link rel="stylesheet" href="{{ css_file | relative_url }}">
+    {% endfor %}
+  {% endif %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+</head>
+
+<body class="{{ page.body-class }}">
+
+  {% unless page.hide_header %}
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-dot"></span>
+        <span class="brand-title">{{ site.title | default: "empanADA" }}</span>
+      </a>
+
+      <nav class="nav">
+        {% for p in site.header_pages %}
+          {% assign my_page = site.pages | where: "path", p | first %}
+          {% if my_page.title %}
+            <a class="nav-link {% if page.url == my_page.url %}active{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+  {% endunless %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% unless page.hide_footer %}
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="muted">
+        Built with Jekyll · NASDAQ regimes x investor expectations · {{ "now" | date: "%Y" }}
+      </div>
+      <div class="muted">
+        Made for EPFL CS-401 Applied Data Analysis.
+      </div>
+    </div>
+  </footer>
+  {% endunless %}
+
+  <!-- Main JavaScript -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  <!-- Page-specific JS -->
+  {% if page.js %}
+    {% for js_file in page.js %}
+      <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
+
+</body>
+</html>

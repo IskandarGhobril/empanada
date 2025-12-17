@@ -6,15 +6,6 @@
   <p class="session-subtitle">What We Learned About The Market</p>
 </div>
 
-<!-- IMAGE: The Final Diagnosis -->
-<figure class="hero-illustration reveal">
-  <div class="image-placeholder mood-card gradient-border pulse-purple">
-    <p class="placeholder-label">Image: final-diagnosis.png</p>
-    <p class="placeholder-desc">A dramatic medical/clinical scene: A therapist figure holding up a glowing clipboard/diagnosis document, while The Market (abstract humanoid made of charts) sits on a therapy couch. The diagnosis paper glows with key findings. The lighting is revelatory - like a moment of truth. Style: Cinematic, dramatic lighting, blend of medical and financial imagery.</p>
-  </div>
-  <figcaption>The moment of truth: delivering the diagnosis</figcaption>
-</figure>
-
 <div class="diagnosis-intro reveal">
   <p class="lead">After five intensive sessions examining our patient through the lens of investor sentiment, market behavior, and statistical analysis, we are ready to deliver our findings.</p>
 </div>
@@ -115,15 +106,6 @@
 
 ## Key Findings Summary
 
-<!-- IMAGE: Key Findings Infographic -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: key-findings-infographic.png</p>
-    <p class="placeholder-desc">A clean infographic summarizing the 6 key findings with icons: (1) Backward-looking arrow/mirror icon, (2) Misleading correlation with crossed-out crystal ball, (3) Google vs Survey showdown icon, (4) Efficiency checkmark, (5) Asymmetric scales, (6) Sector pie chart. Each finding has a small visualization. Style: Modern infographic, consistent color scheme with greens/reds/purples.</p>
-  </div>
-  <figcaption>The six key takeaways from our analysis</figcaption>
-</figure>
-
 <div class="findings-grid reveal">
 
   <div class="finding-card pulse-on-hover">
@@ -217,15 +199,6 @@
     <p>The Market doesn't need therapy. It's processing information efficiently. If anyone needs therapy, it might be the investors who think they can predict it.</p>
   </div>
 </div>
-
-<!-- IMAGE: Healthy Market -->
-<figure class="mood-illustration reveal">
-  <div class="image-placeholder mood-card">
-    <p class="placeholder-label">Image: healthy-market.png</p>
-    <p class="placeholder-desc">The Market (abstract humanoid figure made of healthy, upward-trending charts) leaving the therapy office with a spring in its step, waving goodbye. The therapist waves from the doorway. Optimistic, warm lighting. A "HEALTHY" stamp or certificate visible. Style: Warm, hopeful, slightly humorous editorial illustration.</p>
-  </div>
-  <figcaption>The Market walks out healthy — it never needed therapy after all</figcaption>
-</figure>
 
 ---
 
