@@ -26,7 +26,7 @@ css:
   <div class="therapy-hero-overlay"></div>
   <div class="therapy-hero-content">
     <div class="clinic-badge pulse-purple">empanADA Behavioral Finance Clinic</div>
-    <h1 class="therapy-title glow-text-subtle">The Market Goes to Therapy</h1>
+    <h1 class="therapy-title glow-text-subtle">When the Market Goes to Therapy</h1>
     <p class="therapy-tagline">A behavioral diagnosis of investor sentiment and market dynamics</p>
 
     <!-- Emotion Meter Preview -->
