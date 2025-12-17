@@ -1,75 +1,77 @@
+<div class="section section-intake">
 
-<div id="intro"></div>
+<h2 class="section-title">The Market Goes to Therapy</h2>
 
-<div class="hero-intro">
-  <p class="lead-question">What came first, the chicken or the egg?</p>
+<p class="lead">
+Markets are often described as rational, efficient, and forward-looking.
+But anyone who has lived through a crash knows something else is going on.
+</p>
+
+<p>
+Sudden drops. Slow recoveries. Long stretches of optimism followed by abrupt fear.
+The market behaves less like a machine and more like a mind.
+</p>
+
+<p>
+So we did what any responsible data scientists would do.
+<strong>We sent the Market to therapy.</strong>
+</p>
+
+<hr>
+
+<h3>The Presenting Problem</h3>
+
+<p>
+The Market does not speak directly.
+Instead, we observe it through the people around it.
+</p>
+
+<ul>
+  <li><strong>The Inner Circle</strong> — investors who explicitly report their expectations</li>
+  <li><strong>The Crowd</strong> — public attention revealed through search behavior</li>
+  <li><strong>The Patient</strong> — prices, returns, and market regimes</li>
+</ul>
+
+<p>
+Everyone claims to understand the market.
+But a fundamental question remains unanswered:
+</p>
+
+<div class="big-question">
+<strong>Who is influencing whom?</strong>
 </div>
 
-## Introduction
+<hr>
 
-Financial markets are often described as forward-looking. Every week, investors confidently state what they believe the market will do over the next six months: **bullish**, **bearish**, or **neutral**. These expectations shape headlines, influence portfolio decisions, and justify billions in capital flows. But beneath this apparent foresight lies a deeper and rarely examined question: **who is actually leading whom?** Do investors’ predictions *pull* the market in a certain direction? or are they largely reactions to market movements that have already begun? Financial markets feel like a collective mind yet it's unclear who is leading the dance.
+<h3>Two Competing Stories</h3>
 
+<div class="two-worlds">
 
-
-### Two Competing Stories
-
-<p class="section-intro">There are two radically different worlds hiding in the data:</p>
-
-<div class="competing-worlds">
-  <div class="world-card world-1">
-    <div class="world-header">
-      <span class="world-icon">🔮</span>
-      <h3>World 1 — Beliefs Create Reality</h3>
-    </div>
-    <div class="world-content">
-      <p>Investors look ahead.<br>
-      Their expectations influence today's decisions.<br>
-      Capital flows turn forecasts into self-fulfilling prophecies.</p>
-      <p class="world-conclusion"><strong>In this world, sentiment is power.</strong></p>
-    </div>
-  </div>
-  
-  <div class="world-card world-2">
-    <div class="world-header">
-      <span class="world-icon">🪞</span>
-      <h3>World 2 — Reality Creates Beliefs</h3>
-    </div>
-    <div class="world-content">
-      <p>Markets react to fundamentals, shocks, and liquidity.<br>
-      Investors adjust their outlook afterward.<br>
-      Predictions are rationalizations, not signals.</p>
-      <p class="world-conclusion"><strong>In this world, sentiment is a mirror.</strong></p>
-    </div>
-  </div>
+<div class="world">
+<h4>🧠 Beliefs Shape Reality</h4>
+<p>
+Investors look ahead.
+Their expectations guide decisions.
+Capital flows turn beliefs into self-fulfilling prophecies.
+</p>
+<p><em>In this world, sentiment has power.</em></p>
 </div>
 
-<p class="conclusion-text">Only one of these worlds can dominate and the data reveals which one.</p>
-
----
-
-#### Our Investigation
-
-This project investigates the temporal relationship between investor sentiment and market regimes by placing beliefs and prices on the same timeline. We combine three complementary datasets:
-
-<div class="data-sources">
-  <div class="data-card">
-    <h4>📊 NASDAQ Market Data</h4>
-    <p><strong>24.2M data points</strong> tracking objective price movements and returns across 5,884 tickers</p>
-  </div>
-  
-  <div class="data-card">
-    <h4>📈 AAII Sentiment Survey</h4>
-    <p>Weekly six-month forecasts from <strong>thousands of retail investors</strong></p>
-  </div>
-  
-  <div class="data-card">
-    <h4>🔍 Google Trends Data</h4>
-    <p>Revealed attention patterns for economic terms (recession, unemployment, stock market)</p>
-  </div>
+<div class="world">
+<h4>🪞 Reality Shapes Beliefs</h4>
+<p>
+Markets move because of shocks, fundamentals, and constraints.
+Investors update their views afterward.
+Beliefs explain what already happened.
+</p>
+<p><em>In this world, sentiment is a mirror.</em></p>
 </div>
 
-By tracking these signals through bull, neutral, and bear regimes, we aim to answer one fundamental question: **who moves first?**
+</div>
 
-Other than chasing prediction accuracy, we focus on something as revealing: **timing**. When do beliefs change relative to market regimes? When does sentiment lead, and when does it lag?
+<p class="transition">
+Only one of these stories can dominate in the data.
+Let’s begin the session.
+</p>
 
----
+</div>
