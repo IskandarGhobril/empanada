@@ -6,7 +6,16 @@
   <p class="session-subtitle">What We Learned About The Market</p>
 </div>
 
-<div class="diagnosis-intro">
+<!-- IMAGE: The Final Diagnosis -->
+<figure class="hero-illustration reveal">
+  <div class="image-placeholder mood-card gradient-border pulse-purple">
+    <p class="placeholder-label">Image: final-diagnosis.png</p>
+    <p class="placeholder-desc">A dramatic medical/clinical scene: A therapist figure holding up a glowing clipboard/diagnosis document, while The Market (abstract humanoid made of charts) sits on a therapy couch. The diagnosis paper glows with key findings. The lighting is revelatory - like a moment of truth. Style: Cinematic, dramatic lighting, blend of medical and financial imagery.</p>
+  </div>
+  <figcaption>The moment of truth: delivering the diagnosis</figcaption>
+</figure>
+
+<div class="diagnosis-intro reveal">
   <p class="lead">After five intensive sessions examining our patient through the lens of investor sentiment, market behavior, and statistical analysis, we are ready to deliver our findings.</p>
 </div>
 
@@ -14,26 +23,26 @@
 
 ## The Official Diagnosis
 
-<div class="diagnosis-card">
+<div class="diagnosis-card reveal gradient-border">
   <div class="diagnosis-header">
     <span class="diagnosis-icon">📋</span>
     <h3>Clinical Assessment: The Market</h3>
   </div>
 
   <div class="diagnosis-content">
-    <div class="diagnosis-item primary">
+    <div class="diagnosis-item primary pulse-on-hover">
       <span class="diagnosis-label">Primary Finding</span>
       <h4>Retail Investor Sentiment Is Primarily Reactive</h4>
       <p>Despite asking about the future ("Where will the market be in 6 months?"), AAII survey respondents largely report their experience of the past. The peak at lag = -26 weeks is not coincidental — it matches the survey's 6-month horizon exactly.</p>
     </div>
 
-    <div class="diagnosis-item secondary">
+    <div class="diagnosis-item secondary pulse-on-hover">
       <span class="diagnosis-label">Supporting Evidence</span>
       <h4>The 6-Month Mirror Effect</h4>
       <p>When investors are asked to predict the future, they systematically anchor on where the market has been. This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — core concepts in behavioral finance, now quantified.</p>
     </div>
 
-    <div class="diagnosis-item tertiary">
+    <div class="diagnosis-item tertiary pulse-on-hover">
       <span class="diagnosis-label">Comparative Finding</span>
       <h4>Google Trends Outperforms Surveys</h4>
       <p>Aggregate search behavior contains more market-relevant information than explicit expectations surveys. The crowd's unconscious behavior reveals more than their conscious predictions.</p>
@@ -45,13 +54,13 @@
 
 ## Answering the Central Question
 
-<div class="central-answer">
+<div class="central-answer reveal">
   <div class="question-recall">
     <p class="recall-label">We Asked</p>
     <h3>Is investor sentiment part of the cure — or part of the disease?</h3>
   </div>
 
-  <div class="answer-reveal">
+  <div class="answer-reveal gradient-border pulse-purple">
     <p class="answer-label">The Answer</p>
     <h3>Neither. Sentiment is mostly a symptom.</h3>
     <p>Investor sentiment is not destabilizing markets (part of the disease), nor is it providing useful predictive signals (part of the cure). It is primarily <strong>reflecting</strong> what markets have already done.</p>
@@ -62,9 +71,9 @@
 
 ## The Verdict on Our Two Hypotheses
 
-<div class="hypothesis-verdict">
+<div class="hypothesis-verdict reveal">
 
-  <div class="verdict-card verdict-rejected">
+  <div class="verdict-card verdict-rejected pulse-red">
     <div class="verdict-header">
       <span class="verdict-icon">❌</span>
       <span class="verdict-status">Largely Rejected</span>
@@ -82,7 +91,7 @@
     </div>
   </div>
 
-  <div class="verdict-card verdict-supported">
+  <div class="verdict-card verdict-supported pulse-green">
     <div class="verdict-header">
       <span class="verdict-icon">✓</span>
       <span class="verdict-status">Strongly Supported</span>
@@ -106,39 +115,48 @@
 
 ## Key Findings Summary
 
-<div class="findings-grid">
+<!-- IMAGE: Key Findings Infographic -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card">
+    <p class="placeholder-label">Image: key-findings-infographic.png</p>
+    <p class="placeholder-desc">A clean infographic summarizing the 6 key findings with icons: (1) Backward-looking arrow/mirror icon, (2) Misleading correlation with crossed-out crystal ball, (3) Google vs Survey showdown icon, (4) Efficiency checkmark, (5) Asymmetric scales, (6) Sector pie chart. Each finding has a small visualization. Style: Modern infographic, consistent color scheme with greens/reds/purples.</p>
+  </div>
+  <figcaption>The six key takeaways from our analysis</figcaption>
+</figure>
 
-  <div class="finding-card">
+<div class="findings-grid reveal">
+
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">1</span>
     <h4>Retail Investors Are Backward-Looking</h4>
     <p>The AAII survey, despite asking about the next 6 months, primarily reflects what the market did over the past 6 months. Investors extrapolate recent experience into future outlook.</p>
   </div>
 
-  <div class="finding-card">
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">2</span>
     <h4>Correlation Is Real But Misleading</h4>
     <p>Sentiment and future returns are positively correlated (ρ ≈ 0.33), but this does not imply predictive power. The correlation exists because both reflect past market conditions.</p>
   </div>
 
-  <div class="finding-card">
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">3</span>
     <h4>Google Trends > AAII Surveys</h4>
     <p>Aggregate search behavior contains more market-relevant information than explicit surveys. Spontaneous behavior reveals more than considered opinions.</p>
   </div>
 
-  <div class="finding-card">
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">4</span>
     <h4>Market Efficiency Confirmed</h4>
     <p>By the time retail investors update their views, the information is already priced in. Professional investors and market mechanisms incorporate information faster than sentiment surveys can capture.</p>
   </div>
 
-  <div class="finding-card">
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">5</span>
     <h4>Sentiment Is Persistent But Asymmetric</h4>
     <p>Optimism is the baseline state. Bullish sentiment is more persistent than bearish. Pessimism arrives fast and fades faster than optimism.</p>
   </div>
 
-  <div class="finding-card">
+  <div class="finding-card pulse-on-hover">
     <span class="finding-number">6</span>
     <h4>Sectors Are Not Equal</h4>
     <p>The sentiment-market relationship varies by industry. High-attention sectors may show stronger ties to retail sentiment; commodity-driven sectors less so.</p>
@@ -150,9 +168,9 @@
 
 ## What This Means
 
-<div class="implications-section">
+<div class="implications-section reveal">
 
-  <div class="implication-card for-investors">
+  <div class="implication-card for-investors pulse-on-hover">
     <h4>For Retail Investors</h4>
     <p><strong>Be humble about your predictions.</strong> If you're like most investors, your market outlook is likely a reflection of recent performance, not genuine foresight. Recognizing this bias is the first step to avoiding it.</p>
     <ul>
@@ -162,7 +180,7 @@
     </ul>
   </div>
 
-  <div class="implication-card for-researchers">
+  <div class="implication-card for-researchers pulse-on-hover">
     <h4>For Researchers</h4>
     <p><strong>Correlation isn't causation — and timing matters.</strong> The positive sentiment-return correlation is real but primarily driven by the reverse channel. Lead-lag analysis should be standard in any sentiment study.</p>
     <ul>
@@ -172,7 +190,7 @@
     </ul>
   </div>
 
-  <div class="implication-card for-markets">
+  <div class="implication-card for-markets pulse-on-hover">
     <h4>For Market Efficiency</h4>
     <p><strong>Markets are remarkably efficient at incorporating information.</strong> Retail sentiment doesn't destabilize markets because markets have already processed the same information that shapes sentiment — just faster.</p>
     <ul>
@@ -188,7 +206,7 @@
 
 ## The Patient's Prognosis
 
-<div class="prognosis-card">
+<div class="prognosis-card reveal gradient-border pulse-green">
   <div class="prognosis-header">
     <span class="prognosis-icon">🏥</span>
     <h3>Clinical Prognosis</h3>
@@ -200,11 +218,20 @@
   </div>
 </div>
 
+<!-- IMAGE: Healthy Market -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card">
+    <p class="placeholder-label">Image: healthy-market.png</p>
+    <p class="placeholder-desc">The Market (abstract humanoid figure made of healthy, upward-trending charts) leaving the therapy office with a spring in its step, waving goodbye. The therapist waves from the doorway. Optimistic, warm lighting. A "HEALTHY" stamp or certificate visible. Style: Warm, hopeful, slightly humorous editorial illustration.</p>
+  </div>
+  <figcaption>The Market walks out healthy — it never needed therapy after all</figcaption>
+</figure>
+
 ---
 
 ## Limitations & Future Work
 
-<div class="limitations-box">
+<div class="limitations-box reveal">
   <h4>Study Limitations</h4>
   <ul>
     <li><strong>Time period:</strong> Data ends in 2020 — COVID and post-COVID dynamics may differ</li>
@@ -228,8 +255,8 @@
 
 ## Final Thoughts
 
-<div class="final-thoughts">
-  <blockquote>
+<div class="final-thoughts reveal">
+  <blockquote class="gradient-border">
     <p>"The four most dangerous words in investing are: <em>this time it's different.</em>"</p>
     <cite>— Sir John Templeton</cite>
   </blockquote>
@@ -240,12 +267,12 @@
 
   <p>The market knows this. It prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
 
-  <p class="closing-statement">The Market doesn't need to listen to investors. <strong>It's already heard them, and moved on.</strong></p>
+  <p class="closing-statement pulse-purple">The Market doesn't need to listen to investors. <strong>It's already heard them, and moved on.</strong></p>
 </div>
 
 ---
 
-<div class="session-end">
+<div class="session-end reveal">
   <div class="end-decoration">
     <span class="end-line"></span>
     <span class="end-icon">📋</span>

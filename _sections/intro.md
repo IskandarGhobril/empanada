@@ -6,6 +6,22 @@
   <p class="session-subtitle">Meet the Patient</p>
 </div>
 
+<!-- DRAMATIC OPENING STATS -->
+<div class="dramatic-stats reveal">
+  <div class="data-highlight">
+    <span class="value stat-counter">34%</span>
+    <span class="label">Drop in 23 days</span>
+  </div>
+  <div class="data-highlight">
+    <span class="value stat-counter">33</span>
+    <span class="label">Years of data</span>
+  </div>
+  <div class="data-highlight">
+    <span class="value stat-counter">5,884</span>
+    <span class="label">Stocks analyzed</span>
+  </div>
+</div>
+
 <div class="therapist-note">
   <div class="note-header">
     <span class="note-icon">📋</span>
@@ -17,11 +33,20 @@
   </div>
 </div>
 
-<p class="lead">
+<!-- IMAGE: The Patient -->
+<figure class="hero-illustration reveal">
+  <div class="image-placeholder mood-card">
+    <p class="placeholder-label">Image: the-patient-market.png</p>
+    <p class="placeholder-desc">An abstract humanoid figure made of stock charts sitting on a therapy couch, with a glowing bull/bear symbol where the heart would be. Contemplative, data-streams flowing from body.</p>
+  </div>
+  <figcaption>The Market — our most complex patient</figcaption>
+</figure>
+
+<p class="lead reveal">
 They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.
 </p>
 
-<p>
+<p class="reveal">
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life — the ones who interact with it daily and claim to know what it's thinking.
 </p>
 

@@ -6,7 +6,16 @@
   <p class="session-subtitle">Two Perspectives on the Patient</p>
 </div>
 
-<div class="therapist-note">
+<!-- IMAGE: The Two Witnesses -->
+<figure class="hero-illustration reveal">
+  <div class="image-placeholder mood-card">
+    <p class="placeholder-label">Image: two-witnesses.png</p>
+    <p class="placeholder-desc">Split composition: Left side shows a focused investor at a desk with charts (warm lighting, professional), right side shows abstract crowd silhouettes with glowing search bars floating above their heads (cool digital tones). The two halves merge in the center. Style: Modern editorial illustration.</p>
+  </div>
+  <figcaption>The Inner Circle vs. The General Public — two different windows into market psychology</figcaption>
+</figure>
+
+<div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🔍</span>
     <span class="note-label">Observation Method</span>
@@ -20,9 +29,9 @@
 
 ## Part A: The Inner Circle Speaks
 
-<p class="lead">Every week since 1987, members of the American Association of Individual Investors have answered one simple question:</p>
+<p class="lead reveal">Every week since 1987, members of the American Association of Individual Investors have answered one simple question:</p>
 
-<div class="survey-question-box">
+<div class="survey-question-box reveal pulse-on-hover">
   <p class="survey-label">AAII Weekly Sentiment Survey</p>
   <h3 class="survey-question">"Where do you think the market will be in the next 6 months?"</h3>
   <div class="survey-options">
@@ -44,12 +53,13 @@
 
 ### Finding 1: A Baseline of Optimism
 
-<div class="plot-text-container">
+<div class="plot-text-container reveal">
   <div class="plot-side">
-    <figure>
+    <figure class="interactive-figure" data-plot="sentiment-pie">
       <img src="{{ site.baseurl }}/assets/img/sentiment_state_pie_chart.png"
            alt="Pie chart showing distribution of sentiment states">
       <figcaption>Distribution of investor sentiment across all observations (1987-2020)</figcaption>
+      <!-- INTERACTIVE: Make this pie chart interactive with hover tooltips showing exact percentages and click to filter time periods -->
     </figure>
   </div>
 
@@ -63,12 +73,13 @@
   </div>
 </div>
 
-<div class="plot-text-container reverse">
+<div class="plot-text-container reverse reveal">
   <div class="plot-side">
-    <figure>
+    <figure class="interactive-figure" data-plot="sentiment-violin">
       <img src="{{ site.baseurl }}/assets/img/sentiment_box_violin_plots.png"
            alt="Sentiment distribution boxplot">
       <figcaption>Distribution of sentiment levels showing median, spread, and outliers</figcaption>
+      <!-- INTERACTIVE: Hover to highlight specific distribution, show statistical summaries -->
     </figure>
   </div>
 
@@ -83,19 +94,20 @@
 
 ### Finding 2: Beliefs Are Sticky
 
-<div class="section-intro-text">
+<div class="section-intro-text reveal">
   <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
 </div>
 
-<div class="plot-figure">
-  <figure>
+<div class="plot-figure reveal">
+  <figure class="interactive-figure" data-plot="transition-matrix">
     <img src="{{ site.baseurl }}/assets/img/sentiment_state_transition_matrix.png"
          alt="Sentiment state transition matrix">
     <figcaption>Week-to-week sentiment transition probabilities</figcaption>
+    <!-- INTERACTIVE: Animated heatmap - hover cells to see probability flows, click to simulate random walks -->
   </figure>
 </div>
 
-<div class="transition-matrix-explanation">
+<div class="transition-matrix-explanation reveal">
   <h4>Reading the Transition Matrix</h4>
   <p>Each cell shows the probability of moving from one sentiment state (row) to another (column) in a single week:</p>
 
@@ -123,7 +135,7 @@
   </div>
 </div>
 
-<div class="insight-box">
+<div class="insight-box reveal">
   <p><strong>Key Insight:</strong> Sentiment states are highly persistent. When investors are optimistic, they tend to stay optimistic. But crucially, <strong>pessimism is less sticky than optimism</strong> — bad moods pass faster than good ones. This asymmetry will matter when we study market regimes.</p>
 </div>
 
@@ -131,31 +143,44 @@
 
 ### Finding 3: Critical Moments — When Beliefs Shift Suddenly
 
-<div class="section-intro-text">
+<div class="section-intro-text reveal">
   <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps — moments when investors rapidly reassessed their outlook.</p>
 </div>
 
-<div class="plot-figure">
-  <figure>
+<div class="plot-figure reveal">
+  <figure class="interactive-figure" data-plot="sentiment-shifts">
     <img src="{{ site.baseurl }}/assets/img/top_sudden_sentiment_changes.png"
          alt="Largest sentiment changes over time">
     <figcaption>Top sudden sentiment shifts — critical moments in market psychology</figcaption>
+    <!-- INTERACTIVE: Click on spikes to see news headlines from that date, hover for context -->
   </figure>
 </div>
 
-<p><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points — we'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
+<p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points — we'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
 
-<!-- IMAGE PLACEHOLDER: therapy-themed illustration of an anxious investor looking at screens -->
-<div class="image-placeholder">
-  <p class="placeholder-label">Suggested Image</p>
-  <p class="placeholder-desc">Illustration: A nervous investor surrounded by screens showing red numbers — representing the acute stress moments when sentiment flips</p>
-</div>
+<!-- IMAGE: Anxious Investor -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card pulse-red">
+    <p class="placeholder-label">Image: sentiment-shock.png</p>
+    <p class="placeholder-desc">A nervous investor surrounded by multiple glowing screens showing red numbers and downward charts. Expression shows anxiety. Background has abstract fear indicators (falling arrows, red gradients). The screens reflect on their face. Style: Moody, cinematic lighting, digital art.</p>
+  </div>
+  <figcaption>When fear arrives, it arrives fast</figcaption>
+</figure>
 
 ---
 
 ## Part B: The General Public Under the Microscope
 
-<div class="therapist-note">
+<!-- IMAGE: Google Search Collective -->
+<figure class="hero-illustration reveal">
+  <div class="image-placeholder mood-card gradient-border">
+    <p class="placeholder-label">Image: collective-search.png</p>
+    <p class="placeholder-desc">Abstract visualization of millions of people connected by glowing search queries floating above them. The queries form patterns like neural networks or constellations. Some queries glow red (fear-related), some green (opportunity-related), some neutral blue. Bird's eye view perspective. Style: Data visualization meets surrealist art.</p>
+  </div>
+  <figcaption>The crowd's unconscious mind — revealed through search behavior</figcaption>
+</figure>
+
+<div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🧠</span>
     <span class="note-label">Methodology Note</span>
@@ -165,13 +190,13 @@
   </div>
 </div>
 
-<p class="lead">Every week, millions of searches reveal what market participants are paying attention to. Unlike surveys, these searches are spontaneous, unfiltered, and often emotional.</p>
+<p class="lead reveal">Every week, millions of searches reveal what market participants are paying attention to. Unlike surveys, these searches are spontaneous, unfiltered, and often emotional.</p>
 
 ### Search Query Classification
 
-<p>We classified Google search queries into three sentiment categories based on their economic meaning:</p>
+<p class="reveal">We classified Google search queries into three sentiment categories based on their economic meaning:</p>
 
-<div class="search-classification">
+<div class="search-classification reveal">
   <div class="search-category bullish-search">
     <h4>Bullish Indicators</h4>
     <ul>
@@ -203,7 +228,7 @@
   </div>
 </div>
 
-<figure class="plot-figure">
+<figure class="plot-figure reveal">
   <img src="{{ site.baseurl }}/assets/img/bull.png"
        alt="Bull vs Bear Google Trends word cloud"
        class="plot">
@@ -214,14 +239,17 @@
 
 ### Search Patterns Across Market Cycles
 
-<figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
-       alt="Google Trends sentiment classification over time"
-       class="plot">
-  <figcaption>Dominant search sentiment over time — the crowd's unconscious mood</figcaption>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sentiment-timeline">
+    <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
+         alt="Google Trends sentiment classification over time"
+         class="plot">
+    <figcaption>Dominant search sentiment over time — the crowd's unconscious mood</figcaption>
+    <!-- INTERACTIVE: Zoomable timeline with brushing, hover to see specific search terms dominating each period, click periods to see breakdown -->
+  </div>
 </figure>
 
-<div class="pattern-observation">
+<div class="pattern-observation reveal">
   <h4>Pattern Observed</h4>
   <p><strong>Bullish searches build gradually</strong> during expansions — people slowly become more interested in investing as confidence grows.</p>
   <p><strong>Bearish searches spike sharply</strong> during stress — fear triggers immediate information-seeking. The asymmetry mirrors what we saw in AAII sentiment.</p>
@@ -231,14 +259,17 @@
 
 ### Correlation: Do the Two Witnesses Agree?
 
-<figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/sentiment_correlation_matrices.png"
-       alt="Correlation between sentiment measures"
-       class="plot">
-  <figcaption>Correlation matrices showing relationships between search queries and AAII sentiment</figcaption>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="correlation-matrix">
+    <img src="{{ site.baseurl }}/assets/img/sentiment_correlation_matrices.png"
+         alt="Correlation between sentiment measures"
+         class="plot">
+    <figcaption>Correlation matrices showing relationships between search queries and AAII sentiment</figcaption>
+    <!-- INTERACTIVE: Hover cells for exact values, click to see scatter plots of specific pairs -->
+  </div>
 </figure>
 
-<div class="correlation-findings">
+<div class="correlation-findings reveal">
   <h4>Key Correlations</h4>
   <ul>
     <li><strong>Within-category queries correlate strongly</strong> — "Recession" and "Unemployment" move together, as do bullish terms</li>
@@ -247,13 +278,13 @@
   </ul>
 </div>
 
-<div class="key-insight">
+<div class="key-insight reveal gradient-border">
   <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 </div>
 
 ---
 
-<div class="session-summary">
+<div class="session-summary reveal">
   <h3>Session 2 Summary: What the Witnesses Told Us</h3>
   <div class="summary-points">
     <div class="summary-point">
@@ -275,10 +306,10 @@
   </div>
 </div>
 
-<div class="session-transition">
+<div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've profiled the witnesses. Now comes the critical question: <strong>Who moves first?</strong> Does sentiment lead market movements, or does it simply follow them?</p>
-  <p class="transition-cta">Time for the timeline analysis.</p>
+  <p class="transition-cta pulse-purple">Time for the timeline analysis.</p>
 </div>
 
 </div>

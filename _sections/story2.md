@@ -6,7 +6,16 @@
   <p class="session-subtitle">Who Moves First?</p>
 </div>
 
-<div class="therapist-note dramatic">
+<!-- IMAGE: The Race - Who Moves First -->
+<figure class="hero-illustration reveal">
+  <div class="image-placeholder mood-card pulse-purple">
+    <p class="placeholder-label">Image: who-moves-first.png</p>
+    <p class="placeholder-desc">A dramatic split-second race visualization: On the left, an abstract representation of "Sentiment" (crowd of figures, thought bubbles) and on the right, "The Market" (bull/bear symbols, price charts). Between them, a glowing timeline with question marks. Style: Dynamic, motion blur, competitive energy. Think sports photography meets financial data art.</p>
+  </div>
+  <figcaption>The critical question: Does sentiment lead, follow, or move with the market?</figcaption>
+</figure>
+
+<div class="therapist-note dramatic reveal">
   <div class="note-header">
     <span class="note-icon">⚡</span>
     <span class="note-label">Critical Session</span>
@@ -20,9 +29,9 @@
 
 ## First, Define the Patient's Moods
 
-<p class="lead">Before testing if sentiment predicts the market, we need an objective way to classify the market's own states. We let the data speak for itself.</p>
+<p class="lead reveal">Before testing if sentiment predicts the market, we need an objective way to classify the market's own states. We let the data speak for itself.</p>
 
-<div class="methodology-box">
+<div class="methodology-box reveal">
   <h4>Clustering Methodology: Gaussian Mixture Model</h4>
   <p>We use a <strong>Gaussian Mixture Model (GMM)</strong> with 3 components to identify distinct market regimes. Unlike simple thresholds, GMM:</p>
   <ul>
@@ -33,14 +42,17 @@
   <p><strong>Features used:</strong> 6-month forward returns, realized volatility, market momentum, cross-sectional statistics</p>
 </div>
 
-<figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
-       alt="Market returns over time"
-       class="plot">
-  <figcaption>Weekly NASDAQ returns — the raw material for regime classification</figcaption>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="market-returns">
+    <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
+         alt="Market returns over time"
+         class="plot">
+    <figcaption>Weekly NASDAQ returns — the raw material for regime classification</figcaption>
+    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
+  </div>
 </figure>
 
-<div class="regime-cards">
+<div class="regime-cards reveal">
   <div class="regime-card regime-bull">
     <h4>Bullish Regime</h4>
     <p>Higher returns, moderate volatility. The market is trending upward with confidence.</p>
@@ -57,40 +69,46 @@
   </div>
 </div>
 
-<!-- IMAGE PLACEHOLDER: Market regime clusters visualization -->
-<div class="image-placeholder">
-  <p class="placeholder-label">Suggested Plot</p>
-  <p class="placeholder-desc">3D scatter plot or PCA projection showing the three market regime clusters with color coding — demonstrating clear separation</p>
-</div>
+<!-- IMAGE: Market Regime Clusters -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card gradient-border">
+    <p class="placeholder-label">Image: regime-clusters.png</p>
+    <p class="placeholder-desc">3D visualization of market regime clusters: Three distinct cloud formations in space - green/bullish cluster (upward trending, confident), gray/neutral cluster (sideways, indecisive), red/bearish cluster (downward, volatile). Data points as glowing particles. Style: Scientific visualization meets abstract art, dark background with luminous clusters.</p>
+  </div>
+  <figcaption>GMM identifies three distinct market personalities</figcaption>
+</figure>
 
 ---
 
 ## The Initial Evidence: Correlation
 
-<p class="lead">Let's start with the obvious question: Are sentiment and future returns related at all?</p>
+<p class="lead reveal">Let's start with the obvious question: Are sentiment and future returns related at all?</p>
 
-<div class="methodology-box">
+<div class="methodology-box reveal">
   <h4>Sentiment Metric</h4>
   <p>We define a single sentiment measure: <strong>S = %Bullish − %Bearish</strong></p>
   <p>This captures net optimism on a scale from -100 (completely bearish) to +100 (completely bullish).</p>
 </div>
 
-<figure class="plot-figure">
-  <img src="{{ site.baseurl }}/assets/img/sentiment_vs_returns.png"
-       alt="Sentiment vs Returns scatter plot"
-       class="plot">
-  <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sentiment-scatter">
+    <img src="{{ site.baseurl }}/assets/img/sentiment_vs_returns.png"
+         alt="Sentiment vs Returns scatter plot"
+         class="plot">
+    <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+    <!-- INTERACTIVE: Hover points to see dates, brush to select subsets, toggle regression line -->
+  </div>
 </figure>
 
-<div class="stats-results">
+<div class="stats-results reveal">
   <h4>Correlation Results</h4>
   <div class="stat-row">
-    <div class="stat-item">
+    <div class="stat-item pulse-green">
       <span class="stat-name">Pearson Correlation</span>
       <span class="stat-value positive">ρ ≈ 0.33</span>
       <span class="stat-pvalue">p < 0.001</span>
     </div>
-    <div class="stat-item">
+    <div class="stat-item pulse-green">
       <span class="stat-name">Spearman Rank Correlation</span>
       <span class="stat-value positive">ρₛ ≈ 0.28</span>
       <span class="stat-pvalue">p << 0.001</span>
@@ -98,7 +116,7 @@
   </div>
 </div>
 
-<div class="insight-box">
+<div class="insight-box reveal">
   <p><strong>Initial Finding:</strong> Yes! Higher optimism is associated with higher future returns. The relationship is positive, statistically significant, and robust to outliers (Spearman confirms).</p>
   <p><em>But wait...</em> correlation doesn't tell us direction. Does sentiment <strong>cause</strong> higher returns, or does something else cause both?</p>
 </div>
@@ -107,7 +125,7 @@
 
 ## The Critical Test: Granger Causality
 
-<div class="therapist-note">
+<div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">🔬</span>
     <span class="note-label">Statistical Method</span>
@@ -117,7 +135,7 @@
   </div>
 </div>
 
-<div class="methodology-box math-box">
+<div class="methodology-box math-box reveal">
   <h4>The Granger Causality Test</h4>
   <p>We test: <em>"Does knowing past sentiment help forecast future returns?"</em></p>
   <p>Formally, we compare two models:</p>
@@ -128,11 +146,11 @@
   <p>If the unrestricted model fits significantly better, sentiment "Granger-causes" returns.</p>
 </div>
 
-<div class="test-result-box">
+<div class="test-result-box reveal gradient-border">
   <h4>Granger Causality Result</h4>
   <div class="result-highlight">
     <span class="result-label">p-value</span>
-    <span class="result-value">0.047</span>
+    <span class="result-value pulse-green">0.047</span>
     <span class="result-verdict verdict-positive">Significant at 5% level</span>
   </div>
   <p>Sentiment does Granger-cause future returns. Past investor sentiment contains predictive information about market performance beyond what past returns alone explain.</p>
@@ -143,7 +161,7 @@
 
 ## The Full Picture: Vector Autoregression (VAR)
 
-<div class="therapist-note">
+<div class="therapist-note reveal">
   <div class="note-header">
     <span class="note-icon">📊</span>
     <span class="note-label">Advanced Analysis</span>
@@ -153,7 +171,7 @@
   </div>
 </div>
 
-<div class="methodology-box math-box">
+<div class="methodology-box math-box reveal">
   <h4>Vector Autoregression Model</h4>
   <p>We estimate a system of two equations:</p>
   <div class="equation">
@@ -163,7 +181,16 @@
   <p>The coefficients tell us: How much does lagged sentiment affect current returns? And vice versa?</p>
 </div>
 
-<div class="var-results">
+<!-- IMAGE: VAR Flow Diagram -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card">
+    <p class="placeholder-label">Image: var-flow.png</p>
+    <p class="placeholder-desc">Elegant flow diagram showing the VAR relationship: A large bold arrow from "Returns" to "Sentiment" (labeled ~1395), and a tiny hairline arrow from "Sentiment" to "Returns" (labeled ~0.000001). The visual disparity should be striking. Style: Clean infographic, dark background, glowing arrows with different thicknesses.</p>
+  </div>
+  <figcaption>The asymmetry revealed: Markets move sentiment, not vice versa</figcaption>
+</figure>
+
+<div class="var-results reveal">
   <h3>VAR Model Results</h3>
 
   <div class="var-equation">
@@ -175,7 +202,7 @@
         <span class="coef-pvalue">p < 0.001</span>
         <span class="coef-meaning">Strong persistence — sentiment is sticky</span>
       </div>
-      <div class="var-coef highlight-coef">
+      <div class="var-coef highlight-coef pulse-green">
         <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
         <span class="coef-value">1394.83</span>
         <span class="coef-pvalue">p < 0.001</span>
@@ -193,7 +220,7 @@
         <span class="coef-pvalue">p < 0.001</span>
         <span class="coef-meaning">Strong autocorrelation (overlapping windows)</span>
       </div>
-      <div class="var-coef highlight-coef-weak">
+      <div class="var-coef highlight-coef-weak pulse-red">
         <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
         <span class="coef-value">0.000001</span>
         <span class="coef-pvalue">p = 0.047</span>
@@ -203,7 +230,7 @@
   </div>
 </div>
 
-<div class="revelation-box">
+<div class="revelation-box reveal gradient-border">
   <h3>The Revelation</h3>
   <p>The VAR reveals a <strong>striking asymmetry</strong>:</p>
   <ul>
@@ -217,7 +244,7 @@
 
 ## The Lead-Lag Analysis: The Smoking Gun
 
-<div class="therapist-note dramatic">
+<div class="therapist-note dramatic reveal">
   <div class="note-header">
     <span class="note-icon">🎯</span>
     <span class="note-label">Key Analysis</span>
@@ -227,7 +254,7 @@
   </div>
 </div>
 
-<div class="methodology-box">
+<div class="methodology-box reveal">
   <h4>Lead-Lag Information Gain</h4>
   <p>We measure <strong>information gain</strong> — how much knowing sentiment at different lags reduces uncertainty about the next market state.</p>
   <ul>
@@ -237,17 +264,37 @@
   <p>If sentiment is predictive, positive lags should dominate. If sentiment is reactive, negative lags should dominate.</p>
 </div>
 
-<!-- IMAGE PLACEHOLDER: Lead-lag analysis plot for AAII -->
-<div class="image-placeholder large">
-  <p class="placeholder-label">Critical Plot: AAII Lead-Lag Information Gain</p>
-  <p class="placeholder-desc">Line plot showing information gain (y-axis) vs. lag in weeks (x-axis). X-axis ranges from -52 to +52 weeks. Should show clear peak at negative lags (especially around -26 weeks), with minimal signal at positive lags.</p>
+<!-- CRITICAL INTERACTIVE: Lead-Lag Analysis -->
+<div class="interactive-placeholder reveal" id="lead-lag-interactive">
+  <div class="placeholder-header">
+    <span class="placeholder-badge pulse-purple">Key Interactive Element</span>
+    <h3>Lead-Lag Information Gain Explorer</h3>
+  </div>
+  <div class="placeholder-body">
+    <p class="placeholder-desc">This is the most important visualization in the analysis:</p>
+    <ul>
+      <li>X-axis: Lag in weeks (-52 to +52)</li>
+      <li>Y-axis: Information gain (bits)</li>
+      <li>Toggle between AAII and Google Trends</li>
+      <li>Hover to see exact values at each lag</li>
+      <li>Animated highlight of the -26 week peak</li>
+      <li>Click to zoom into specific lag ranges</li>
+    </ul>
+    <div class="placeholder-mockup">
+      <div class="mockup-chart lead-lag-mockup">
+        <span>📈 Lead-Lag Information Gain Plot</span>
+        <div class="lag-indicator">Peak at -26 weeks = 6-month mirror effect</div>
+      </div>
+    </div>
+  </div>
+  <p class="placeholder-note">Implementation: Plotly.js with dual traces, crosshair tooltips, and annotation highlighting</p>
 </div>
 
-<div class="lead-lag-results aaii-results">
+<div class="lead-lag-results aaii-results reveal">
   <h3>AAII Sentiment: Lead-Lag Results</h3>
 
   <div class="result-stats">
-    <div class="result-stat">
+    <div class="result-stat pulse-red">
       <span class="stat-label">Best Lag</span>
       <span class="stat-value negative">-1 week (and strong signal at -26 weeks)</span>
     </div>
@@ -261,7 +308,7 @@
     </div>
   </div>
 
-  <div class="interpretation-box critical">
+  <div class="interpretation-box critical gradient-border">
     <h4>What This Means</h4>
     <p>The peak at <strong>lag = -26 weeks (≈ 6 months)</strong> is striking and not coincidental.</p>
     <p>Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em></p>
@@ -270,17 +317,20 @@
   </div>
 </div>
 
-<!-- IMAGE PLACEHOLDER: Lead-lag analysis plot for Google Trends -->
-<div class="image-placeholder large">
-  <p class="placeholder-label">Comparison Plot: Google Trends Lead-Lag Information Gain</p>
-  <p class="placeholder-desc">Same format as AAII plot, but showing more symmetric pattern with peak around +26 weeks. Higher overall information gain (0.05-0.07 bits).</p>
-</div>
+<!-- IMAGE: The 6-Month Mirror -->
+<figure class="mood-illustration reveal">
+  <div class="image-placeholder mood-card pulse-purple">
+    <p class="placeholder-label">Image: six-month-mirror.png</p>
+    <p class="placeholder-desc">A person looking into a mirror, but instead of their reflection, they see a stock chart from 6 months ago. The mirror has "6 MONTHS" etched at the top. The person is dressed as an investor (business attire). Surreal, contemplative mood. Style: Magritte-inspired surrealism meets financial imagery.</p>
+  </div>
+  <figcaption>The 6-Month Mirror Effect: When asked about the future, investors describe the past</figcaption>
+</figure>
 
-<div class="lead-lag-results google-results">
+<div class="lead-lag-results google-results reveal">
   <h3>Google Trends: Lead-Lag Results</h3>
 
   <div class="result-stats">
-    <div class="result-stat">
+    <div class="result-stat pulse-green">
       <span class="stat-label">Best Lag</span>
       <span class="stat-value positive">+26 weeks</span>
     </div>
@@ -294,7 +344,7 @@
     </div>
   </div>
 
-  <div class="interpretation-box">
+  <div class="interpretation-box reveal">
     <h4>What This Means</h4>
     <p>Google Trends shows a <strong>mixed reactive and predictive signal</strong>. Search behavior captures both:</p>
     <ul>
@@ -309,7 +359,7 @@
 
 ## Head-to-Head: AAII vs. Google Trends
 
-<div class="comparison-table">
+<div class="comparison-table reveal">
   <table>
     <thead>
       <tr>
@@ -343,7 +393,7 @@
   </table>
 </div>
 
-<div class="key-insight dramatic">
+<div class="key-insight dramatic reveal gradient-border">
   <h4>The 6-Month Mirror Effect</h4>
   <p>When AAII investors are asked <em>"Where will the market be in 6 months?"</em>, they appear to answer <em>"Where has the market been for the past 6 months?"</em></p>
   <p>This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — fundamental concepts in behavioral finance, now quantified in our data.</p>
@@ -351,7 +401,7 @@
 
 ---
 
-<div class="session-summary">
+<div class="session-summary reveal">
   <h3>Session 3 Summary: The Timeline Verdict</h3>
   <div class="summary-points">
     <div class="summary-point">
@@ -373,10 +423,10 @@
   </div>
 </div>
 
-<div class="session-transition">
+<div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've established the direction of causality. Now let's examine the patient's <strong>mood cycles</strong> — distinct behavioral states and how sentiment affects transitions between them.</p>
-  <p class="transition-cta">Time for the mood analysis.</p>
+  <p class="transition-cta pulse-purple">Time for the mood analysis.</p>
 </div>
 
 </div>

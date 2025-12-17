@@ -1,0 +1,746 @@
+/* ============================================
+   MARKET MOOD ANIMATIONS & DYNAMIC EFFECTS
+   The Market Goes to Therapy
+   ============================================ */
+
+/* ============================================
+   STOCK TICKER ANIMATION
+   ============================================ */
+
+.ticker-tape {
+  overflow: hidden;
+  background: linear-gradient(90deg, #1a1a2e 0%, #0f3460 50%, #1a1a2e 100%);
+  padding: 0.75rem 0;
+  position: relative;
+}
+
+.ticker-tape::before,
+.ticker-tape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.ticker-tape::before {
+  left: 0;
+  background: linear-gradient(90deg, #1a1a2e 0%, transparent 100%);
+}
+
+.ticker-tape::after {
+  right: 0;
+  background: linear-gradient(90deg, transparent 0%, #1a1a2e 100%);
+}
+
+.ticker-content {
+  display: flex;
+  animation: ticker-scroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+}
+
+.ticker-symbol {
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.ticker-price {
+  color: white;
+}
+
+.ticker-change {
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ticker-change.up {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.ticker-change.down {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   HEARTBEAT / PULSE ANIMATIONS
+   ============================================ */
+
+.pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+.pulse-red {
+  animation: pulse-red 2s ease-in-out infinite;
+}
+
+.pulse-purple {
+  animation: pulse-purple 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+}
+
+@keyframes pulse-purple {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(102, 126, 234, 0); }
+}
+
+/* Heartbeat line animation (like EKG) */
+.heartbeat-line {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+}
+
+.heartbeat-line svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: heartbeat-scroll 3s linear infinite;
+}
+
+@keyframes heartbeat-scroll {
+  0% { transform: translateY(-50%) translateX(0); }
+  100% { transform: translateY(-50%) translateX(-50%); }
+}
+
+/* ============================================
+   MOOD INDICATOR ORBS
+   ============================================ */
+
+.mood-orb {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.mood-orb::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.mood-orb.bullish {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.mood-orb.bearish {
+  background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+  animation: float-gentle 4s ease-in-out infinite 0.5s;
+}
+
+.mood-orb.neutral {
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  animation: float-gentle 4s ease-in-out infinite 1s;
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   CANDLESTICK PATTERN BACKGROUND
+   ============================================ */
+
+.candlestick-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.candlestick-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ============================================
+   SENTIMENT WAVE ANIMATION
+   ============================================ */
+
+.sentiment-wave {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z' fill='%23667eea' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 1200px 100%;
+  animation: wave-move 8s linear infinite;
+}
+
+.wave:nth-child(2) {
+  bottom: 10px;
+  opacity: 0.5;
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+.wave:nth-child(3) {
+  bottom: 20px;
+  opacity: 0.3;
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
+
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   GLOWING TEXT EFFECTS
+   ============================================ */
+
+.glow-text {
+  text-shadow:
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+.glow-text-subtle {
+  text-shadow:
+    0 0 5px rgba(102, 126, 234, 0.5),
+    0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================================
+   NUMBER COUNTER ANIMATION
+   ============================================ */
+
+.stat-counter {
+  font-variant-numeric: tabular-nums;
+  transition: all 0.3s ease;
+}
+
+.stat-counter:hover {
+  transform: scale(1.1);
+  color: #667eea;
+}
+
+/* ============================================
+   CARD HOVER EFFECTS (Market Mood)
+   ============================================ */
+
+.mood-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mood-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.mood-card:hover::before {
+  left: 100%;
+}
+
+.mood-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Bull card */
+.mood-card.bull-card {
+  border-left: 4px solid #10b981;
+}
+
+.mood-card.bull-card:hover {
+  box-shadow:
+    0 20px 40px rgba(16, 185, 129, 0.15),
+    0 0 0 1px rgba(16, 185, 129, 0.1);
+}
+
+/* Bear card */
+.mood-card.bear-card {
+  border-left: 4px solid #ef4444;
+}
+
+.mood-card.bear-card:hover {
+  box-shadow:
+    0 20px 40px rgba(239, 68, 68, 0.15),
+    0 0 0 1px rgba(239, 68, 68, 0.1);
+}
+
+/* ============================================
+   GRADIENT BORDERS (Animated)
+   ============================================ */
+
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    45deg,
+    #667eea,
+    #764ba2,
+    #f59e0b,
+    #10b981,
+    #667eea
+  );
+  background-size: 300% 300%;
+  animation: gradient-rotate 6s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradient-rotate {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ============================================
+   FLOATING PARTICLES (Stock symbols)
+   ============================================ */
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  font-family: 'SF Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.1);
+  animation: float-up 15s linear infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   TRANSITION ARROW (Between sections)
+   ============================================ */
+
+.section-arrow {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.section-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.arrow-icon {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  animation: bounce-down 2s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ============================================
+   SPLIT SCREEN COMPARISON
+   ============================================ */
+
+.split-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.split-side {
+  padding: 3rem;
+  position: relative;
+}
+
+.split-side.bull-side {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+  color: white;
+}
+
+.split-side.bear-side {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+  color: white;
+}
+
+.split-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.split-divider::before {
+  content: 'VS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #1a202c;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   EMOTION METER
+   ============================================ */
+
+.emotion-meter {
+  background: #f8f9fa;
+  border-radius: 100px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.meter-segment {
+  flex: 1;
+  height: 12px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.meter-segment:hover {
+  transform: scaleY(1.5);
+}
+
+.meter-segment.fear { background: linear-gradient(90deg, #7f1d1d, #ef4444); }
+.meter-segment.worry { background: linear-gradient(90deg, #ef4444, #f59e0b); }
+.meter-segment.neutral { background: linear-gradient(90deg, #f59e0b, #6b7280); }
+.meter-segment.hope { background: linear-gradient(90deg, #6b7280, #10b981); }
+.meter-segment.greed { background: linear-gradient(90deg, #10b981, #065f46); }
+
+.meter-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* ============================================
+   TIMELINE VISUALIZATION
+   ============================================ */
+
+.analysis-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #667eea, #764ba2, #f59e0b, #10b981);
+  border-radius: 2px;
+}
+
+.timeline-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.timeline-node:nth-child(odd) {
+  flex-direction: row;
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-node:nth-child(even) {
+  flex-direction: row-reverse;
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 4px solid #667eea;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+/* ============================================
+   REVEAL ON SCROLL (Intersection Observer)
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   QUOTE CALLOUT (Dramatic)
+   ============================================ */
+
+.dramatic-quote {
+  position: relative;
+  padding: 3rem 4rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.dramatic-quote::before {
+  content: '"';
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 8rem;
+  font-family: Georgia, serif;
+  color: rgba(102, 126, 234, 0.1);
+  line-height: 1;
+}
+
+.dramatic-quote blockquote {
+  font-size: 1.75rem;
+  font-style: italic;
+  color: #2d3748;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dramatic-quote cite {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-style: normal;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* ============================================
+   DATA HIGHLIGHT BOXES
+   ============================================ */
+
+.data-highlight {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 16px;
+  margin: 0.5rem;
+}
+
+.data-highlight .value {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.data-highlight .label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .split-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .split-divider {
+    display: none;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-node:nth-child(odd),
+  .timeline-node:nth-child(even) {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .dramatic-quote {
+    padding: 2rem 1rem;
+  }
+
+  .dramatic-quote::before {
+    font-size: 5rem;
+  }
+
+  .dramatic-quote blockquote {
+    font-size: 1.3rem;
+  }
+}
