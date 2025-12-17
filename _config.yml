@@ -8,7 +8,7 @@ remote_theme: daattali/beautiful-jekyll
 # --- Site information ---
 ###########################################################
 
-title: "When the Market Goes to Therapy"
+title: "Market Sentiment Analysis"
 author: "Empanada Group"
 description: >
   A data-driven exploration of sentiment, prices,
