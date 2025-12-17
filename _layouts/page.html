@@ -31,7 +31,21 @@
 
       <nav class="nav">
         {% for link in site.navbar-links %}
-          <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+          {% if link[1].first %}
+            <!-- Dropdown menu -->
+            <div class="nav-dropdown">
+              <button class="nav-link dropdown-toggle">{{ link[0] }}</button>
+              <div class="dropdown-menu">
+                {% for sublink in link[1] %}
+                  {% for sub in sublink %}
+                    <a class="dropdown-item" href="{{ sub[1] | relative_url }}">{{ sub[0] }}</a>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+          {% endif %}
         {% endfor %}
       </nav>
     </div>

@@ -8,7 +8,7 @@ remote_theme: daattali/beautiful-jekyll
 # --- Site information ---
 ###########################################################
 
-title: "Do Markets Listen to Investors?"
+title: "When the Market Goes to Therapy"
 author: "Empanada Group"
 description: >
   A data-driven exploration of sentiment, prices,
@@ -20,10 +20,13 @@ description: >
 
 navbar-links:
   Home: "/"
-  Introduction: "/#intro"
-  Story1: "/#story1"
-  Story2: "/#story2"
-  Results: "/#results"
+  Sessions:
+    - Session 1 - The Intake: "/#intro"
+    - Session 2 - The Witnesses: "/#story1"
+    - Session 3 - The Timeline: "/#story2"
+    - Session 4 - Mood Cycles: "/#story3"
+    - Session 5 - Sectors: "/#story4"
+  Diagnosis: "/#results"
 ###########################################################
 # --- Branding ---
 ###########################################################
