@@ -33,10 +33,11 @@
   </div>
 </div>
 
-<figure class="hero-illustration reveal">
+<figure class="hero-illustration reveal" style="max-width: 400px; margin: 2rem auto;">
   <img src="{{ site.baseurl }}/assets/img/the-patient-market.png"
        alt="The Market personified as a patient on a therapy couch"
-       class="section-image">
+       class="section-image"
+       style="max-width: 100%; height: auto; border-radius: 12px;">
   <figcaption>The Market — our most complex patient</figcaption>
 </figure>
 

@@ -16,9 +16,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## The Patient's Mood States
+<h2>The Patient's Mood States</h2>
 
 <p class="lead reveal">Rather than treating market behavior as a continuous spectrum, we identify distinct <strong>regimes</strong> — qualitatively different states with their own dynamics.</p>
 
@@ -28,7 +28,7 @@
   <p>This matches our clinical intuition: the market's "mood" today tells us something about tomorrow's mood, but we don't need to know every mood from the past decade.</p>
 </div>
 
-### Unconditional Regime Transitions
+<h3>Unconditional Regime Transitions</h3>
 
 <p class="reveal">First, we examine how the market transitions between states <em>without</em> considering external factors like sentiment.</p>
 
@@ -80,9 +80,9 @@
   <p><strong>Key Pattern:</strong> Market regimes are highly persistent — once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
 </div>
 
----
+<hr class="section-divider">
 
-### Stationary Distribution: Where Does the Market Spend Its Time?
+<h3>Stationary Distribution: Where Does the Market Spend Its Time?</h3>
 
 <div class="methodology-box math-box reveal">
   <h4>Stationary Distribution</h4>
@@ -95,9 +95,9 @@
   <p>The theoretical and empirical distributions align well, suggesting the market process is approximately <strong>stationary</strong> over our sample period. The market hasn't fundamentally changed its mood cycling behavior.</p>
 </div>
 
----
+<hr class="section-divider">
 
-### How Long Do Moods Last?
+<h3>How Long Do Moods Last?</h3>
 
 <div class="duration-analysis reveal">
   <h4>State Duration Analysis</h4>
@@ -122,9 +122,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## The Key Question: Does Sentiment Affect Transitions?
+<h2>The Key Question: Does Sentiment Affect Transitions?</h2>
 
 <div class="therapist-note dramatic reveal">
   <div class="note-header">
@@ -136,7 +136,7 @@
   </div>
 </div>
 
-### Conditional Markov Analysis: AAII Sentiment
+<h3>Conditional Markov Analysis: AAII Sentiment</h3>
 
 <div class="methodology-box math-box reveal">
   <h4>Chi-Square Independence Test</h4>
@@ -207,9 +207,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-### Conditional Markov Analysis: Google Trends
+<h3>Conditional Markov Analysis: Google Trends</h3>
 
 <div class="conditional-results google-conditional reveal">
   <h3>Google Trends Conditional Analysis Results</h3>
@@ -236,9 +236,9 @@
   </ul>
 </div>
 
----
+<hr class="section-divider">
 
-## Visualizing Mood Cycles Over Time
+<h2>Visualizing Mood Cycles Over Time</h2>
 
 <!-- INTERACTIVE: Historical Timeline -->
 <div class="interactive-placeholder reveal" id="historical-timeline-interactive">
@@ -290,7 +290,7 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
 <div class="session-summary reveal">
   <h3>Session 4 Summary: Mood Cycle Findings</h3>

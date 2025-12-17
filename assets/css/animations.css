@@ -330,15 +330,18 @@
 }
 
 /* ============================================
-   GRADIENT BORDERS (Animated)
+   GRADIENT BORDERS (Simplified - no animation)
    ============================================ */
 
 .gradient-border {
   position: relative;
   background: white;
   border-radius: 16px;
+  border: 2px solid #667eea;
 }
 
+/* Disabled animated rainbow gradient - too distracting */
+/*
 .gradient-border::before {
   content: '';
   position: absolute;
@@ -361,6 +364,7 @@
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
+*/
 
 /* ============================================
    FLOATING PARTICLES (Stock symbols)

@@ -16,9 +16,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Why Sector Analysis Matters
+<h2>Why Sector Analysis Matters</h2>
 
 <p class="lead reveal">Retail investors don't hold "the market" — they hold specific stocks in specific sectors. Their sentiment may be driven by, or influence, particular industries more than others.</p>
 
@@ -36,9 +36,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Interactive Sector Explorer
+<h2>Interactive Sector Explorer</h2>
 
 <div class="interactive-preview reveal">
   <div class="preview-header">
@@ -93,9 +93,9 @@
   <p class="placeholder-note">Implementation: Plotly.js dashboard with coordinated views, dropdown/button sector selection, animated transitions</p>
 </div>
 
----
+<hr class="section-divider">
 
-## Sector-by-Sector Findings
+<h2>Sector-by-Sector Findings</h2>
 
 <div class="sector-grid reveal">
 
@@ -211,9 +211,9 @@
 
 </div>
 
----
+<hr class="section-divider">
 
-## Statistical Test: Do Sectors Differ Significantly?
+<h2>Statistical Test: Do Sectors Differ Significantly?</h2>
 
 <div class="methodology-box reveal">
   <h4>Testing for Sector Heterogeneity</h4>
@@ -235,9 +235,9 @@
   </ul>
 </div>
 
----
+<hr class="section-divider">
 
-## Are Investors Sector-Biased?
+<h2>Are Investors Sector-Biased?</h2>
 
 <div class="bias-analysis reveal">
   <h3>The Question</h3>
@@ -249,9 +249,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## The Sector Story: A Nuanced Picture
+<h2>The Sector Story: A Nuanced Picture</h2>
 
 <div class="nuance-box reveal gradient-border">
   <p>The sector breakdown reveals that <strong>"the market"</strong> is really many markets. The sentiment-return relationship likely varies:</p>
@@ -263,7 +263,7 @@
   <p>This heterogeneity is clinically important: it suggests that investor sentiment, even when it does contain information, is not uniformly relevant across the portfolio.</p>
 </div>
 
----
+<hr class="section-divider">
 
 <div class="session-summary reveal">
   <h3>Session 5 Summary: Differential Diagnosis</h3>

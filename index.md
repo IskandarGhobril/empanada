@@ -1,8 +1,7 @@
 ---
 layout: page
-title: ""
+title: "When the Market Goes to Therapy"
 body-class: longform-page
-hide_header: true
 hide_footer: true
 css:
   - assets/css/style.css

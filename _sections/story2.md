@@ -16,9 +16,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## First, Define the Patient's Moods
+<h2>First, Define the Patient's Moods</h2>
 
 <p class="lead reveal">Before testing if sentiment predicts the market, we need an objective way to classify the market's own states. We let the data speak for itself.</p>
 
@@ -60,9 +60,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## The Initial Evidence: Correlation
+<h2>The Initial Evidence: Correlation</h2>
 
 <p class="lead reveal">Let's start with the obvious question: Are sentiment and future returns related at all?</p>
 
@@ -103,9 +103,9 @@
   <p><em>But wait...</em> correlation doesn't tell us direction. Does sentiment <strong>cause</strong> higher returns, or does something else cause both?</p>
 </div>
 
----
+<hr class="section-divider">
 
-## The Critical Test: Granger Causality
+<h2>The Critical Test: Granger Causality</h2>
 
 <div class="therapist-note reveal">
   <div class="note-header">
@@ -139,9 +139,9 @@
   <p class="result-caveat"><strong>However:</strong> The effect is modest — p-value is close to the threshold. This is not a strong signal.</p>
 </div>
 
----
+<hr class="section-divider">
 
-## The Full Picture: Vector Autoregression (VAR)
+<h2>The Full Picture: Vector Autoregression (VAR)</h2>
 
 <div class="therapist-note reveal">
   <div class="note-header">
@@ -213,9 +213,9 @@
   <p class="revelation-conclusion">The relationship is bidirectional in a statistical sense, but <strong>economically one-sided</strong>. Markets move investors far more than investors move markets.</p>
 </div>
 
----
+<hr class="section-divider">
 
-## The Lead-Lag Analysis: The Smoking Gun
+<h2>The Lead-Lag Analysis: The Smoking Gun</h2>
 
 <div class="therapist-note dramatic reveal">
   <div class="note-header">
@@ -319,9 +319,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Head-to-Head: AAII vs. Google Trends
+<h2>Head-to-Head: AAII vs. Google Trends</h2>
 
 <div class="comparison-table reveal">
   <table>
@@ -363,7 +363,7 @@
   <p>This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — fundamental concepts in behavioral finance, now quantified in our data.</p>
 </div>
 
----
+<hr class="section-divider">
 
 <div class="session-summary reveal">
   <h3>Session 3 Summary: The Timeline Verdict</h3>

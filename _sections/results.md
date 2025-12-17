@@ -10,9 +10,9 @@
   <p class="lead">After five intensive sessions examining our patient through the lens of investor sentiment, market behavior, and statistical analysis, we are ready to deliver our findings.</p>
 </div>
 
----
+<hr class="section-divider">
 
-## The Official Diagnosis
+<h2>The Official Diagnosis</h2>
 
 <div class="diagnosis-card reveal gradient-border">
   <div class="diagnosis-header">
@@ -41,9 +41,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Answering the Central Question
+<h2>Answering the Central Question</h2>
 
 <div class="central-answer reveal">
   <div class="question-recall">
@@ -58,9 +58,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## The Verdict on Our Two Hypotheses
+<h2>The Verdict on Our Two Hypotheses</h2>
 
 <div class="hypothesis-verdict reveal">
 
@@ -102,9 +102,9 @@
 
 </div>
 
----
+<hr class="section-divider">
 
-## Key Findings Summary
+<h2>Key Findings Summary</h2>
 
 <div class="findings-grid reveal">
 
@@ -146,9 +146,9 @@
 
 </div>
 
----
+<hr class="section-divider">
 
-## What This Means
+<h2>What This Means</h2>
 
 <div class="implications-section reveal">
 
@@ -184,9 +184,9 @@
 
 </div>
 
----
+<hr class="section-divider">
 
-## The Patient's Prognosis
+<h2>The Patient's Prognosis</h2>
 
 <div class="prognosis-card reveal gradient-border pulse-green">
   <div class="prognosis-header">
@@ -200,9 +200,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Limitations & Future Work
+<h2>Limitations &amp; Future Work</h2>
 
 <div class="limitations-box reveal">
   <h4>Study Limitations</h4>
@@ -224,9 +224,9 @@
   </ul>
 </div>
 
----
+<hr class="section-divider">
 
-## Final Thoughts
+<h2>Final Thoughts</h2>
 
 <div class="final-thoughts reveal">
   <blockquote class="gradient-border">
@@ -243,7 +243,7 @@
   <p class="closing-statement pulse-purple">The Market doesn't need to listen to investors. <strong>It's already heard them, and moved on.</strong></p>
 </div>
 
----
+<hr class="section-divider">
 
 <div class="session-end reveal">
   <div class="end-decoration">

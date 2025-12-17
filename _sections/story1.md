@@ -16,9 +16,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-## Part A: The Inner Circle Speaks
+<h2>Part A: The Inner Circle Speaks</h2>
 
 <p class="lead reveal">Every week since 1987, members of the American Association of Individual Investors have answered one simple question:</p>
 
@@ -34,15 +34,15 @@
 
 <p>Before we look at what investors actually believe, take a moment to answer the same question they face every week:</p>
 
-#### Where do you think the market is headed over the next six months?
+<h4>Where do you think the market is headed over the next six months?</h4>
 
 {% include click.html %}
 
 <p>Whatever your choice, you've just joined millions of investors who make this call regularly. Now let's see what the data reveals about their collective psychology.</p>
 
----
+<hr class="section-divider">
 
-### Finding 1: A Baseline of Optimism
+<h3>Finding 1: A Baseline of Optimism</h3>
 
 <div class="plot-text-container reveal">
   <div class="plot-side">
@@ -81,9 +81,9 @@
   </div>
 </div>
 
----
+<hr class="section-divider">
 
-### Finding 2: Beliefs Are Sticky
+<h3>Finding 2: Beliefs Are Sticky</h3>
 
 <div class="section-intro-text reveal">
   <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
@@ -130,9 +130,9 @@
   <p><strong>Key Insight:</strong> Sentiment states are highly persistent. When investors are optimistic, they tend to stay optimistic. But crucially, <strong>pessimism is less sticky than optimism</strong> — bad moods pass faster than good ones. This asymmetry will matter when we study market regimes.</p>
 </div>
 
----
+<hr class="section-divider">
 
-### Finding 3: Critical Moments — When Beliefs Shift Suddenly
+<h3>Finding 3: Critical Moments — When Beliefs Shift Suddenly</h3>
 
 <div class="section-intro-text reveal">
   <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps — moments when investors rapidly reassessed their outlook.</p>
@@ -149,9 +149,9 @@
 
 <p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points — we'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
 
----
+<hr class="section-divider">
 
-## Part B: The General Public Under the Microscope
+<h2>Part B: The General Public Under the Microscope</h2>
 
 <div class="therapist-note reveal">
   <div class="note-header">
@@ -165,7 +165,7 @@
 
 <p class="lead reveal">Every week, millions of searches reveal what market participants are paying attention to. Unlike surveys, these searches are spontaneous, unfiltered, and often emotional.</p>
 
-### Search Query Classification
+<h3>Search Query Classification</h3>
 
 <p class="reveal">We classified Google search queries into three sentiment categories based on their economic meaning:</p>
 
@@ -208,9 +208,9 @@
   <figcaption>Word clouds showing the language of optimism versus pessimism in search behavior</figcaption>
 </figure>
 
----
+<hr class="section-divider">
 
-### Search Patterns Across Market Cycles
+<h3>Search Patterns Across Market Cycles</h3>
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sentiment-timeline">
@@ -228,9 +228,9 @@
   <p><strong>Bearish searches spike sharply</strong> during stress — fear triggers immediate information-seeking. The asymmetry mirrors what we saw in AAII sentiment.</p>
 </div>
 
----
+<hr class="section-divider">
 
-### Correlation: Do the Two Witnesses Agree?
+<h3>Correlation: Do the Two Witnesses Agree?</h3>
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="correlation-matrix">
@@ -255,7 +255,7 @@
   <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 </div>
 
----
+<hr class="section-divider">
 
 <div class="session-summary reveal">
   <h3>Session 2 Summary: What the Witnesses Told Us</h3>
