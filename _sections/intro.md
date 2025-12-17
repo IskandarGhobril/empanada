@@ -1,77 +1,110 @@
-<div class="section section-intake">
+<div id="intro" class="section section-intake">
 
-<h2 class="section-title">The Market Goes to Therapy</h2>
+<div class="session-header">
+  <div class="session-number">Session 1</div>
+  <h2 class="section-title">The Intake</h2>
+  <p class="session-subtitle">Meet the Patient</p>
+</div>
+
+<div class="therapist-note">
+  <div class="note-header">
+    <span class="note-icon">📋</span>
+    <span class="note-label">Initial Assessment Notes</span>
+  </div>
+  <div class="note-content">
+    <p><strong>Date:</strong> March 2020. <strong>Presenting symptoms:</strong> Severe mood swings. Patient experienced a 34% decline in just 23 trading days. Investors reported extreme bearish sentiment. Google searches for "market crash" and "recession" spiked to unprecedented levels.</p>
+    <p><strong>Clinical question:</strong> Did the collective anxiety cause the crash, predict it, or simply react to it?</p>
+  </div>
+</div>
 
 <p class="lead">
-Markets are often described as rational, efficient, and forward-looking.
-But anyone who has lived through a crash knows something else is going on.
+They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.
 </p>
 
 <p>
-Sudden drops. Slow recoveries. Long stretches of optimism followed by abrupt fear.
-The market behaves less like a machine and more like a mind.
+<strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life — the ones who interact with it daily and claim to know what it's thinking.
 </p>
 
-<p>
-So we did what any responsible data scientists would do.
-<strong>We sent the Market to therapy.</strong>
-</p>
+<hr class="section-divider">
 
-<hr>
+<h3>The Patient's Support Network</h3>
 
-<h3>The Presenting Problem</h3>
+<p>We can't interview The Market directly. But we can study the two groups who spend the most time with it:</p>
 
-<p>
-The Market does not speak directly.
-Instead, we observe it through the people around it.
-</p>
+<div class="witness-cards">
 
-<ul>
-  <li><strong>The Inner Circle</strong> — investors who explicitly report their expectations</li>
-  <li><strong>The Crowd</strong> — public attention revealed through search behavior</li>
-  <li><strong>The Patient</strong> — prices, returns, and market regimes</li>
-</ul>
+  <div class="witness-card inner-circle">
+    <div class="witness-icon">🎯</div>
+    <h4>The Inner Circle</h4>
+    <p class="witness-source">AAII Weekly Sentiment Survey</p>
+    <p>Active investors who interact with the patient every week. They report their expectations directly: <em>"Where do you think the market will be in 6 months?"</em></p>
+    <ul class="witness-traits">
+      <li>Informed and engaged</li>
+      <li>Explicit predictions</li>
+      <li>Weekly frequency</li>
+      <li>Since 1987</li>
+    </ul>
+  </div>
 
-<p>
-Everyone claims to understand the market.
-But a fundamental question remains unanswered:
-</p>
-
-<div class="big-question">
-<strong>Who is influencing whom?</strong>
-</div>
-
-<hr>
-
-<h3>Two Competing Stories</h3>
-
-<div class="two-worlds">
-
-<div class="world">
-<h4>🧠 Beliefs Shape Reality</h4>
-<p>
-Investors look ahead.
-Their expectations guide decisions.
-Capital flows turn beliefs into self-fulfilling prophecies.
-</p>
-<p><em>In this world, sentiment has power.</em></p>
-</div>
-
-<div class="world">
-<h4>🪞 Reality Shapes Beliefs</h4>
-<p>
-Markets move because of shocks, fundamentals, and constraints.
-Investors update their views afterward.
-Beliefs explain what already happened.
-</p>
-<p><em>In this world, sentiment is a mirror.</em></p>
-</div>
+  <div class="witness-card general-public">
+    <div class="witness-icon">🌐</div>
+    <h4>The General Public</h4>
+    <p class="witness-source">Google Trends Search Behavior</p>
+    <p>Society at large — their collective search behavior reveals unconscious fears and hopes about the economy. They don't know they're being observed.</p>
+    <ul class="witness-traits">
+      <li>Spontaneous and unfiltered</li>
+      <li>Implicit sentiment</li>
+      <li>Real-time signals</li>
+      <li>Massive scale</li>
+    </ul>
+  </div>
 
 </div>
 
-<p class="transition">
-Only one of these stories can dominate in the data.
-Let’s begin the session.
-</p>
+<div class="clinical-question">
+  <p class="question-label">The Central Clinical Question</p>
+  <h3 class="big-question">Is investor sentiment part of the cure — or part of the disease?</h3>
+  <p class="question-subtext">Are the millions of people trying to read the market actually destabilizing it? Is the patient's support system... <em>toxic</em>?</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>Two Competing Hypotheses</h3>
+
+<p>Before we begin our analysis, we must acknowledge two fundamentally different ways this relationship could work:</p>
+
+<div class="hypothesis-cards">
+
+  <div class="hypothesis-card hypothesis-a">
+    <div class="hypothesis-header">
+      <span class="hypothesis-icon">🔮</span>
+      <span class="hypothesis-label">Hypothesis A</span>
+    </div>
+    <h4>Sentiment Has Power</h4>
+    <p>Investors look ahead. Their collective expectations shape capital flows, which move prices. Beliefs become self-fulfilling prophecies.</p>
+    <div class="hypothesis-implication">
+      <strong>Implication:</strong> Sentiment should <em>lead</em> market movements. We'd see investors turn bearish <em>before</em> crashes.
+    </div>
+  </div>
+
+  <div class="hypothesis-card hypothesis-b">
+    <div class="hypothesis-header">
+      <span class="hypothesis-icon">🪞</span>
+      <span class="hypothesis-label">Hypothesis B</span>
+    </div>
+    <h4>Sentiment Is Just a Mirror</h4>
+    <p>Markets move because of fundamentals, shocks, and institutional flows. Retail investors simply update their views afterward — explaining what already happened.</p>
+    <div class="hypothesis-implication">
+      <strong>Implication:</strong> Sentiment should <em>lag</em> market movements. Investors turn bearish <em>after</em> seeing losses.
+    </div>
+  </div>
+
+</div>
+
+<div class="session-transition">
+  <p class="transition-label">Session Notes</p>
+  <p class="transition-text">Only one of these hypotheses can dominate in the data. Armed with decades of price history, sentiment surveys, and search data — plus statistical tools sharper than any scalpel — we're going in.</p>
+  <p class="transition-cta">Let's meet the witnesses.</p>
+</div>
 
 </div>
