@@ -79,18 +79,6 @@
 }
 
 
-/* Prevent container from clipping the full-bleed ticker */
-.longform,
-.page-content,
-.markdown-body,
-.container,
-.container-md,
-.container-lg {
-  overflow: visible !important;
-}
-
-
-
 @keyframes ticker-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
