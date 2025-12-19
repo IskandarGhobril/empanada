@@ -2548,8 +2548,9 @@ figcaption {
 .plot-side img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .plot-side figcaption {
