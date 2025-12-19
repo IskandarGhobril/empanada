@@ -2593,6 +2593,25 @@ figcaption {
   order: 1;
 }
 
+
+.plot-figure img,
+img.plot,
+figure.interactive-figure img {
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.plot-figure,
+figure.interactive-figure {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+
 /* ============================================
    SECTION INTRO TEXT
    ============================================ */
