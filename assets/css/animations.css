@@ -12,6 +12,8 @@
   background: linear-gradient(90deg, #1a1a2e 0%, #0f3460 50%, #1a1a2e 100%);
   padding: 0.75rem 0;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .ticker-tape::before,
@@ -22,6 +24,7 @@
   bottom: 0;
   width: 100px;
   z-index: 2;
+  pointer-events: none;
 }
 
 .ticker-tape::before {
