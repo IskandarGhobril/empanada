@@ -12,8 +12,8 @@ This data story website focuses on **presenting data analysis results** through 
 ## AI-GENERATED IMAGE (1 Total)
 
 ### The Patient (Opening Image)
-**Filename:** `the-patient-market.png`
-**Location:** `assets/img/the-patient-market.png`
+**Filename:** `the-patient-market1.png`
+**Location:** `assets/img/the-patient-market1.png`
 **Used in:** `_sections/intro.md` - Opening illustration
 
 **Status:** Uploaded and implemented.
