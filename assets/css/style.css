@@ -2614,32 +2614,6 @@ figcaption {
   color: #4a5568;
 }
 
-
-/* --- Make plots blend into the page (no card, no shadow) --- */
-.plot-text-container .plot-side,
-.plot-text-container .plot-side figure,
-.plot-text-container .plot-side .interactive-figure,
-.plot-figure,
-.plot-figure figure {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-}
-
-/* Ensure the image itself never gets a shadow/border from theme defaults */
-.plot-text-container .plot-side img,
-.plot-figure img,
-img.plot {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  display: block;
-}
-
-
 /* ============================================
    RESPONSIVE STYLES
    ============================================ */

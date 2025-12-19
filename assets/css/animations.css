@@ -79,20 +79,14 @@
 }
 
 
-/* FORCE ticker to be full-viewport width (robust full-bleed) */
-.ticker-tape {
-  display: block !important;
-
-  width: 100vw !important;
-  max-width: 100vw !important;
-
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-
-  border-radius: 0 !important;
+/* Prevent container from clipping the full-bleed ticker */
+.longform,
+.page-content,
+.markdown-body,
+.container,
+.container-md,
+.container-lg {
+  overflow: visible !important;
 }
 
 
