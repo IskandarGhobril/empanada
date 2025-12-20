@@ -4593,3 +4593,33 @@ hr,
   line-height: 1.65;
   margin: 0;
 }
+
+/* ============================================
+   VAR SECTION SIDE-BY-SIDE LAYOUT
+   ============================================ */
+
+/* The container that holds text on left, image on right */
+.var-layout-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Give text slightly more space than image */
+    gap: 2.5rem;                      /* Generous space between them */
+    align-items: center;              /* Vertically align center */
+    margin-bottom: 2rem;
+}
+
+/* Ensure the image container doesn't have extra margins */
+.var-plot-right .plot-figure {
+    margin: 0 !important;
+}
+
+/* Mobile Fallback: Stack them vertically on smaller screens */
+@media (max-width: 900px) {
+    .var-layout-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    /* On mobile, move image above the formulas for better flow */
+    .var-plot-right {
+        order: -1; 
+    }
+}

@@ -34,15 +34,7 @@
   <p><strong>Features used:</strong> 6-month forward returns, realized volatility, market momentum, cross-sectional statistics</p>
 </div>
 
-<figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="market-returns">
-    <img src="{{ site.baseurl }}/assets/img/clustering.png"
-         alt="Market returns over time"
-         class="plot">
-    <figcaption>Weekly NASDAQ returns — the raw material for regime classification</figcaption>
-    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
-  </div>
-</figure>
+
 
 <div class="regime-cards reveal">
   <div class="regime-card regime-bull">
@@ -148,36 +140,51 @@
 
 <h2>The Full Picture: Vector Autoregression (VAR)</h2>
 
-<p class="section-intro">
-  To understand whether sentiment and returns influence each other, we estimate a
-  <strong>Vector Autoregression (VAR)</strong>, which captures bidirectional dynamics
-  between the two variables.
-</p>
+<div class="var-layout-container">
 
-<!-- VAR model -->
-<div class="var-model">
-  <h4>Model specification</h4>
+  <div class="var-content-left">
+    <p class="section-intro" style="margin-top: 0;">
+      To understand whether sentiment and returns influence each other, we estimate a
+      <strong>Vector Autoregression (VAR)</strong>, which captures bidirectional dynamics
+      between the two variables.
+    </p>
 
-  <div class="var-equations">
-    <div class="var-eq">
-      <span class="eq-label">Sentiment</span>
-      <span class="eq-formula">
-        S<sub>t</sub> = α₁ + β₁S<sub>t−1</sub> + γ₁R<sub>t−1</sub> + ε<sub>1t</sub>
-      </span>
-    </div>
+    <div class="var-model">
+      <h4>Model specification</h4>
 
-    <div class="var-eq">
-      <span class="eq-label">Returns</span>
-      <span class="eq-formula">
-        R<sub>t</sub> = α₂ + β₂R<sub>t−1</sub> + γ₂S<sub>t−1</sub> + ε<sub>2t</sub>
-      </span>
+      <div class="var-equations">
+        <div class="var-eq">
+          <span class="eq-label">Sentiment</span>
+          <span class="eq-formula">
+            S<sub>t</sub> = α₁ + β₁S<sub>t−1</sub> + γ₁R<sub>t−1</sub> + ε<sub>1t</sub>
+          </span>
+        </div>
+
+        <div class="var-eq">
+          <span class="eq-label">Returns</span>
+          <span class="eq-formula">
+            R<sub>t</sub> = α₂ + β₂R<sub>t−1</sub> + γ₂S<sub>t−1</sub> + ε<sub>2t</sub>
+          </span>
+        </div>
+      </div>
+
+      <p class="var-note">
+        The coefficients quantify how past sentiment affects returns — and how past
+        returns affect sentiment.
+      </p>
     </div>
   </div>
 
-  <p class="var-note">
-    The coefficients quantify how past sentiment affects returns — and how past
-    returns affect sentiment.
-  </p>
+  <div class="var-plot-right">
+    <figure class="plot-figure reveal">
+      <img src="{{ site.baseurl }}/assets/img/clustering.png"
+           alt="VAR Model Interaction Visualization"
+           class="plot"
+           style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <figcaption>Visualizing the complex interplay between market states and sentiment.</figcaption>
+    </figure>
+  </div>
+
 </div>
 
 <!-- VAR results -->
