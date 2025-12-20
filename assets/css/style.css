@@ -2809,3 +2809,15 @@ img.plot {
 .option:focus {
   outline: none; /* Remove focus outline */
 }
+
+.submit-btn {
+  padding: 0.75rem 2rem;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 2rem; /* Increased from 1rem to 2rem */
+  transition: all 0.3s ease;
+}

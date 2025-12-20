@@ -188,11 +188,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   let selectedSentiment = null;
+  let isSubmitted = false;
+
+  const surveyBox = document.querySelector('.survey-question-box');
+  
+  // Reset survey when clicking the box after submission
+  if (surveyBox) {
+    surveyBox.addEventListener('click', function(e) {
+      if (isSubmitted && e.target === this) {
+        resetSurvey();
+      }
+    });
+  }
+
+  function resetSurvey() {
+    // Re-enable all buttons
+    document.querySelectorAll('.option').forEach(opt => {
+      opt.disabled = false;
+      opt.classList.remove('selected');
+    });
+    
+    const submitBtn = document.getElementById('submitSentiment');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+    }
+    
+    const messageEl = document.getElementById('responseMessage');
+    if (messageEl) {
+      messageEl.textContent = '';
+    }
+    
+    selectedSentiment = null;
+    isSubmitted = false;
+  }
 
   // Handle option selection
   document.querySelectorAll('.option').forEach(option => {
-    option.addEventListener('click', function() {
-      console.log('Button clicked!'); // Debug line
+    option.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent triggering box click
+      
+      if (isSubmitted) return; // Don't allow selection after submit
       
       // Remove selected class from all options
       document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
@@ -214,7 +249,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle submit
   const submitBtn = document.getElementById('submitSentiment');
   if (submitBtn) {
-    submitBtn.addEventListener('click', function() {
+    submitBtn.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent triggering box click
+      
       if (selectedSentiment) {
         const messageEl = document.getElementById('responseMessage');
         if (messageEl) {
@@ -225,6 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Disable buttons after submission
         document.querySelectorAll('.option').forEach(opt => opt.disabled = true);
         this.disabled = true;
+        
+        isSubmitted = true;
         
         console.log('Submitted sentiment:', selectedSentiment);
       }
