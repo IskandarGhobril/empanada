@@ -167,11 +167,10 @@
   </div>
 </div>
 
-<p class="lead reveal">Every week, millions of searches reveal what market participants are paying attention to. Unlike surveys, these searches are spontaneous, unfiltered, and often emotional.</p>
-
 <h3>Search Query Classification</h3>
 
-<p>We classified Google search queries into three sentiment categories based on their economic meaning:</p>
+<p>Every week, millions of searches reveal what market participants are paying attention to. Unlike surveys, these searches are spontaneous, unfiltered, and often emotional.
+We classified Google search queries into three sentiment categories based on their economic meaning:</p>
 
 <div class="classification-layout">
   <!-- Left side: Buttons and Table -->
