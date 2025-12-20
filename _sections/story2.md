@@ -110,7 +110,7 @@
 
 <h2>The Critical Test: Granger Causality</h2>
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-boxes">
   <div class="note-header">
     <span class="note-icon"></span>
     <span class="note-label">Statistical Method</span>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<div class="methodology-box math-box reveal">
+<div class="methodology-box math-box reveal no-box">
   <h4>The Granger Causality Test</h4>
   <p>We test: <em>"Does knowing past sentiment help forecast future returns?"</em></p>
   <p>Formally, we compare two models:</p>
@@ -146,9 +146,9 @@
 
 <h2>The Full Picture: Vector Autoregression (VAR)</h2>
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
-    <span class="note-icon">📊</span>
+    <span class="note-icon"></span>
     <span class="note-label">Advanced Analysis</span>
   </div>
   <div class="note-content">
@@ -156,7 +156,7 @@
   </div>
 </div>
 
-<div class="methodology-box math-box reveal">
+<div class="methodology-box math-box reveal no-box">
   <h4>Vector Autoregression Model</h4>
   <p>We estimate a system of two equations:</p>
   <div class="equation">
