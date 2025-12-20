@@ -3723,3 +3723,28 @@ img.plot {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ============================================
+   UNIFY TEXT STYLES 
+   (Standardizes font size/weight for all non-boxed text)
+   ============================================ */
+
+/* Target standard paragraphs, lead text, and the notes we un-boxed */
+body.longform-page .longform p, 
+body.longform-page .longform .lead, 
+.therapist-note.no-box .note-content p,
+.session-transition .transition-text {
+    font-size: 1.1rem !important;  /* Unified size (approx 17-18px) */
+    line-height: 1.7 !important;   /* Consistent, readable line height */
+    color: #2d3748 !important;     /* Standard dark gray color */
+    font-weight: 400 !important;   /* Removes extra thickness from 'lead' text */
+    letter-spacing: normal !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Ensure proper spacing between these text blocks */
+.therapist-note.no-box p,
+.session-transition p {
+    margin-bottom: 1.5rem !important;
+}
