@@ -286,16 +286,16 @@ We classified Google search queries into three sentiment categories based on the
       Red cells indicate strong positive correlations, while blue cells show negative correlations. 
       Click on a category above to explore specific sentiment patterns.
     </p>
-  </div>
 
-  <div class="correlation-findings reveal">
-  <h4>Key Correlations</h4>
-  <ul>
-    <li><strong>Within-category queries correlate strongly</strong> — "Recession" and "Unemployment" move together, as do bullish terms</li>
-    <li><strong>Bearish and Bullish searches show some negative correlation</strong> — when fear rises, optimism falls</li>
-    <li><strong>AAII and Google sentiment are related but distinct</strong> — they capture different aspects of the same underlying psychology</li>
-  </ul>
-</div>
+    <div class="correlation-findings reveal">
+    <h4>Key Correlations</h4>
+    <ul>
+      <li><strong>Within-category queries correlate strongly</strong> — "Recession" and "Unemployment" move together, as do bullish terms</li>
+      <li><strong>Bearish and Bullish searches show some negative correlation</strong> — when fear rises, optimism falls</li>
+      <li><strong>AAII and Google sentiment are related but distinct</strong> — they capture different aspects of the same underlying psychology</li>
+    </ul>
+    </div>
+  </div>
 </div>
 
 
