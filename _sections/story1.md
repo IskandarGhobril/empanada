@@ -167,7 +167,7 @@
 
 <h2>Part B: The General Public Under the Microscope</h2>
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
     <span class="note-icon">🧠</span>
     <span class="note-label">Methodology Note</span>
