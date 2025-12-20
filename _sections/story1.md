@@ -92,7 +92,6 @@
 
 <p class="reveal">
   <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
-</div>
 
 <div class="transition-layout">
   <!-- Left side: Plot -->
@@ -306,7 +305,6 @@
 </div>
 
 <div class="key-insight reveal gradient-border no-box">
-  <p>
   <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 </div>
 
