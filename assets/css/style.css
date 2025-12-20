@@ -2956,30 +2956,12 @@ img.plot {
 
 
 
-/* ONLY this plot */
-figure[data-plot="sentiment-pie"]{
-  width: clamp(90px, 12vw, 160px);
-  margin: 0 auto;
-}
+figure[data-plot="sentiment-pie"] { width: 120px !important; margin: 0 auto; }
+figure[data-plot="sentiment-pie"] .plotly-graph-div { width: 120px !important; height: 120px !important; }
+figure[data-plot="sentiment-pie"] .plotly-graph-div > div { width: 120px !important; height: 120px !important; }
+figure[data-plot="sentiment-pie"] svg, 
+figure[data-plot="sentiment-pie"] canvas { width: 120px !important; height: 120px !important; }
 
-/* Force Plotly container size */
-figure[data-plot="sentiment-pie"] .plotly-graph-div{
-  width: 100% !important;
-  height: clamp(90px, 12vw, 160px) !important;
-}
-
-/* Plotly often adds an inner wrapper div with inline px sizing */
-figure[data-plot="sentiment-pie"] .plotly-graph-div > div{
-  width: 100% !important;
-  height: 100% !important;
-}
-
-/* Sometimes the svg/canvas keeps its own explicit px size */
-figure[data-plot="sentiment-pie"] .plotly-graph-div svg,
-figure[data-plot="sentiment-pie"] .plotly-graph-div canvas{
-  width: 100% !important;
-  height: 100% !important;
-}
 
 
 
