@@ -2825,22 +2825,35 @@ img.plot {
 
 .therapy-layout {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: stretch;
+  gap: 2.5rem;
   margin: 3rem 0;
 }
 
 .therapist-note {
   flex: 1.4;
+  padding: 2rem;
+  background: #fff9e6;
+  border-radius: 16px;
 }
 
 .hero-illustration {
   flex: 1;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero-illustration img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
+
+.hero-illustration figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
