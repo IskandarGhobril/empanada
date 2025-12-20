@@ -768,36 +768,31 @@ body.longform-page .longform {
   margin-top: 0.75rem;
 }
 
-/* ============================================
-   SESSION TRANSITION
-   ============================================ */
+/* === SESSION TRANSITION === */
 
 .session-transition {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 1.75rem;
+  background: transparent; /* Changed: Removes the gray box background */
+  padding: 0;              /* Changed: Removes the padding inside the box */
   text-align: center;
-  margin: 2rem 0;
+  margin: 2rem 0;          /* Keeps spacing above and below */
+  border: none;
 }
 
 .session-transition.final {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: transparent; /* Ensures the 'final' variation is also clear */
 }
 
+/* Changed: Hides the "SESSION NOTES" title completely */
 .transition-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #667eea;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+  display: none; 
 }
 
 .transition-text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;      /* Slightly larger for readability */
   color: #4a5568;
   margin-bottom: 0.75rem;
   line-height: 1.6;
+  font-style: italic;     /* Optional: Makes it look more like a narrative transition */
 }
 
 .transition-cta {
