@@ -1,10 +1,12 @@
 <div id="results" class="section section-diagnosis">
 
-<div class="session-header final-session">
-  <div class="session-number">Final Session</div>
-  <h2 class="section-title">The Diagnosis</h2>
+<div class="session-header">
+  <h2 class="section-title">
+    <span class="session-label">Final Session:</span> The Diagnosis
+  </h2>
   <p class="session-subtitle">What We Learned About The Market</p>
 </div>
+
 
 <div class="diagnosis-intro reveal">
   <p class="lead">After five intensive sessions examining our patient through the lens of investor sentiment, market behavior, and statistical analysis, we are ready to deliver our findings.</p>

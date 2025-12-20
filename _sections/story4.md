@@ -1,10 +1,12 @@
 <div id="story4" class="section section-sectors">
 
 <div class="session-header">
-  <div class="session-number">Session 5</div>
-  <h2 class="section-title">Sector Breakdown</h2>
+  <h2 class="section-title">
+    <span class="session-label">Session 5:</span> Sector Breakdown
+  </h2>
   <p class="session-subtitle">Differential Diagnosis</p>
 </div>
+
 
 <div class="therapist-note reveal">
   <div class="note-header">

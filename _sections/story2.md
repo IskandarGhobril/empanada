@@ -34,16 +34,16 @@
   <p><strong>Features used:</strong> 6-month forward returns, realized volatility, market momentum, cross-sectional statistics</p>
 </div>
 
- <div class="classification-layout reveal">
-    <figure class="plot-figure reveal">
-      <img id="sentimentImage" 
-           src="{{ site.baseurl }}/assets/img/clustering.png"
-           alt="clustering"
-           class="sentiment-wordcloud">
-      <figcaption>Clustering </figcaption>
-    </figure>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="market-returns">
+    <img src="{{ site.baseurl }}/assets/img/clustering.png"
+         alt="Market returns over time"
+         class="plot">
+    <figcaption>Weekly NASDAQ returns — the raw material for regime classification</figcaption>
+    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
   </div>
-</div>
+</figure>
+
 
 <div class="regime-cards reveal">
   <div class="regime-card regime-bull">

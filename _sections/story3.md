@@ -1,10 +1,12 @@
 <div id="story3" class="section section-mood-cycles">
 
 <div class="session-header">
-  <div class="session-number">Session 4</div>
-  <h2 class="section-title">The Mood Cycles</h2>
+  <h2 class="section-title">
+    <span class="session-label">Session 4:</span> The Mood Cycles
+  </h2>
   <p class="session-subtitle">Identifying States</p>
 </div>
+
 
 <div class="therapist-note reveal no-box">
   <div class="note-header">
