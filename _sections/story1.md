@@ -96,40 +96,43 @@
   <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
 </div>
 
-<div class="plot-figure reveal">
-  <figure class="interactive-figure" data-plot="transition-matrix">
-    <img src="{{ site.baseurl }}/assets/img/sentiment_state_transition_matrix.png"
-         alt="Sentiment state transition matrix"
-         style="width: 60%; height: auto;">
-    <figcaption>Week-to-week sentiment transition probabilities</figcaption>
-    <!-- INTERACTIVE: Animated heatmap - hover cells to see probability flows, click to simulate random walks -->
-  </figure>
-</div>
+<div class="transition-layout">
+  <!-- Left side: Plot -->
+  <div class="plot-figure reveal">
+    <figure class="interactive-figure" data-plot="transition-matrix">
+      <img src="{{ site.baseurl }}/assets/img/sentiment_state_transition_matrix.png"
+           alt="Sentiment state transition matrix"
+           class="transition-matrix-img">
+      <figcaption>Week-to-week sentiment transition probabilities</figcaption>
+    </figure>
+  </div>
 
-<div class="transition-matrix-explanation reveal">
-  <h4>Reading the Transition Matrix</h4>
-  <p>Each cell shows the probability of moving from one sentiment state (row) to another (column) in a single week:</p>
+  <!-- Right side: Explanation with stacked cards -->
+  <div class="transition-matrix-explanation reveal">
+    <h4>Reading the Transition Matrix</h4>
+    <p class="matrix-intro">Each cell shows the probability of moving from one sentiment state (row) to another (column) in a single week:</p>
 
-  <div class="matrix-highlights">
-    <div class="matrix-stat">
-      <span class="stat-value">77%</span>
-      <span class="stat-label">Bullish → Bullish</span>
-      <span class="stat-meaning">Optimism is highly persistent</span>
-    </div>
-    <div class="matrix-stat">
-      <span class="stat-value">64%</span>
-      <span class="stat-label">Bearish → Bearish</span>
-      <span class="stat-meaning">Pessimism is sticky too, but less so</span>
-    </div>
-    <div class="matrix-stat">
-      <span class="stat-value">23%</span>
-      <span class="stat-label">Bearish → Bullish</span>
-      <span class="stat-meaning">Recovery from pessimism is relatively fast</span>
-    </div>
-    <div class="matrix-stat">
-      <span class="stat-value">11%</span>
-      <span class="stat-label">Bullish → Bearish</span>
-      <span class="stat-meaning">Falls into pessimism are rare</span>
+    <div class="matrix-highlights">
+      <div class="matrix-stat">
+        <span class="stat-value">77%</span>
+        <span class="stat-label">Bullish → Bullish</span>
+        <span class="stat-meaning">Optimism is highly persistent</span>
+      </div>
+      <div class="matrix-stat">
+        <span class="stat-value">64%</span>
+        <span class="stat-label">Bearish → Bearish</span>
+        <span class="stat-meaning">Pessimism is sticky too, but less so</span>
+      </div>
+      <div class="matrix-stat">
+        <span class="stat-value">23%</span>
+        <span class="stat-label">Bearish → Bullish</span>
+        <span class="stat-meaning">Recovery from pessimism is relatively fast</span>
+      </div>
+      <div class="matrix-stat">
+        <span class="stat-value">11%</span>
+        <span class="stat-label">Bullish → Bearish</span>
+        <span class="stat-meaning">Falls into pessimism are rare</span>
+      </div>
     </div>
   </div>
 </div>
