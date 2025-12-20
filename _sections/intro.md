@@ -48,9 +48,6 @@
 
 <p class="lead reveal">
 They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.
-</p>
-
-<p class="reveal">
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life — the ones who interact with it daily and claim to know what it's thinking.
 </p>
 

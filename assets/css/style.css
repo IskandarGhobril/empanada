@@ -2851,7 +2851,6 @@ img.plot {
   outline: none;
 }
 
-
 .therapy-layout {
   display: flex;
   align-items: stretch; 
@@ -2862,9 +2861,9 @@ img.plot {
 .therapist-note {
   flex: 1.4;
   padding: 1.5rem;
-  background: transparent; /* Changed from #fff9e6 */
+  background: transparent;
   border-radius: 12px;
-  border: none; /* Changed from 2px solid #f0c040 */
+  border: 2px solid #7c93e8; /* Blue-mauve border */
   display: flex;
   flex-direction: column;
 }
@@ -2878,7 +2877,7 @@ img.plot {
 
 .note-label {
   font-weight: 700;
-  color: #333; /* Changed from #8b4513 to match the rest */
+  color: #5b6fd8; /* Matching blue-mauve color */
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2893,6 +2892,7 @@ img.plot {
   line-height: 1.6;
   color: #4a4a4a;
 }
+
 .note-label {
   font-weight: 700;
   color: #8b4513;
