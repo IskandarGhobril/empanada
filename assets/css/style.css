@@ -3763,3 +3763,26 @@ body.longform-page .longform .lead,
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   COMPACT SPACING FOR UN-BOXED TEXT
+   (Reduces gaps in Granger Causality & Methodology sections)
+   ============================================ */
+
+/* Tighter spacing for paragraphs inside no-box containers */
+.therapist-note.no-box p,
+.methodology-box.no-box p {
+    margin-bottom: 0.6rem !important; /* Reduced from 1.5rem to 0.6rem */
+}
+
+/* Even tighter spacing for the equation lines so they stay grouped */
+.equation p {
+    margin-bottom: 0.2rem !important;
+    margin-top: 0.2rem !important;
+}
+
+/* Reduce the gap between the small headers and the text below them */
+.methodology-box.no-box h4,
+.therapist-note.no-box .note-header {
+    margin-bottom: 0.4rem !important;
+}
