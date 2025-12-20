@@ -26,9 +26,18 @@
   <p class="survey-label">AAII Weekly Sentiment Survey</p>
   <h3 class="survey-question">"Where do you think the market will be in the next 6 months?"</h3>
   <div class="survey-options">
-    <button class="option bullish" data-sentiment="bullish">Bullish</button>
-    <button class="option neutral" data-sentiment="neutral">Neutral</button>
-    <button class="option bearish" data-sentiment="bearish">Bearish</button>
+    <button class="option bullish" data-sentiment="bullish">
+      <span class="option-title">Bullish</span>
+      <span class="option-desc">The market will rise</span>
+    </button>
+    <button class="option neutral" data-sentiment="neutral">
+      <span class="option-title">Neutral</span>
+      <span class="option-desc">Markets will stay flat</span>
+    </button>
+    <button class="option bearish" data-sentiment="bearish">
+      <span class="option-title">Bearish</span>
+      <span class="option-desc">The market will fall</span>
+    </button>
   </div>
   <button class="submit-btn" id="submitSentiment" disabled>Submit</button>
   <p class="response-message" id="responseMessage"></p>
