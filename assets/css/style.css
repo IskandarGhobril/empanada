@@ -2532,10 +2532,12 @@ body.longform-page .longform {
 img.plot {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   display: block;
   margin: 0 auto;
+  background: transparent;
 }
 
 .plot-figure figcaption,
@@ -2568,8 +2570,9 @@ figcaption {
 .plot-side img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .plot-side figcaption {
@@ -2611,6 +2614,31 @@ figcaption {
 .plot-text-container.reverse .text-side {
   order: 1;
 }
+
+/* --- Make plots blend into the page (no card, no shadow) --- */
+.plot-text-container .plot-side,
+.plot-text-container .plot-side figure,
+.plot-text-container .plot-side .interactive-figure,
+.plot-figure,
+.plot-figure figure {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the image itself never gets a shadow/border from theme defaults */
+.plot-text-container .plot-side img,
+.plot-figure img,
+img.plot {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  display: block;
+}
+
 
 /* ============================================
    SECTION INTRO TEXT
