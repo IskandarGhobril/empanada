@@ -1,8 +1,9 @@
 <div id="intro" class="section section-intake">
 
 <div class="session-header">
-  <div class="session-number">Session 1:</div>
-  <h2 class="section-title">The Intake</h2>
+  <h2 class="section-title">
+    <span class="session-label">Session 1:</span> The Intake
+  </h2>
   <p class="session-subtitle">Meet the Patient</p>
 </div>
 
@@ -39,7 +40,7 @@
     <img src="{{ site.baseurl }}/assets/img/the-patient-market1.png"
          alt="The Market personified as a patient on a therapy couch"
          class="section-image">
-         
+
     <figcaption>The Market — our most complex patient</figcaption>
   </figure>
 

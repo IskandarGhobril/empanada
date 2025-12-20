@@ -1,8 +1,9 @@
 <div id="story2" class="section section-timeline">
 
 <div class="session-header">
-  <div class="session-number">Session 3</div>
-  <h2 class="section-title">The Timeline</h2>
+  <h2 class="section-title">
+    <span class="session-label">Session 3:</span> The Timeline
+  </h2>
   <p class="session-subtitle">Who Moves First?</p>
 </div>
 
