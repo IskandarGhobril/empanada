@@ -4500,3 +4500,46 @@ hr,
     display: none !important;
     border: none !important;
 }
+
+.session-block {
+  margin: 6rem 0 4rem;
+  text-align: center;
+}
+
+.session-header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.session-number {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+.session-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a202c;
+}
+
+.session-subtitle {
+  font-size: 1.2rem;
+  color: #718096;
+  margin-top: 0.75rem;
+}
+
+.session-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #667eea;
+  margin: 2rem auto 0;
+  border-radius: 2px;
+}
