@@ -112,7 +112,7 @@
 
 <div class="therapist-note reveal">
   <div class="note-header">
-    <span class="note-icon">🔬</span>
+    <span class="note-icon"></span>
     <span class="note-label">Statistical Method</span>
   </div>
   <div class="note-content">
