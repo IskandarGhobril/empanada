@@ -967,8 +967,8 @@ body.longform-page .longform {
    ============================================ */
 
 .insight-box {
-  background: #fffbeb;
-  border-left: 3px solid #f59e0b;
+  background: rgba(102, 126, 234, 0.05);
+  border-left: 3px solid #667eea;
   padding: 1rem;
   border-radius: 0 6px 6px 0;
   margin: 1.5rem 0;
