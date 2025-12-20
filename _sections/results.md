@@ -13,88 +13,60 @@
   <hr class="section-divider">
 
   <h2>The Official Diagnosis</h2>
+<div class="diagnosis-accordion reveal">
 
-  <div class="diagnosis-text reveal">
-    <h3 style="margin-bottom: 1.5rem; color: #2d3748;">📋 Clinical Assessment: The Market</h3>
-    
-    <div style="margin-bottom: 1.5rem;">
-      <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #1a202c;">
-        <span style="color: #92400e; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-right: 0.5rem; letter-spacing: 0.05em;">Primary Finding</span> 
-        Retail Investor Sentiment Is Primarily Reactive
-      </h4>
-      <p style="margin: 0; color: #4a5568;">Despite asking about the future ("Where will the market be in 6 months?"), AAII survey respondents largely report their experience of the past. The peak at lag = -26 weeks is not coincidental — it matches the survey's 6-month horizon exactly.</p>
-    </div>
+  <!-- Header (clickable) -->
+  <button class="accordion-header" aria-expanded="false">
+    <span class="accordion-title">📋 Clinical Assessment: The Market</span>
+    <span class="accordion-arrow">▾</span>
+  </button>
 
-    <div style="margin-bottom: 1.5rem;">
-      <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #1a202c;">
-        <span style="color: #667eea; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-right: 0.5rem; letter-spacing: 0.05em;">Evidence</span> 
-        The 6-Month Mirror Effect
-      </h4>
-      <p style="margin: 0; color: #4a5568;">When investors are asked to predict the future, they systematically anchor on where the market has been. This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — core concepts in behavioral finance, now quantified.</p>
-    </div>
+  <!-- Collapsible content -->
+  <div class="accordion-content">
 
-    <div>
-      <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #1a202c;">
-        <span style="color: #065f46; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-right: 0.5rem; letter-spacing: 0.05em;">Comparison</span> 
-        Google Trends Outperforms Surveys
-      </h4>
-      <p style="margin: 0; color: #4a5568;">Aggregate search behavior contains more market-relevant information than explicit expectations surveys. The crowd's unconscious behavior reveals more than their conscious predictions.</p>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h2>Answering the Central Question</h2>
-
-  <div class="central-answer reveal" style="display: block; text-align: center; margin: 2rem 0;">
-    <p style="font-size: 1.1rem; color: #718096; font-style: italic; margin-bottom: 0.5rem;">
-      We Asked: Do investors’ predictions pull the market in a certain direction, or are they largely reactions to market movements that have already begun?
-    </p>
-    <h3 style="font-size: 1.8rem; color: #667eea; margin-bottom: 0.5rem; margin-top: 0;">
-      The Answer: They are reactions.
-    </h3>
-    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #2d3748;">
-      Sentiment primarily <strong>reflects</strong> what markets have already done. It is a symptom, not a cause.
-    </p>
-  </div>
-
-  <hr class="section-divider">
-
-  <h2>The Verdict on Our Two Hypotheses</h2>
-
-  <div class="lead-lag-grid-wrapper reveal" style="margin: 1.5rem 0;">
-    
-    <div class="verdict-card verdict-rejected" style="border: 1px solid #ef4444; border-radius: 8px; padding: 1.25rem;">
-      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <span style="font-size: 1.2rem;">❌</span>
-        <span style="color: #ef4444; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Largely Rejected</span>
+    <div class="diagnosis-text">
+      
+      <div class="diagnosis-section">
+        <h4>
+          <span class="label label-primary">Primary Finding</span>
+          Retail Investor Sentiment Is Primarily Reactive
+        </h4>
+        <p>
+          Despite asking about the future ("Where will the market be in 6 months?"),
+          AAII survey respondents largely report their experience of the past.
+          The peak at lag = −26 weeks matches the survey’s 6-month horizon exactly.
+        </p>
       </div>
-      <h4 style="margin: 0 0 0.5rem;">Hypothesis A: Sentiment Has Power</h4>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #4a5568;"><em>"Beliefs shape reality. Investors look ahead, and their expectations move markets."</em></p>
-      <ul style="font-size: 0.85rem; margin: 0; padding-left: 1.2rem; color: #4a5568;">
-        <li>VAR: Sentiment effect on returns is tiny (~0.000001)</li>
-        <li>Lead-lag: AAII is backward-looking</li>
-        <li>Granger causality: Economically negligible</li>
-        <li>Conditional Markov: Minimal information gain</li>
-      </ul>
-    </div>
 
-    <div class="verdict-card verdict-supported" style="border: 1px solid #10b981; border-radius: 8px; padding: 1.25rem;">
-      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <span style="font-size: 1.2rem;">✓</span>
-        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Strongly Supported</span>
+      <div class="diagnosis-section">
+        <h4>
+          <span class="label label-evidence">Evidence</span>
+          The 6-Month Mirror Effect
+        </h4>
+        <p>
+          When investors are asked to predict the future, they anchor on where the
+          market has been. This reflects <strong>recency bias</strong> and
+          <strong>extrapolation behavior</strong>, now quantified.
+        </p>
       </div>
-      <h4 style="margin: 0 0 0.5rem;">Hypothesis B: Sentiment Is Just a Mirror</h4>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #4a5568;"><em>"Reality shapes beliefs. Markets move first; investors update their views afterward."</em></p>
-      <ul style="font-size: 0.85rem; margin: 0; padding-left: 1.2rem; color: #4a5568;">
-        <li>VAR: Returns massively affect sentiment (~1395)</li>
-        <li>Lead-lag peak at -26 weeks (6 months)</li>
-        <li>Negative lags dominate information gain</li>
-        <li>Historical episodes: Sentiment moves with/after prices</li>
-      </ul>
-    </div>
 
+      <div class="diagnosis-section">
+        <h4>
+          <span class="label label-comparison">Comparison</span>
+          Google Trends Outperforms Surveys
+        </h4>
+        <p>
+          Aggregate search behavior contains more market-relevant information than
+          explicit expectations surveys. The crowd’s unconscious behavior reveals
+          more than conscious predictions.
+        </p>
+      </div>
+
+    </div>
   </div>
+
+</div>
+
 
   <hr class="section-divider">
 
@@ -169,7 +141,6 @@
     </div>
     <p class="end-text">Session Complete</p>
     <p class="end-signature">— empanADA Behavioral Finance Clinic</p>
-    <p class="end-note">A data story created for EPFL CS-401 Applied Data Analysis</p>
   </div>
 
 </div>

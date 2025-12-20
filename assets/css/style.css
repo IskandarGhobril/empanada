@@ -4709,3 +4709,72 @@ hr,
 .figure-interpretation p:last-child {
   margin-bottom: 0;
 }
+
+
+.diagnosis-accordion {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.accordion-header {
+  width: 100%;
+  background: #f9fafb;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.accordion-header:hover {
+  background: #f3f4f6;
+}
+
+.accordion-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header[aria-expanded="true"] .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.accordion-header[aria-expanded="true"] + .accordion-content {
+  max-height: 2000px; /* large enough */
+  padding: 1.5rem;
+}
+
+/* Internal styling */
+.diagnosis-section {
+  margin-bottom: 1.5rem;
+}
+
+.diagnosis-section h4 {
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.label-primary { color: #92400e; }
+.label-evidence { color: #6366f1; }
+.label-comparison { color: #065f46; }

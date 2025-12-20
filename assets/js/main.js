@@ -347,3 +347,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+document.querySelectorAll('.accordion-header').forEach(button => {
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', !expanded);
+  });
+});
+
