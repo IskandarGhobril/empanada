@@ -22,24 +22,28 @@
   </div>
 </div>
 
-<div class="therapist-note">
-  <div class="note-header">
-    <span class="note-icon">📋</span>
-    <span class="note-label">Initial Assessment Notes</span>
+<div class="therapy-layout">
+  
+  <div class="therapist-note">
+    <div class="note-header">
+      <span class="note-icon">📋</span>
+      <span class="note-label">Initial Assessment Notes</span>
+    </div>
+    <div class="note-content">
+      <p><strong>Date:</strong> March 2020. <strong>Presenting symptoms:</strong> Severe mood swings. Patient experienced a 34% decline in just 23 trading days. Investors reported extreme bearish sentiment. Google searches for "market crash" and "recession" spiked to unprecedented levels.</p>
+      <p><strong>Clinical question:</strong> Did the collective anxiety cause the crash, predict it, or simply react to it?</p>
+    </div>
   </div>
-  <div class="note-content">
-    <p><strong>Date:</strong> March 2020. <strong>Presenting symptoms:</strong> Severe mood swings. Patient experienced a 34% decline in just 23 trading days. Investors reported extreme bearish sentiment. Google searches for "market crash" and "recession" spiked to unprecedented levels.</p>
-    <p><strong>Clinical question:</strong> Did the collective anxiety cause the crash, predict it, or simply react to it?</p>
-  </div>
+
+  <figure class="hero-illustration reveal">
+    <img src="{{ site.baseurl }}/assets/img/the-patient-market.png"
+         alt="The Market personified as a patient on a therapy couch"
+         class="section-image">
+    <figcaption>The Market — our most complex patient</figcaption>
+  </figure>
+
 </div>
 
-<figure class="hero-illustration reveal" style="max-width: 400px; margin: 2rem auto;">
-  <img src="{{ site.baseurl }}/assets/img/the-patient-market1.png"
-       alt="The Market personified as a patient on a therapy couch"
-       class="section-image"
-       style="max-width: 100%; height: auto; border-radius: 12px;">
-  <figcaption>The Market — our most complex patient</figcaption>
-</figure>
 
 <p class="lead reveal">
 They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.

@@ -2821,3 +2821,26 @@ img.plot {
   margin-top: 2rem; /* Increased from 1rem to 2rem */
   transition: all 0.3s ease;
 }
+
+
+.therapy-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.therapist-note {
+  flex: 1.4;
+}
+
+.hero-illustration {
+  flex: 1;
+  max-width: 400px;
+}
+
+.hero-illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
