@@ -1,13 +1,21 @@
 /* ============================================
    THE MARKET GOES TO THERAPY
    Data Story Styles - empanADA
+   Theme: White Background + Terminal Headers
    ============================================ */
 
-/* === GLOBAL RESETS === */
+/* === GLOBAL RESETS & VARIABLES === */
+:root {
+  --font-terminal: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --terminal-cursor: #10b981; /* Matrix Green */
+  --terminal-accent: #667eea; /* Indigo */
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
+  /* Keep main body font readable (Sans-Serif), only headers are Terminal */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   line-height: 1.6;
   color: #2d3748;
@@ -15,7 +23,7 @@ body {
 }
 
 /* ============================================
-   NAVIGATION BAR (TOPBAR)
+   NAVIGATION BAR (TOPBAR) - PRESERVED
    ============================================ */
 
 .topbar {
@@ -48,16 +56,21 @@ header.topbar .brand {
   align-items: center !important;
   gap: 0.5rem !important;
   text-decoration: none !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important; /* Bold */
   color: #1a202c !important;
+  /* Terminal Font for the Logo */
+  font-family: var(--font-terminal) !important; 
+  letter-spacing: -0.05em;
 }
 
 .topbar .brand-dot {
   width: 10px !important;
   height: 10px !important;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  /* Green cursor dot */
+  background: var(--terminal-cursor) !important; 
   border-radius: 50% !important;
   display: inline-block !important;
+  box-shadow: 0 0 8px var(--terminal-cursor);
 }
 
 .topbar .brand-title {
@@ -78,11 +91,13 @@ header.topbar nav.nav {
 header.topbar .nav-link {
   color: #4a5568 !important;
   text-decoration: none !important;
-  font-size: 0.95rem !important;
+  font-size: 0.9rem !important; /* Slightly smaller for mono */
   font-weight: 500 !important;
   transition: color 0.2s ease !important;
   padding: 0.5rem 0.75rem !important;
   border-radius: 6px !important;
+  /* Terminal Font for Links */
+  font-family: var(--font-terminal) !important; 
 }
 
 .topbar .nav-link:hover,
@@ -105,9 +120,10 @@ header.topbar .nav-link:hover {
   background: none !important;
   border: none !important;
   cursor: pointer !important;
-  font-family: inherit !important;
+  /* Terminal Font */
+  font-family: var(--font-terminal) !important;
   color: #4a5568 !important;
-  font-size: 0.95rem !important;
+  font-size: 0.9rem !important;
   font-weight: 500 !important;
   padding: 0.5rem 0.75rem !important;
   border-radius: 6px !important;
@@ -161,9 +177,11 @@ div.dropdown-menu a.dropdown-item {
   padding: 0.6rem 1rem !important;
   color: #4a5568 !important;
   text-decoration: none !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
   transition: all 0.15s ease !important;
   white-space: nowrap !important;
+  /* Terminal Font */
+  font-family: var(--font-terminal) !important;
 }
 
 .dropdown-item:hover {
@@ -194,7 +212,7 @@ body.longform-page .markdown-body {
 }
 
 /* ============================================
-   THERAPY HERO SECTION
+   THERAPY HERO SECTION (Terminal Style)
    ============================================ */
 
 .therapy-hero {
@@ -203,6 +221,7 @@ body.longform-page .markdown-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Keep the dark gradient hero for contrast */
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -212,10 +231,7 @@ body.longform-page .markdown-body {
 .therapy-hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.5;
 }
@@ -244,9 +260,11 @@ body.longform-page .markdown-body {
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--terminal-cursor); /* Green Text */
   margin-bottom: 2rem;
   backdrop-filter: blur(10px);
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 .therapy-title {
@@ -256,13 +274,25 @@ body.longform-page .markdown-body {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* Terminal Font */
+  font-family: var(--font-terminal);
+  letter-spacing: -0.05em;
+}
+
+/* The Prompt Prefix */
+.therapy-title::before {
+  content: "> ";
+  color: var(--terminal-cursor);
+  margin-right: 0.2rem;
 }
 
 .therapy-tagline {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 3rem;
-  font-weight: 300;
+  font-weight: 400;
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 .scroll-indicator {
@@ -273,6 +303,7 @@ body.longform-page .markdown-body {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
   animation: float 3s ease-in-out infinite;
+  font-family: var(--font-terminal);
 }
 
 .scroll-arrow {
@@ -298,6 +329,8 @@ body.longform-page .markdown-body {
   padding: 1.5rem 2rem;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 .case-file-content {
@@ -326,17 +359,17 @@ body.longform-page .markdown-body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .case-label {
   color: #718096;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .case-value {
   color: #2d3748;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .case-divider {
@@ -356,6 +389,7 @@ body.longform-page .markdown-body {
   margin-top: 4rem;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  font-family: var(--font-terminal);
 }
 
 .clinic-footer-content {
@@ -395,31 +429,27 @@ body.longform-page .longform {
 }
 
 /* ============================================
-   SESSION HEADERS
-   ============================================ */
-
-/* ============================================
-   SESSION HEADERS (Clean Style)
+   SESSION HEADERS (Clean Terminal Style)
    ============================================ */
 
 .session-header {
   text-align: center;
-  padding: 4rem 0 2rem; /* Reduced padding, no side padding */
+  padding: 4rem 0 2rem;
   margin-bottom: 3rem;
-  background: transparent; /* Removes the "huge rectangle" background */
+  background: transparent;
   border-radius: 0;
   position: relative;
 }
 
-/* Add a sleek underline instead of the box */
+/* Terminal Underline (Green/Indigo Gradient) */
 .session-header::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 60px;
   height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #667eea 0%, #10b981 100%);
   margin: 1.5rem auto 0;
-  border-radius: 2px;
+  border-radius: 0; /* Square edges for tech look */
 }
 
 /* Reset the Final Session styles to match the clean look */
@@ -430,30 +460,30 @@ body.longform-page .longform {
 
 .session-header.final-session .section-title, 
 .session-header.final-session .session-subtitle {
-  color: #1a202c; /* Resets white text back to dark */
+  color: #1a202c;
 }
 
-/* Keep the badge looking nice */
-.session-header.final-session .session-number {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
-
+/* Terminal Badge Style for Session Number */
 .session-number {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #f1f5f9; /* Light code background */
+  border: 1px solid #cbd5e0;
+  color: #667eea;
   padding: 0.4rem 1.2rem;
-  border-radius: 50px;
+  border-radius: 4px; /* Less rounded */
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 .session-header.final-session .session-number {
-  background: rgba(255, 255, 255, 0.2);
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
 }
 
 .section-title {
@@ -462,6 +492,16 @@ body.longform-page .longform {
   color: #1a202c;
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
+  /* Terminal Font */
+  font-family: var(--font-terminal);
+  letter-spacing: -0.05em;
+}
+
+/* The prompt prefix for sessions */
+.section-title::before {
+  content: "./";
+  color: #cbd5e0; /* Subtle gray prompt */
+  margin-right: 0.2rem;
 }
 
 .session-subtitle {
@@ -469,24 +509,30 @@ body.longform-page .longform {
   color: #667eea;
   font-weight: 500;
   margin: 0;
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 /* ============================================
-   THERAPIST NOTES
+   THERAPIST NOTES (System Logs)
    ============================================ */
 
 .therapist-note {
-  background: #fffbeb;
-  border: 1px solid #fcd34d;
+  background: #f8fafc; /* Very light blue-gray */
+  border: 1px solid #e2e8f0;
   border-left: 4px solid #f59e0b;
-  border-radius: 8px;
+  border-radius: 4px; /* Squarer */
   padding: 1.5rem;
   margin: 2rem 0;
+  /* Terminal Font for the note content */
+  font-family: var(--font-terminal);
+  font-size: 0.95rem;
 }
 
 .therapist-note.dramatic {
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-  border-color: #f59e0b;
+  background: #fff1f2;
+  border-color: #fecdd3;
+  border-left-color: #f43f5e;
 }
 
 .note-header {
@@ -510,7 +556,7 @@ body.longform-page .longform {
 
 .note-content p {
   margin: 0 0 0.75rem 0;
-  color: #78350f;
+  color: #334155;
   line-height: 1.7;
 }
 
@@ -522,10 +568,15 @@ body.longform-page .longform {
    TYPOGRAPHY
    ============================================ */
 
+/* Apply Terminal Font to all Headings */
+.longform h1, .longform h2, .longform h3, .longform h4 {
+  font-family: var(--font-terminal);
+  color: #1a202c;
+}
+
 .longform h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a202c;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -533,23 +584,28 @@ body.longform-page .longform {
 .longform h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #1a202c;
   margin: 3rem 0 1.5rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #e2e8f0;
 }
 
+/* Add hash for H2 to look like markdown/code */
+.longform h2::before {
+  content: "## ";
+  color: #667eea;
+  font-weight: 400;
+}
+
 .longform h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2d3748;
   margin: 2.5rem 0 1rem;
 }
 
 .longform h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #4a5568;
   margin: 1.5rem 0 0.75rem;
 }
 
@@ -576,11 +632,13 @@ body.longform-page .longform {
   color: #667eea;
   text-decoration: none;
   transition: color 0.2s;
+  border-bottom: 1px dotted #667eea;
 }
 
 .longform a:hover {
   color: #5568d3;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom-style: solid;
 }
 
 .longform ul, .longform ol {
@@ -595,7 +653,7 @@ body.longform-page .longform {
 
 .longform hr {
   border: none;
-  border-top: 2px solid #e2e8f0;
+  border-top: 2px dashed #cbd5e0;
   margin: 3rem 0;
 }
 
@@ -617,8 +675,8 @@ body.longform-page .longform {
 
 .witness-card {
   background: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border: 1px solid #e2e8f0; /* Thinner, techy border */
+  border-radius: 8px; /* Slightly squarer */
   padding: 2rem;
   transition: all 0.3s ease;
 }
@@ -642,16 +700,19 @@ body.longform-page .longform {
 }
 
 .witness-card h4 {
+  font-family: var(--font-terminal);
   font-size: 1.4rem;
   color: #1a202c;
   margin: 0 0 0.5rem 0;
 }
 
 .witness-source {
+  font-family: var(--font-terminal);
   color: #667eea;
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .witness-traits {
@@ -664,11 +725,13 @@ body.longform-page .longform {
 }
 
 .witness-traits li {
+  font-family: var(--font-terminal);
   background: #f7fafc;
   padding: 0.25rem 0.75rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 0.85rem;
   color: #4a5568;
+  border: 1px solid #e2e8f0;
 }
 
 /* ============================================
@@ -679,12 +742,13 @@ body.longform-page .longform {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 3rem 2rem;
-  border-radius: 16px;
+  border-radius: 8px;
   text-align: center;
   margin: 3rem 0;
 }
 
 .question-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -693,6 +757,7 @@ body.longform-page .longform {
 }
 
 .big-question {
+  font-family: var(--font-terminal);
   font-size: 2rem;
   color: white;
   margin: 0 0 1rem 0;
@@ -718,8 +783,8 @@ body.longform-page .longform {
 
 .hypothesis-card {
   background: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
@@ -749,9 +814,10 @@ body.longform-page .longform {
 }
 
 .hypothesis-label {
+  font-family: var(--font-terminal);
   background: #f7fafc;
   padding: 0.25rem 0.75rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #718096;
@@ -760,6 +826,7 @@ body.longform-page .longform {
 }
 
 .hypothesis-card h4 {
+  font-family: var(--font-terminal);
   font-size: 1.3rem;
   color: #1a202c;
   margin: 0 0 1rem 0;
@@ -768,9 +835,10 @@ body.longform-page .longform {
 .hypothesis-implication {
   background: #f7fafc;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 0.95rem;
   margin-top: 1rem;
+  border: 1px solid #e2e8f0;
 }
 
 /* ============================================
@@ -779,7 +847,7 @@ body.longform-page .longform {
 
 .session-transition {
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2.5rem;
   text-align: center;
   margin: 3rem 0;
@@ -790,6 +858,7 @@ body.longform-page .longform {
 }
 
 .transition-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -806,6 +875,7 @@ body.longform-page .longform {
 }
 
 .transition-cta {
+  font-family: var(--font-terminal);
   font-size: 1.1rem;
   color: #667eea;
   font-weight: 600;
@@ -819,13 +889,14 @@ body.longform-page .longform {
 .survey-question-box {
   background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
   border: 2px solid #667eea;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
 .survey-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -835,6 +906,7 @@ body.longform-page .longform {
 }
 
 .survey-question {
+  font-family: var(--font-terminal);
   font-size: 1.5rem;
   color: #1a202c;
   margin: 0 0 1.5rem 0;
@@ -849,8 +921,9 @@ body.longform-page .longform {
 }
 
 .survey-options .option {
+  font-family: var(--font-terminal);
   padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -883,6 +956,7 @@ body.longform-page .longform {
 }
 
 .finding-box h4 {
+  font-family: var(--font-terminal);
   color: #667eea;
   margin: 0 0 0.5rem 0;
   font-size: 0.9rem;
@@ -908,6 +982,7 @@ body.longform-page .longform {
 
 .transition-matrix-explanation h4 {
   margin-top: 0;
+  font-family: var(--font-terminal);
 }
 
 .matrix-highlights {
@@ -926,6 +1001,7 @@ body.longform-page .longform {
 }
 
 .matrix-stat .stat-value {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -934,6 +1010,7 @@ body.longform-page .longform {
 }
 
 .matrix-stat .stat-label {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 0.9rem;
   color: #4a5568;
@@ -966,6 +1043,7 @@ body.longform-page .longform {
 }
 
 .insight-box h4 {
+  font-family: var(--font-terminal);
   color: #92400e;
   margin: 0 0 0.75rem 0;
 }
@@ -996,6 +1074,7 @@ body.longform-page .longform {
 }
 
 .key-insight.dramatic h4 {
+  font-family: var(--font-terminal);
   color: white;
 }
 
@@ -1012,8 +1091,8 @@ body.longform-page .longform {
 
 .search-category {
   background: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
 }
@@ -1036,6 +1115,7 @@ body.longform-page .longform {
 }
 
 .search-category h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
 }
@@ -1047,11 +1127,11 @@ body.longform-page .longform {
 }
 
 .search-category li {
+  font-family: var(--font-terminal);
   background: #f7fafc;
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
-  border-radius: 6px;
-  font-family: monospace;
+  border-radius: 4px;
   font-size: 0.9rem;
 }
 
@@ -1075,6 +1155,7 @@ body.longform-page .longform {
 }
 
 .pattern-observation h4 {
+  font-family: var(--font-terminal);
   color: #065f46;
   margin: 0 0 1rem 0;
 }
@@ -1094,12 +1175,13 @@ body.longform-page .longform {
 
 .correlation-findings {
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
 }
 
 .correlation-findings h4 {
+  font-family: var(--font-terminal);
   margin-top: 0;
 }
 
@@ -1113,13 +1195,14 @@ body.longform-page .longform {
 
 .session-summary {
   background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
-  border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   padding: 2.5rem;
   margin: 3rem 0;
 }
 
 .session-summary h3 {
+  font-family: var(--font-terminal);
   text-align: center;
   margin: 0 0 2rem 0;
   color: #1a202c;
@@ -1146,7 +1229,8 @@ body.longform-page .longform {
   min-width: 32px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border-radius: 50%;
+  border-radius: 4px; /* Square */
+  font-family: var(--font-terminal);
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -1164,7 +1248,7 @@ body.longform-page .longform {
 .image-placeholder {
   background: #f8f9fa;
   border: 2px dashed #cbd5e0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   text-align: center;
   margin: 2rem 0;
@@ -1175,6 +1259,7 @@ body.longform-page .longform {
 }
 
 .placeholder-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1196,7 +1281,7 @@ body.longform-page .longform {
 .methodology-box {
   background: #f7fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
 }
@@ -1207,6 +1292,7 @@ body.longform-page .longform {
 }
 
 .methodology-box h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   color: #1a202c;
 }
@@ -1236,12 +1322,13 @@ body.longform-page .longform {
 
 .stats-results {
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
 }
 
 .stats-results h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
 }
 
@@ -1260,6 +1347,7 @@ body.longform-page .longform {
 }
 
 .stat-name {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 0.85rem;
   color: #718096;
@@ -1267,6 +1355,7 @@ body.longform-page .longform {
 }
 
 .stat-value {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1294,12 +1383,13 @@ body.longform-page .longform {
 .test-result-box {
   background: white;
   border: 2px solid #10b981;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .test-result-box h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1.5rem 0;
   color: #065f46;
 }
@@ -1314,17 +1404,20 @@ body.longform-page .longform {
 }
 
 .result-label {
+  font-family: var(--font-terminal);
   font-size: 0.9rem;
   color: #718096;
 }
 
 .result-value {
+  font-family: var(--font-terminal);
   font-size: 2rem;
   font-weight: 700;
   color: #1a202c;
 }
 
 .result-verdict {
+  font-family: var(--font-terminal);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: 600;
@@ -1351,12 +1444,13 @@ body.longform-page .longform {
 
 .var-results {
   background: #f8f9fa;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .var-results h3 {
+  font-family: var(--font-terminal);
   text-align: center;
   margin: 0 0 2rem 0;
 }
@@ -1364,7 +1458,7 @@ body.longform-page .longform {
 .var-equation {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -1374,6 +1468,7 @@ body.longform-page .longform {
 }
 
 .var-equation h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   color: #667eea;
 }
@@ -1434,12 +1529,13 @@ body.longform-page .longform {
 .revelation-box {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2.5rem;
   margin: 2.5rem 0;
 }
 
 .revelation-box h3 {
+  font-family: var(--font-terminal);
   color: white;
   margin: 0 0 1.5rem 0;
   text-align: center;
@@ -1468,12 +1564,13 @@ body.longform-page .longform {
 
 .lead-lag-results {
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .lead-lag-results h3 {
+  font-family: var(--font-terminal);
   margin: 0 0 1.5rem 0;
 }
 
@@ -1492,6 +1589,7 @@ body.longform-page .longform {
 }
 
 .result-stat .stat-label {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 0.8rem;
   color: #718096;
@@ -1501,6 +1599,7 @@ body.longform-page .longform {
 }
 
 .result-stat .stat-value {
+  font-family: var(--font-terminal);
   font-weight: 600;
   color: #1a202c;
 }
@@ -1526,6 +1625,7 @@ body.longform-page .longform {
 }
 
 .interpretation-box h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
 }
 
@@ -1536,6 +1636,7 @@ body.longform-page .longform {
   border-radius: 8px;
   text-align: center;
   margin-top: 1rem;
+  font-family: var(--font-terminal);
 }
 
 /* ============================================
@@ -1551,7 +1652,7 @@ body.longform-page .longform {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -1562,6 +1663,7 @@ body.longform-page .longform {
 }
 
 .comparison-table th {
+  font-family: var(--font-terminal);
   padding: 1rem 1.25rem;
   text-align: left;
   font-weight: 600;
@@ -1579,16 +1681,19 @@ body.longform-page .longform {
 .comparison-table .positive-cell {
   background: #d1fae5;
   color: #065f46;
+  font-family: var(--font-terminal);
 }
 
 .comparison-table .negative-cell {
   background: #fee2e2;
   color: #991b1b;
+  font-family: var(--font-terminal);
 }
 
 .comparison-table .neutral-cell {
   background: #f3f4f6;
   color: #4b5563;
+  font-family: var(--font-terminal);
 }
 
 /* ============================================
@@ -1604,7 +1709,7 @@ body.longform-page .longform {
 
 .regime-card {
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -1629,6 +1734,7 @@ body.longform-page .longform {
 }
 
 .regime-card h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
@@ -1653,7 +1759,7 @@ body.longform-page .longform {
 .persistence-card {
   background: white;
   border: 2px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
 }
@@ -1671,6 +1777,7 @@ body.longform-page .longform {
 }
 
 .persist-value {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1679,6 +1786,7 @@ body.longform-page .longform {
 }
 
 .persist-label {
+  font-family: var(--font-terminal);
   display: block;
   font-size: 0.9rem;
   color: #718096;
@@ -1700,7 +1808,7 @@ body.longform-page .longform {
 .duration-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
 }
 
@@ -1710,6 +1818,7 @@ body.longform-page .longform {
 }
 
 .duration-card h5 {
+  font-family: var(--font-terminal);
   margin: 0 0 0.75rem 0;
   color: #1a202c;
 }
@@ -1726,12 +1835,13 @@ body.longform-page .longform {
 
 .conditional-results {
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .conditional-results h3 {
+  font-family: var(--font-terminal);
   margin: 0 0 1.5rem 0;
 }
 
@@ -1742,12 +1852,13 @@ body.longform-page .longform {
 .comparison-insight {
   background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
   border: 1px solid #667eea;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
 }
 
 .comparison-insight h4 {
+  font-family: var(--font-terminal);
   color: #667eea;
   margin: 0 0 1rem 0;
 }
@@ -1770,17 +1881,19 @@ body.longform-page .longform {
 }
 
 .event-date {
+  font-family: var(--font-terminal);
   display: inline-block;
   background: #667eea;
   color: white;
   padding: 0.25rem 0.75rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   margin-right: 0.75rem;
 }
 
 .event-name {
+  font-family: var(--font-terminal);
   font-weight: 700;
   color: #1a202c;
 }
@@ -1805,7 +1918,7 @@ body.longform-page .longform {
 .sector-card {
   background: white;
   border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
 }
@@ -1827,6 +1940,7 @@ body.longform-page .longform {
 }
 
 .sector-card h4 {
+  font-family: var(--font-terminal);
   margin: 0;
   font-size: 1.2rem;
   color: #1a202c;
@@ -1846,10 +1960,13 @@ body.longform-page .longform {
 }
 
 .metric-label {
+  font-family: var(--font-terminal);
   color: #718096;
+  font-size: 0.8rem;
 }
 
 .metric-value {
+  font-family: var(--font-terminal);
   font-weight: 600;
   color: #2d3748;
 }
@@ -1870,7 +1987,7 @@ body.longform-page .longform {
 .interactive-placeholder {
   background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
   border: 2px solid #667eea;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
@@ -1885,15 +2002,17 @@ body.longform-page .longform {
   background: #667eea;
   color: white;
   padding: 0.25rem 0.75rem;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
+  font-family: var(--font-terminal);
 }
 
 .placeholder-header h3 {
+  font-family: var(--font-terminal);
   margin: 0;
   color: #1a202c;
 }
@@ -1905,7 +2024,7 @@ body.longform-page .longform {
 .placeholder-mockup {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -1919,6 +2038,7 @@ body.longform-page .longform {
 }
 
 .selector-label {
+  font-family: var(--font-terminal);
   font-weight: 600;
   color: #4a5568;
 }
@@ -1930,11 +2050,12 @@ body.longform-page .longform {
 }
 
 .sector-btn {
+  font-family: var(--font-terminal);
   padding: 0.5rem 1rem;
   border: 1px solid #e2e8f0;
   background: white;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -1979,12 +2100,13 @@ body.longform-page .longform {
 .stats-placeholder {
   background: #f8f9fa;
   border: 2px dashed #cbd5e0;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .stats-placeholder h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   color: #718096;
 }
@@ -2010,6 +2132,7 @@ body.longform-page .longform {
 }
 
 .bias-finding h4 {
+  font-family: var(--font-terminal);
   color: #92400e;
   margin: 0 0 0.75rem 0;
 }
@@ -2020,7 +2143,7 @@ body.longform-page .longform {
 
 .nuance-box {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
@@ -2042,7 +2165,7 @@ body.longform-page .longform {
 .diagnosis-card {
   background: white;
   border: 2px solid #667eea;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   margin: 2rem 0;
 }
@@ -2061,6 +2184,7 @@ body.longform-page .longform {
 }
 
 .diagnosis-header h3 {
+  font-family: var(--font-terminal);
   margin: 0;
   color: white;
 }
@@ -2071,7 +2195,7 @@ body.longform-page .longform {
 
 .diagnosis-item {
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 1.5rem;
 }
 
@@ -2095,6 +2219,7 @@ body.longform-page .longform {
 }
 
 .diagnosis-label {
+  font-family: var(--font-terminal);
   display: inline-block;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -2116,6 +2241,7 @@ body.longform-page .longform {
 }
 
 .diagnosis-item h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 0.75rem 0;
   color: #1a202c;
 }
@@ -2137,7 +2263,7 @@ body.longform-page .longform {
 
 .question-recall {
   background: #f8f9fa;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -2145,6 +2271,7 @@ body.longform-page .longform {
 }
 
 .recall-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -2162,12 +2289,13 @@ body.longform-page .longform {
 
 .answer-reveal {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
   color: white;
 }
 
 .answer-label {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -2176,6 +2304,7 @@ body.longform-page .longform {
 }
 
 .answer-reveal h3 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   font-size: 1.75rem;
   color: white;
@@ -2200,7 +2329,7 @@ body.longform-page .longform {
 .verdict-card {
   background: white;
   border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
 }
 
@@ -2224,6 +2353,7 @@ body.longform-page .longform {
 }
 
 .verdict-status {
+  font-family: var(--font-terminal);
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2239,6 +2369,7 @@ body.longform-page .longform {
 }
 
 .verdict-card h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 0.75rem 0;
   color: #1a202c;
 }
@@ -2278,7 +2409,7 @@ body.longform-page .longform {
 .finding-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 1.5rem;
   position: relative;
 }
@@ -2291,15 +2422,18 @@ body.longform-page .longform {
   height: 28px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border-radius: 50%;
+  border-radius: 4px; /* Square */
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 0.85rem;
+  /* Terminal Font */
+  font-family: var(--font-terminal);
 }
 
 .finding-card h4 {
+  font-family: var(--font-terminal);
   margin: 0.5rem 0 0.75rem 0;
   color: #1a202c;
   font-size: 1.1rem;
@@ -2324,7 +2458,7 @@ body.longform-page .longform {
 .implication-card {
   background: white;
   border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
 }
 
@@ -2344,6 +2478,7 @@ body.longform-page .longform {
 }
 
 .implication-card h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   color: #1a202c;
 }
@@ -2364,7 +2499,7 @@ body.longform-page .longform {
 .prognosis-card {
   background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
   border: 2px solid #10b981;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   margin: 2rem 0;
 }
@@ -2383,6 +2518,7 @@ body.longform-page .longform {
 }
 
 .prognosis-header h3 {
+  font-family: var(--font-terminal);
   margin: 0;
   color: white;
 }
@@ -2392,6 +2528,7 @@ body.longform-page .longform {
 }
 
 .prognosis-statement {
+  font-family: var(--font-terminal);
   font-size: 1.5rem;
   color: #065f46;
   margin: 0 0 1rem 0;
@@ -2407,12 +2544,13 @@ body.longform-page .longform {
 
 .limitations-box {
   background: #f8f9fa;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .limitations-box h4 {
+  font-family: var(--font-terminal);
   margin: 0 0 1rem 0;
   color: #1a202c;
 }
@@ -2457,6 +2595,7 @@ body.longform-page .longform {
   font-style: normal;
   color: #718096;
   font-size: 0.95rem;
+  font-family: var(--font-terminal);
 }
 
 .final-thoughts > p {
@@ -2466,6 +2605,7 @@ body.longform-page .longform {
 }
 
 .closing-statement {
+  font-family: var(--font-terminal);
   font-size: 1.25rem;
   color: #1a202c;
   font-weight: 600;
@@ -2505,6 +2645,7 @@ body.longform-page .longform {
   color: #1a202c;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
+  font-family: var(--font-terminal);
 }
 
 .end-signature {
@@ -2591,6 +2732,7 @@ figcaption {
 }
 
 .text-side h3 {
+  font-family: var(--font-terminal); /* Terminal Font */
   margin-top: 0;
   color: #1a202c;
   font-size: 1.4rem;
@@ -2638,7 +2780,6 @@ img.plot {
   border-radius: 0 !important;
   display: block;
 }
-
 
 /* ============================================
    SECTION INTRO TEXT
