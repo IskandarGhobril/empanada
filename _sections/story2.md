@@ -65,89 +65,97 @@
 <hr class="section-divider">
 
 
-<h2>The Initial Evidence: Correlation</h2>
+<section class="evidence-section reveal">
 
-<p class="lead reveal">
-  Let’s start with the most basic question: are sentiment and future returns
-  related at all?
-</p>
-
-<figure class="plot-figure reveal plot-small">
-  <div class="interactive-figure" data-plot="market-returns">
-    <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
-         alt="Market returns sentiment"
-         class="plot">
-    <figcaption>Sentiment and future returns</figcaption>
-  </div>
-
-  <!-- Interpretation text -->
-  <div class="figure-interpretation">
-    <p>
-      The distribution tilts upward from bottom-left to top-right.
-      When past returns were negative (bottom half), investors tend to be
-      bearish (left side). When past returns were positive (top half),
-      investors tend to be bullish (right side). This suggests a positive
-      relationship between sentiment and past performance.
+  <!-- Title & framing -->
+  <header class="section-header">
+    <h2>The Initial Evidence: Correlation</h2>
+    <p class="section-intro">
+      We begin with a simple but essential question:
+      <em>is investor sentiment related to returns at all?</em>
     </p>
+  </header>
 
-    <p>
-      By contrast, the distribution is more symmetric and scattered.
-      There is no clear directional pattern between sentiment and future
-      returns. Bullish investors (right side) do not consistently see
-      higher future returns, and bearish investors (left side) do not
-      consistently see lower future returns.
-    </p>
-  </div>
-</figure>
+  <!-- Figure card -->
+  <div class="card figure-card plot-small">
+    <figure class="plot-figure">
+      <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
+           alt="Joint distribution of sentiment and returns"
+           class="plot">
+      <figcaption>
+        Joint distribution of investor sentiment and market returns
+      </figcaption>
+    </figure>
 
+    <!-- Interpretation -->
+    <div class="figure-interpretation">
+      <p>
+        The left panel exhibits an upward tilt from bottom-left to top-right.
+        Periods of negative past returns are associated with bearish sentiment,
+        while positive past returns coincide with more bullish attitudes.
+        This indicates a strong relationship between sentiment and
+        <strong>past performance</strong>.
+      </p>
 
-<!-- Sentiment definition -->
-<div class="stat-definition reveal">
-  <span class="definition-label">Sentiment metric</span>
-  <p>
-    We construct a single sentiment measure:
-    <strong>S = %Bullish − %Bearish</strong>,
-    capturing net optimism on a scale from −100 (fully bearish)
-    to +100 (fully bullish).
-  </p>
-</div>
-
-<!-- Results -->
-<div class="stat-results reveal">
-  <h4>Correlation results</h4>
-
-  <div class="stat-grid">
-    <div class="stat-block">
-      <span class="stat-name">Pearson correlation</span>
-      <span class="stat-number">ρ ≈ 0.33</span>
-      <span class="stat-meta">p &lt; 0.001</span>
-    </div>
-
-    <div class="stat-block">
-      <span class="stat-name">Spearman rank correlation</span>
-      <span class="stat-number">ρ<sub>s</sub> ≈ 0.28</span>
-      <span class="stat-meta">p &lt; 0.001</span>
+      <p>
+        In contrast, the distribution linking sentiment to
+        <strong>future returns</strong> appears more symmetric and dispersed.
+        No clear directional pattern emerges: bullish investors do not
+        systematically earn higher future returns, nor do bearish investors
+        consistently experience lower ones.
+      </p>
     </div>
   </div>
-</div>
 
-<!-- Interpretation -->
-<div class="stat-interpretation reveal">
-  <p>
-    <strong>Initial finding.</strong>
-    Higher optimism is associated with higher future returns.
-    The relationship is positive, statistically significant,
-    and robust to outliers.
-  </p>
+  <!-- Metric definition -->
+  <div class="card definition-card reveal">
+    <span class="card-label">Sentiment metric</span>
+    <p>
+      Investor sentiment is summarized by a single index:
+      <strong>S = %Bullish − %Bearish</strong>,
+      representing net optimism on a scale from −100 (fully bearish)
+      to +100 (fully bullish).
+    </p>
+  </div>
 
-  <p class="stat-caveat">
-    However, correlation alone does not establish direction:
-    does sentiment move markets, or do markets shape sentiment?
-  </p>
-</div>
+  <!-- Results -->
+  <div class="card results-card reveal">
+    <h4>Correlation results</h4>
+
+    <div class="stat-grid">
+      <div class="stat-block">
+        <span class="stat-name">Pearson correlation</span>
+        <span class="stat-number">ρ ≈ 0.32</span>
+        <span class="stat-meta">p &lt; 0.001</span>
+      </div>
+
+      <div class="stat-block">
+        <span class="stat-name">Spearman rank correlation</span>
+        <span class="stat-number">ρ<sub>s</sub> ≈ −0.09</span>
+        <span class="stat-meta">p &lt; 0.001</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Takeaway -->
+  <div class="card takeaway-card reveal">
+    <p>
+      <strong>Initial finding.</strong>
+      Higher optimism is associated with higher future returns,
+      and the relationship is statistically significant and
+      robust to outliers.
+    </p>
+
+    <p class="caveat">
+      Nevertheless, correlation alone cannot establish causality:
+      do shifts in sentiment drive markets, or do markets
+      primarily shape investor sentiment?
+    </p>
+  </div>
+
 </section>
 
-<hr class="section-divider">
+
 
 <hr class="section-divider">
 
