@@ -169,42 +169,46 @@
 <div class="var-results reveal">
   <h3>VAR Model Results</h3>
 
-  <div class="var-equation">
-    <h4>What Predicts Sentiment?</h4>
-    <div class="var-coefficients">
-      <div class="var-coef">
-        <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
-        <span class="coef-value">0.652</span>
-        <span class="coef-pvalue">p < 0.001</span>
-        <span class="coef-meaning">Strong persistence — sentiment is sticky</span>
-      </div>
-      <div class="var-coef highlight-coef pulse-green">
-        <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
-        <span class="coef-value">1394.83</span>
-        <span class="coef-pvalue">p < 0.001</span>
-        <span class="coef-meaning">Sentiment strongly responds to past returns</span>
-      </div>
-    </div>
-  </div>
+  <div class="var-grid-wrapper">
 
-  <div class="var-equation">
-    <h4>What Predicts Returns?</h4>
-    <div class="var-coefficients">
-      <div class="var-coef">
-        <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
-        <span class="coef-value">0.965</span>
-        <span class="coef-pvalue">p < 0.001</span>
-        <span class="coef-meaning">Strong autocorrelation (overlapping windows)</span>
-      </div>
-      <div class="var-coef highlight-coef-weak pulse-red">
-        <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
-        <span class="coef-value">0.000001</span>
-        <span class="coef-pvalue">p = 0.047</span>
-        <span class="coef-meaning">Tiny but significant effect</span>
+    <div class="var-equation">
+      <h4>What Predicts Sentiment?</h4>
+      <div class="var-coefficients">
+        <div class="var-coef">
+          <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
+          <span class="coef-value">0.652</span>
+          <span class="coef-pvalue">p < 0.001</span>
+          <span class="coef-meaning">Strong persistence — sentiment is sticky</span>
+        </div>
+        <div class="var-coef highlight-coef pulse-green">
+          <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
+          <span class="coef-value">1394.83</span>
+          <span class="coef-pvalue">p < 0.001</span>
+          <span class="coef-meaning">Sentiment strongly responds to past returns</span>
+        </div>
       </div>
     </div>
+
+    <div class="var-equation">
+      <h4>What Predicts Returns?</h4>
+      <div class="var-coefficients">
+        <div class="var-coef">
+          <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
+          <span class="coef-value">0.965</span>
+          <span class="coef-pvalue">p < 0.001</span>
+          <span class="coef-meaning">Strong autocorrelation (overlapping windows)</span>
+        </div>
+        <div class="var-coef highlight-coef-weak pulse-red">
+          <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
+          <span class="coef-value">0.000001</span>
+          <span class="coef-pvalue">p = 0.047</span>
+          <span class="coef-meaning">Tiny but significant effect</span>
+        </div>
+      </div>
+    </div>
+
+  </div> 
   </div>
-</div>
 
 <div class="revelation-box reveal gradient-border">
   <h3>The Revelation</h3>
