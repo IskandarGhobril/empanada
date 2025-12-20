@@ -4480,3 +4480,23 @@ body.longform-page .longform .lead,
   font-size: 1.05rem;
   font-weight: 500;
 }
+
+
+/* ============================================
+   REMOVE EXTRA LINES (Refined)
+   - Removes dividers and H2 underlines
+   - KEEPS the main Session Header underlines
+   ============================================ */
+
+/* 1. Remove the lines underlining headings (like "Part A", "Part B") */
+.longform h2 {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* 2. Remove the divider lines between sections */
+hr, 
+.section-divider {
+    display: none !important;
+    border: none !important;
+}
