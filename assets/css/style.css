@@ -703,69 +703,94 @@ body.longform-page .longform {
 /* ============================================
    HYPOTHESIS CARDS
    ============================================ */
-
 .hypothesis-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 1.5rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .hypothesis-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
   background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .hypothesis-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hypothesis-card.hypothesis-a:hover {
-  border-color: #667eea;
-}
-
-.hypothesis-card.hypothesis-b:hover {
-  border-color: #764ba2;
-}
-
-.hypothesis-header {
+.hypothesis-title-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.hypothesis-icon {
-  font-size: 1.75rem;
+.hypothesis-title-row h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .hypothesis-label {
-  background: #f7fafc;
-  padding: 0.2rem 0.6rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #718096;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
-.hypothesis-card h4 {
-  font-size: 1.2rem;
-  color: #1a202c;
-  margin: 0 0 0.75rem 0;
+.hypothesis-a .hypothesis-label {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.hypothesis-b .hypothesis-label {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.hypothesis-card p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .hypothesis-implication {
-  background: #f7fafc;
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  margin-top: 0.75rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #7c93e8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hypothesis-implication strong {
+  color: #333;
+}
+
+.hypothesis-implication em {
+  color: #5b6fd8;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hypothesis-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hypothesis-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 /* === SESSION TRANSITION === */

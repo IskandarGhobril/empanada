@@ -90,7 +90,7 @@
 
 <h3>Finding 2: Beliefs Are Sticky</h3>
 
-<div class="section-intro-text reveal">
+<p class="reveal">
   <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
 </div>
 

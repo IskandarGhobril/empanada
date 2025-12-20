@@ -100,11 +100,10 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 <div class="hypothesis-cards">
 
   <div class="hypothesis-card hypothesis-a">
-    <div class="hypothesis-header">
-      <span class="hypothesis-icon">🔮</span>
+    <div class="hypothesis-title-row">
+      <h4>Sentiment Has Power</h4>
       <span class="hypothesis-label">Hypothesis A</span>
     </div>
-    <h4>Sentiment Has Power</h4>
     <p>Investors look ahead. Their collective expectations shape capital flows, which move prices. Beliefs become self-fulfilling prophecies.</p>
     <div class="hypothesis-implication">
       <strong>Implication:</strong> Sentiment should <em>lead</em> market movements. We'd see investors turn bearish <em>before</em> crashes.
@@ -112,16 +111,16 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
   </div>
 
   <div class="hypothesis-card hypothesis-b">
-    <div class="hypothesis-header">
-      <span class="hypothesis-icon">🪞</span>
+    <div class="hypothesis-title-row">
+      <h4>Sentiment Is Just a Mirror</h4>
       <span class="hypothesis-label">Hypothesis B</span>
     </div>
-    <h4>Sentiment Is Just a Mirror</h4>
     <p>Markets move because of fundamentals, shocks, and institutional flows. Retail investors simply update their views afterward — explaining what already happened.</p>
     <div class="hypothesis-implication">
       <strong>Implication:</strong> Sentiment should <em>lag</em> market movements. Investors turn bearish <em>after</em> seeing losses.
     </div>
   </div>
+
 
 </div>
 
