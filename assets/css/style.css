@@ -2956,14 +2956,6 @@ img.plot {
 
 
 
-figure[data-plot="sentiment-pie"] { width: 120px !important; margin: 0 auto; }
-figure[data-plot="sentiment-pie"] .plotly-graph-div { width: 120px !important; height: 120px !important; }
-figure[data-plot="sentiment-pie"] .plotly-graph-div > div { width: 120px !important; height: 120px !important; }
-figure[data-plot="sentiment-pie"] svg, 
-figure[data-plot="sentiment-pie"] canvas { width: 120px !important; height: 120px !important; }
-
-
-
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
