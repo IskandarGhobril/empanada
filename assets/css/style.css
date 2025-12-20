@@ -4548,32 +4548,32 @@ hr,
 .central-label {
   display: block;
   font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #718096;
   font-weight: 600;
+  color: #7b6cf6; /* mauve */
   margin-bottom: 1.5rem;
 }
 
 .central-title {
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   line-height: 1.4;
   font-weight: 600;
-  color: #1a202c;
+  color: #0f172a;
   margin: 0;
 }
 
 .central-divider {
-  width: 60px;
-  height: 3px;
-  background: #667eea;
+  width: 90px;
+  height: 2px;
+  background: rgba(123, 108, 246, 0.45); /* soft mauve/grey */
   margin: 2.5rem auto;
   border-radius: 2px;
 }
 
 .central-subtext {
   font-size: 1.15rem;
-  color: #4a5568;
+  color: #475569;
   font-style: italic;
   line-height: 1.6;
   margin: 0;
