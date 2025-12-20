@@ -146,7 +146,7 @@
 
 <div class="plot-figure reveal">
   <figure class="interactive-figure" data-plot="sentiment-shifts">
-    {% pct_change_prediction.html %}
+    {% include pct_change_prediction.html %}
     <figcaption>Top sudden sentiment shifts: critical moments in market psychology</figcaption>
   </figure>
 </div>
