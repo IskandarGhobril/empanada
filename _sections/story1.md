@@ -181,47 +181,64 @@
 
 <h3>Search Query Classification</h3>
 
-<p class="reveal">We classified Google search queries into three sentiment categories based on their economic meaning:</p>
+<p>We classified Google search queries into three sentiment categories based on their economic meaning:</p>
 
-<div class="search-classification reveal">
-  <div class="search-category bullish-search">
-    <h4>Bullish Indicators</h4>
-    <ul>
-      <li>"Investment"</li>
-      <li>"Stock market"</li>
-      <li>"Exchange-traded fund"</li>
-    </ul>
-    <p class="search-meaning">Growth-oriented, opportunity-seeking</p>
+<div class="classification-layout">
+  <!-- Left side: Buttons and Table -->
+  <div class="classification-left">
+    <div class="sentiment-switch-buttons">
+      <button class="switch-btn active" data-sentiment="bullish">Bullish</button>
+      <button class="switch-btn" data-sentiment="neutral">Neutral</button>
+      <button class="switch-btn" data-sentiment="bearish">Bearish</button>
+    </div>
+
+    <div class="search-classification">
+      <!-- Bullish (shown by default) -->
+      <div class="search-category bullish-search active" data-category="bullish">
+        <h4>Bullish Indicators</h4>
+        <ul>
+          <li>"Investment"</li>
+          <li>"Stock market"</li>
+          <li>"Exchange-traded fund"</li>
+        </ul>
+        <p class="search-meaning">Growth-oriented, opportunity-seeking</p>
+      </div>
+
+      <!-- Neutral (hidden by default) -->
+      <div class="search-category neutral-search" data-category="neutral">
+        <h4>Neutral Indicators</h4>
+        <ul>
+          <li>"Dow Jones"</li>
+          <li>"Nasdaq"</li>
+          <li>"S&P 500"</li>
+        </ul>
+        <p class="search-meaning">Information-seeking, monitoring</p>
+      </div>
+
+      <!-- Bearish (hidden by default) -->
+      <div class="search-category bearish-search" data-category="bearish">
+        <h4>Bearish Indicators</h4>
+        <ul>
+          <li>"Recession"</li>
+          <li>"Unemployment"</li>
+          <li>"Inflation"</li>
+        </ul>
+        <p class="search-meaning">Fear-driven, risk-focused</p>
+      </div>
+    </div>
   </div>
 
-  <div class="search-category neutral-search">
-    <h4>Neutral Indicators</h4>
-    <ul>
-      <li>"Dow Jones"</li>
-      <li>"Nasdaq"</li>
-      <li>"S&P 500"</li>
-    </ul>
-    <p class="search-meaning">Information-seeking, monitoring</p>
-  </div>
-
-  <div class="search-category bearish-search">
-    <h4>Bearish Indicators</h4>
-    <ul>
-      <li>"Recession"</li>
-      <li>"Unemployment"</li>
-      <li>"Inflation"</li>
-    </ul>
-    <p class="search-meaning">Fear-driven, risk-focused</p>
+  <!-- Right side: Image -->
+  <div class="classification-right">
+    <figure class="plot-figure reveal">
+      <img id="sentimentImage" 
+           src="{{ site.baseurl }}/assets/img/bull.png"
+           alt="Bull vs Bear Google Trends word cloud"
+           class="sentiment-wordcloud">
+      <figcaption>Word clouds showing the language of optimism versus pessimism in search behavior</figcaption>
+    </figure>
   </div>
 </div>
-
-<figure class="plot-figure reveal">
-  <img src="{{ site.baseurl }}/assets/img/bull.png"
-       alt="Bull vs Bear Google Trends word cloud"
-       style="width: 60%; height: auto;"
-       class="plot">
-  <figcaption>Word clouds showing the language of optimism versus pessimism in search behavior</figcaption>
-</figure>
 
 <hr class="section-divider">
 

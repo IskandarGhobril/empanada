@@ -319,3 +319,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Search classification switcher
+  const switchButtons = document.querySelectorAll('.switch-btn');
+  const searchCategories = document.querySelectorAll('.search-category');
+  const sentimentImage = document.getElementById('sentimentImage');
+  
+  // Image paths for each sentiment
+  const imagePaths = {
+    bullish: '{{ site.baseurl }}/assets/img/bull.png',
+    neutral: '{{ site.baseurl }}/assets/img/neutral.png', // Add this image
+    bearish: '{{ site.baseurl }}/assets/img/bear.png'     // Add this image
+  };
+  
+  switchButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const sentiment = this.dataset.sentiment;
+      
+      // Update buttons
+      switchButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Update visible category
+      searchCategories.forEach(category => {
+        category.classList.remove('active');
+        if (category.dataset.category === sentiment) {
+          category.classList.add('active');
+        }
+      });
+      
+      // Update image (if you have different images for each)
+      if (sentimentImage && imagePaths[sentiment]) {
+        sentimentImage.src = imagePaths[sentiment];
+      }
+    });
+  });
+});
