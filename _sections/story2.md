@@ -107,16 +107,14 @@
     </div>
   </div>
 
-  <div class="card analysis-card reveal">
+ <h4 class="section-subtitle">Sentiment metric</h4>
 
-  <!-- Metric -->
-  <span class="card-label">Sentiment metric</span>
-  <p class="metric-text">
-    Investor sentiment is summarized by a single index,
-    <strong>S = %Bullish − %Bearish</strong>,
-    capturing net optimism on a scale from −100 (fully bearish)
-    to +100 (fully bullish).
-  </p>
+<p class="metric-text">
+  Investor sentiment is summarized by a single index,
+  <strong>S = %Bullish − %Bearish</strong>, capturing net optimism
+  on a scale from −100 (fully bearish) to +100 (fully bullish).
+</p>
+
 
   <!-- Results -->
   <h4>Correlation with market returns</h4>
@@ -162,7 +160,7 @@
 </div>
 
   <!-- Takeaway -->
-  <div class="card takeaway-card reveal">
+  <div class="insight-box reveal">
     <p>
       <strong>Initial finding.</strong>
       Higher optimism is associated with higher future returns,
@@ -242,7 +240,7 @@
   <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #2b6cb0;">The Blue Line (Left Side): Returns strongly drive Sentiment</h4>
   <p>Here we flip the equation: attempting to predict <em>Sentiment</em> using past <em>Returns</em>. The blue line skyrockets, reaching huge significance levels (p < 0.01). This confirms that yesterday's market performance is the primary driver of today's investor mood.</p> 
 
-  <div class="insight-box reveal no-box" style="border-left: 3px solid #667eea; padding-left: 1.5rem; margin-top: 2rem;">
+  <div class="insight-box reveal">
     <p><strong>The Conclusion:</strong> This confirms <strong>Extrapolative Expectations</strong>. Investors assume that "what just happened" is "what will happen." When markets rise, they become bullish. When markets fall, they become bearish. They are not forecasting; they are reacting.</p>
   </div>
 
