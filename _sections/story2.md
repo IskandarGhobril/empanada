@@ -77,15 +77,18 @@
   </header>
 
   <!-- Figure card -->
-  <div class="card figure-card plot-small">
-    <figure class="plot-figure">
-      <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
-           alt="Joint distribution of sentiment and returns"
-           class="plot">
-      <figcaption>
-        Joint distribution of investor sentiment and market returns
-      </figcaption>
-    </figure>
+  <div class="card figure-card plot-small" style="max-width: 650px; margin: 2rem auto;">
+  <figure class="plot-figure">
+    <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
+         alt="Joint distribution of sentiment and returns"
+         class="plot"
+         style="width: 100%; height: auto;">
+    <figcaption>
+      Joint distribution of investor sentiment and market returns
+    </figcaption>
+  </figure>
+</div>
+
 
     <!-- Interpretation -->
     <div class="figure-interpretation">
@@ -223,12 +226,15 @@
   </p>
 </div>
 
-<div class="plot-figure reveal" style="margin: 2rem 0;">
+<div class="plot-figure reveal" style="margin: 2rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
   <figure class="interactive-figure" data-plot="granger-causality">
     {% include granger_causality.html %}
-    <figcaption>Evolution of Causal Strength: Blue (Returns→Sentiment) vs. Red (Sentiment→Returns)</figcaption>
+    <figcaption>
+      Evolution of Causal Strength: Blue (Returns→Sentiment) vs. Red (Sentiment→Returns)
+    </figcaption>
   </figure>
 </div>
+
 
 <div class="reveal" style="margin-bottom: 2rem;">
   
