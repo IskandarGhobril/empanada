@@ -186,37 +186,48 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-let selectedSentiment = null;
+document.addEventListener('DOMContentLoaded', function() {
+  let selectedSentiment = null;
 
-// Handle option selection
-document.querySelectorAll('.option').forEach(option => {
-  option.addEventListener('click', function() {
-    // Remove selected class from all options
-    document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
-    
-    // Add selected class to clicked option
-    this.classList.add('selected');
-    
-    // Store selection
-    selectedSentiment = this.dataset.sentiment;
-    
-    // Enable submit button
-    document.getElementById('submitSentiment').disabled = false;
+  // Handle option selection
+  document.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', function() {
+      console.log('Button clicked!'); // Debug line
+      
+      // Remove selected class from all options
+      document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      
+      // Add selected class to clicked option
+      this.classList.add('selected');
+      
+      // Store selection
+      selectedSentiment = this.dataset.sentiment;
+      
+      // Enable submit button
+      const submitBtn = document.getElementById('submitSentiment');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+      }
+    });
   });
-});
 
-// Handle submit
-document.getElementById('submitSentiment').addEventListener('click', function() {
-  if (selectedSentiment) {
-    const messageEl = document.getElementById('responseMessage');
-    messageEl.textContent = `Thank you! Your ${selectedSentiment} sentiment has been recorded.`;
-    messageEl.style.color = '#4CAF50';
-    
-    // Disable buttons after submission
-    document.querySelectorAll('.option').forEach(opt => opt.disabled = true);
-    this.disabled = true;
-    
-    // Here you can add code to send the data to your backend
-    console.log('Submitted sentiment:', selectedSentiment);
+  // Handle submit
+  const submitBtn = document.getElementById('submitSentiment');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function() {
+      if (selectedSentiment) {
+        const messageEl = document.getElementById('responseMessage');
+        if (messageEl) {
+          messageEl.textContent = `Thank you! Your ${selectedSentiment} sentiment has been recorded.`;
+          messageEl.style.color = '#4CAF50';
+        }
+        
+        // Disable buttons after submission
+        document.querySelectorAll('.option').forEach(opt => opt.disabled = true);
+        this.disabled = true;
+        
+        console.log('Submitted sentiment:', selectedSentiment);
+      }
+    });
   }
 });
