@@ -151,7 +151,7 @@ css:
     <div class="clinic-logo-footer">empanADA</div>
     <p class="clinic-motto">"Understanding markets through the lens of behavior"</p>
     <p class="clinic-authors">
-      By Firstname Lastname · Firstname Lastname · Firstname Lastname · Firstname Lastname · Firstname Lastname
+      By Joe EL Hyek · Celia Khalil · Elio Khoury · Marc Younes
     </p>
     <p class="clinic-credits">A data story created for EPFL CS-401 Applied Data Analysis</p>
   </div>
