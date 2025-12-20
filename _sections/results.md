@@ -200,29 +200,6 @@
   </div>
 </div>
 
-<hr class="section-divider">
-
-<h2>Limitations &amp; Future Work</h2>
-
-<div class="limitations-box reveal">
-  <h4>Study Limitations</h4>
-  <ul>
-    <li><strong>Time period:</strong> Data ends in 2020 — COVID and post-COVID dynamics may differ</li>
-    <li><strong>NASDAQ focus:</strong> Results may differ for S&P 500 or international markets</li>
-    <li><strong>AAII sample:</strong> Survey respondents are a specific demographic, not representative of all retail investors</li>
-    <li><strong>Google normalization:</strong> Google Trends scaling introduces potential measurement issues</li>
-    <li><strong>Aggregate analysis:</strong> Individual investor behavior may differ from aggregate patterns</li>
-  </ul>
-
-  <h4>Future Directions</h4>
-  <ul>
-    <li>Extend analysis to post-2020 period (meme stocks, retail trading surge)</li>
-    <li>Incorporate social media sentiment (Reddit, Twitter)</li>
-    <li>Individual-level analysis using brokerage data</li>
-    <li>International comparison across different market structures</li>
-    <li>High-frequency analysis using intraday data</li>
-  </ul>
-</div>
 
 <hr class="section-divider">
 
