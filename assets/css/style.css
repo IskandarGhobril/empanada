@@ -2788,3 +2788,75 @@ img.plot {
     grid-template-columns: 1fr;
   }
 }
+
+
+.survey-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.option {
+  padding: 0.75rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.option.bullish {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+}
+
+.option.neutral {
+  background: rgba(158, 158, 158, 0.1);
+  color: #757575;
+}
+
+.option.bearish {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option.selected {
+  border-color: currentColor;
+  transform: scale(1.05);
+}
+
+.submit-btn {
+  padding: 0.75rem 2rem;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+.response-message {
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.5rem;
+}

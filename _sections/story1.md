@@ -26,10 +26,12 @@
   <p class="survey-label">AAII Weekly Sentiment Survey</p>
   <h3 class="survey-question">"Where do you think the market will be in the next 6 months?"</h3>
   <div class="survey-options">
-    <span class="option bullish">Bullish</span>
-    <span class="option neutral">Neutral</span>
-    <span class="option bearish">Bearish</span>
+    <button class="option bullish" data-sentiment="bullish">Bullish</button>
+    <button class="option neutral" data-sentiment="neutral">Neutral</button>
+    <button class="option bearish" data-sentiment="bearish">Bearish</button>
   </div>
+  <button class="submit-btn" id="submitSentiment" disabled>Submit</button>
+  <p class="response-message" id="responseMessage"></p>
 </div>
 
 <p>Before we look at what investors actually believe, take a moment to answer the same question they face every week:</p>

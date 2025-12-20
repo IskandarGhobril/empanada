@@ -1,7 +1,7 @@
 <div id="intro" class="section section-intake">
 
 <div class="session-header">
-  <div class="session-number">Session 1</div>
+  <div class="session-number">Session 1:</div>
   <h2 class="section-title">The Intake</h2>
   <p class="session-subtitle">Meet the Patient</p>
 </div>
