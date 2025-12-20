@@ -313,19 +313,37 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".filter-btn");
   const image = document.getElementById("correlationImage");
+  if (!image) return;
 
-  buttons.forEach(btn => {
+  const baseurl = image.dataset.baseurl || "";
+  const fallbackSrc = image.getAttribute("src"); // initial working image
+
+  function setImage(category) {
+    const nextSrc = `${baseurl}/assets/img/sentiment_correlation_${category}.png`;
+    console.log("Switching to:", nextSrc);
+
+    // Preload so we don't blank the current image
+    const pre = new Image();
+    pre.onload = () => {
+      image.src = nextSrc;
+    };
+    pre.onerror = () => {
+      console.error("Image not found:", nextSrc);
+      // Keep current or revert to fallback
+      image.src = fallbackSrc;
+    };
+    pre.src = nextSrc;
+  }
+
+  buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Update active state
-      buttons.forEach(b => b.classList.remove("active"));
+      buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-
-      // Swap image
-      const category = btn.dataset.category;
-      image.src = `{{ site.baseurl }}/assets/img/sentiment_correlation_${category}.png`;
+      setImage(btn.dataset.category);
     });
   });
 });
