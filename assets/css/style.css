@@ -670,12 +670,13 @@ body.longform-page .longform {
    ============================================ */
 
 .clinical-question {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
+  background: #f0f4ff; /*Added the light blue background */
+  color: #2d3748;
+  padding: 3rem 2rem;
+  border: 2px solid #667eea;
+  border-radius: 16px;
   text-align: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 .question-label {
@@ -811,9 +812,9 @@ body.longform-page .longform {
    ============================================ */
 
 .survey-question-box {
-  background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
-  border: 1px solid #667eea;
-  border-radius: 12px;
+  background: transparent; 
+  border: none;            
+  box-shadow: none;        
   padding: 1.5rem;
   text-align: center;
   margin: 1.5rem 0;
