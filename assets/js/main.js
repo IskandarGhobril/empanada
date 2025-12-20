@@ -312,3 +312,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const image = document.getElementById("correlationImage");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Update active state
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Swap image
+      const category = btn.dataset.category;
+      image.src = `{{ site.baseurl }}/assets/img/sentiment_correlation_${category}.png`;
+    });
+  });
+});

@@ -254,22 +254,28 @@
 <div class="correlation-layout">
   <!-- Left side: Plot with buttons -->
   <div class="correlation-plot-container">
+
     <div class="sentiment-filter-buttons">
       <button class="filter-btn active" data-category="all">All Categories</button>
       <button class="filter-btn" data-category="bearish">Bearish</button>
       <button class="filter-btn" data-category="bullish">Bullish</button>
       <button class="filter-btn" data-category="neutral">Neutral</button>
     </div>
-    
+
     <figure class="plot-figure reveal">
       <div class="interactive-figure" data-plot="correlation-matrix">
-        <img id="correlationImage" 
-             src="{{ site.baseurl }}/assets/img/sentiment_correlation_all.png"
-             alt="Correlation between sentiment measures"
-             class="plot">
-        <figcaption>Correlation matrices showing relationships between search queries and AAII sentiment</figcaption>
+        <img
+          id="correlationImage"
+          src="{{ site.baseurl }}/assets/img/sentiment_correlation_all.png"
+          alt="Correlation between sentiment measures"
+          class="plot"
+        >
+        <figcaption>
+          Correlation matrices showing relationships between search queries and AAII sentiment
+        </figcaption>
       </div>
     </figure>
+
   </div>
 
   <!-- Right side: Explanation box -->
