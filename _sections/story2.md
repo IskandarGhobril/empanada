@@ -52,45 +52,61 @@
     <p>Lower/negative returns, heightened volatility. Stress and drawdowns.</p>
   </div>
 </div>
-
 <hr class="section-divider">
-<h2>The Initial Evidence: Correlation</h2>
 
-<p class="lead reveal">Let's start with the obvious question: Are sentiment and future returns related at all?</p>
+<section class="stat-section">
+  <h2>The Initial Evidence: Correlation</h2>
 
-<div class="correlation-layout">
-  <!-- Left side: Definition and Results -->
-  <div class="correlation-left">
-    <div class="methodology-box reveal">
-      <h4>Sentiment Metric</h4>
-      <p>We define a single sentiment measure: <strong>S = %Bullish − %Bearish</strong></p>
-      <p>This captures net optimism on a scale from -100 (completely bearish) to +100 (completely bullish).</p>
-    </div>
+  <p class="lead reveal">
+    Let’s start with the most basic question: are sentiment and future returns
+    related at all?
+  </p>
 
-    <div class="stats-results reveal">
-      <h4>Correlation Results</h4>
-      <div class="stat-row">
-        <div class="stat-item pulse-green">
-          <span class="stat-name">Pearson Correlation</span>
-          <span class="stat-value positive">ρ ≈ 0.33</span>
-          <span class="stat-pvalue">p < 0.001</span>
-        </div>
-        <div class="stat-item pulse-green">
-          <span class="stat-name">Spearman Rank Correlation</span>
-          <span class="stat-value positive">ρₛ ≈ 0.28</span>
-          <span class="stat-pvalue">p < 0.001</span>
-        </div>
+  <!-- Sentiment definition -->
+  <div class="stat-definition reveal">
+    <span class="definition-label">Sentiment metric</span>
+    <p>
+      We construct a single sentiment measure:
+      <strong>S = %Bullish − %Bearish</strong>,
+      capturing net optimism on a scale from −100 (fully bearish)
+      to +100 (fully bullish).
+    </p>
+  </div>
+
+  <!-- Results -->
+  <div class="stat-results reveal">
+    <h4>Correlation results</h4>
+
+    <div class="stat-grid">
+      <div class="stat-block">
+        <span class="stat-name">Pearson correlation</span>
+        <span class="stat-number">ρ ≈ 0.33</span>
+        <span class="stat-meta">p &lt; 0.001</span>
+      </div>
+
+      <div class="stat-block">
+        <span class="stat-name">Spearman rank correlation</span>
+        <span class="stat-number">ρ<sub>s</sub> ≈ 0.28</span>
+        <span class="stat-meta">p &lt; 0.001</span>
       </div>
     </div>
   </div>
 
-  <!-- Right side: Figure -->
- 
+  <!-- Interpretation -->
+  <div class="stat-interpretation reveal">
+    <p>
+      <strong>Initial finding.</strong>
+      Higher optimism is associated with higher future returns.
+      The relationship is positive, statistically significant,
+      and robust to outliers.
+    </p>
 
-<div class="insight-box reveal">
-  <p><strong>Initial Finding:</strong> Yes! Higher optimism is associated with higher future returns. The relationship is positive, statistically significant, and robust to outliers (Spearman confirms).</p>
-  <p><em>But wait...</em> correlation doesn't tell us direction. Does sentiment <strong>cause</strong> higher returns, or does something else cause both?</p>
-</div>
+    <p class="stat-caveat">
+      However, correlation alone does not establish direction:
+      does sentiment move markets, or do markets shape sentiment?
+    </p>
+  </div>
+</section>
 
 <hr class="section-divider">
 

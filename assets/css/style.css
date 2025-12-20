@@ -4594,32 +4594,91 @@ hr,
   margin: 0;
 }
 
-/* ============================================
-   VAR SECTION SIDE-BY-SIDE LAYOUT
-   ============================================ */
+/* === STATISTICAL SECTION === */
 
-/* The container that holds text on left, image on right */
-.var-layout-container {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Give text slightly more space than image */
-    gap: 2.5rem;                      /* Generous space between them */
-    align-items: center;              /* Vertically align center */
-    margin-bottom: 2rem;
+.stat-section {
+  max-width: 900px;
+  margin: 4rem auto;
 }
 
-/* Ensure the image container doesn't have extra margins */
-.var-plot-right .plot-figure {
-    margin: 0 !important;
+/* Definition */
+.stat-definition {
+  margin: 2rem 0 2.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(123,108,246,0.5);
 }
 
-/* Mobile Fallback: Stack them vertically on smaller screens */
-@media (max-width: 900px) {
-    .var-layout-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    /* On mobile, move image above the formulas for better flow */
-    .var-plot-right {
-        order: -1; 
-    }
+.definition-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #7b6cf6;
+  margin-bottom: 0.5rem;
+}
+
+.stat-definition p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Results */
+.stat-results h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-block {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.stat-name {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.25rem;
+}
+
+.stat-meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Interpretation */
+.stat-interpretation {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.stat-interpretation p {
+  margin: 0 0 0.75rem 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.stat-caveat {
+  font-style: italic;
+  color: #475569;
 }
