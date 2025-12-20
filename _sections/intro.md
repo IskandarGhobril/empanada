@@ -51,6 +51,16 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life: the ones who interact with it daily and claim to know what it's thinking.
 </p>
 
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="market-returns">
+    <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
+         alt="Market returns over time"
+         class="plot">
+    <figcaption>Weekly NASDAQ returns - The heat beat of the market </figcaption>
+    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
+  </div>
+</figure>
+
 <hr class="section-divider">
 
 <h3>The Patient's Support Network</h3>
