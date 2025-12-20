@@ -2929,29 +2929,31 @@ img.plot {
   font-size: 0.85rem;
 }
 
-/* --- Force sentiment pie to be tiny + centered --- */
+/* --- Sentiment pie: VERY small, no padding, centered (only this plot) --- */
 figure[data-plot="sentiment-pie"] {
-  width: 220px !important;     /* 🔽 smaller */
+  width: 160px !important;   
   max-width: none !important;
-  margin: 0 auto !important;   /* hard center */
+  margin: 0 auto !important;
+  padding: 0 !important;
   display: flex !important;
   justify-content: center !important;
 }
 
-/* Override Plotly inline size */
+/* Hard override Plotly inline sizing */
 figure[data-plot="sentiment-pie"] .plotly-graph-div {
-  width: 220px !important;
-  height: 220px !important;
+  width: 160px !important;
+  height: 160px !important;
+  padding: 0 !important;
   margin: 0 auto !important;
 }
 
-figure[data-plot="sentiment-pie"],
-figure[data-plot="sentiment-pie"] .interactive-figure,
-figure[data-plot="sentiment-pie"] .plotly-graph-div {
+/* Kill any extra wrapper spacing Plotly injects */
+figure[data-plot="sentiment-pie"] > div,
+figure[data-plot="sentiment-pie"] .interactive-figure {
   padding: 0 !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 auto !important;
 }
+
 
 
 /* Responsive design for smaller screens */
