@@ -197,9 +197,9 @@
 
 <div class="methodology-box math-box reveal no-box">
   <h4>The Formal Test</h4>
-  <p>To test if <strong>Sentiment ($S$) causes Returns ($R$)</strong>, we compare two models using an F-test:</p>
+  <p>To test if <strong>Sentiment (S) causes Returns (R)</strong>, we compare two models using an F-test:</p>
   
-  <div class="var-grid-wrapper" style="margin-top: 1rem; grid-template-columns: 1fr; gap: 1rem;">
+  <div class="var-grid-wrapper" style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
     
     <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #718096;">
       <h5 style="color: #4a5568; margin: 0 0 0.5rem;">1. Restricted Model (Null Hypothesis)</h5>
@@ -247,6 +247,14 @@
   </div>
 
 </div>
+
+<style>
+@media (max-width: 768px) {
+  .var-grid-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 
 <hr class="section-divider">
 
