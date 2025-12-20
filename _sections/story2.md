@@ -330,14 +330,6 @@
       <span class="point-number">2</span>
       <p><strong>Causality is asymmetric.</strong> Returns massively affect sentiment; sentiment barely affects returns.</p>
     </div>
-    <div class="summary-point">
-      <span class="point-number">3</span>
-      <p><strong>AAII is backward-looking.</strong> The 6-month survey horizon matches a 6-month backward-looking pattern — investors extrapolate the past.</p>
-    </div>
-    <div class="summary-point">
-      <span class="point-number">4</span>
-      <p><strong>Google contains more information.</strong> Search behavior captures both reactive and anticipatory signals, outperforming explicit surveys.</p>
-    </div>
   </div>
 </div>
 

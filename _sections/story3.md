@@ -61,32 +61,42 @@
 
 <p class="reveal">First, we examine how the market transitions between states <em>without</em> considering external factors like sentiment.</p>
 
-<figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="transition-matrix">
-    <img src="{{ site.baseurl }}/assets/img/unconditional_transition_matrix.png"
-         alt="Unconditional Market Regime Transition Matrix"
-         class="plot">
-    <figcaption>The unconditional transition matrix. High diagonal values mean the market tends to stay in its current state. Bull-to-bull transitions are particularly strong.</figcaption>
+<div class="transition-layout">
+  <!-- Left side: Plot -->
+  <div class="transition-plot-side">
+    <div class="plot-figure reveal">
+      <figure class="interactive-figure" data-plot="transition-matrix">
+        <img src="{{ site.baseurl }}/assets/img/unconditional_transition_matrix.png"
+             alt="Unconditional Market Regime Transition Matrix"
+             class="transition-matrix-img">
+        <figcaption>Market regime transition probabilities</figcaption>
+      </figure>
+    </div>
   </div>
-</figure>
 
-<div class="transition-findings reveal">
-  <h4>Regime Persistence Patterns</h4>
-  <div class="persistence-cards">
-    <div class="persistence-card bull-persist pulse-green">
-      <span class="persist-value">High</span>
-      <span class="persist-label">Bull → Bull</span>
-      <p>Bull markets are self-reinforcing</p>
-    </div>
-    <div class="persistence-card neutral-persist">
-      <span class="persist-value">Moderate</span>
-      <span class="persist-label">Neutral → Neutral</span>
-      <p>Sideways markets are transitional</p>
-    </div>
-    <div class="persistence-card bear-persist pulse-red">
-      <span class="persist-value">High</span>
-      <span class="persist-label">Bear → Bear</span>
-      <p>Downturns are sticky</p>
+  <!-- Right side: Explanation -->
+  <div class="transition-explanation-side">
+    <div class="transition-matrix-explanation reveal">
+      <h4>Regime Persistence Patterns</h4>
+      <p class="matrix-intro">Each cell shows the probability of moving from one market state (row) to another (column):</p>
+
+      <div class="matrix-highlights">
+        <div class="matrix-stat">
+          <span class="stat-value">High</span>
+          <span class="stat-label">Bull → Bull</span>
+          <span class="stat-meaning">Bull markets are self-reinforcing</span>
+        </div>
+        <div class="matrix-stat">
+          <span class="stat-value">Moderate</span>
+          <span class="stat-label">Neutral → Neutral</span>
+          <span class="stat-meaning">Sideways markets are transitional</span>
+        </div>
+        <div class="matrix-stat">
+          <span class="stat-value">High</span>
+          <span class="stat-label">Bear → Bear</span>
+          <span class="stat-meaning">Downturns are sticky</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -97,18 +107,30 @@
 
 <h3>Where Does the Market Spend Its Time?</h3>
 
-<p class="reveal">Given the transition matrix, we can compute the <strong>long-run equilibrium</strong> — the fraction of time the market spends in each state. We compare this to what we actually observed.</p>
-
-<figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="stationary-dist">
-    <img src="{{ site.baseurl }}/assets/img/empirical_stationary_dist.png"
-         alt="Empirical Stationary Distribution of Market Regimes"
-         class="plot">
-    <figcaption>The empirical distribution of market regimes. The close match between theoretical predictions and observed frequencies confirms the Markov assumption is reasonable.</figcaption>
+<div class="transition-layout">
+  <!-- Left side: Plot -->
+  <div class="transition-plot-side">
+    <div class="plot-figure reveal">
+      <figure class="interactive-figure" data-plot="stationary-dist">
+        <img src="{{ site.baseurl }}/assets/img/empirical_stationary_dist.png"
+             alt="Empirical vs Stationary Distribution"
+             class="transition-matrix-img">
+        <figcaption>Empirical vs. theoretical distribution</figcaption>
+      </figure>
+    </div>
   </div>
-</figure>
 
-<p class="reveal">The theoretical and empirical distributions align well, suggesting the market process is approximately <strong>stationary</strong> over our sample period. The market hasn't fundamentally changed its mood cycling behavior.</p>
+  <!-- Right side: Explanation -->
+  <div class="transition-explanation-side">
+    <div class="transition-matrix-explanation reveal">
+      <h4>What Are We Comparing?</h4>
+      <p><strong>Stationary (theoretical):</strong> Given the transition probabilities, math tells us how often the market <em>should</em> be in each state if we ran the process forever.</p>
+      <p><strong>Empirical (observed):</strong> How often the market <em>actually was</em> in each state in our data.</p>
+      <p><strong>Why it matters:</strong> If these match, our Markov model is a good fit. The market's mood cycling has been consistent over time — it hasn't fundamentally changed behavior.</p>
+      <p class="reveal"><strong>Finding:</strong> Close match. The market process is approximately stationary.</p>
+    </div>
+  </div>
+</div>
 
 <hr class="section-divider">
 
@@ -180,41 +202,6 @@
 <p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>. Meaningfully higher than AAII — search behavior is more informative about regime transitions.</p>
 
 <p class="reveal"><strong>Why does Google outperform AAII?</strong> Google captures everyone (not just survey respondents), searches are spontaneous and unfiltered, and they happen in real-time rather than as considered survey responses.</p>
-
-<hr class="section-divider">
-
-<h2>Mood Cycles Over Time</h2>
-
-<figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="sentiment-timeline">
-    <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
-         alt="Historical Sentiment Over Time"
-         class="plot">
-    <figcaption>AAII sentiment over time. Notice how sentiment spikes and crashes tend to follow — not precede — major market moves.</figcaption>
-  </div>
-</figure>
-
-<div class="historical-events reveal">
-  <h4>Key Episodes</h4>
-
-  <div class="event-card pulse-red">
-    <span class="event-date">2000-2002</span>
-    <span class="event-name">Dot-Com Crash</span>
-    <p>Extended bearish regime. Sentiment turned negative <em>after</em> the decline was well underway.</p>
-  </div>
-
-  <div class="event-card pulse-red">
-    <span class="event-date">2008-2009</span>
-    <span class="event-name">Global Financial Crisis</span>
-    <p>Sharp regime transition. Bearish sentiment peaked <em>after</em> the worst of the drawdown.</p>
-  </div>
-
-  <div class="event-card pulse-red">
-    <span class="event-date">March 2020</span>
-    <span class="event-name">COVID Crash</span>
-    <p>Fastest transition on record. Sentiment collapsed in sync with prices — no lead time.</p>
-  </div>
-</div>
 
 <hr class="section-divider">
 
@@ -308,10 +295,6 @@
     </div>
     <div class="summary-point">
       <span class="point-number">4</span>
-      <p><strong>Historical pattern confirms reactivity.</strong> In major market events, sentiment moves with or after prices — not before.</p>
-    </div>
-    <div class="summary-point">
-      <span class="point-number">5</span>
       <p><strong>The 6-month mirror effect.</strong> AAII sentiment peaks at -26 weeks lag — investors answer "where will markets go?" by looking at where they've been.</p>
     </div>
   </div>
