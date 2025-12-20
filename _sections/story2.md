@@ -210,7 +210,7 @@
   </div> 
   </div>
 
-<div class="revelation-box reveal gradient-border">
+<div class="revelation-box reveal no-box">
   <h3>The Revelation</h3>
   <p>The VAR reveals a <strong>striking asymmetry</strong>:</p>
   <ul>
