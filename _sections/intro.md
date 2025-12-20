@@ -40,7 +40,7 @@
          alt="The Market personified as a patient on a therapy couch"
          class="section-image">
 
-    <figcaption>The Market — our most complex patient</figcaption>
+    <figcaption>The Market: our most complex patient</figcaption>
   </figure>
 
 </div>
@@ -48,7 +48,7 @@
 
 <p class="lead reveal">
 They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.
-<strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life — the ones who interact with it daily and claim to know what it's thinking.
+<strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life: the ones who interact with it daily and claim to know what it's thinking.
 </p>
 
 <hr class="section-divider">
@@ -74,7 +74,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
   <div class="witness-card general-public">
     <h4>The General Public</h4>
     <p class="witness-source">Google Trends Search Behavior</p>
-    <p>Society at large — their collective search behavior reveals unconscious fears and hopes about the economy. They don't know they're being observed.</p>
+    <p>Society at large: their collective search behavior reveals unconscious fears and hopes about the economy. They don't know they're being observed.</p>
     <ul class="witness-traits">
       <li>Spontaneous</li>
       <li>Implicit sentiment</li>
@@ -115,7 +115,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
       <h4>Sentiment Is Just a Mirror</h4>
       <span class="hypothesis-label">Hypothesis B</span>
     </div>
-    <p>Markets move because of fundamentals, shocks, and institutional flows. Retail investors simply update their views afterward — explaining what already happened.</p>
+    <p>Markets move because of fundamentals, shocks, and institutional flows. Retail investors simply update their views afterward, explaining what already happened.</p>
     <div class="hypothesis-implication">
       <strong>Implication:</strong> Sentiment should <em>lag</em> market movements. Investors turn bearish <em>after</em> seeing losses.
     </div>
@@ -126,7 +126,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 
 <div class="session-transition">
   <p class="transition-label">Session Notes</p>
-  <p class="transition-text">Only one of these hypotheses can dominate in the data. Armed with decades of price history, sentiment surveys, and search data — plus statistical tools sharper than any scalpel — we're going in.</p>
+  <p class="transition-text">Only one of these hypotheses can dominate in the data. Armed with decades of price history, sentiment surveys, and search data (plus statistical tools sharper than any scalpel) we're going in.</p>
   <p class="transition-cta">Let's meet the witnesses.</p>
 </div>
 
