@@ -132,7 +132,7 @@
   </div>
 </div>
 
-<div class="insight-box reveal">
+<div class="section-intro-text reveal">
   <p><strong>Key Insight:</strong> Sentiment states are highly persistent. When investors are optimistic, they tend to stay optimistic. But crucially, <strong>pessimism is less sticky than optimism:</strong>  bad moods pass faster than good ones. This asymmetry will matter when we study market regimes.</p>
 </div>
 
