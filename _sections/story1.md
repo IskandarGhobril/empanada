@@ -146,11 +146,8 @@
 
 <div class="plot-figure reveal">
   <figure class="interactive-figure" data-plot="sentiment-shifts">
-    <img src="{{ site.baseurl }}/assets/img/top_sudden_sentiment_changes.png"
-         alt="Largest sentiment changes over time"
-         style="width: 60%; height: auto;">
+    {% pct_change_prediction.html %}
     <figcaption>Top sudden sentiment shifts: critical moments in market psychology</figcaption>
-    <!-- INTERACTIVE: Click on spikes to see news headlines from that date, hover for context -->
   </figure>
 </div>
 
