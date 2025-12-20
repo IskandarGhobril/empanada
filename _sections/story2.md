@@ -72,19 +72,34 @@
   related at all?
 </p>
 
-<figure class="plot-figure reveal">
+<figure class="plot-figure reveal plot-small">
   <div class="interactive-figure" data-plot="market-returns">
     <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
-         alt="Market returns sentiment "
+         alt="Market returns sentiment"
          class="plot">
-    <figcaption> Sentiment and future returns </figcaption>
-    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
+    <figcaption>Sentiment and future returns</figcaption>
+  </div>
+
+  <!-- Interpretation text -->
+  <div class="figure-interpretation">
+    <p>
+      The distribution tilts upward from bottom-left to top-right.
+      When past returns were negative (bottom half), investors tend to be
+      bearish (left side). When past returns were positive (top half),
+      investors tend to be bullish (right side). This suggests a positive
+      relationship between sentiment and past performance.
+    </p>
+
+    <p>
+      By contrast, the distribution is more symmetric and scattered.
+      There is no clear directional pattern between sentiment and future
+      returns. Bullish investors (right side) do not consistently see
+      higher future returns, and bearish investors (left side) do not
+      consistently see lower future returns.
+    </p>
   </div>
 </figure>
 
-The distribution tilts upward from bottom-left to top-right. When past returns were negative (bottom half), investors tend to be bearish (left side). When past returns were positive (top half), investors tend to be bullish (right side). This suggests a positive relationship between sentiment and past performance.
-
-The distribution is more symmetric and scattered. There is no clear directional pattern between sentiment and future returns. Bullish investors (right side) do not consistently see higher future returns, and bearish investors (left side) do not consistently see lower future returns.
 
 <!-- Sentiment definition -->
 <div class="stat-definition reveal">

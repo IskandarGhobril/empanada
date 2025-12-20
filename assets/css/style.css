@@ -4682,3 +4682,18 @@ hr,
   font-style: italic;
   color: #475569;
 }
+
+.figure-interpretation {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.figure-interpretation p {
+  margin: 0 0 0.75rem 0;
+}
+
+.figure-interpretation p:last-child {
+  margin-bottom: 0;
+}
