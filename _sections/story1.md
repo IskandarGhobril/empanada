@@ -236,10 +236,7 @@
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sentiment-timeline">
-    <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
-         alt="Google Trends sentiment classification over time"
-         class="plot"
-         style="width: 60%; height: auto;">
+    {% include google_over_time.html %}
     <figcaption>Dominant search sentiment over time: the crowd's unconscious mood</figcaption>
     <!-- INTERACTIVE: Zoomable timeline with brushing, hover to see specific search terms dominating each period, click periods to see breakdown -->
   </div>
