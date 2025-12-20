@@ -381,6 +381,15 @@ body.longform-page .markdown-body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.clinic-authors {
+  margin-top: 1rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 /* ============================================
    LONGFORM WRAPPER
    ============================================ */

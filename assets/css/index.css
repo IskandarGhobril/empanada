@@ -29,16 +29,6 @@
 }
 
 
-.clinic-authors {
-  margin-top: 1rem;
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-
 /* Responsive adjustment */
 @media (max-width: 900px) {
   .index-title h1 {
