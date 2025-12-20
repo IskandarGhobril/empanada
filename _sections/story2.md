@@ -72,17 +72,27 @@
   <p>We define a single sentiment measure: <strong>S = %Bullish − %Bearish</strong></p>
   <p>This captures net optimism on a scale from -100 (completely bearish) to +100 (completely bullish).</p>
 </div>
-
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sentiment-scatter">
-    <!-- TODO: Add sentiment_vs_returns.png scatter plot image -->
-    <div class="placeholder-chart" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 2px dashed #dee2e6; border-radius: 12px; padding: 3rem; text-align: center; color: #6c757d;">
-      <p style="font-size: 1.1rem; margin: 0;">📊 Sentiment vs Returns Scatter Plot</p>
-      <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Image pending: sentiment_vs_returns.png</p>
-    </div>
-    <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+
+    <iframe
+      src="assets/plots/granger_causality.html"
+      title="Sentiment vs 6-month forward returns scatter plot"
+      style="
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-radius: 12px;
+      "
+      loading="lazy"
+    ></iframe>
+
     <!-- INTERACTIVE: Hover points to see dates, brush to select subsets, toggle regression line -->
   </div>
+
+  <figcaption>
+    Sentiment (S) versus 6-month forward returns — is there a relationship?
+  </figcaption>
 </figure>
 
 <div class="stats-results reveal">
