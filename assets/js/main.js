@@ -270,3 +270,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Correlation matrix filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const correlationImage = document.getElementById('correlationImage');
+  const explanationTitle = document.getElementById('explanationTitle');
+  const explanationText = document.getElementById('explanationText');
+  
+  const explanations = {
+    all: {
+      title: "Understanding the Correlations",
+      text: "These correlation matrices reveal how different Google search terms align with investor sentiment. Red cells indicate strong positive correlations, while blue cells show negative correlations. Click on a category above to explore specific sentiment patterns."
+    },
+    bearish: {
+      title: "Bearish Sentiment Patterns",
+      text: "Bearish searches like 'recession' and 'unemployment' show strong positive correlations with AAII bearish sentiment. When investors expect markets to fall, they increasingly search for economic warning signs. Notice the dark red cells indicating searches that spike during market downturns."
+    },
+    bullish: {
+      title: "Bullish Sentiment Patterns",
+      text: "Bullish searches such as 'investment' and 'stock market' correlate positively with optimistic AAII sentiment. When confidence is high, investors actively seek opportunities. The correlation patterns reveal which searches best predict market optimism."
+    },
+    neutral: {
+      title: "Neutral Sentiment Patterns",
+      text: "Neutral sentiment reflects market uncertainty. These searches show weaker correlations, as investors are neither strongly optimistic nor pessimistic. Major indices like the Dow Jones and Nasdaq show moderate correlations, indicating cautious market observation."
+    }
+  };
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      // Get selected category
+      const category = this.dataset.category;
+      
+      // Update image source
+      const basePath = correlationImage.src.split('/').slice(0, -1).join('/');
+      correlationImage.src = `${basePath}/sentiment_correlation_${category}.png`;
+      
+      // Update explanation
+      explanationTitle.textContent = explanations[category].title;
+      explanationText.textContent = explanations[category].text;
+    });
+  });
+});

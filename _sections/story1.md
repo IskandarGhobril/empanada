@@ -39,7 +39,7 @@
       <span class="option-title">Bearish</span>
       <span class="option-desc">The market will fall</span>
     </button>
-    
+
   </div>
   <button class="submit-btn" id="submitSentiment" disabled>Submit</button>
   <p class="response-message" id="responseMessage"></p>
@@ -237,20 +237,41 @@
   <p><strong>Bullish searches build gradually</strong> during expansions — people slowly become more interested in investing as confidence grows.</p>
   <p><strong>Bearish searches spike sharply</strong> during stress — fear triggers immediate information-seeking. The asymmetry mirrors what we saw in AAII sentiment.</p>
 </div>
-
 <hr class="section-divider">
 
 <h3>Correlation: Do the Two Witnesses Agree?</h3>
 
-<figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="correlation-matrix">
-    <img src="{{ site.baseurl }}/assets/img/sentiment_correlation_matrices.png"
-         alt="Correlation between sentiment measures"
-         class="plot">
-    <figcaption>Correlation matrices showing relationships between search queries and AAII sentiment</figcaption>
-    <!-- INTERACTIVE: Hover cells for exact values, click to see scatter plots of specific pairs -->
+<div class="correlation-layout">
+  <!-- Left side: Plot with buttons -->
+  <div class="correlation-plot-container">
+    <div class="sentiment-filter-buttons">
+      <button class="filter-btn active" data-category="all">All Categories</button>
+      <button class="filter-btn" data-category="bearish">Bearish</button>
+      <button class="filter-btn" data-category="bullish">Bullish</button>
+      <button class="filter-btn" data-category="neutral">Neutral</button>
+    </div>
+    
+    <figure class="plot-figure reveal">
+      <div class="interactive-figure" data-plot="correlation-matrix">
+        <img id="correlationImage" 
+             src="{{ site.baseurl }}/assets/img/sentiment_correlation_all.png"
+             alt="Correlation between sentiment measures"
+             class="plot">
+        <figcaption>Correlation matrices showing relationships between search queries and AAII sentiment</figcaption>
+      </div>
+    </figure>
   </div>
-</figure>
+
+  <!-- Right side: Explanation box -->
+  <div class="correlation-explanation">
+    <h4 id="explanationTitle">Understanding the Correlations</h4>
+    <p id="explanationText">
+      These correlation matrices reveal how different Google search terms align with investor sentiment. 
+      Red cells indicate strong positive correlations, while blue cells show negative correlations. 
+      Click on a category above to explore specific sentiment patterns.
+    </p>
+  </div>
+</div>
 
 <div class="correlation-findings reveal">
   <h4>Key Correlations</h4>
