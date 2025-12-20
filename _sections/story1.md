@@ -1,8 +1,9 @@
 <div id="story1" class="section section-witnesses">
 
 <div class="session-header">
-  <div class="session-number">Session 2</div>
-  <h2 class="section-title">The Witness Profiles</h2>
+  <h2 class="section-title">
+    <span class="session-label">Session 2:</span> The Witness Profiles
+  </h2>
   <p class="session-subtitle">Two Perspectives on the Patient</p>
 </div>
 
@@ -42,12 +43,6 @@
   <button class="submit-btn" id="submitSentiment" disabled>Submit</button>
   <p class="response-message" id="responseMessage"></p>
 </div>
-
-<p>Before we look at what investors actually believe, take a moment to answer the same question they face every week:</p>
-
-<h4>Where do you think the market is headed over the next six months?</h4>
-
-{% include click.html %}
 
 <p>Whatever your choice, you've just joined millions of investors who make this call regularly. Now let's see what the data reveals about their collective psychology.</p>
 
