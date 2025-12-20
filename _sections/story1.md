@@ -54,10 +54,8 @@
 <div class="plot-text-container reveal">
   <div class="plot-side">
     <figure class="interactive-figure" data-plot="sentiment-pie">
-      <img src="{{ site.baseurl }}/assets/img/sentiment_state_pie_chart.png"
-           alt="Pie chart showing distribution of sentiment states">
+      {% include sentiment_pie_plot.html %}
       <figcaption>Distribution of investor sentiment across all observations (1987-2020)</figcaption>
-      <!-- INTERACTIVE: Make this pie chart interactive with hover tooltips showing exact percentages and click to filter time periods -->
     </figure>
   </div>
 
