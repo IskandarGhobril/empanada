@@ -39,6 +39,7 @@
       <span class="option-title">Bearish</span>
       <span class="option-desc">The market will fall</span>
     </button>
+    
   </div>
   <button class="submit-btn" id="submitSentiment" disabled>Submit</button>
   <p class="response-message" id="responseMessage"></p>
