@@ -4483,22 +4483,17 @@ body.longform-page .longform .lead,
 
 
 /* ============================================
-   REMOVE EXTRA LINES (Refined)
-   - Removes dividers and H2 underlines
-   - KEEPS the main Session Header underlines
+   REMOVE EXTRA DIVIDERS ONLY
+   - Removes dashed separators (<hr>)
+   - KEEPS all Title/Header underlines
    ============================================ */
 
-/* 1. Remove the lines underlining headings (like "Part A", "Part B") */
-.longform h2 {
-    border-bottom: none !important;
-    padding-bottom: 0 !important;
-}
-
-/* 2. Remove the divider lines between sections */
+/* Remove only the divider lines between sections */
 hr, 
 .section-divider {
     display: none !important;
     border: none !important;
+    margin: 0 !important; /* Removes the empty gap they leave behind */
 }
 
 .session-block {
