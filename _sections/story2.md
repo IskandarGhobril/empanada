@@ -107,35 +107,59 @@
     </div>
   </div>
 
-  <!-- Metric definition -->
-  <div class="card definition-card reveal">
-    <span class="card-label">Sentiment metric</span>
-    <p>
-      Investor sentiment is summarized by a single index:
-      <strong>S = %Bullish − %Bearish</strong>,
-      representing net optimism on a scale from −100 (fully bearish)
-      to +100 (fully bullish).
-    </p>
-  </div>
+  <div class="card analysis-card reveal">
+
+  <!-- Metric -->
+  <span class="card-label">Sentiment metric</span>
+  <p class="metric-text">
+    Investor sentiment is summarized by a single index,
+    <strong>S = %Bullish − %Bearish</strong>,
+    capturing net optimism on a scale from −100 (fully bearish)
+    to +100 (fully bullish).
+  </p>
 
   <!-- Results -->
-  <div class="card results-card reveal">
-    <h4>Correlation results</h4>
+  <h4>Correlation with market returns</h4>
 
-    <div class="stat-grid">
-      <div class="stat-block">
-        <span class="stat-name">Pearson correlation</span>
-        <span class="stat-number">ρ ≈ 0.32</span>
-        <span class="stat-meta">p &lt; 0.001</span>
-      </div>
+  <div class="stat-grid">
 
-      <div class="stat-block">
-        <span class="stat-name">Spearman rank correlation</span>
-        <span class="stat-number">ρ<sub>s</sub> ≈ −0.09</span>
-        <span class="stat-meta">p &lt; 0.001</span>
-      </div>
+    <div class="stat-block">
+      <span class="stat-name">Past 6-month returns (Pearson)</span>
+      <span class="stat-number">ρ ≈ 0.32</span>
+      <span class="stat-meta">p &lt; 0.001</span>
+      <p class="stat-text">
+        Sentiment is strongly and positively correlated with recent
+        market performance. Investors tend to become more optimistic
+        following periods of rising prices, consistent with
+        trend-chasing behavior.
+      </p>
     </div>
+
+    <div class="stat-block">
+      <span class="stat-name">Future 6-month returns (Spearman)</span>
+      <span class="stat-number">ρ<sub>s</sub> ≈ −0.09</span>
+      <span class="stat-meta">p &lt; 0.001</span>
+      <p class="stat-text">
+        Looking forward, the relationship weakens and reverses sign.
+        High levels of optimism are followed by slightly lower
+        future returns, suggesting that excessive bullishness
+        may precede periods of underperformance.
+      </p>
+    </div>
+
   </div>
+
+  <!-- Takeaway -->
+  <p class="analysis-takeaway">
+    <strong>Overall interpretation.</strong>
+    Sentiment appears to respond strongly to past returns but provides
+    limited predictive power for future performance. Although both
+    correlations are statistically significant, their modest magnitude
+    indicates that sentiment explains only a small share of market
+    return variation.
+  </p>
+
+</div>
 
   <!-- Takeaway -->
   <div class="card takeaway-card reveal">
