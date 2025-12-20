@@ -382,16 +382,31 @@ body.longform-page .markdown-body {
 }
 
 
-.clinic-authors {
-  margin: 0.9rem auto 0 auto; 
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.05em;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;         
+.clinic-authors{
+  display: block !important;
+  width: 100% !important;
+
+  /* kill any sneaky offsets */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-indent: 0 !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+
+  /* real centering */
+  text-align: center !important;
+  white-space: nowrap !important;
+
+  /* your typography (keep/tweak) */
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  color: rgba(255,255,255,0.9) !important;
 }
+
 
 
 /* ============================================
