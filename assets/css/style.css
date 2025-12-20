@@ -398,22 +398,44 @@ body.longform-page .longform {
    SESSION HEADERS
    ============================================ */
 
+/* ============================================
+   SESSION HEADERS (Clean Style)
+   ============================================ */
+
 .session-header {
   text-align: center;
-  padding: 4rem 2rem 3rem;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-  border-radius: 16px;
+  padding: 4rem 0 2rem; /* Reduced padding, no side padding */
+  margin-bottom: 3rem;
+  background: transparent; /* Removes the "huge rectangle" background */
+  border-radius: 0;
   position: relative;
 }
 
-.session-header.final-session {
+/* Add a sleek underline instead of the box */
+.session-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
 }
 
-.session-header.final-session .section-title,
+/* Reset the Final Session styles to match the clean look */
+.session-header.final-session {
+  background: transparent;
+  color: inherit;
+}
+
+.session-header.final-session .section-title, 
 .session-header.final-session .session-subtitle {
+  color: #1a202c; /* Resets white text back to dark */
+}
+
+/* Keep the badge looking nice */
+.session-header.final-session .session-number {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
