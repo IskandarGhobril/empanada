@@ -211,7 +211,6 @@
   </div>
 
 <div class="revelation-box reveal no-box">
-  <h3>The Revelation</h3>
   <p>The VAR reveals a <strong>striking asymmetry</strong>:</p>
   <ul>
     <li><strong>Returns → Sentiment:</strong> HUGE effect (coefficient ~1395). Past market performance massively shifts investor sentiment.</li>
@@ -270,60 +269,64 @@
   <p class="placeholder-note">Implementation: Plotly.js with dual traces, crosshair tooltips, and annotation highlighting</p>
 </div>
 
-<div class="lead-lag-results aaii-results reveal">
-  <h3>AAII Sentiment: Lead-Lag Results</h3>
+<div class="lead-lag-grid-wrapper reveal">
 
-  <div class="result-stats">
-    <div class="result-stat pulse-red">
-      <span class="stat-label">Best Lag</span>
-      <span class="stat-value negative">-1 week (and strong signal at -26 weeks)</span>
+  <div class="lead-lag-results aaii-results">
+    <h3>AAII Sentiment: Lead-Lag Results</h3>
+
+    <div class="result-stats">
+      <div class="result-stat pulse-red">
+        <span class="stat-label">Best Lag</span>
+        <span class="stat-value negative">-1 week (and strong signal at -26 weeks)</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Information Gain Range</span>
+        <span class="stat-value">0.002 – 0.018 bits</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Pattern</span>
+        <span class="stat-value">Strongly asymmetric — negative lags dominate</span>
+      </div>
     </div>
-    <div class="result-stat">
-      <span class="stat-label">Information Gain Range</span>
-      <span class="stat-value">0.002 – 0.018 bits</span>
-    </div>
-    <div class="result-stat">
-      <span class="stat-label">Pattern</span>
-      <span class="stat-value">Strongly asymmetric — negative lags dominate</span>
+
+    <div class="interpretation-box critical gradient-border">
+      <h4>What This Means</h4>
+      <p>The peak at <strong>lag = -26 weeks (≈ 6 months)</strong> is striking and not coincidental.</p>
+      <p>Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em></p>
+      <p>Investors answering this question appear to be anchoring on <strong>"where has the market been for the past 6 months?"</strong> and extrapolating that experience into their future outlook.</p>
+      <p class="critical-finding"><strong>AAII sentiment is REACTIVE, not predictive.</strong></p>
     </div>
   </div>
 
-  <div class="interpretation-box critical gradient-border">
-    <h4>What This Means</h4>
-    <p>The peak at <strong>lag = -26 weeks (≈ 6 months)</strong> is striking and not coincidental.</p>
-    <p>Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em></p>
-    <p>Investors answering this question appear to be anchoring on <strong>"where has the market been for the past 6 months?"</strong> and extrapolating that experience into their future outlook.</p>
-    <p class="critical-finding"><strong>AAII sentiment is REACTIVE, not predictive.</strong></p>
-  </div>
-</div>
+  <div class="lead-lag-results google-results">
+    <h3>Google Trends: Lead-Lag Results</h3>
 
-<div class="lead-lag-results google-results reveal">
-  <h3>Google Trends: Lead-Lag Results</h3>
+    <div class="result-stats">
+      <div class="result-stat pulse-green">
+        <span class="stat-label">Best Lag</span>
+        <span class="stat-value positive">+26 weeks</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Information Gain Range</span>
+        <span class="stat-value">0.05 – 0.07 bits</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Pattern</span>
+        <span class="stat-value">More symmetric across positive and negative lags</span>
+      </div>
+    </div>
 
-  <div class="result-stats">
-    <div class="result-stat pulse-green">
-      <span class="stat-label">Best Lag</span>
-      <span class="stat-value positive">+26 weeks</span>
-    </div>
-    <div class="result-stat">
-      <span class="stat-label">Information Gain Range</span>
-      <span class="stat-value">0.05 – 0.07 bits</span>
-    </div>
-    <div class="result-stat">
-      <span class="stat-label">Pattern</span>
-      <span class="stat-value">More symmetric across positive and negative lags</span>
+    <div class="interpretation-box reveal">
+      <h4>What This Means</h4>
+      <p>Google Trends shows a <strong>mixed reactive and predictive signal</strong>. Search behavior captures both:</p>
+      <ul>
+        <li>Response to events (negative lags)</li>
+        <li>Anticipation of market moves (positive lags)</li>
+      </ul>
+      <p>The higher baseline information gain suggests Google captures <strong>more market-relevant information</strong> than AAII surveys.</p>
     </div>
   </div>
 
-  <div class="interpretation-box reveal">
-    <h4>What This Means</h4>
-    <p>Google Trends shows a <strong>mixed reactive and predictive signal</strong>. Search behavior captures both:</p>
-    <ul>
-      <li>Response to events (negative lags)</li>
-      <li>Anticipation of market moves (positive lags)</li>
-    </ul>
-    <p>The higher baseline information gain suggests Google captures <strong>more market-relevant information</strong> than AAII surveys.</p>
-  </div>
 </div>
 
 <hr class="section-divider">
