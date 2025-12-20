@@ -72,10 +72,8 @@
 <div class="plot-text-container reverse reveal">
   <div class="plot-side">
     <figure class="interactive-figure" data-plot="sentiment-violin">
-      <img src="{{ site.baseurl }}/assets/img/sentiment_box_violin_plots.png"
-           alt="Sentiment distribution boxplot">
+      {% include sentiment_box_violin.html %}
       <figcaption>Distribution of sentiment levels showing median, spread, and outliers</figcaption>
-      <!-- INTERACTIVE: Hover to highlight specific distribution, show statistical summaries -->
     </figure>
   </div>
 
