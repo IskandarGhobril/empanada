@@ -69,19 +69,17 @@
   </div>
 </div>
 
-<div class="plot-text-container reverse reveal">
-  <div class="plot-side">
-    <figure class="interactive-figure" data-plot="sentiment-violin">
-      {% include sentiment_box_violin.html %}
-      <figcaption>Distribution of sentiment levels showing median, spread, and outliers</figcaption>
-    </figure>
-  </div>
+<div class="text-side">
+  <p>The violin plots tell us more. <strong>Bullish sentiment</strong> centers around 35-40% with occasional surges above 60%. It's symmetric: optimism can be extreme in either direction.</p>
+  <p><strong>Bearish sentiment</strong> is different. It clusters around 25-30% but shows a right skew. This indicates that deep pessimism is rare, appearing only in acute stress episodes.</p>
+  <p><strong>Neutral sentiment</strong> is the most stable, consistently hovering near 30%.</p>
+</div>
 
-  <div class="text-side">
-    <p>The violin plots tell us more. <strong>Bullish sentiment</strong> centers around 35-40% with occasional surges above 60%. It's symmetric: optimism can be extreme in either direction.</p>
-    <p><strong>Bearish sentiment</strong> is different. It clusters around 25-30% but shows a right skew. This indicates that deep pessimism is rare, appearing only in acute stress episodes.</p>
-    <p><strong>Neutral sentiment</strong> is the most stable, consistently hovering near 30%.</p>
-  </div>
+<div class="plot-side">
+  <figure class="interactive-figure" data-plot="sentiment-violin">
+    {% include sentiment_box_violin.html %}
+    <figcaption>Distribution of sentiment levels showing median, spread, and outliers</figcaption>
+  </figure>
 </div>
 
 <hr class="section-divider">
