@@ -148,130 +148,100 @@
 
 <h2>The Full Picture: Vector Autoregression (VAR)</h2>
 
-<div class="therapist-note reveal no-box">
-  <div class="note-header">
-    <span class="note-icon"></span>
-    <span class="note-label">Advanced Analysis</span>
+<p class="section-intro">
+  To understand whether sentiment and returns influence each other, we estimate a
+  <strong>Vector Autoregression (VAR)</strong>, which captures bidirectional dynamics
+  between the two variables.
+</p>
+
+<!-- VAR model -->
+<div class="var-model">
+  <h4>Model specification</h4>
+
+  <div class="var-equations">
+    <div class="var-eq">
+      <span class="eq-label">Sentiment</span>
+      <span class="eq-formula">
+        S<sub>t</sub> = α₁ + β₁S<sub>t−1</sub> + γ₁R<sub>t−1</sub> + ε<sub>1t</sub>
+      </span>
+    </div>
+
+    <div class="var-eq">
+      <span class="eq-label">Returns</span>
+      <span class="eq-formula">
+        R<sub>t</sub> = α₂ + β₂R<sub>t−1</sub> + γ₂S<sub>t−1</sub> + ε<sub>2t</sub>
+      </span>
+    </div>
   </div>
-  <div class="note-content">
-    <p>VAR models allow us to estimate <strong>bidirectional relationships</strong> — not just whether sentiment predicts returns, but also whether returns predict sentiment. Both directions can be true simultaneously.</p>
+
+  <p class="var-note">
+    The coefficients quantify how past sentiment affects returns — and how past
+    returns affect sentiment.
+  </p>
+</div>
+
+<!-- VAR results -->
+<h3 class="results-title">VAR Results</h3>
+
+<div class="var-grid">
+  <div class="var-card">
+    <h4>Predicting Sentiment</h4>
+
+    <div class="coef-row">
+      <span>Lagged sentiment (S<sub>t−1</sub>)</span>
+      <span class="coef-value">0.652</span>
+    </div>
+    <div class="coef-meta">p &lt; 0.001 · strong persistence</div>
+
+    <div class="coef-row strong">
+      <span>Lagged returns (R<sub>t−1</sub>)</span>
+      <span class="coef-value">1394.83</span>
+    </div>
+    <div class="coef-meta">p &lt; 0.001 · sentiment reacts strongly to returns</div>
+  </div>
+
+  <div class="var-card">
+    <h4>Predicting Returns</h4>
+
+    <div class="coef-row">
+      <span>Lagged returns (R<sub>t−1</sub>)</span>
+      <span class="coef-value">0.965</span>
+    </div>
+    <div class="coef-meta">p &lt; 0.001 · autocorrelation</div>
+
+    <div class="coef-row weak">
+      <span>Lagged sentiment (S<sub>t−1</sub>)</span>
+      <span class="coef-value">0.000001</span>
+    </div>
+    <div class="coef-meta">p = 0.047 · economically negligible</div>
   </div>
 </div>
-<div class="var-section">
-  <!-- Model Explanation -->
-  <div class="var-model-box reveal">
-    <div class="model-header">
-      <span class="advanced-tag">ADVANCED ANALYSIS</span>
-      <h4>Vector Autoregression Model</h4>
+
+<!-- Key insight -->
+<div class="var-insight">
+  <h4>Key insight</h4>
+
+  <div class="insight-compare">
+    <div class="insight-item strong">
+      <span class="direction">Returns → Sentiment</span>
+      <span class="magnitude">Large effect</span>
+      <span class="detail">Coefficient ≈ 1395</span>
     </div>
-    <p class="model-intro">We estimate a system of two equations:</p>
-    
-    <div class="equations-container">
-      <div class="equation-item">
-        <span class="equation-label">Sentiment equation:</span>
-        <span class="equation-formula">S<sub>t</sub> = α₁ + β₁S<sub>t-1</sub> + γ₁R<sub>t-1</sub> + ε<sub>1t</sub></span>
-      </div>
-      <div class="equation-item">
-        <span class="equation-label">Returns equation:</span>
-        <span class="equation-formula">R<sub>t</sub> = α₂ + β₂R<sub>t-1</sub> + γ₂S<sub>t-1</sub> + ε<sub>2t</sub></span>
-      </div>
-    </div>
-    
-    <p class="model-question">The coefficients tell us: How much does lagged sentiment affect current returns? And vice versa?</p>
-  </div>
 
-  <!-- VAR Results -->
-  <div class="var-results-section reveal">
-    <h3 class="results-title">VAR Model Results</h3>
-
-    <div class="var-grid">
-      <!-- Left: What Predicts Sentiment? -->
-      <div class="var-card">
-        <h4 class="card-title">What Predicts Sentiment?</h4>
-        
-        <div class="coefficient-item">
-          <div class="coef-header">
-            <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
-            <span class="coef-value neutral">0.652</span>
-          </div>
-          <div class="coef-details">
-            <span class="coef-pvalue">p < 0.001</span>
-            <span class="coef-meaning">Strong persistence — sentiment is sticky</span>
-          </div>
-        </div>
-
-        <div class="coefficient-item highlighted green">
-          <div class="coef-header">
-            <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
-            <span class="coef-value strong">1394.83</span>
-          </div>
-          <div class="coef-details">
-            <span class="coef-pvalue">p < 0.001</span>
-            <span class="coef-meaning">Sentiment strongly responds to past returns</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: What Predicts Returns? -->
-      <div class="var-card">
-        <h4 class="card-title">What Predicts Returns?</h4>
-        
-        <div class="coefficient-item">
-          <div class="coef-header">
-            <span class="coef-name">Lagged Returns (R<sub>t-1</sub>)</span>
-            <span class="coef-value neutral">0.965</span>
-          </div>
-          <div class="coef-details">
-            <span class="coef-pvalue">p < 0.001</span>
-            <span class="coef-meaning">Strong autocorrelation (overlapping windows)</span>
-          </div>
-        </div>
-
-        <div class="coefficient-item highlighted orange">
-          <div class="coef-header">
-            <span class="coef-name">Lagged Sentiment (S<sub>t-1</sub>)</span>
-            <span class="coef-value weak">0.000001</span>
-          </div>
-          <div class="coef-details">
-            <span class="coef-pvalue">p = 0.047</span>
-            <span class="coef-meaning">Tiny but significant effect</span>
-          </div>
-        </div>
-      </div>
+    <div class="insight-item weak">
+      <span class="direction">Sentiment → Returns</span>
+      <span class="magnitude">Tiny effect</span>
+      <span class="detail">Coefficient ≈ 0.000001</span>
     </div>
   </div>
 
-  <!-- Key Finding -->
-  <div class="key-finding-box reveal">
-    <div class="finding-header">
-      <span class="finding-icon">💡</span>
-      <h4>The VAR reveals a <strong>striking asymmetry:</strong></h4>
-    </div>
-    
-    <div class="asymmetry-comparison">
-      <div class="comparison-item returns-sentiment">
-        <div class="comparison-arrow">Returns → Sentiment</div>
-        <div class="comparison-value">HUGE effect</div>
-        <div class="comparison-detail">Coefficient ≈ 1395</div>
-        <p>Past market performance massively shifts investor sentiment</p>
-      </div>
-      
-      <div class="comparison-divider">vs</div>
-      
-      <div class="comparison-item sentiment-returns">
-        <div class="comparison-arrow">Sentiment → Returns</div>
-        <div class="comparison-value">TINY effect</div>
-        <div class="comparison-detail">Coefficient ≈ 0.000001</div>
-        <p>Sentiment has almost no impact on future returns</p>
-      </div>
-    </div>
-
-    <div class="conclusion">
-      <p>The relationship is bidirectional in a statistical sense, but <strong>economically one-sided</strong>.</p>
-      <p class="conclusion-emphasis">Markets move investors far more than investors move markets.</p>
-    </div>
-  </div>
+  <p class="final-takeaway">
+    The relationship is statistically bidirectional, but
+    <strong>economically one-sided</strong>:
+    markets move investors far more than investors move markets.
+  </p>
 </div>
+
 
 <hr class="section-divider">
 
