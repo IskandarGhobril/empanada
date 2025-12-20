@@ -61,60 +61,75 @@
     <p>Lower/negative returns, heightened volatility. Stress and drawdowns.</p>
   </div>
 </div>
+
 <hr class="section-divider">
 
-<section class="stat-section">
-  <h2>The Initial Evidence: Correlation</h2>
 
-  <p class="lead reveal">
-    Let’s start with the most basic question: are sentiment and future returns
-    related at all?
-  </p>
+<h2>The Initial Evidence: Correlation</h2>
 
-  <!-- Sentiment definition -->
-  <div class="stat-definition reveal">
-    <span class="definition-label">Sentiment metric</span>
-    <p>
-      We construct a single sentiment measure:
-      <strong>S = %Bullish − %Bearish</strong>,
-      capturing net optimism on a scale from −100 (fully bearish)
-      to +100 (fully bullish).
-    </p>
+<p class="lead reveal">
+  Let’s start with the most basic question: are sentiment and future returns
+  related at all?
+</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="market-returns">
+    <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
+         alt="Market returns sentiment "
+         class="plot">
+    <figcaption> Sentiment and future returns </figcaption>
+    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
   </div>
+</figure>
 
-  <!-- Results -->
-  <div class="stat-results reveal">
-    <h4>Correlation results</h4>
+The distribution tilts upward from bottom-left to top-right. When past returns were negative (bottom half), investors tend to be bearish (left side). When past returns were positive (top half), investors tend to be bullish (right side). This suggests a positive relationship between sentiment and past performance.
 
-    <div class="stat-grid">
-      <div class="stat-block">
-        <span class="stat-name">Pearson correlation</span>
-        <span class="stat-number">ρ ≈ 0.33</span>
-        <span class="stat-meta">p &lt; 0.001</span>
-      </div>
+The distribution is more symmetric and scattered. There is no clear directional pattern between sentiment and future returns. Bullish investors (right side) do not consistently see higher future returns, and bearish investors (left side) do not consistently see lower future returns.
 
-      <div class="stat-block">
-        <span class="stat-name">Spearman rank correlation</span>
-        <span class="stat-number">ρ<sub>s</sub> ≈ 0.28</span>
-        <span class="stat-meta">p &lt; 0.001</span>
-      </div>
+<!-- Sentiment definition -->
+<div class="stat-definition reveal">
+  <span class="definition-label">Sentiment metric</span>
+  <p>
+    We construct a single sentiment measure:
+    <strong>S = %Bullish − %Bearish</strong>,
+    capturing net optimism on a scale from −100 (fully bearish)
+    to +100 (fully bullish).
+  </p>
+</div>
+
+<!-- Results -->
+<div class="stat-results reveal">
+  <h4>Correlation results</h4>
+
+  <div class="stat-grid">
+    <div class="stat-block">
+      <span class="stat-name">Pearson correlation</span>
+      <span class="stat-number">ρ ≈ 0.33</span>
+      <span class="stat-meta">p &lt; 0.001</span>
+    </div>
+
+    <div class="stat-block">
+      <span class="stat-name">Spearman rank correlation</span>
+      <span class="stat-number">ρ<sub>s</sub> ≈ 0.28</span>
+      <span class="stat-meta">p &lt; 0.001</span>
     </div>
   </div>
+</div>
 
-  <!-- Interpretation -->
-  <div class="stat-interpretation reveal">
-    <p>
-      <strong>Initial finding.</strong>
-      Higher optimism is associated with higher future returns.
-      The relationship is positive, statistically significant,
-      and robust to outliers.
-    </p>
+<!-- Interpretation -->
+<div class="stat-interpretation reveal">
+  <p>
+    <strong>Initial finding.</strong>
+    Higher optimism is associated with higher future returns.
+    The relationship is positive, statistically significant,
+    and robust to outliers.
+  </p>
 
-    <p class="stat-caveat">
-      However, correlation alone does not establish direction:
-      does sentiment move markets, or do markets shape sentiment?
-    </p>
-  </div>
+  <p class="stat-caveat">
+    However, correlation alone does not establish direction:
+    does sentiment move markets, or do markets shape sentiment?
+  </p>
+</div>
 </section>
 
 <hr class="section-divider">
