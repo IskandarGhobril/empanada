@@ -2954,7 +2954,7 @@ img.plot {
   font-size: 0.85rem;
 }
 
-figure[data-plot="sentiment-pie"] { max-width: clamp(1120px, 18vw, 260px); }
+figure[data-plot="sentiment-pie"] { max-width: clamp(120px, 18vw, 260px); }
 figure[data-plot="sentiment-pie"] .plotly-graph-div { height: clamp(120px, 18vw, 260px) !important; }
 
 
