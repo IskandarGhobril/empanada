@@ -7,7 +7,7 @@
   <p class="session-subtitle">Two Perspectives on the Patient</p>
 </div>
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
     <span class="note-icon">🔍</span>
     <span class="note-label">Observation Method</span>
@@ -23,7 +23,7 @@
 
 <p class="lead reveal">Every week since 1987, members of the American Association of Individual Investors have answered one simple question:</p>
 
-<div class="survey-question-box reveal pulse-on-hover">
+<div class="survey-question-box reveal pulse-on-hover no-box">
   <p class="survey-label">AAII Weekly Sentiment Survey</p>
   <h3 class="survey-question">"Where do you think the market will be in the next 6 months?"</h3>
   <div class="survey-options">

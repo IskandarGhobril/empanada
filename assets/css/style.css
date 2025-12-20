@@ -3333,3 +3333,20 @@ figure[data-plot="sentiment-pie"] .plotly-graph-div canvas{
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Helper class to remove box container styling */
+.no-box {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Optional: Adjusts the spacing of headers inside these notes to sit better as plain text */
+.no-box .note-header, 
+.no-box .survey-label {
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
