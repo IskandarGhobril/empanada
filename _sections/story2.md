@@ -167,31 +167,38 @@
     <span class="note-label">Statistical Method</span>
   </div>
   <div class="note-content">
-    <p><strong>Granger Causality</strong> isn't "magic." It simply asks: does knowing the past history of Variable A help us predict Variable B better than just knowing Variable B's own history?</p>
+    <p><strong>Granger Causality</strong> asks a specific question: Does adding past values of Variable X reduce the prediction error of Variable Y, compared to predicting Y using only its own history?</p>
   </div>
 </div>
 
 <div class="methodology-box math-box reveal no-box">
-  <h4>The Two-Way Test</h4>
-  <p>To solve the "Chicken or Egg" problem, we test the relationship in <strong>both directions</strong>.</p>
+  <h4>The Formal Test</h4>
+  <p>To test if <strong>Sentiment ($S$) causes Returns ($R$)</strong>, we compare two models using an F-test:</p>
   
-  <div class="var-grid-wrapper" style="margin-top: 1rem;">
-    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #c53030;">
-      <h5 style="color: #c53030; margin: 0 0 0.5rem;">1. Does Sentiment predict Returns?</h5>
-      <div class="equation no-box" style="font-size: 0.9rem;">
-        R<sub>t</sub> = α + ... + <strong style="color: #c53030;">γ S<sub>t-lag</sub></strong> + ε<sub>t</sub>
+  <div class="var-grid-wrapper" style="margin-top: 1rem; grid-template-columns: 1fr; gap: 1rem;">
+    
+    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #718096;">
+      <h5 style="color: #4a5568; margin: 0 0 0.5rem;">1. Restricted Model (Null Hypothesis)</h5>
+      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">We try to predict Returns using <em>only</em> past Returns.</p>
+      <div class="equation no-box" style="font-size: 1rem;">
+        R<sub>t</sub> = α + <span style="color: #718096;">∑ β<sub>i</sub> R<sub>t-i</sub></span> + ε<sub>t</sub>
       </div>
-      <p style="font-size: 0.85rem; margin: 0.5rem 0 0;">This tests if Sentiment contains "new news" about future prices. (Represented by the <strong>RED LINE</strong>).</p>
     </div>
 
-    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #2b6cb0;">
-      <h5 style="color: #2b6cb0; margin: 0 0 0.5rem;">2. Do Returns predict Sentiment?</h5>
-      <div class="equation no-box" style="font-size: 0.9rem;">
-        S<sub>t</sub> = α + ... + <strong style="color: #2b6cb0;">γ R<sub>t-lag</sub></strong> + ε<sub>t</sub>
+    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #c53030;">
+      <h5 style="color: #c53030; margin: 0 0 0.5rem;">2. Unrestricted Model (Alternative Hypothesis)</h5>
+      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">We add past Sentiment to see if predictions improve.</p>
+      <div class="equation no-box" style="font-size: 1rem;">
+        R<sub>t</sub> = α + <span style="color: #718096;">∑ β<sub>i</sub> R<sub>t-i</sub></span> + <strong style="color: #c53030;">∑ γ<sub>i</sub> S<sub>t-i</sub></strong> + ε<sub>t</sub>
       </div>
-      <p style="font-size: 0.85rem; margin: 0.5rem 0 0;">This tests if investors are simply reacting to past price moves. (Represented by the <strong>BLUE LINE</strong>).</p>
     </div>
+    
   </div>
+  
+  <p style="margin-top: 1rem; font-size: 0.95rem;">
+    <strong>The Test:</strong> We check if the coefficients <strong>γ</strong> (the effect of sentiment) are jointly different from zero. <br>
+    If <strong>γ ≠ 0</strong>, then Sentiment "Granger-causes" Returns.
+  </p>
 </div>
 
 <div class="plot-figure reveal" style="margin: 2rem 0;">
@@ -205,17 +212,11 @@
   
   <p class="lead">The results tell a story of complete asymmetry. By looking at the plot above, we can trace the flow of information:</p>
 
-  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #c53030;">❌ The Red Line (Right Side): Sentiment fails to predict</h4>
-  <p>Look at the <strong>Red Line</strong> on the right side of the graph (positive lags). It represents our ability to predict market returns using past sentiment. The line stays flat near zero, far below the dashed significance threshold. <strong>Result: 0 out of 26 lags are significant.</strong> High optimism today tells us <em>nothing</em> about returns next week.</p>
+  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #c53030;">The Red Line (Right Side): Sentiment fails to predict</h4>
+  <p>This tests the <strong>Unrestricted Model</strong> above. The coefficient sum (<strong>∑ γ</strong>) is effectively zero. Knowing past sentiment adds <strong>no predictive power</strong> to the model. The line stays flat near zero, far below the dashed significance threshold.</p>
 
-  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #2b6cb0;">✅ The Blue Line (Left Side): Returns strongly drive Sentiment</h4>
-  <p>Now look at the <strong>Blue Line</strong> on the left side (negative lags). It skyrockets upwards, reaching values between 15 and 18 on the Y-axis (which is a logarithmic scale of significance). <strong>Result: All 26 lags are highly significant (p < 0.01).</strong></p> 
-  
-  <p><strong>Reading the Blue Curve:</strong></p>
-  <ul>
-    <li><strong>The Dip at -1:</strong> At lag -1 (the most recent week), the signal is slightly weaker. This suggests it takes more than a single week for a trend to fully "soak in" to investor psychology.</li>
-    <li><strong>The Plateau:</strong> From lag -2 to -8, the signal is strongest. This confirms that investors are forming their views based on a rolling window of the past 1-2 months of market performance.</li>
-  </ul>
+  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #2b6cb0;">The Blue Line (Left Side): Returns strongly drive Sentiment</h4>
+  <p>Here we flip the equation: attempting to predict <em>Sentiment</em> using past <em>Returns</em>. The blue line skyrockets, reaching huge significance levels (p < 0.01). This confirms that yesterday's market performance is the primary driver of today's investor mood.</p> 
 
   <div class="insight-box reveal no-box" style="border-left: 3px solid #667eea; padding-left: 1.5rem; margin-top: 2rem;">
     <p><strong>The Conclusion:</strong> This confirms <strong>Extrapolative Expectations</strong>. Investors assume that "what just happened" is "what will happen." When markets rise, they become bullish. When markets fall, they become bearish. They are not forecasting; they are reacting.</p>
