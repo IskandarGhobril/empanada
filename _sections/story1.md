@@ -13,7 +13,7 @@
     <span class="note-label">Observation Method</span>
   </div>
   <div class="note-content">
-    <p>To understand our patient, we interview two key witness groups separately. First, the Inner Circle (AAII survey respondents) — investors who explicitly report their expectations. Then, the General Public — whose unconscious fears and hopes are revealed through Google search behavior.</p>
+    <p>To understand our patient, we interview two key witness groups separately. First, the Inner Circle (AAII survey respondents) — investors who explicitly report their expectations. Then, the General Public, whose unconscious fears and hopes are revealed through Google search behavior.</p>
   </div>
 </div>
 
@@ -65,7 +65,7 @@
       <p>Across 33 years of data, <strong>bullish sentiment is the baseline state</strong>, accounting for 37.6% of all observations. Neutral and bearish views each represent about 31%.</p>
     </div>
     <p>This asymmetry reveals something fundamental about investor psychology: <strong>optimism is the default</strong>. Even accounting for recessions, crashes, and bear markets, investors expect growth more often than decline.</p>
-    <p>This isn't irrational — markets have historically trended upward. But it raises a question: when investors turn bearish, is it because they're seeing something, or because they just saw something?</p>
+    <p>This isn't irrational: markets have historically trended upward. But it raises a question: when investors turn bearish, is it because they're seeing something, or because they just saw something?</p>
   </div>
 </div>
 
@@ -80,8 +80,8 @@
   </div>
 
   <div class="text-side">
-    <p>The violin plots tell us more. <strong>Bullish sentiment</strong> centers around 35-40% with occasional surges above 60%. It's symmetric — optimism can be extreme in either direction.</p>
-    <p><strong>Bearish sentiment</strong> is different. It clusters around 25-30% but shows a right skew — deep pessimism is rare, appearing only in acute stress episodes.</p>
+    <p>The violin plots tell us more. <strong>Bullish sentiment</strong> centers around 35-40% with occasional surges above 60%. It's symmetric: optimism can be extreme in either direction.</p>
+    <p><strong>Bearish sentiment</strong> is different. It clusters around 25-30% but shows a right skew. This indicates that deep pessimism is rare, appearing only in acute stress episodes.</p>
     <p><strong>Neutral sentiment</strong> is the most stable, consistently hovering near 30%.</p>
   </div>
 </div>
@@ -139,7 +139,7 @@
 </div>
 
 <div class="insight-box reveal">
-  <p><strong>Key Insight:</strong> Sentiment states are highly persistent. When investors are optimistic, they tend to stay optimistic. But crucially, <strong>pessimism is less sticky than optimism</strong> — bad moods pass faster than good ones. This asymmetry will matter when we study market regimes.</p>
+  <p><strong>Key Insight:</strong> Sentiment states are highly persistent. When investors are optimistic, they tend to stay optimistic. But crucially, <strong>pessimism is less sticky than optimism:</strong>  bad moods pass faster than good ones. This asymmetry will matter when we study market regimes.</p>
 </div>
 
 <hr class="section-divider">
@@ -147,7 +147,7 @@
 <h3>Finding 3: Critical Moments — When Beliefs Shift Suddenly</h3>
 
 <div class="section-intro-text reveal">
-  <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps — moments when investors rapidly reassessed their outlook.</p>
+  <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps: moments when investors rapidly reassessed their outlook.</p>
 </div>
 
 <div class="plot-figure reveal">
@@ -155,12 +155,12 @@
     <img src="{{ site.baseurl }}/assets/img/top_sudden_sentiment_changes.png"
          alt="Largest sentiment changes over time"
          style="width: 60%; height: auto;">
-    <figcaption>Top sudden sentiment shifts — critical moments in market psychology</figcaption>
+    <figcaption>Top sudden sentiment shifts: critical moments in market psychology</figcaption>
     <!-- INTERACTIVE: Click on spikes to see news headlines from that date, hover for context -->
   </figure>
 </div>
 
-<p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points — we'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
+<p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points. We'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
 
 <hr class="section-divider">
 
@@ -172,7 +172,7 @@
     <span class="note-label">Methodology Note</span>
   </div>
   <div class="note-content">
-    <p>Survey data tells us what investors <strong>say</strong> they believe. But beliefs aren't always articulated — sometimes they show up through what people search when worried, curious, or excited. Google Trends provides this unconscious pulse.</p>
+    <p>Survey data tells us what investors <strong>say</strong> they believe. But beliefs aren't always articulated. Sometimes they show up through what people search when worried, curious, or excited. Google Trends provides this unconscious pulse.</p>
   </div>
 </div>
 
@@ -249,15 +249,15 @@
          alt="Google Trends sentiment classification over time"
          class="plot"
          style="width: 60%; height: auto;">
-    <figcaption>Dominant search sentiment over time — the crowd's unconscious mood</figcaption>
+    <figcaption>Dominant search sentiment over time: the crowd's unconscious mood</figcaption>
     <!-- INTERACTIVE: Zoomable timeline with brushing, hover to see specific search terms dominating each period, click periods to see breakdown -->
   </div>
 </figure>
 
 <div class="pattern-observation reveal">
   <h4>Pattern Observed</h4>
-  <p><strong>Bullish searches build gradually</strong> during expansions — people slowly become more interested in investing as confidence grows.</p>
-  <p><strong>Bearish searches spike sharply</strong> during stress — fear triggers immediate information-seeking. The asymmetry mirrors what we saw in AAII sentiment.</p>
+  <p><strong>Bullish searches build gradually</strong> during expansions; people slowly become more interested in investing as confidence grows.</p>
+  <p><strong>Bearish searches spike sharply</strong> during stress; fear triggers immediate information-seeking. The asymmetry mirrors what we saw in AAII sentiment.</p>
 </div>
 <hr class="section-divider">
 
@@ -336,6 +336,4 @@
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've profiled the witnesses. Now comes the critical question: <strong>Who moves first?</strong> Does sentiment lead market movements, or does it simply follow them?</p>
   <p class="transition-cta">Time for the timeline analysis.</p>
-</div>
-
 </div>
