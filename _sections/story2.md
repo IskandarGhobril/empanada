@@ -85,15 +85,7 @@
   </div>
 
   <!-- Right side: Figure -->
-  <div class="correlation-right">
-    <div class="plot-figure reveal">
-      <figure class="interactive-figure" data-plot="sentiment-scatter">
-        {% include granger_causality.html %}
-        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
+ 
 
 <div class="insight-box reveal">
   <p><strong>Initial Finding:</strong> Yes! Higher optimism is associated with higher future returns. The relationship is positive, statistically significant, and robust to outliers (Spearman confirms).</p>
@@ -175,17 +167,16 @@
     </div>
   </div>
 
-  <div class="var-plot-right">
-    <figure class="plot-figure reveal">
-      <img src="{{ site.baseurl }}/assets/img/clustering.png"
-           alt="VAR Model Interaction Visualization"
-           class="plot"
-           style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-      <figcaption>Visualizing the complex interplay between market states and sentiment.</figcaption>
-    </figure>
+ <div class="correlation-right">
+    <div class="plot-figure reveal">
+      <figure class="interactive-figure" data-plot="sentiment-scatter">
+        {% include granger_causality.html %}
+        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+      </figure>
+    </div>
   </div>
-
 </div>
+
 
 <!-- VAR results -->
 <h3 class="results-title">VAR Results</h3>
