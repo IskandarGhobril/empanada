@@ -126,9 +126,9 @@
 
 <h2>The Key Question: Does Sentiment Affect Transitions?</h2>
 
-<div class="therapist-note dramatic reveal">
+<div class="therapist-note dramatic reveal no-box">
   <div class="note-header">
-    <span class="note-icon">❓</span>
+    <span class="note-icon"></span>
     <span class="note-label">The Critical Test</span>
   </div>
   <div class="note-content">
@@ -138,7 +138,7 @@
 
 <h3>Conditional Markov Analysis: AAII Sentiment</h3>
 
-<div class="methodology-box math-box reveal">
+<div class="methodology-box math-box reveal no-box">
   <h4>Chi-Square Independence Test</h4>
   <p>We test whether market transitions are <strong>independent</strong> of AAII sentiment:</p>
   <ul>
@@ -148,7 +148,7 @@
   <p>A significant result means sentiment contains information about regime changes.</p>
 </div>
 
-<div class="methodology-box math-box reveal">
+<div class="methodology-box math-box reveal no-box">
   <h4>Likelihood Ratio Test</h4>
   <p>We compare two Markov models:</p>
   <ul>
@@ -158,7 +158,7 @@
   <p>If Model 2 fits significantly better, sentiment adds predictive value for regime transitions.</p>
 </div>
 
-<div class="methodology-box math-box reveal">
+<div class="methodology-box math-box reveal no-box">
   <h4>Information Gain Metric</h4>
   <p>We measure how much sentiment reduces uncertainty about the next state:</p>
   <div class="equation">
@@ -317,7 +317,7 @@
 <div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've treated The Market as a single entity. But does the same pattern hold across <strong>different sectors</strong>? Is tech sentiment different from energy sentiment? Time for a differential diagnosis.</p>
-  <p class="transition-cta pulse-purple">Let's break it down by sector.</p>
+  <p class="transition-cta ">Let's break it down by sector.</p>
 </div>
 
 </div>

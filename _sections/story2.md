@@ -110,7 +110,7 @@
 
 <h2>The Critical Test: Granger Causality</h2>
 
-<div class="therapist-note reveal no-boxes">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
     <span class="note-icon"></span>
     <span class="note-label">Statistical Method</span>
@@ -124,7 +124,7 @@
   <h4>The Granger Causality Test</h4>
   <p>We test: <em>"Does knowing past sentiment help forecast future returns?"</em></p>
   <p>Formally, we compare two models:</p>
-  <div class="equation">
+  <div class="equation no-box">
     <p><strong>Restricted:</strong> R<sub>t</sub> = α + β₁R<sub>t-1</sub> + ... + β<sub>p</sub>R<sub>t-p</sub> + ε<sub>t</sub></p>
     <p><strong>Unrestricted:</strong> R<sub>t</sub> = α + β₁R<sub>t-1</sub> + ... + γ₁S<sub>t-1</sub> + ... + γ<sub>p</sub>S<sub>t-p</sub> + ε<sub>t</sub></p>
   </div>
