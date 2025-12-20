@@ -9,7 +9,7 @@
 
 <div class="therapist-note reveal no-box">
   <div class="note-header">
-    <span class="note-icon">🔍</span>
+    <span class="note-icon"></span>
     <span class="note-label">Observation Method</span>
   </div>
   <div class="note-content">
@@ -169,7 +169,7 @@
 
 <div class="therapist-note reveal no-box">
   <div class="note-header">
-    <span class="note-icon">🧠</span>
+    <span class="note-icon"></span>
     <span class="note-label">Methodology Note</span>
   </div>
   <div class="note-content">
