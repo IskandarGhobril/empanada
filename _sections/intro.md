@@ -1,20 +1,11 @@
 <div id="intro" class="section section-intake">
 
-<!-- <div class="session-header">
+<div class="session-header">
   <h2 class="section-title">
     <span class="session-label">Session 1:</span> The Intake
   </h2>
   <p class="session-subtitle">Meet the Patient</p>
-</div> -->
-
-<section class="session-block" id="session-1">
-  <div class="session-header">
-    <span class="session-number">Session 1</span>
-    <h2 class="session-title">The Intake</h2>
-    <p class="session-subtitle">Meet the Patient</p>
-  </div>
-</section>
-
+</div>
 
 <!-- DRAMATIC OPENING STATS -->
 <div class="dramatic-stats reveal">
