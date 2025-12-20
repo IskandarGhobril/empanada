@@ -4538,43 +4538,58 @@ hr,
   margin: 2rem auto 0;
   border-radius: 2px;
 }
-
-.central-question {
-  max-width: 900px;
+/* CENTRAL CLINICAL QUESTION — clean version */
+.central-question{
+  max-width: 980px;
   margin: 5rem auto;
   text-align: center;
 }
 
-.central-label {
+/* Make the label bigger + mauve */
+.central-label{
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.9rem;          /* bigger than before */
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #7b6cf6; /* mauve */
-  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #7b6cf6;             /* mauve */
+  margin-bottom: 1.4rem;
 }
 
-.central-title {
-  font-size: 2.25rem;
-  line-height: 1.4;
-  font-weight: 600;
+/* Main question */
+.central-title{
+  font-size: 2.35rem;
+  line-height: 1.35;
+  font-weight: 700;
   color: #0f172a;
   margin: 0;
 }
 
-.central-divider {
-  width: 90px;
+/* ✅ ONLY keep ONE divider: the long one, but mauve */
+.central-divider{
+  width: 100%;
+  max-width: 820px;
   height: 2px;
-  background: rgba(123, 108, 246, 0.45); /* soft mauve/grey */
-  margin: 2.5rem auto;
+  background: rgba(123,108,246,0.45);  /* mauve-tinted line */
+  margin: 1.8rem auto 2.2rem;
   border-radius: 2px;
 }
 
-.central-subtext {
+/* ✅ Remove the small mauve line (your old underline) */
+.central-question .underline,
+.central-question .mini-line,
+.central-question .short-line,
+.central-question .section-underline,
+.central-question::after{
+  display: none !important;
+  content: none !important;
+}
+
+/* Subtext */
+.central-subtext{
   font-size: 1.15rem;
   color: #475569;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
 }
