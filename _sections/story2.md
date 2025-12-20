@@ -134,6 +134,8 @@ The distribution is more symmetric and scattered. There is no clear directional 
 
 <hr class="section-divider">
 
+<hr class="section-divider">
+
 <h2>The Critical Test: Granger Causality</h2>
 
 <div class="therapist-note reveal no-box">
@@ -157,25 +159,30 @@ The distribution is more symmetric and scattered. There is no clear directional 
   <p>If the unrestricted model fits significantly better, sentiment "Granger-causes" returns.</p>
 </div>
 
-<div class="correlation-right">
-    <div class="plot-figure reveal">
-      <figure class="interactive-figure" data-plot="sentiment-scatter">
-        {% include granger_causality.html %}
-        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
-      </figure>
-    </div>
-  </div>
+<div class="plot-figure reveal" style="margin: 2rem 0;">
+  <figure class="interactive-figure" data-plot="granger-causality">
+    {% include granger_causality.html %}
+    <figcaption>Evolution of Causal Strength: Returns→Sentiment (Blue) vs. Sentiment→Returns (Red)</figcaption>
+  </figure>
 </div>
 
-<div class="test-result-box reveal gradient-border">
-  <h4>Granger Causality Result</h4>
-  <div class="result-highlight">
-    <span class="result-label">p-value</span>
-    <span class="result-value pulse-green">0.047</span>
-    <span class="result-verdict verdict-positive">Significant at 5% level</span>
-  </div>
-  <p>Sentiment does Granger-cause future returns. Past investor sentiment contains predictive information about market performance beyond what past returns alone explain.</p>
-  <p class="result-caveat"><strong>However:</strong> The effect is modest — p-value is close to the threshold. This is not a strong signal.</p>
+<div class="reveal" style="margin-bottom: 2rem;">
+  
+  <p class="lead">The Granger causality results tell a clear story. Past returns strongly predict sentiment at all 26 lags tested (all p-values < 0.01), while sentiment fails to predict future returns at any lag (0/26 significant).</p>
+
+  <p><strong>Visualizing the Asymmetry:</strong> The plot above visualizes this clearly. The <span style="color: #2b6cb0; font-weight: 600;">blue line</span> (past returns → sentiment) sits firmly in the significant zone across all 26 lags, with -log₁₀(p) values between 15 and 18. The <span style="color: #c53030; font-weight: 600;">red line</span> (sentiment → future returns) flatlines near zero, never approaching the significance threshold.</p>
+  
+  <p>Two notable patterns emerge in the blue line: it dips at lag -1 before stabilizing, suggesting the very latest week's returns may have a slightly weaker immediate impact on sentiment. It also gradually weakens as we go further back in time, indicating that more recent returns carry more weight in shaping current sentiment than older ones.</p>
+
+  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem;">Confirmation of Extrapolation</h4>
+  <p>This confirms what the correlations suggested: investors form their sentiment based on recent market performance rather than the other way around. When markets go up, people become optimistic; when markets fall, pessimism follows. This is consistent with <strong>extrapolative expectations</strong>, where investors assume recent trends will continue.</p>
+
+  <p>The lack of predictive power from sentiment to returns challenges the idea that sentiment is a useful forecasting tool. While high sentiment is associated with slightly lower future returns (the negative correlation we saw earlier), this relationship disappears once we account for the time-series dynamics. In other words, sentiment does not add information beyond what past returns already tell us.</p>
+
+</div>
+
+<div class="insight-box reveal no-box" style="border-left: 3px solid #667eea; padding-left: 1.5rem;">
+  <p><strong>Practical Takeaway:</strong> From a practical standpoint, these results suggest that sentiment indicators are better understood as a reflection of where markets <em>have been</em>, not where they are going.</p>
 </div>
 
 <hr class="section-divider">
