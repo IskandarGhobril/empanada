@@ -287,9 +287,8 @@ We classified Google search queries into three sentiment categories based on the
       Click on a category above to explore specific sentiment patterns.
     </p>
   </div>
-</div>
 
-<div class="correlation-findings reveal">
+  <div class="correlation-findings reveal">
   <h4>Key Correlations</h4>
   <ul>
     <li><strong>Within-category queries correlate strongly</strong> — "Recession" and "Unemployment" move together, as do bullish terms</li>
@@ -297,6 +296,9 @@ We classified Google search queries into three sentiment categories based on the
     <li><strong>AAII and Google sentiment are related but distinct</strong> — they capture different aspects of the same underlying psychology</li>
   </ul>
 </div>
+</div>
+
+
 
 <div class="key-insight reveal gradient-border no-box">
   <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
