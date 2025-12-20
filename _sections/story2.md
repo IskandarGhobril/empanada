@@ -62,36 +62,43 @@
 </div>
 
 <hr class="section-divider">
-
 <h2>The Initial Evidence: Correlation</h2>
 
 <p class="lead reveal">Let's start with the obvious question: Are sentiment and future returns related at all?</p>
 
-<div class="methodology-box reveal">
-  <h4>Sentiment Metric</h4>
-  <p>We define a single sentiment measure: <strong>S = %Bullish − %Bearish</strong></p>
-  <p>This captures net optimism on a scale from -100 (completely bearish) to +100 (completely bullish).</p>
-</div>
-
-<div class="plot-figure reveal">
-  <story class="interactive-figure" data-plot="sentiment-scatter">
-    {% include granger_causality.html %}
-    <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
-  </figure>
-</div>
-
-<div class="stats-results reveal">
-  <h4>Correlation Results</h4>
-  <div class="stat-row">
-    <div class="stat-item pulse-green">
-      <span class="stat-name">Pearson Correlation</span>
-      <span class="stat-value positive">ρ ≈ 0.33</span>
-      <span class="stat-pvalue">p < 0.001</span>
+<div class="correlation-layout">
+  <!-- Left side: Definition and Results -->
+  <div class="correlation-left">
+    <div class="methodology-box reveal">
+      <h4>Sentiment Metric</h4>
+      <p>We define a single sentiment measure: <strong>S = %Bullish − %Bearish</strong></p>
+      <p>This captures net optimism on a scale from -100 (completely bearish) to +100 (completely bullish).</p>
     </div>
-    <div class="stat-item pulse-green">
-      <span class="stat-name">Spearman Rank Correlation</span>
-      <span class="stat-value positive">ρₛ ≈ 0.28</span>
-      <span class="stat-pvalue">p << 0.001</span>
+
+    <div class="stats-results reveal">
+      <h4>Correlation Results</h4>
+      <div class="stat-row">
+        <div class="stat-item pulse-green">
+          <span class="stat-name">Pearson Correlation</span>
+          <span class="stat-value positive">ρ ≈ 0.33</span>
+          <span class="stat-pvalue">p < 0.001</span>
+        </div>
+        <div class="stat-item pulse-green">
+          <span class="stat-name">Spearman Rank Correlation</span>
+          <span class="stat-value positive">ρₛ ≈ 0.28</span>
+          <span class="stat-pvalue">p < 0.001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right side: Figure -->
+  <div class="correlation-right">
+    <div class="plot-figure reveal">
+      <figure class="interactive-figure" data-plot="sentiment-scatter">
+        {% include granger_causality.html %}
+        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+      </figure>
     </div>
   </div>
 </div>

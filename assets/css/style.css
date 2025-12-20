@@ -3887,3 +3887,157 @@ body.longform-page .longform .lead,
 .lead-lag-grid-wrapper .interpretation-box ul {
     margin: 0.5rem 0 0.5rem 1.2rem !important;
 }
+.correlation-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Left slightly smaller than right */
+  gap: 3rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+.correlation-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.methodology-box {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #7c93e8;
+  border-radius: 8px;
+}
+
+.methodology-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.methodology-box p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.methodology-box p:last-child {
+  margin-bottom: 0;
+}
+
+.methodology-box strong {
+  color: #5b6fd8;
+  font-weight: 700;
+}
+
+.stats-results {
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.stats-results h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #f8fff9;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  gap: 0.3rem;
+}
+
+.stat-name {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+.stat-pvalue {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+.correlation-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correlation-right .plot-figure {
+  margin: 0;
+  width: 100%;
+}
+
+.correlation-right figure {
+  margin: 0;
+}
+
+.correlation-right figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.insight-box {
+  padding: 1.5rem;
+  background: #fff9e6;
+  border-left: 4px solid #f0c040;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.insight-box p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.insight-box p:last-child {
+  margin-bottom: 0;
+}
+
+.insight-box strong {
+  color: #8b4513;
+}
+
+.insight-box em {
+  color: #d97706;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .correlation-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .correlation-left {
+    order: 2;
+  }
+  
+  .correlation-right {
+    order: 1;
+  }
+}
