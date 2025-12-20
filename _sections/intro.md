@@ -64,7 +64,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
     <p class="witness-source">AAII Weekly Sentiment Survey</p>
     <p>Active investors who interact with the patient every week. They report their expectations directly: <em>"Where do you think the market will be in 6 months?"</em></p>
     <ul class="witness-traits">
-      <li>Informed and engaged</li>
+      <li>Informed </li>
       <li>Explicit predictions</li>
       <li>Weekly frequency</li>
       <li>Since 1987</li>
@@ -76,7 +76,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
     <p class="witness-source">Google Trends Search Behavior</p>
     <p>Society at large — their collective search behavior reveals unconscious fears and hopes about the economy. They don't know they're being observed.</p>
     <ul class="witness-traits">
-      <li>Spontaneous and unfiltered</li>
+      <li>Spontaneous</li>
       <li>Implicit sentiment</li>
       <li>Real-time signals</li>
       <li>Massive scale</li>
