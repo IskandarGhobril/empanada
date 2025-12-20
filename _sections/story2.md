@@ -220,9 +220,9 @@
 
 <h2>The Lead-Lag Analysis: The Smoking Gun</h2>
 
-<div class="therapist-note dramatic reveal">
+<div class="therapist-note dramatic reveal no-box">
   <div class="note-header">
-    <span class="note-icon">🎯</span>
+    <span class="note-icon"></span>
     <span class="note-label">Key Analysis</span>
   </div>
   <div class="note-content">
@@ -230,7 +230,7 @@
   </div>
 </div>
 
-<div class="methodology-box reveal">
+<div class="methodology-box reveal no-box">
   <h4>Lead-Lag Information Gain</h4>
   <p>We measure <strong>information gain</strong> — how much knowing sentiment at different lags reduces uncertainty about the next market state.</p>
   <ul>
@@ -393,7 +393,7 @@
 <div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've established the direction of causality. Now let's examine the patient's <strong>mood cycles</strong> — distinct behavioral states and how sentiment affects transitions between them.</p>
-  <p class="transition-cta pulse-purple">Time for the mood analysis.</p>
+  <p class="transition-cta">Time for the mood analysis.</p>
 </div>
 
 </div>
