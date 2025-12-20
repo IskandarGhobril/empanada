@@ -6,9 +6,9 @@
   <p class="session-subtitle">Identifying States</p>
 </div>
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
-    <span class="note-icon">🔄</span>
+    <span class="note-icon"></span>
     <span class="note-label">Behavioral Analysis</span>
   </div>
   <div class="note-content">

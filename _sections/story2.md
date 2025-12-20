@@ -7,13 +7,13 @@
   <p class="session-subtitle">Who Moves First?</p>
 </div>
 
-<div class="therapist-note dramatic reveal">
+<div class="therapist-note dramatic reveal no-box">
   <div class="note-header">
-    <span class="note-icon">⚡</span>
+    <span class="note-icon"></span>
     <span class="note-label">Critical Session</span>
   </div>
   <div class="note-content">
-    <p>This is the pivotal session. Everything we've learned leads here. We have two witnesses (AAII and Google) and one patient (The Market). Now we determine the direction of causality: <strong>Does sentiment lead, follow, or move with the market?</strong></p>
+    <p>Everything we've learned leads here. We have two witnesses (AAII and Google) and one patient (The Market). Now we determine the direction of causality: <strong>Does sentiment lead, follow, or move with the market?</strong></p>
   </div>
 </div>
 
