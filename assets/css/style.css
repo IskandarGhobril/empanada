@@ -3794,74 +3794,96 @@ body.longform-page .longform .lead,
 
 
 /* ============================================
-   COMPACT SIDE-BY-SIDE LEAD-LAG GRID
+   COMPACT LEAD-LAG SECTION (FINAL)
+   - Layout: Side-by-side columns
+   - Style: Compact rows instead of big squares
    ============================================ */
 
-/* The new wrapper that puts them side-by-side */
+/* 1. MAIN LAYOUT: Side-by-side columns */
 .lead-lag-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 1.5rem;                    /* Space between columns */
-    margin: 2rem 0;                 /* Vertical spacing for the whole block */
-    align-items: start;             /* Align tops evenly */
+    gap: 2rem;                      /* Space between columns */
+    margin: 2rem 0;
+    align-items: start;
 }
 
-/* Mobile fallback: stack them vertically on small screens */
+/* Mobile fallback: stack vertically */
 @media (max-width: 768px) {
     .lead-lag-grid-wrapper {
         grid-template-columns: 1fr;
     }
 }
 
-/* --- COMPACT STYLING overrides for inside the grid --- */
-
-/* Make the main gray boxes tighter */
+/* 2. WRAPPER CLEANUP: Remove padding from the grey containers */
 .lead-lag-grid-wrapper .lead-lag-results {
-    padding: 1rem !important;       /* Reduced from 1.5rem */
-    margin: 0 !important;           /* Let the grid handle margins */
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important; /* Removes grey background so it looks cleaner */
+    border: none !important;
 }
 
-/* Tighten the header spacing */
 .lead-lag-grid-wrapper .lead-lag-results h3 {
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 1rem !important;
     font-size: 1.2rem;
+    color: #1a202c;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
 }
 
-/* Make the internal stats grid tighter */
+/* 3. ROW LAYOUT: Stack stats vertically (slim rows) */
 .lead-lag-grid-wrapper .result-stats {
-    gap: 0.5rem !important;         /* Reduced gap between stats */
-    margin-bottom: 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    grid-template-columns: none !important; /* Overrides any previous grid rules */
 }
 
-/* Make individual stat boxes tighter */
+/* 4. COMPACT ROW STYLE: Label left, Value right */
 .lead-lag-grid-wrapper .result-stat {
-    padding: 0.5rem 0.75rem !important; /* Reduced padding */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0.6rem 1rem !important;
+    min-height: auto !important;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
 }
 
-/* Make interpretation white boxes tighter */
+/* Left side: Label */
+.lead-lag-grid-wrapper .stat-label {
+    margin-bottom: 0 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #718096 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Right side: Value */
+.lead-lag-grid-wrapper .stat-value {
+    margin-bottom: 0 !important;
+    font-size: 0.95rem !important;
+    text-align: right !important;
+    font-weight: 700 !important;
+}
+
+/* 5. INTERPRETATION BOX: Clean up spacing */
 .lead-lag-grid-wrapper .interpretation-box {
-     padding: 0.75rem !important;
+    margin-top: 0 !important;
+    padding: 1rem !important;
+    background: #f8f9fa; /* Light grey background for contrast */
 }
 
-/* Tighten paragraph spacing inside interpretation */
 .lead-lag-grid-wrapper .interpretation-box p {
     margin-bottom: 0.5rem !important;
-    font-size: 0.95rem !important; /* Slightly smaller text for compactness */
+    font-size: 0.95rem !important;
     line-height: 1.5 !important;
 }
 
-/* Tighten lists inside interpretation */
 .lead-lag-grid-wrapper .interpretation-box ul {
-    margin: 0.4rem 0 0.4rem 1.2rem !important;
-}
-
-.lead-lag-grid-wrapper .interpretation-box li {
-     margin-bottom: 0.2rem !important;
-     font-size: 0.95rem !important;
-}
-
-/* Tighten the red critical finding box */
-.lead-lag-grid-wrapper .critical-finding {
-    margin-top: 0.5rem !important;
-    padding: 0.4rem 0.6rem !important;
+    margin: 0.5rem 0 0.5rem 1.2rem !important;
 }
