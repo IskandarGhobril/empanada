@@ -383,13 +383,13 @@ body.longform-page .markdown-body {
 
 
 .clinic-authors {
-  margin-top: 1.2rem;
-  font-size: clamp(1.6rem, 2.2vw, 2.0rem);
-  font-weight: 600;
+  margin-top: 0.9rem;
+  font-size: 1.3rem;          /* ⬅ smaller than current */
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-align: center;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 /* ============================================
