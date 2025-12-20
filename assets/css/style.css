@@ -3147,12 +3147,11 @@ img.plot {
   padding: 1.5rem;
   border-radius: 12px;
   border: 2px solid #667eea;
-  position: sticky;
   top: 4rem; /* Adjusted for sticky header */
 }
 
 .correlation-explanation h4 {
-  color: #8b4513;
+  color: #667eea;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
