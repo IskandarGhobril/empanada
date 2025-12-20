@@ -383,14 +383,14 @@ body.longform-page .markdown-body {
 
 
 .clinic-authors {
-  margin-top: 1.6rem;
-  font-size: 2.4rem; 
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.08em;
+  margin-top: 1.2rem;
+  font-size: clamp(1.6rem, 2.2vw, 2.0rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.06em;
   text-align: center;
+  white-space: nowrap;  
 }
-
 
 /* ============================================
    LONGFORM WRAPPER
