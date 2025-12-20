@@ -34,7 +34,16 @@
   <p><strong>Features used:</strong> 6-month forward returns, realized volatility, market momentum, cross-sectional statistics</p>
 </div>
 
-
+ <div class="classification-layout reveal">
+    <figure class="plot-figure reveal">
+      <img id="sentimentImage" 
+           src="{{ site.baseurl }}/assets/img/clustering.png"
+           alt="clustering"
+           class="sentiment-wordcloud">
+      <figcaption>Clustering </figcaption>
+    </figure>
+  </div>
+</div>
 
 <div class="regime-cards reveal">
   <div class="regime-card regime-bull">
@@ -133,6 +142,16 @@
   <p>If the unrestricted model fits significantly better, sentiment "Granger-causes" returns.</p>
 </div>
 
+<div class="correlation-right">
+    <div class="plot-figure reveal">
+      <figure class="interactive-figure" data-plot="sentiment-scatter">
+        {% include granger_causality.html %}
+        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
 <div class="test-result-box reveal gradient-border">
   <h4>Granger Causality Result</h4>
   <div class="result-highlight">
@@ -183,15 +202,7 @@
     </div>
   </div>
 
- <div class="correlation-right">
-    <div class="plot-figure reveal">
-      <figure class="interactive-figure" data-plot="sentiment-scatter">
-        {% include granger_causality.html %}
-        <figcaption>Sentiment (S) versus 6-month forward returns — is there a relationship?</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
+ 
 
 
 <!-- VAR results -->
