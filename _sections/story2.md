@@ -144,45 +144,60 @@ The distribution is more symmetric and scattered. There is no clear directional 
     <span class="note-label">Statistical Method</span>
   </div>
   <div class="note-content">
-    <p><strong>Granger Causality</strong> tests whether knowing past values of X helps predict future values of Y, beyond what past values of Y alone can predict. It's not true causality — but it reveals predictive information content.</p>
+    <p><strong>Granger Causality</strong> isn't "magic." It simply asks: does knowing the past history of Variable A help us predict Variable B better than just knowing Variable B's own history?</p>
   </div>
 </div>
 
 <div class="methodology-box math-box reveal no-box">
-  <h4>The Granger Causality Test</h4>
-  <p>We test: <em>"Does knowing past sentiment help forecast future returns?"</em></p>
-  <p>Formally, we compare two models:</p>
-  <div class="equation no-box">
-    <p><strong>Restricted:</strong> R<sub>t</sub> = α + β₁R<sub>t-1</sub> + ... + β<sub>p</sub>R<sub>t-p</sub> + ε<sub>t</sub></p>
-    <p><strong>Unrestricted:</strong> R<sub>t</sub> = α + β₁R<sub>t-1</sub> + ... + γ₁S<sub>t-1</sub> + ... + γ<sub>p</sub>S<sub>t-p</sub> + ε<sub>t</sub></p>
+  <h4>The Two-Way Test</h4>
+  <p>To solve the "Chicken or Egg" problem, we test the relationship in <strong>both directions</strong>.</p>
+  
+  <div class="var-grid-wrapper" style="margin-top: 1rem;">
+    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #c53030;">
+      <h5 style="color: #c53030; margin: 0 0 0.5rem;">1. Does Sentiment predict Returns?</h5>
+      <div class="equation no-box" style="font-size: 0.9rem;">
+        R<sub>t</sub> = α + ... + <strong style="color: #c53030;">γ S<sub>t-lag</sub></strong> + ε<sub>t</sub>
+      </div>
+      <p style="font-size: 0.85rem; margin: 0.5rem 0 0;">This tests if Sentiment contains "new news" about future prices. (Represented by the <strong>RED LINE</strong>).</p>
+    </div>
+
+    <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 3px solid #2b6cb0;">
+      <h5 style="color: #2b6cb0; margin: 0 0 0.5rem;">2. Do Returns predict Sentiment?</h5>
+      <div class="equation no-box" style="font-size: 0.9rem;">
+        S<sub>t</sub> = α + ... + <strong style="color: #2b6cb0;">γ R<sub>t-lag</sub></strong> + ε<sub>t</sub>
+      </div>
+      <p style="font-size: 0.85rem; margin: 0.5rem 0 0;">This tests if investors are simply reacting to past price moves. (Represented by the <strong>BLUE LINE</strong>).</p>
+    </div>
   </div>
-  <p>If the unrestricted model fits significantly better, sentiment "Granger-causes" returns.</p>
 </div>
 
 <div class="plot-figure reveal" style="margin: 2rem 0;">
   <figure class="interactive-figure" data-plot="granger-causality">
     {% include granger_causality.html %}
-    <figcaption>Evolution of Causal Strength: Returns→Sentiment (Blue) vs. Sentiment→Returns (Red)</figcaption>
+    <figcaption>Evolution of Causal Strength: Blue (Returns→Sentiment) vs. Red (Sentiment→Returns)</figcaption>
   </figure>
 </div>
 
 <div class="reveal" style="margin-bottom: 2rem;">
   
-  <p class="lead">The Granger causality results tell a clear story. Past returns strongly predict sentiment at all 26 lags tested (all p-values < 0.01), while sentiment fails to predict future returns at any lag (0/26 significant).</p>
+  <p class="lead">The results tell a story of complete asymmetry. By looking at the plot above, we can trace the flow of information:</p>
 
-  <p><strong>Visualizing the Asymmetry:</strong> The plot above visualizes this clearly. The <span style="color: #2b6cb0; font-weight: 600;">blue line</span> (past returns → sentiment) sits firmly in the significant zone across all 26 lags, with -log₁₀(p) values between 15 and 18. The <span style="color: #c53030; font-weight: 600;">red line</span> (sentiment → future returns) flatlines near zero, never approaching the significance threshold.</p>
+  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #c53030;">❌ The Red Line (Right Side): Sentiment fails to predict</h4>
+  <p>Look at the <strong>Red Line</strong> on the right side of the graph (positive lags). It represents our ability to predict market returns using past sentiment. The line stays flat near zero, far below the dashed significance threshold. <strong>Result: 0 out of 26 lags are significant.</strong> High optimism today tells us <em>nothing</em> about returns next week.</p>
+
+  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #2b6cb0;">✅ The Blue Line (Left Side): Returns strongly drive Sentiment</h4>
+  <p>Now look at the <strong>Blue Line</strong> on the left side (negative lags). It skyrockets upwards, reaching values between 15 and 18 on the Y-axis (which is a logarithmic scale of significance). <strong>Result: All 26 lags are highly significant (p < 0.01).</strong></p> 
   
-  <p>Two notable patterns emerge in the blue line: it dips at lag -1 before stabilizing, suggesting the very latest week's returns may have a slightly weaker immediate impact on sentiment. It also gradually weakens as we go further back in time, indicating that more recent returns carry more weight in shaping current sentiment than older ones.</p>
+  <p><strong>Reading the Blue Curve:</strong></p>
+  <ul>
+    <li><strong>The Dip at -1:</strong> At lag -1 (the most recent week), the signal is slightly weaker. This suggests it takes more than a single week for a trend to fully "soak in" to investor psychology.</li>
+    <li><strong>The Plateau:</strong> From lag -2 to -8, the signal is strongest. This confirms that investors are forming their views based on a rolling window of the past 1-2 months of market performance.</li>
+  </ul>
 
-  <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem;">Confirmation of Extrapolation</h4>
-  <p>This confirms what the correlations suggested: investors form their sentiment based on recent market performance rather than the other way around. When markets go up, people become optimistic; when markets fall, pessimism follows. This is consistent with <strong>extrapolative expectations</strong>, where investors assume recent trends will continue.</p>
+  <div class="insight-box reveal no-box" style="border-left: 3px solid #667eea; padding-left: 1.5rem; margin-top: 2rem;">
+    <p><strong>The Conclusion:</strong> This confirms <strong>Extrapolative Expectations</strong>. Investors assume that "what just happened" is "what will happen." When markets rise, they become bullish. When markets fall, they become bearish. They are not forecasting; they are reacting.</p>
+  </div>
 
-  <p>The lack of predictive power from sentiment to returns challenges the idea that sentiment is a useful forecasting tool. While high sentiment is associated with slightly lower future returns (the negative correlation we saw earlier), this relationship disappears once we account for the time-series dynamics. In other words, sentiment does not add information beyond what past returns already tell us.</p>
-
-</div>
-
-<div class="insight-box reveal no-box" style="border-left: 3px solid #667eea; padding-left: 1.5rem;">
-  <p><strong>Practical Takeaway:</strong> From a practical standpoint, these results suggest that sentiment indicators are better understood as a reflection of where markets <em>have been</em>, not where they are going.</p>
 </div>
 
 <hr class="section-divider">
