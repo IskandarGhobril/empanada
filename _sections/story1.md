@@ -305,7 +305,8 @@
   </ul>
 </div>
 
-<div class="key-insight reveal gradient-border">
+<div class="key-insight reveal gradient-border no-box">
+  <p>
   <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 </div>
 
@@ -336,7 +337,7 @@
 <div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've profiled the witnesses. Now comes the critical question: <strong>Who moves first?</strong> Does sentiment lead market movements, or does it simply follow them?</p>
-  <p class="transition-cta pulse-purple">Time for the timeline analysis.</p>
+  <p class="transition-cta">Time for the timeline analysis.</p>
 </div>
 
 </div>
