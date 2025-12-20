@@ -36,7 +36,7 @@
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="market-returns">
-    <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
+    <img src="{{ site.baseurl }}/assets/img/clustering.png"
          alt="Market returns over time"
          class="plot">
     <figcaption>Weekly NASDAQ returns — the raw material for regime classification</figcaption>
