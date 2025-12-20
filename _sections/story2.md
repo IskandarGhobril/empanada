@@ -76,7 +76,7 @@
   <div class="interactive-figure" data-plot="sentiment-scatter">
 
     <iframe
-      src="assets/plots/granger_causality.html"
+      src="assets/img/granger_causality.html"
       title="Sentiment vs 6-month forward returns scatter plot"
       style="
         width: 100%;
