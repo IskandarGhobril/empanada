@@ -159,7 +159,7 @@
 <div class="methodology-box math-box reveal no-box">
   <h4>Vector Autoregression Model</h4>
   <p>We estimate a system of two equations:</p>
-  <div class="equation">
+  <div class="equation no-box">
     <p><strong>Sentiment equation:</strong> S<sub>t</sub> = α₁ + β₁S<sub>t-1</sub> + γ₁R<sub>t-1</sub> + ε<sub>1t</sub></p>
     <p><strong>Returns equation:</strong> R<sub>t</sub> = α₂ + β₂R<sub>t-1</sub> + γ₂S<sub>t-1</sub> + ε<sub>2t</sub></p>
   </div>

@@ -3786,3 +3786,8 @@ body.longform-page .longform .lead,
 .therapist-note.no-box .note-header {
     margin-bottom: 0.4rem !important;
 }
+
+/* Reduces space between the result values/verdict and the explanation text below */
+.result-highlight {
+    margin-bottom: 0.25rem !important; /* Reduced from the default 0.75rem */
+}
