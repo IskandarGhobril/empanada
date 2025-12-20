@@ -7,7 +7,6 @@
   <p class="session-subtitle">Identifying States</p>
 </div>
 
-
 <div class="therapist-note reveal no-box">
   <div class="note-header">
     <span class="note-icon"></span>
@@ -20,42 +19,56 @@
 
 <hr class="section-divider">
 
-<h2>The Patient's Mood States</h2>
+<h2>First, Define the Patient's Moods</h2>
 
-<p class="lead reveal">Rather than treating market behavior as a continuous spectrum, we identify distinct <strong>regimes</strong> — qualitatively different states with their own dynamics.</p>
+<p class="lead reveal">Before analyzing mood cycles, we need an objective way to classify the market's own states. We let the data speak for itself.</p>
 
-<div class="methodology-box reveal">
-  <h4>Markov Regime Framework</h4>
-  <p>A <strong>Markov model</strong> assumes the market exists in one of several discrete states, and the probability of transitioning to the next state depends only on the current state — not the entire history.</p>
-  <p>This matches our clinical intuition: the market's "mood" today tells us something about tomorrow's mood, but we don't need to know every mood from the past decade.</p>
+<p class="reveal">We use a <strong>Gaussian Mixture Model (GMM)</strong> with 3 components to identify distinct market regimes. Unlike simple thresholds, GMM provides soft membership probabilities and handles the fuzzy boundaries between real market states. Features include 6-month forward returns, realized volatility, and market momentum.</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="market-returns">
+    <img src="{{ site.baseurl }}/assets/img/clustering.png"
+         alt="GMM clustering of market regimes"
+         class="plot">
+    <figcaption>GMM clustering reveals three distinct market regimes. Each color represents a different regime, with the model capturing natural boundaries between bullish, neutral, and bearish states.</figcaption>
+  </div>
+</figure>
+
+<div class="regime-cards reveal">
+  <div class="regime-card regime-bull">
+    <h4>Bullish Regime</h4>
+    <p>Higher returns, moderate volatility. The market is trending upward with confidence.</p>
+  </div>
+
+  <div class="regime-card regime-neutral">
+    <h4>Neutral Regime</h4>
+    <p>Mixed performance, sideways movement. The market is indecisive.</p>
+  </div>
+
+  <div class="regime-card regime-bear">
+    <h4>Bearish Regime</h4>
+    <p>Lower/negative returns, heightened volatility. Stress and drawdowns.</p>
+  </div>
 </div>
 
-<h3>Unconditional Regime Transitions</h3>
+<hr class="section-divider">
+
+<h2>Regime Transitions</h2>
+
+<p class="lead reveal">A <strong>Markov model</strong> assumes the market exists in one of several discrete states, and the probability of transitioning to the next state depends only on the current state — not the entire history. The market's "mood" today tells us something about tomorrow's mood.</p>
+
+<h3>Unconditional Transitions</h3>
 
 <p class="reveal">First, we examine how the market transitions between states <em>without</em> considering external factors like sentiment.</p>
 
-<!-- INTERACTIVE: Regime Transition Matrix -->
-<div class="interactive-placeholder reveal" id="regime-transition-interactive">
-  <div class="placeholder-header">
-    <span class="placeholder-badge">Interactive Element</span>
-    <h3>Market Regime Transition Matrix</h3>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="transition-matrix">
+    <img src="{{ site.baseurl }}/assets/img/unconditional_transition_matrix.png"
+         alt="Unconditional Market Regime Transition Matrix"
+         class="plot">
+    <figcaption>The unconditional transition matrix. High diagonal values mean the market tends to stay in its current state. Bull-to-bull transitions are particularly strong.</figcaption>
   </div>
-  <div class="placeholder-body">
-    <p class="placeholder-desc">Animated heatmap showing transition probabilities:</p>
-    <ul>
-      <li>Hover cells to see exact probabilities and sample sizes</li>
-      <li>Click to simulate Markov chain random walks</li>
-      <li>Toggle between unconditional and conditional (by sentiment) matrices</li>
-      <li>Animate transitions to show regime persistence visually</li>
-    </ul>
-    <div class="placeholder-mockup">
-      <div class="mockup-chart">
-        <span>🔥 Transition Probability Heatmap</span>
-      </div>
-    </div>
-  </div>
-  <p class="placeholder-note">Implementation: D3.js heatmap with animated transitions</p>
-</div>
+</figure>
 
 <div class="transition-findings reveal">
   <h4>Regime Persistence Patterns</h4>
@@ -78,200 +91,111 @@
   </div>
 </div>
 
-<div class="insight-box reveal">
-  <p><strong>Key Pattern:</strong> Market regimes are highly persistent — once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
-</div>
+<p class="reveal"><strong>Key Pattern:</strong> Market regimes are highly persistent — once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
 
 <hr class="section-divider">
 
-<h3>Stationary Distribution: Where Does the Market Spend Its Time?</h3>
+<h3>Where Does the Market Spend Its Time?</h3>
 
-<div class="methodology-box math-box reveal">
-  <h4>Stationary Distribution</h4>
-  <p>Given the transition matrix, we can compute the <strong>long-run equilibrium</strong> — the fraction of time the market spends in each state if the process runs forever.</p>
-  <p>We then compare this theoretical distribution to the <strong>empirical frequencies</strong> we actually observed.</p>
-</div>
+<p class="reveal">Given the transition matrix, we can compute the <strong>long-run equilibrium</strong> — the fraction of time the market spends in each state. We compare this to what we actually observed.</p>
 
-<div class="distribution-result reveal">
-  <h4>Finding: Close Match</h4>
-  <p>The theoretical and empirical distributions align well, suggesting the market process is approximately <strong>stationary</strong> over our sample period. The market hasn't fundamentally changed its mood cycling behavior.</p>
-</div>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="stationary-dist">
+    <img src="{{ site.baseurl }}/assets/img/empirical_stationary_dist.png"
+         alt="Empirical Stationary Distribution of Market Regimes"
+         class="plot">
+    <figcaption>The empirical distribution of market regimes. The close match between theoretical predictions and observed frequencies confirms the Markov assumption is reasonable.</figcaption>
+  </div>
+</figure>
+
+<p class="reveal">The theoretical and empirical distributions align well, suggesting the market process is approximately <strong>stationary</strong> over our sample period. The market hasn't fundamentally changed its mood cycling behavior.</p>
 
 <hr class="section-divider">
 
 <h3>How Long Do Moods Last?</h3>
 
-<div class="duration-analysis reveal">
-  <h4>State Duration Analysis</h4>
-  <p>We measure the typical duration of each market regime before transitioning:</p>
+<p class="reveal">We measure the typical duration of each market regime before transitioning:</p>
 
-  <div class="duration-cards">
-    <div class="duration-card bull-duration pulse-green">
-      <span class="duration-icon">📈</span>
-      <h5>Bullish Regime</h5>
-      <p class="duration-desc">Bull markets tend to be <strong>longer-lasting</strong>. The market's natural drift is upward, so bullish states have natural staying power.</p>
-    </div>
-    <div class="duration-card neutral-duration">
-      <span class="duration-icon">➡️</span>
-      <h5>Neutral Regime</h5>
-      <p class="duration-desc">Neutral states are <strong>transitional</strong>. The market rarely stays sideways for long — it either recovers or declines.</p>
-    </div>
-    <div class="duration-card bear-duration pulse-red">
-      <span class="duration-icon">📉</span>
-      <h5>Bearish Regime</h5>
-      <p class="duration-desc">Bear markets are <strong>shorter but intense</strong>. Crashes happen fast; recoveries happen faster (in calendar time, not in magnitude).</p>
-    </div>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="duration-dist">
+    <img src="{{ site.baseurl }}/assets/img/dist_state_durations.png"
+         alt="Distribution of State Durations"
+         class="plot">
+    <figcaption>Distribution of regime durations. Bull markets last longest; bear markets are shorter but more intense.</figcaption>
+  </div>
+</figure>
+
+<div class="duration-cards reveal">
+  <div class="duration-card bull-duration pulse-green">
+    <span class="duration-icon">📈</span>
+    <h5>Bullish Regime</h5>
+    <p class="duration-desc">Bull markets tend to be <strong>longer-lasting</strong>. The market's natural drift is upward.</p>
+  </div>
+  <div class="duration-card neutral-duration">
+    <span class="duration-icon">➡️</span>
+    <h5>Neutral Regime</h5>
+    <p class="duration-desc">Neutral states are <strong>transitional</strong>. The market rarely stays sideways for long.</p>
+  </div>
+  <div class="duration-card bear-duration pulse-red">
+    <span class="duration-icon">📉</span>
+    <h5>Bearish Regime</h5>
+    <p class="duration-desc">Bear markets are <strong>shorter but intense</strong>. Crashes happen fast; recoveries begin quickly.</p>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h2>The Key Question: Does Sentiment Affect Transitions?</h2>
+<h2>Does Sentiment Affect Transitions?</h2>
 
-<div class="therapist-note dramatic reveal no-box">
-  <div class="note-header">
-    <span class="note-icon"></span>
-    <span class="note-label">The Critical Test</span>
+<p class="lead reveal">This is where we test Hypothesis A vs. Hypothesis B at the regime level. If sentiment has power, knowing it should change our predictions about state transitions. If sentiment is just a mirror, conditioning on it should add little information.</p>
+
+<p class="reveal">We measure <strong>information gain</strong> — how much knowing sentiment reduces uncertainty about the next market state. Higher information gain means sentiment is more useful for prediction.</p>
+
+<h3>AAII Sentiment</h3>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="conditional-sentiment">
+    <img src="{{ site.baseurl }}/assets/img/transition_matrices_sentiment.png"
+         alt="Conditional Transition Matrices by AAII Sentiment"
+         class="plot">
+    <figcaption>Transition matrices conditioned on AAII sentiment. Despite splitting by bullish, neutral, and bearish sentiment, the matrices look remarkably similar.</figcaption>
   </div>
-  <div class="note-content">
-    <p>This is where we test Hypothesis A vs. Hypothesis B at the regime level. If sentiment has power, knowing it should change our predictions about state transitions. If sentiment is just a mirror, conditioning on it should add little information.</p>
-  </div>
-</div>
+</figure>
 
-<h3>Conditional Markov Analysis: AAII Sentiment</h3>
-
-<div class="methodology-box math-box reveal no-box">
-  <h4>Chi-Square Independence Test</h4>
-  <p>We test whether market transitions are <strong>independent</strong> of AAII sentiment:</p>
-  <ul>
-    <li><strong>H₀:</strong> Transition probabilities are the same regardless of sentiment</li>
-    <li><strong>H₁:</strong> Transition probabilities differ by sentiment class</li>
-  </ul>
-  <p>A significant result means sentiment contains information about regime changes.</p>
-</div>
-
-<div class="methodology-box math-box reveal no-box">
-  <h4>Likelihood Ratio Test</h4>
-  <p>We compare two Markov models:</p>
-  <ul>
-    <li><strong>Model 1 (Unconditional):</strong> P(next state | current state)</li>
-    <li><strong>Model 2 (Conditional):</strong> P(next state | current state, sentiment)</li>
-  </ul>
-  <p>If Model 2 fits significantly better, sentiment adds predictive value for regime transitions.</p>
-</div>
-
-<div class="methodology-box math-box reveal no-box">
-  <h4>Information Gain Metric</h4>
-  <p>We measure how much sentiment reduces uncertainty about the next state:</p>
-  <div class="equation">
-    <p><strong>IG = H(next | current) − H(next | current, sentiment)</strong></p>
-  </div>
-  <p>Where H is entropy (uncertainty). Higher IG means sentiment is more informative.</p>
-</div>
-
-<!-- INTERACTIVE: Conditional Transition Comparison -->
-<div class="interactive-placeholder reveal" id="conditional-matrices-interactive">
-  <div class="placeholder-header">
-    <span class="placeholder-badge">Interactive Element</span>
-    <h3>Conditional Transition Matrices (AAII)</h3>
-  </div>
-  <div class="placeholder-body">
-    <p class="placeholder-desc">Three side-by-side heatmaps comparing transitions under different sentiment conditions:</p>
-    <ul>
-      <li>Matrix 1: Transitions when AAII is Bullish</li>
-      <li>Matrix 2: Transitions when AAII is Neutral</li>
-      <li>Matrix 3: Transitions when AAII is Bearish</li>
-      <li>Hover to compare: highlight differences between matrices</li>
-      <li>Animation: morphing between matrices to show (lack of) differences</li>
-    </ul>
-    <div class="placeholder-mockup">
-      <div class="mockup-chart triple">
-        <span>🟢 Bullish</span>
-        <span>⚪ Neutral</span>
-        <span>🔴 Bearish</span>
-      </div>
-    </div>
-  </div>
-  <p class="placeholder-note">Implementation: D3.js with synchronized hover and transition animations</p>
-</div>
-
-<div class="conditional-results aaii-conditional reveal">
-  <h3>AAII Conditional Analysis Results</h3>
-  <div class="result-stats">
-    <div class="result-stat pulse-red">
-      <span class="stat-label">Information Gain</span>
-      <span class="stat-value">0.002 – 0.018 bits</span>
-    </div>
-    <div class="result-stat">
-      <span class="stat-label">Interpretation</span>
-      <span class="stat-value">Very small — sentiment adds minimal information</span>
-    </div>
-  </div>
-</div>
+<p class="reveal"><strong>AAII Result:</strong> Information gain of only <strong>0.002 – 0.018 bits</strong>. Very small — knowing investor sentiment barely changes our predictions about the next market state.</p>
 
 <hr class="section-divider">
 
-<h3>Conditional Markov Analysis: Google Trends</h3>
+<h3>Google Trends</h3>
 
-<div class="conditional-results google-conditional reveal">
-  <h3>Google Trends Conditional Analysis Results</h3>
-  <div class="result-stats">
-    <div class="result-stat pulse-green">
-      <span class="stat-label">Information Gain</span>
-      <span class="stat-value">0.05 – 0.07 bits</span>
-    </div>
-    <div class="result-stat">
-      <span class="stat-label">Interpretation</span>
-      <span class="stat-value">Meaningfully higher than AAII — search behavior is more informative</span>
-    </div>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="conditional-google">
+    <img src="{{ site.baseurl }}/assets/img/transition_matrices_google.png"
+         alt="Conditional Transition Matrices by Google Trends"
+         class="plot">
+    <figcaption>Transition matrices conditioned on Google Trends sentiment. Unlike AAII, these matrices show more visible differences across sentiment conditions.</figcaption>
   </div>
-</div>
+</figure>
 
-<div class="comparison-insight reveal">
-  <h4>Why Does Google Outperform AAII?</h4>
-  <p>Possible explanations:</p>
-  <ul>
-    <li><strong>Broader population:</strong> Google captures everyone, not just AAII members</li>
-    <li><strong>Unfiltered signal:</strong> Searches are spontaneous, not filtered through survey framing</li>
-    <li><strong>Real-time behavior:</strong> Search happens in the moment; surveys ask about considered opinions</li>
-    <li><strong>Mixed signal:</strong> Google captures both reactive and anticipatory behavior</li>
-  </ul>
-</div>
+<p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>. Meaningfully higher than AAII — search behavior is more informative about regime transitions.</p>
+
+<p class="reveal"><strong>Why does Google outperform AAII?</strong> Google captures everyone (not just survey respondents), searches are spontaneous and unfiltered, and they happen in real-time rather than as considered survey responses.</p>
 
 <hr class="section-divider">
 
-<h2>Visualizing Mood Cycles Over Time</h2>
+<h2>Mood Cycles Over Time</h2>
 
-<!-- INTERACTIVE: Historical Timeline -->
-<div class="interactive-placeholder reveal" id="historical-timeline-interactive">
-  <div class="placeholder-header">
-    <span class="placeholder-badge pulse-purple">Key Interactive Element</span>
-    <h3>Historical Market Regimes with Sentiment Overlay</h3>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sentiment-timeline">
+    <img src="{{ site.baseurl }}/assets/img/sentiment_over_time.png"
+         alt="Historical Sentiment Over Time"
+         class="plot">
+    <figcaption>AAII sentiment over time. Notice how sentiment spikes and crashes tend to follow — not precede — major market moves.</figcaption>
   </div>
-  <div class="placeholder-body">
-    <p class="placeholder-desc">Interactive timeline spanning 1987-2020:</p>
-    <ul>
-      <li>Background bands showing market regime (green=bull, gray=neutral, red=bear)</li>
-      <li>AAII sentiment line overlaid</li>
-      <li>Zoomable with brush selection</li>
-      <li>Click events for annotated historical moments</li>
-      <li>Hover to see exact dates, values, and regime probabilities</li>
-      <li>Toggle Google Trends overlay</li>
-    </ul>
-    <div class="placeholder-mockup">
-      <div class="mockup-chart timeline-mockup">
-        <div class="regime-band bull">2003-2007</div>
-        <div class="regime-band bear">2008</div>
-        <div class="regime-band bull">2009-2020</div>
-        <span>📈 Click any event to explore</span>
-      </div>
-    </div>
-  </div>
-  <p class="placeholder-note">Implementation: Plotly.js with annotations, brush zoom, and regime band backgrounds</p>
-</div>
+</figure>
 
 <div class="historical-events reveal">
-  <h4>Key Episodes in the Patient's History</h4>
+  <h4>Key Episodes</h4>
 
   <div class="event-card pulse-red">
     <span class="event-date">2000-2002</span>
@@ -290,6 +214,79 @@
     <span class="event-name">COVID Crash</span>
     <p>Fastest transition on record. Sentiment collapsed in sync with prices — no lead time.</p>
   </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>The Lead-Lag Analysis: The Smoking Gun</h2>
+
+<p class="lead reveal">This is where the case breaks open. We test sentiment at various time lags — not just whether sentiment predicts, but <strong>when</strong> the relationship is strongest.</p>
+
+<p class="reveal">We measure information gain at different lags. <strong>Positive lags</strong> mean using sentiment from weeks ago to predict today's market state. <strong>Negative lags</strong> test if sentiment reflects past market states. If sentiment is predictive, positive lags should dominate. If reactive, negative lags should dominate.</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="lead-lag">
+    <img src="{{ site.baseurl }}/assets/img/pred_power_lag.png"
+         alt="Lead-Lag Information Gain Analysis"
+         class="plot">
+    <figcaption>Lead-lag analysis. AAII peaks at negative lags (reflecting past returns). Google Trends shows a more balanced pattern.</figcaption>
+  </div>
+</figure>
+
+<h3>AAII: The 6-Month Mirror</h3>
+
+<p class="reveal">AAII shows peak information at <strong>lag = -26 weeks (6 months)</strong>. This is striking and not coincidental.</p>
+
+<p class="reveal">Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em> Investors answering this question appear to be anchoring on <strong>"where has the market been for the past 6 months?"</strong> and extrapolating that experience into their future outlook.</p>
+
+<p class="reveal"><strong>AAII sentiment is REACTIVE, not predictive.</strong></p>
+
+<h3>Google Trends: Mixed Signal</h3>
+
+<p class="reveal">Google Trends peaks at <strong>+26 weeks</strong> with information gain of <strong>0.05–0.07 bits</strong> — more symmetric across positive and negative lags. Search behavior captures both response to events and some anticipation of market moves.</p>
+
+<hr class="section-divider">
+
+<h2>Head-to-Head: AAII vs. Google Trends</h2>
+
+<div class="comparison-table reveal">
+  <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>AAII Sentiment</th>
+        <th>Google Trends</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dominant Signal</strong></td>
+        <td class="negative-cell">Reactive (negative lags)</td>
+        <td class="neutral-cell">Mixed (symmetric)</td>
+      </tr>
+      <tr>
+        <td><strong>Best Lag</strong></td>
+        <td class="negative-cell">-1 week / -26 weeks</td>
+        <td class="positive-cell">+26 weeks</td>
+      </tr>
+      <tr>
+        <td><strong>Information Gain</strong></td>
+        <td class="negative-cell">Lower (0.002–0.018 bits)</td>
+        <td class="positive-cell">Higher (0.05–0.07 bits)</td>
+      </tr>
+      <tr>
+        <td><strong>Implied Behavior</strong></td>
+        <td class="negative-cell">Backward-looking extrapolation</td>
+        <td class="neutral-cell">Mixed reactive/predictive</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="key-insight reveal gradient-border no-box">
+  <h4>The 6-Month Mirror Effect</h4>
+  <p>When AAII investors are asked <em>"Where will the market be in 6 months?"</em>, they appear to answer <em>"Where has the market been for the past 6 months?"</em></p>
+  <p>This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — fundamental concepts in behavioral finance, now quantified in our data.</p>
 </div>
 
 <hr class="section-divider">
@@ -313,13 +310,17 @@
       <span class="point-number">4</span>
       <p><strong>Historical pattern confirms reactivity.</strong> In major market events, sentiment moves with or after prices — not before.</p>
     </div>
+    <div class="summary-point">
+      <span class="point-number">5</span>
+      <p><strong>The 6-month mirror effect.</strong> AAII sentiment peaks at -26 weeks lag — investors answer "where will markets go?" by looking at where they've been.</p>
+    </div>
   </div>
 </div>
 
 <div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
   <p class="transition-text">We've treated The Market as a single entity. But does the same pattern hold across <strong>different sectors</strong>? Is tech sentiment different from energy sentiment? Time for a differential diagnosis.</p>
-  <p class="transition-cta ">Let's break it down by sector.</p>
+  <p class="transition-cta">Let's break it down by sector.</p>
 </div>
 
 </div>
