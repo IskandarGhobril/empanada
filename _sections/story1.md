@@ -266,6 +266,7 @@
       <div class="interactive-figure" data-plot="correlation-matrix">
         <img
           id="correlationImage"
+          data-baseurl="{{ site.baseurl }}"
           src="{{ site.baseurl }}/assets/img/sentiment_correlation_all.png"
           alt="Correlation between sentiment measures"
           class="plot"
