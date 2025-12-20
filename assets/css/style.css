@@ -2929,16 +2929,17 @@ img.plot {
   font-size: 0.85rem;
 }
 
-/* --- Make ONLY the sentiment pie smaller --- */
-figure[data-plot="sentiment-pie"] {
-  max-width: 360px;          /* pick: 300–420 */
-  margin: 0 auto;            /* center inside the left column */
+/* --- Sentiment pie: smaller --- */
+figure[data-plot="sentiment-pie"]{
+  max-width: 260px !important;
+  margin: 0 auto !important;
 }
 
-figure[data-plot="sentiment-pie"] .plotly-graph-div {
-  width: 100% !important;    /* fill the max-width above */
-  height: 360px !important;  /* same as max-width for a square */
+figure[data-plot="sentiment-pie"] .plotly-graph-div{
+  width: 260px !important;   /* force override Plotly inline style */
+  height: 260px !important;
 }
+
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
