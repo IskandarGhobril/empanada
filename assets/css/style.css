@@ -2934,6 +2934,17 @@ img.plot {
   font-size: 0.85rem;
 }
 
+/* --- Make ONLY the sentiment pie smaller --- */
+figure[data-plot="sentiment-pie"] {
+  max-width: 360px;          /* pick: 300–420 */
+  margin: 0 auto;            /* center inside the left column */
+}
+
+figure[data-plot="sentiment-pie"] .plotly-graph-div {
+  width: 100% !important;    /* fill the max-width above */
+  height: 360px !important;  /* same as max-width for a square */
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .therapy-layout {
