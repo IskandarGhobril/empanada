@@ -94,7 +94,8 @@
 <div class="plot-figure reveal">
   <figure class="interactive-figure" data-plot="transition-matrix">
     <img src="{{ site.baseurl }}/assets/img/sentiment_state_transition_matrix.png"
-         alt="Sentiment state transition matrix">
+         alt="Sentiment state transition matrix"
+         style="width: 60%; height: auto;">
     <figcaption>Week-to-week sentiment transition probabilities</figcaption>
     <!-- INTERACTIVE: Animated heatmap - hover cells to see probability flows, click to simulate random walks -->
   </figure>
@@ -143,7 +144,8 @@
 <div class="plot-figure reveal">
   <figure class="interactive-figure" data-plot="sentiment-shifts">
     <img src="{{ site.baseurl }}/assets/img/top_sudden_sentiment_changes.png"
-         alt="Largest sentiment changes over time">
+         alt="Largest sentiment changes over time"
+         style="width: 60%; height: auto;">
     <figcaption>Top sudden sentiment shifts — critical moments in market psychology</figcaption>
     <!-- INTERACTIVE: Click on spikes to see news headlines from that date, hover for context -->
   </figure>
@@ -206,6 +208,7 @@
 <figure class="plot-figure reveal">
   <img src="{{ site.baseurl }}/assets/img/bull.png"
        alt="Bull vs Bear Google Trends word cloud"
+       style="width: 60%; height: auto;"
        class="plot">
   <figcaption>Word clouds showing the language of optimism versus pessimism in search behavior</figcaption>
 </figure>
