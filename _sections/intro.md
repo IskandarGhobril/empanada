@@ -85,11 +85,27 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 
 </div>
 
-<div class="clinical-question">
+<!-- <div class="clinical-question">
   <p class="question-label">The Central Clinical Question</p>
   <h3 class="big-question">Do investors’ predictions pull the market in a certain direction? or are they largely reactions to market movements that have already begun? </h3>
   <p class="question-subtext">Are the millions of people trying to read the market actually destabilizing it? Is the patient's support system... <em>toxic</em>?</p>
-</div>
+</div> -->
+<section class="central-question">
+  <span class="central-label">The Central Clinical Question</span>
+
+  <h2 class="central-title">
+    Do investors’ predictions pull the market in a certain direction,
+    or are they largely reactions to market movements that have already begun?
+  </h2>
+
+  <div class="central-divider"></div>
+
+  <p class="central-subtext">
+    Are the millions of people trying to read the market actually destabilizing it?
+    Is the patient’s support system… <em>toxic</em>?
+  </p>
+</section>
+
 
 <hr class="section-divider">
 

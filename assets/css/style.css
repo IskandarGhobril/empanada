@@ -4538,3 +4538,43 @@ hr,
   margin: 2rem auto 0;
   border-radius: 2px;
 }
+
+.central-question {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.central-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.central-title {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.central-divider {
+  width: 60px;
+  height: 3px;
+  background: #667eea;
+  margin: 2.5rem auto;
+  border-radius: 2px;
+}
+
+.central-subtext {
+  font-size: 1.15rem;
+  color: #4a5568;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
