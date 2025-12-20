@@ -77,7 +77,7 @@
   </header>
 
   <!-- Figure card -->
-  <div class="card figure-card plot-small" style="max-width: 650px; margin: 2rem auto;">
+  <div class="card figure-card plot-small" style="max-width: 800px; margin: 2rem auto;">
   <figure class="plot-figure">
     <img src="{{ site.baseurl }}/assets/img/joint_sentiment_vs_returns.png"
          alt="Joint distribution of sentiment and returns"
@@ -108,7 +108,7 @@
         consistently experience lower ones.
       </p>
     </div>
-  </div>
+
 
  <h4 class="section-subtitle">Sentiment metric</h4>
 
@@ -147,8 +147,6 @@
         may precede periods of underperformance.
       </p>
     </div>
-
-  </div>
 
   <!-- Takeaway -->
   <p class="analysis-takeaway">
@@ -226,7 +224,7 @@
   </p>
 </div>
 
-<div class="plot-figure reveal" style="margin: 2rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+<div class="plot-figure reveal" style="margin: 2rem 0; max-width: 900px; margin-left: auto; margin-right: auto;">
   <figure class="interactive-figure" data-plot="granger-causality">
     {% include granger_causality.html %}
     <figcaption>
