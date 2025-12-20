@@ -27,7 +27,6 @@
   
   <div class="therapist-note">
     <div class="note-header">
-      <span class="note-icon">📋</span>
       <span class="note-label">Initial Assessment Notes</span>
     </div>
     <div class="note-content">
@@ -64,7 +63,6 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 <div class="witness-cards">
 
   <div class="witness-card inner-circle">
-    <div class="witness-icon">🎯</div>
     <h4>The Inner Circle</h4>
     <p class="witness-source">AAII Weekly Sentiment Survey</p>
     <p>Active investors who interact with the patient every week. They report their expectations directly: <em>"Where do you think the market will be in 6 months?"</em></p>
@@ -77,7 +75,6 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
   </div>
 
   <div class="witness-card general-public">
-    <div class="witness-icon">🌐</div>
     <h4>The General Public</h4>
     <p class="witness-source">Google Trends Search Behavior</p>
     <p>Society at large — their collective search behavior reveals unconscious fears and hopes about the economy. They don't know they're being observed.</p>
