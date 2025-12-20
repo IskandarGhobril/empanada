@@ -36,9 +36,10 @@
   </div>
 
   <figure class="hero-illustration reveal">
-    <img src="{{ site.baseurl }}/assets/img/the-patient-market.png"
+    <img src="{{ site.baseurl }}/assets/img/the-patient-market1.png"
          alt="The Market personified as a patient on a therapy couch"
          class="section-image">
+         
     <figcaption>The Market — our most complex patient</figcaption>
   </figure>
 
