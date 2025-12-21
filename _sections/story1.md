@@ -290,7 +290,7 @@ We classified Google search queries into three sentiment categories based on the
 
     <div class="correlation-findings reveal">
     <h4>Key Correlations</h4>
-    Neutral shows the strongest internal cohesion, with search interest in the Dow, S&P 500, and Nasdaq moving almost in lockstep, reflecting a unified market-monitoring behavior. Bullish searches are moderately cohesive: interest in “Stock Market” and “ETF” is tightly linked, indicating ETFs as the main investment proxy, while the broader term “Investment” remains more diffuse. Bearish behavior is fragmented, with near-zero correlation between inflation and unemployment searches, suggesting fears are issue-specific rather than systemic. Overall, Neutral and Bullish categories strongly overlap, whereas Bearish sentiment stands apart as a distinct outlier.
+    Neutral searches are highly cohesive, reflecting unified market monitoring. Bullish interest links “Stock Market” and “ETF,” while “Investment” remains broader. Bearish searches are fragmented and issue-specific. Neutral and Bullish strongly overlap, with Bearish standing apart.
     </div>
   </div>
 </div>
