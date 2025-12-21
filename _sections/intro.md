@@ -51,7 +51,26 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life: the ones who interact with it daily and claim to know what it's thinking.
 </p>
 
-<div class="flip-card-back">
+<figure class="plot-figure reveal">
+  <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      
+      <div class="flip-card-front">
+        <div class="interactive-figure" data-plot="market-returns">
+          <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
+               alt="Market returns over time"
+               class="plot">
+          <figcaption>
+            Weekly NASDAQ returns - The heart beat of the market
+            <br>
+            <span class="flip-instruction">
+              <span class="icon">↺</span> Click to view calculation details
+            </span>
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="flip-card-back">
         <div class="back-content compact-back">
           <h4>Methodology: Equally Weighted Returns</h4>
           
@@ -83,6 +102,12 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
           <span class="flip-hint">↺ Click to flip back to plot</span>
         </div>
       </div>
+
+    </div>
+  </div>
+</figure>
+
+
 
 <hr class="section-divider">
 
