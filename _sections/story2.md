@@ -91,7 +91,7 @@
     </div>
 
     <div class="stat-block">
-      <span class="stat-name">Future 6-month returns (Spearman)</span>
+      <span class="stat-name">Future 6-month returns (Pearson)</span>
       <span class="stat-number">ρ<sub>s</sub> ≈ −0.09</span>
       <span class="stat-meta">p &lt; 0.001</span>
       <p class="stat-text">
