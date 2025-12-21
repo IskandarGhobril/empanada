@@ -47,8 +47,14 @@
 
 
 <p class="lead reveal">
-They call us when nobody else can figure it out. We're <strong>empanADA</strong>: the best behavioral psychologists in the world. But nothing prepared us for this patient.
+They call us when nobody else can figure it out. We're <strong>empanADA</strong>: leading experts in behavioral psychology. But nothing prepared us for this patient.
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life: the ones who interact with it daily and claim to know what it's thinking.
+</p>
+
+<p class="reveal">
+<strong>First of all, let's check the pulse!</strong> 
+For the market, that pulse is its daily returns — a continuous signal that reflects stress, calm, and sudden shocks.  
+Before interpreting sentiment or regimes, we listen to this heartbeat.
 </p>
 
 <figure class="plot-figure reveal">
@@ -61,7 +67,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
                alt="Market returns over time"
                class="plot">
           <figcaption>
-            Weekly NASDAQ returns - The heart beat of the market
+            Daily NASDAQ returns - The heart beat of the market
             <br>
             <span class="flip-instruction">
               <span class="icon">↺</span> Click to view calculation details
@@ -111,7 +117,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 
 <hr class="section-divider">
 
-<h3>The Patient's Support Network</h3>
+<h3>Next: The Patient's Support Network</h3>
 
 <p>We can't interview The Market directly. But we can study the two groups who spend the most time with it:</p>
 
@@ -119,7 +125,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 
   <div class="witness-card inner-circle">
     <h4>The Inner Circle</h4>
-    <p class="witness-source">AAII Weekly Sentiment Survey</p>
+    <p class="witness-source">AAII (a.k.a. American Association of Individual Investors) Weekly Sentiment Survey</p>
     <p>Active investors who interact with the patient every week. They report their expectations directly: <em>"Where do you think the market will be in 6 months?"</em></p>
     <ul class="witness-traits">
       <li>Informed </li>

@@ -98,11 +98,6 @@
     </div>
     <div class="finding-card pulse-on-hover">
       <span class="finding-number">5</span>
-      <h4>Sentiment Is Persistent But Asymmetric</h4>
-      <p>Optimism is the baseline state. Bullish sentiment is more persistent than bearish. Pessimism arrives fast and fades faster than optimism.</p>
-    </div>
-    <div class="finding-card pulse-on-hover">
-      <span class="finding-number">6</span>
       <h4>Sectors Are Not Equal</h4>
       <p>The sentiment-market relationship varies by industry. High-attention sectors may show stronger ties to retail sentiment; commodity-driven sectors less so.</p>
     </div>
@@ -112,10 +107,10 @@
 
   <h2>The Patient's Prognosis</h2>
   
-  <div class="reveal" style="text-align: center; max-width: 800px; margin: 1.5rem auto;">
-    <h3 style="color: #065f46; margin-bottom: 0.5rem;">The Market is Healthy.</h3>
-    <p style="color: #047857; margin: 0; font-size: 1.1rem; line-height: 1.6;">It turns out the patient's "support system" (retail investors) is neither toxic nor therapeutic, it's mostly just a reflection of the patient's own behavior. The Market processes information efficiently; it's the investors who need to catch up.</p>
-  </div>
+<div class="reveal" style="text-align: center; max-width: 800px; margin: 1.5rem auto;">
+  <h3 style="color: #065f46; margin-bottom: 0.5rem;">Diagnosis: The Market Doesn't Need Therapy—Its Investors Do.</h3>
+  <p style="color: #047857; margin: 0; font-size: 1.1rem; line-height: 1.6;">After extensive observation, we've reached an interesting conclusion: the patient is remarkably self-aware. Investor sentiment, it turns out, is not a leading indicator but a lagging echo—reactive, emotional, and perpetually chasing yesterday's moves. Google Trends, by contrast, reveals a more balanced dance with the market, suggesting that collective curiosity moves in step with prices rather than behind them. The real behavioral disorder? It's not in the market's price action—it's in the investors who mistake their hindsight for foresight. Our prescription: stop trying to read the market's mind and start examining your own!</p>
+</div>
 
   <hr class="section-divider">
 
@@ -134,7 +129,7 @@
 
   <p>Our analysis suggests a corollary: <strong>"The four most common words in investor sentiment are: <em>it was like this.</em>"</strong></p>
 
-  <p>Retail investors aren't predicting the future, they're describing the recent past and calling it a forecast. The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
+  <p>The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
 
   <p class="closing-statement" style="margin-top: 2rem; color: #2d3748;">
     The Market doesn't need to listen to investors. <strong style="color: #667eea;">It's already heard them, and moved on.</strong>

@@ -52,13 +52,16 @@
   </div>
 </figure>
 
-<p class="reveal">Technology and Consumer sectors show high correlation—when retail investors are bullish, they often pile into both. Energy shows lower correlation with other sectors, driven more by commodity prices than general sentiment.</p>
+<p class="reveal">Healthcare and Consumer sectors exhibit the highest mutual synchronization, suggesting they often experience similar regime dynamics. Technology shows more moderate alignment with other sectors, indicating more sector-specific regime behavior. Financials appear relatively less synchronized with most sectors, highlighting their distinct sensitivity to credit conditions and macro-financial factors. Overall, the results suggest that while some sectors share common regime cycles, market states are not fully synchronized across the economy, supporting the use of sector-level regime analysis rather than a single aggregate market regime.</p>
 
 <hr class="section-divider">
 
 <h2>Sector Returns Analysis</h2>
 
 <p class="lead reveal">How do sector returns compare across different market conditions? The scatter plot reveals the relationship between overall market sentiment and individual sector performance.</p>
+
+<p class="reveal">Use the dropdown to explore each sector's state evolution!</p>
+
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sector-returns">
@@ -72,7 +75,7 @@
 
 <h2>Sentiment vs. Sector Returns</h2>
 
-<p class="lead reveal">Does investor sentiment predict sector returns differently across industries? This visualization shows the relationship between sentiment measures and subsequent sector performance.</p>
+<p class="lead reveal">Does investor sentiment predict sector returns differently across industries? This interactive visualization shows the relationship between sentiment measures and subsequent sector performance.</p>
 
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sentiment-vs-returns">
@@ -81,6 +84,10 @@
     <figcaption>Sentiment vs. sector returns: exploring predictive relationships across industries.</figcaption>
   </div>
 </figure>
+
+<p class="reveal">As you can see, the Energy sector seems to be the only one to have a positive correlation with investor sentiment: interesting! However, we should be carefull here, the correlation numbers being small, this might be not be statistically significant enough!</p>
+
+<p class="reveal"><strong>Next:</strong> To better understand these correlation results, let's proceded with a lead-lag correlation analysis for each sector.</p>
 
 <hr class="section-divider">
 
@@ -96,7 +103,7 @@
   </div>
 </figure>
 
-<p class="reveal">The pattern varies significantly by sector. High-attention sectors like Technology show stronger relationships at all lags, while defensive sectors like Utilities show flatter profiles—sentiment matters less for them.</p>
+<p class="reveal">As we can see, all 5 sectors appear to have highest correlation for negative lags, suggesting that investors respond to past performance, which matches the market analysis results!</p>
 
 <hr class="section-divider">
 
@@ -112,57 +119,7 @@
   </div>
 </figure>
 
-<div class="sector-grid reveal">
-
-  <div class="sector-card tech-sector pulse-on-hover">
-    <div class="sector-header">
-      <span class="sector-icon"></span>
-      <h4>Technology</h4>
-    </div>
-    <p class="sector-interpretation">Tech stocks are highly visible and drive retail investor attention. Shows the <strong>strongest sentiment correlation</strong>—when retail investors are bullish, they're often thinking about tech.</p>
-  </div>
-
-  <div class="sector-card healthcare-sector pulse-on-hover">
-    <div class="sector-header">
-      <span class="sector-icon"></span>
-      <h4>Healthcare</h4>
-    </div>
-    <p class="sector-interpretation">Healthcare is defensive, less tied to general market sentiment. Returns are driven more by sector-specific factors like drug approvals and regulatory changes.</p>
-  </div>
-
-  <div class="sector-card consumer-sector pulse-on-hover">
-    <div class="sector-header">
-      <span class="sector-icon"></span>
-      <h4>Consumer</h4>
-    </div>
-    <p class="sector-interpretation">Consumer sectors reflect economic sentiment directly—when people search for "recession," they're often worried about their spending, which impacts these stocks.</p>
-  </div>
-
-  <div class="sector-card energy-sector pulse-on-hover">
-    <div class="sector-header">
-      <span class="sector-icon"></span>
-      <h4>Energy</h4>
-    </div>
-    <p class="sector-interpretation">Energy is commodity-driven. Retail sentiment matters less here—global supply/demand factors and geopolitics dominate.</p>
-  </div>
-
-  <div class="sector-card financials-sector pulse-on-hover">
-    <div class="sector-header">
-      <span class="sector-icon"></span>
-      <h4>Financials</h4>
-    </div>
-    <p class="sector-interpretation">Financials are economically sensitive. They show stronger ties to macroeconomic searches like "recession" and "interest rates."</p>
-  </div>
-
-</div>
-
-<hr class="section-divider">
-
-<h2>Do Sectors Differ Significantly?</h2>
-
-<p class="reveal">The visualizations above suggest clear differences, but are they statistically significant? We test whether the sentiment-return relationship varies meaningfully across sectors using interaction terms in regression models.</p>
-
-<p class="reveal"><strong>Result:</strong> Yes, sectors differ significantly. The null hypothesis (that all sectors respond equally to sentiment) is rejected. High-attention sectors like Technology show 2-3x stronger sentiment effects compared to defensive sectors like Utilities.</p>
+<p class="reveal"><strong>Sector Comparison results:</strong>The left panel shows that sentiment–return correlations are predominantly negative across sectors, with the strongest contrarian relationship observed in Technology and Consumer sectors, indicating that elevated sentiment is typically followed by lower subsequent returns, which again shows the lack of predictive power of investor sentiment! Energy stands out as the only sector with a mildly positive correlation, consistent with its stronger exposure to persistent commodity price cycles rather than valuation-driven mean reversion. The right panel shows that, despite these small linear correlations, sentiment still provides non-negligible predictive information for regime transitions, particularly in Technology, Financials, and Consumer sectors. This highlights that sentiment effects are largely nonlinear and regime-dependent, explaining why information gain reveals structure that simple correlations fail to capture: in particular, the Technology sector exhibits the strongest (negative) correlation with sentiment, suggesting that investor optimism does not translate into accurate directional forecasts for future returns. Instead, sentiment appears to function primarily as a contrarian indicator: periods of heightened enthusiasm toward technology are more often followed by weaker performance, implying that when investors collectively expect strong outcomes in this sector, the opposite outcome is statistically more likely!</p>
 
 <hr class="section-divider">
 
@@ -178,11 +135,11 @@
 
 <p class="reveal">The sector breakdown reveals that <strong>"the market"</strong> is really many markets. The sentiment-return relationship varies:</p>
 
-<p class="reveal"><strong>Strongest</strong> in high-attention sectors (Tech, Consumer Discretionary) where retail investors concentrate their attention and trading.</p>
+<p class="reveal"><strong>Strongest</strong> in high-attention sectors like Tech, where retail investors concentrate their attention and trading.</p>
 
 <p class="reveal"><strong>Weakest</strong> in institutional/commodity-driven sectors (Energy, Utilities) where fundamentals dominate and retail sentiment has little impact.</p>
 
-<p class="reveal"><strong>Mixed</strong> in economically sensitive sectors (Financials, Industrials) which respond to both sentiment and macroeconomic conditions.</p>
+<p class="reveal"><strong>Mixed</strong> in economically sensitive sectors (Financials) which respond to both sentiment and macroeconomic conditions.</p>
 
 <p class="reveal">This heterogeneity is important: investor sentiment, even when it contains information, is not uniformly relevant across a diversified portfolio.</p>
 
