@@ -4780,19 +4780,19 @@ hr,
 .label-comparison { color: #065f46; }
 
 /* ============================================
-   FLIP CARD ANIMATION (FIXED)
+   FLIP CARD ANIMATION (ROBUST FIX)
    ============================================ */
 
 .flip-card-container {
   background-color: transparent;
   width: 100%;
-  /* CRITICAL FIX: Set a fixed height so it pushes other content down */
-  height: 550px; 
+  /* FIXED HEIGHT: This ensures the paragraph below isn't hidden */
+  height: 600px; 
   perspective: 1000px;
   cursor: pointer;
   margin: 2rem 0;
   position: relative;
-  z-index: 10; /* Ensures it sits above other elements if needed */
+  z-index: 10; 
 }
 
 .flip-card-inner {
@@ -4815,32 +4815,36 @@ hr,
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;         /* Hides the back of the element */
+  backface-visibility: hidden;         /* Standard */
   border-radius: 12px;
   top: 0;
   left: 0;
-  overflow: hidden; /* Keeps content inside rounded corners */
+  overflow: hidden; 
 }
 
-/* FRONT: White background to hold the image */
+/* FRONT: The Plot */
 .flip-card-front {
-  background-color: white;
+  background-color: white; /* SOLID background is crucial */
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: rotateY(0deg); /* Explicitly set rotation */
 }
 
-/* BACK: Solid Grey Background to hide the mirrored image */
+/* BACK: The Explanation (Grey Box) */
 .flip-card-back {
-  background-color: #e2e8f0; /* Solid grey color */
+  background-color: #e2e8f0; /* SOLID Grey color */
   color: #1e293b;
-  transform: rotateY(180deg); /* Start rotated away */
+  transform: rotateY(180deg); /* Starts rotated away */
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #cbd5e1;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+  
+  /* FIX: Ensure this sits 'above' the front when flipped to hide any bleeding */
+  z-index: 1; 
 }
 
 /* Typography for the back content */
@@ -4848,6 +4852,7 @@ hr,
   text-align: left;
   max-width: 600px;
   padding: 2rem;
+  background: #e2e8f0; /* Double insurance on background */
 }
 
 .back-content h4 {
