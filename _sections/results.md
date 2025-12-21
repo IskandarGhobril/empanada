@@ -121,22 +121,26 @@
 
   <h2>Final Thoughts</h2>
 
-<div class="final-thoughts reveal">
-    <blockquote style="border: none; background: transparent; box-shadow: none; padding: 0; margin: 3rem 0; text-align: left;">
-      <p style="font-size: 1.5rem; font-style: italic; color: #2d3748; margin-bottom: 0.75rem; line-height: 1.4;">
-        "The four most dangerous words in investing are: <em>this time it's different.</em>"
-      </p>
-      <cite style="display: block; font-size: 1rem; color: #667eea; font-style: normal; font-weight: 600;">
-        — Sir John Templeton
-      </cite>
-    </blockquote>
+<div class="final-thoughts reveal" style="text-align: left; max-width: 800px; margin: 3rem auto;">
+  
+  <blockquote style="border: none; background: transparent; box-shadow: none; padding: 0; margin: 0 0 2rem 0;">
+    <p style="font-size: 1.5rem; font-style: italic; color: #2d3748; margin-bottom: 0.5rem; line-height: 1.4;">
+      "The four most dangerous words in investing are: <em>this time it's different.</em>"
+    </p>
+    <cite style="display: block; font-size: 1rem; color: #667eea; font-style: normal; font-weight: 600;">
+      — Sir John Templeton
+    </cite>
+  </blockquote>
 
-    <p>Our analysis suggests a corollary: <strong>"The four most common words in investor sentiment are: <em>it was like this.</em>"</strong></p>
+  <p>Our analysis suggests a corollary: <strong>"The four most common words in investor sentiment are: <em>it was like this.</em>"</strong></p>
 
-    <p>Retail investors aren't predicting the future, they're describing the recent past and calling it a forecast. The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
+  <p>Retail investors aren't predicting the future, they're describing the recent past and calling it a forecast. The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
 
-    <p class="closing-statement pulse-purple">The Market doesn't need to listen to investors. <strong>It's already heard them, and moved on.</strong></p>
-  </div>
+  <p class="closing-statement" style="margin-top: 2rem; color: #2d3748;">
+    The Market doesn't need to listen to investors. <strong style="color: #667eea;">It's already heard them, and moved on.</strong>
+  </p>
+
+</div>
 
   <hr class="section-divider">
 
