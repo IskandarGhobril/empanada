@@ -15,13 +15,16 @@
   <h2>The Official Diagnosis</h2>
 <div class="diagnosis-accordion reveal">
 
-  <!-- Header (clickable) -->
   <button class="accordion-header" aria-expanded="false">
-    <span class="accordion-title">📋 Clinical Assessment: The Market</span>
+    <span class="accordion-title">
+      📋 Clinical Assessment: The Market
+      <span style="color: #718096; font-size: 0.85rem; font-weight: normal; font-style: italic; margin-left: 10px;">
+        (click to expand)
+      </span>
+    </span>
     <span class="accordion-arrow">▾</span>
   </button>
 
-  <!-- Collapsible content -->
   <div class="accordion-content">
 
     <div class="diagnosis-text">
