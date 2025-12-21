@@ -51,34 +51,28 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 <strong>The Market</strong> doesn't talk. It doesn't sit on our couch and tell us about its childhood. Instead, it communicates through price movements, volatility spikes, and regime shifts. To understand it, we must observe the people in its life: the ones who interact with it daily and claim to know what it's thinking.
 </p>
 
-<figure class="plot-figure reveal">
-  <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
-    <div class="flip-card-inner">
-      
-      <div class="flip-card-front">
-        <div class="interactive-figure" data-plot="market-returns">
-          <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
-               alt="Market returns over time"
-               class="plot">
-          <figcaption>
-            Weekly NASDAQ returns - The heart beat of the market
-            <br>
-            <span class="flip-instruction">
-              <span class="icon">↺</span> Click to view calculation details
-            </span>
-          </figcaption>
-        </div>
-      </div>
-
-      <div class="flip-card-back">
+<div class="flip-card-back">
         <div class="back-content compact-back">
           <h4>Methodology: Equally Weighted Returns</h4>
           
           <div class="formula-box compact-formula">
             <p>We compute the market-level return at time <em>t</em> as an equal-weighted average of individual stock returns:</p>
             
-            <div class="math-equation">
-              $$ \text{total\_return}_t = \frac{1}{N_t} \sum_{i=1}^{N_t} \frac{P_{i,t} - P_{i,t-1}}{P_{i,t-1}} $$
+            <div class="custom-html-math">
+              <span class="variable">total_return</span><sub>t</sub>
+              <span class="operator">=</span>
+              
+              <div class="fraction">
+                <span class="numerator">1</span>
+                <span class="denominator">N<sub>t</sub></span>
+              </div>
+              
+              <span class="sigma">∑</span>
+              
+              <div class="fraction">
+                <span class="numerator">P<sub>i,t</sub> − P<sub>i,t-1</sub></span>
+                <span class="denominator">P<sub>i,t-1</sub></span>
+              </div>
             </div>
             
             <p class="formula-legend">
@@ -89,10 +83,6 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
           <span class="flip-hint">↺ Click to flip back to plot</span>
         </div>
       </div>
-
-    </div>
-  </div>
-</figure>
 
 <hr class="section-divider">
 

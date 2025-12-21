@@ -4779,6 +4779,7 @@ hr,
 .label-evidence { color: #6366f1; }
 .label-comparison { color: #065f46; }
 
+
 /* ============================================
    FLIP CARD ANIMATION (COMPACT FIX)
    ============================================ */
@@ -4910,4 +4911,67 @@ hr,
   text-align: center;
   font-style: italic;
   font-weight: 600;
+}
+
+/* ============================================
+   CUSTOM MATH FORMULA STYLES
+   (Replaces LaTeX for visual consistency)
+   ============================================ */
+
+.custom-html-math {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem; /* Good readable size */
+  gap: 0.4rem;       /* Space between elements */
+  margin: 1.5rem 0;
+  color: #1e293b;
+}
+
+.custom-html-math .variable {
+  font-family: 'Courier New', Courier, monospace; /* Monospace for 'code-like' var names */
+  font-weight: 600;
+}
+
+.custom-html-math .fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0 0.2rem;
+}
+
+.custom-html-math .numerator {
+  border-bottom: 2px solid #334155; /* The fraction line */
+  padding: 0 0.3rem 2px 0.3rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.custom-html-math .denominator {
+  padding-top: 2px;
+  text-align: center;
+  display: block;
+}
+
+.custom-html-math .sigma {
+  font-size: 2rem; /* Make the Summation symbol big */
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0.2rem;
+}
+
+.custom-html-math .operator {
+  margin: 0 0.3rem;
+  font-weight: bold;
+}
+
+/* Ensure subscripts are small and well-placed */
+.custom-html-math sub {
+  font-size: 0.7em;
+  position: relative;
+  bottom: -0.2em;
 }
