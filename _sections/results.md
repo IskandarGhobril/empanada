@@ -124,7 +124,7 @@
 <div class="final-thoughts reveal">
   
   <blockquote style="border: none; background: transparent; box-shadow: none; padding: 0; margin: 0 0 2rem 0;">
-    <p style="font-size: 1.5rem; font-style: italic; color: #2d3748; margin-bottom: 0.5rem; line-height: 1.4;">
+    <p style="font-size: 1.5rem; font-style: italic; color: #2d3748;">
       "The four most dangerous words in investing are: <em>this time it's different.</em>"
     </p>
     <cite style="display: block; font-size: 1rem; color: #667eea; font-style: normal; font-weight: 600;">

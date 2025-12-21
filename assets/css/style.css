@@ -2562,11 +2562,6 @@ body.longform-page .longform {
    FINAL THOUGHTS
    ============================================ */
 
-.final-thoughts {
-  max-width: 750px;
-  margin: 2.5rem auto;
-  text-align: left;
-}
 
 .final-thoughts blockquote {
   background: #f8f9fa;
