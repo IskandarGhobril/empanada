@@ -23,6 +23,7 @@
   </div>
 </div>
 
+<div class="therapy-layout">
   
   <div class="therapist-note">
     <div class="note-header">
@@ -35,7 +36,7 @@
   </div>
 
   <figure class="hero-illustration reveal">
-    <img src="{{ site.baseurl }}/assets/img/the-patient-market11.png"
+    <img src="{{ site.baseurl }}/assets/img/the-patient-market1.png"
          alt="The Market personified as a patient on a therapy couch"
          class="section-image">
 
