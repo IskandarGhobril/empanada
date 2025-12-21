@@ -245,7 +245,7 @@
       </div>
 
       <p class="var-note">
-        The coefficients quantify how past sentiment affects returns — and how past
+        The coefficients quantify how past sentiment affects returns and how past
         returns affect sentiment.
       </p>
     </div>
@@ -335,7 +335,7 @@
 
 <div class="session-transition reveal">
   <p class="transition-label">Next Session Preview</p>
-  <p class="transition-text">We've established the direction of causality. Now let's examine the patient's <strong>mood cycles</strong> — distinct behavioral states and how sentiment affects transitions between them.</p>
+  <p class="transition-text">We've established the direction of causality. Now let's examine the patient's <strong>mood cycles</strong>: distinct behavioral states and how sentiment affects transitions between them.</p>
   <p class="transition-cta">Time for the mood analysis.</p>
 </div>
 
