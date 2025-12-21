@@ -4779,3 +4779,115 @@ hr,
 .label-evidence { color: #6366f1; }
 .label-comparison { color: #065f46; }
 
+/* ============================================
+   FLIP CARD ANIMATION
+   ============================================ */
+
+.flip-card-container {
+  background-color: transparent;
+  width: 100%;
+  min-height: 500px; /* Increased height slightly to fit text */
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-container.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: white; 
+  top: 0;
+  left: 0;
+}
+
+.flip-card-front {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* STYLING THE INSTRUCTION TEXT */
+.flip-instruction {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.flip-instruction:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.flip-instruction .icon {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 1.1em;
+}
+
+/* Back Side Styling */
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 1px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.back-content {
+  text-align: left;
+  max-width: 500px;
+}
+
+.back-content h4 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.back-content p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.flip-hint {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+}

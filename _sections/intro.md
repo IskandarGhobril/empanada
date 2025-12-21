@@ -52,12 +52,41 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 </p>
 
 <figure class="plot-figure reveal">
-  <div class="interactive-figure" data-plot="market-returns">
-    <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
-         alt="Market returns over time"
-         class="plot">
-    <figcaption>Weekly NASDAQ returns - The heart beat of the market </figcaption>
-    <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
+  <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      
+      <div class="flip-card-front">
+        <div class="interactive-figure" data-plot="market-returns">
+          <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
+               alt="Market returns over time"
+               class="plot">
+          <figcaption>
+            Weekly NASDAQ returns - The heart beat of the market
+            <br>
+            <span class="flip-instruction">
+              <span class="icon">↺</span> Click to view calculation methodology
+            </span>
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="flip-card-back">
+        <div class="back-content">
+          <h4>Methodology Note</h4>
+          <p><strong>How we measured the pulse:</strong></p>
+          <p>
+            These returns were calculated using an <strong>equally weighted</strong> approach, 
+            computed directly from individual stock price data across 5,884 companies.
+          </p>
+          <p>
+            Unlike market-cap weighted indices (like the S&P 500) that are dominated by tech giants, 
+            this measure captures the true "average experience" of the typical stock in the market.
+          </p>
+          <span class="flip-hint">↺ Click anywhere to return to plot</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </figure>
 
