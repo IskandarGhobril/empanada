@@ -64,7 +64,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
             Weekly NASDAQ returns - The heart beat of the market
             <br>
             <span class="flip-instruction">
-              <span class="icon">↺</span> Click to view calculation methodology
+              <span class="icon">↺</span> Click to view calculation details
             </span>
           </figcaption>
         </div>
@@ -72,17 +72,21 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
 
       <div class="flip-card-back">
         <div class="back-content">
-          <h4>Methodology Note</h4>
-          <p><strong>How we measured the pulse:</strong></p>
-          <p>
-            These returns were calculated using an <strong>equally weighted</strong> approach, 
-            computed directly from individual stock price data across 5,884 companies.
-          </p>
-          <p>
-            Unlike market-cap weighted indices (like the S&P 500) that are dominated by tech giants, 
-            this measure captures the true "average experience" of the typical stock in the market.
-          </p>
-          <span class="flip-hint">↺ Click anywhere to return to plot</span>
+          <h4>Methodology: Equally Weighted Returns</h4>
+          
+          <p>Unlike standard indices (like the S&P 500) which are <strong>value-weighted</strong> (dominated by the largest tech giants), this plot represents the democratic average of the market.</p>
+          
+          <div class="formula-box">
+            <p>We calculate the return $R_t$ at time $t$ as:</p>
+            <div class="math-equation">
+              $$ R_t = \frac{1}{N} \sum_{i=1}^{N} r_{i,t} $$
+            </div>
+            <p>Where $N$ is the total count of 5,884 stocks and $r_{i,t}$ is the individual return of stock $i$.</p>
+          </div>
+
+          <p><strong>Why this matters:</strong> This metric captures the "average experience" of a typical stock, revealing broad market sentiment that might be hidden by the stability of mega-cap companies.</p>
+          
+          <span class="flip-hint">↺ Click to flip back to plot</span>
         </div>
       </div>
 
