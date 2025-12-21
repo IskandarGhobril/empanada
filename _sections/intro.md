@@ -71,21 +71,21 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
       </div>
 
       <div class="flip-card-back">
-        <div class="back-content">
+        <div class="back-content compact-back">
           <h4>Methodology: Equally Weighted Returns</h4>
           
-          <p>Unlike standard indices (like the S&P 500) which are <strong>value-weighted</strong> (dominated by the largest tech giants), this plot represents the democratic average of the market.</p>
-          
-          <div class="formula-box">
-            <p>We calculate the return $R_t$ at time $t$ as:</p>
+          <div class="formula-box compact-formula">
+            <p>We compute the market-level return at time <em>t</em> as an equal-weighted average of individual stock returns:</p>
+            
             <div class="math-equation">
-              $$ R_t = \frac{1}{N} \sum_{i=1}^{N} r_{i,t} $$
+              $$ \text{total\_return}_t = \frac{1}{N_t} \sum_{i=1}^{N_t} \frac{P_{i,t} - P_{i,t-1}}{P_{i,t-1}} $$
             </div>
-            <p>Where $N$ is the total count of 5,884 stocks and $r_{i,t}$ is the individual return of stock $i$.</p>
+            
+            <p class="formula-legend">
+              Where <strong>N<sub>t</sub></strong> is the number of stocks with valid returns on date <em>t</em>, and <strong>P<sub>i,t</sub></strong> is the adjusted closing price of stock <em>i</em>.
+            </p>
           </div>
 
-          <p><strong>Why this matters:</strong> This metric captures the "average experience" of a typical stock, revealing broad market sentiment that might be hidden by the stability of mega-cap companies.</p>
-          
           <span class="flip-hint">↺ Click to flip back to plot</span>
         </div>
       </div>

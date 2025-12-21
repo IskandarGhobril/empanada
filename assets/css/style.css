@@ -4780,14 +4780,14 @@ hr,
 .label-comparison { color: #065f46; }
 
 /* ============================================
-   FLIP CARD ANIMATION (ROBUST FIX)
+   FLIP CARD ANIMATION (COMPACT FIX)
    ============================================ */
 
 .flip-card-container {
   background-color: transparent;
   width: 100%;
-  /* FIXED HEIGHT: This ensures the paragraph below isn't hidden */
-  height: 600px; 
+  /* REDUCED HEIGHT: Eliminates whitespace. Adjust to 450px if needed. */
+  height: 500px; 
   perspective: 1000px;
   cursor: pointer;
   margin: 2rem 0;
@@ -4800,7 +4800,7 @@ hr,
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
 
@@ -4814,8 +4814,8 @@ hr,
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;         /* Standard */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   border-radius: 12px;
   top: 0;
   left: 0;
@@ -4824,60 +4824,65 @@ hr,
 
 /* FRONT: The Plot */
 .flip-card-front {
-  background-color: white; /* SOLID background is crucial */
+  background-color: white;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: rotateY(0deg); /* Explicitly set rotation */
+  transform: rotateY(0deg);
 }
 
-/* BACK: The Explanation (Grey Box) */
+/* BACK: The Math Explanation */
 .flip-card-back {
-  background-color: #e2e8f0; /* SOLID Grey color */
-  color: #1e293b;
-  transform: rotateY(180deg); /* Starts rotated away */
+  background-color: #f1f5f9; /* Clean light grey background */
+  color: #334155;
+  transform: rotateY(180deg);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #cbd5e1;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-  
-  /* FIX: Ensure this sits 'above' the front when flipped to hide any bleeding */
   z-index: 1; 
 }
 
-/* Typography for the back content */
-.back-content {
+/* Compact Content Styling */
+.back-content.compact-back {
   text-align: left;
-  max-width: 600px;
-  padding: 2rem;
-  background: #e2e8f0; /* Double insurance on background */
+  max-width: 650px;
+  padding: 1.5rem;
 }
 
 .back-content h4 {
   color: #1e293b;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid #667eea;
   display: inline-block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.1rem;
 }
 
-.formula-box {
+.formula-box.compact-formula {
   background: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid #667eea;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   font-family: 'Times New Roman', serif;
-  font-size: 1.1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .math-equation {
   text-align: center;
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  font-weight: bold;
+  font-size: 1.3rem; 
+  margin: 1.25rem 0;
+  font-weight: normal; 
+}
+
+.formula-legend {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 1rem;
+  line-height: 1.4;
 }
 
 .flip-instruction {
@@ -4899,9 +4904,9 @@ hr,
 
 .flip-hint {
   display: block;
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  color: #64748b;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
   text-align: center;
   font-style: italic;
   font-weight: 600;
