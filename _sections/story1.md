@@ -152,7 +152,7 @@
   </figure>
 </div>
 
-<p class="reveal"><strong>Bearish sentiment shows the most sensitivity to shocks.</strong> When fear arrives, it arrives fast. These dates become our reference points. We'll compare them against market regime changes to see if sentiment shifted <em>before</em> or <em>after</em> the market moved.</p>
+<p class="reveal">The interactive time-series plots reveal that sentiment typically evolves smoothly from week to week, but sharp discontinuities do occur. These sudden increases correspond to moments when investors rapidly changed their expectations, likely due to major market events or shifts in uncertainty. The difference in the density and magnitude of spikes across the three sentiment states suggests that Bearish sentiment is the most sensitive to shoc</p>
 
 <hr class="section-divider">
 
