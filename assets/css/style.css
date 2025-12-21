@@ -2577,12 +2577,6 @@ body.longform-page .longform {
   border-radius: 0 6px 6px 0;
 }
 
-.final-thoughts blockquote p {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #2d3748;
-  margin: 0;
-}
 
 .final-thoughts blockquote cite {
   display: block;
@@ -2590,12 +2584,6 @@ body.longform-page .longform {
   font-style: normal;
   color: #718096;
   font-size: 0.85rem;
-}
-
-.final-thoughts > p {
-  text-align: left;
-  max-width: 650px;
-  margin: 1.25rem 0;
 }
 
 .closing-statement {
