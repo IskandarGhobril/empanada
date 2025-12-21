@@ -13,7 +13,7 @@
     <span class="note-label">Behavioral Analysis</span>
   </div>
   <div class="note-content">
-    <p>Patients don't exist in a single mood — they cycle through distinct psychological states. Our patient, The Market, is no different. This session examines these mood cycles using <strong>Markov regime models</strong> and tests whether investor sentiment affects state transitions.</p>
+    <p>Patients don't exist in a single mood, they cycle through distinct psychological states. Our patient, The Market, is no different. This session examines these mood cycles using <strong>Markov regime models</strong> and tests whether investor sentiment affects state transitions.</p>
   </div>
 </div>
 
@@ -55,7 +55,7 @@
 
 <h2>Regime Transitions</h2>
 
-<p class="lead reveal">A <strong>Markov model</strong> assumes the market exists in one of several discrete states, and the probability of transitioning to the next state depends only on the current state — not the entire history. The market's "mood" today tells us something about tomorrow's mood.</p>
+<p class="lead reveal">A <strong>Markov model</strong> assumes the market exists in one of several discrete states, and the probability of transitioning to the next state depends only on the current state, not the entire history. The market's "mood" today tells us something about tomorrow's mood.</p>
 
 <h3>Unconditional Transitions</h3>
 
@@ -101,7 +101,7 @@
   </div>
 </div>
 
-<p class="reveal"><strong>Key Pattern:</strong> Market regimes are highly persistent — once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
+<p class="reveal"><strong>Key Pattern:</strong> Market regimes are highly persistent: once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
 
 <hr class="section-divider">
 
@@ -126,7 +126,7 @@
       <h4>What Are We Comparing?</h4>
       <p><strong>Stationary (theoretical):</strong> Given the transition probabilities, math tells us how often the market <em>should</em> be in each state if we ran the process forever.</p>
       <p><strong>Empirical (observed):</strong> How often the market <em>actually was</em> in each state in our data.</p>
-      <p><strong>Why it matters:</strong> If these match, our Markov model is a good fit. The market's mood cycling has been consistent over time — it hasn't fundamentally changed behavior.</p>
+      <p><strong>Why it matters:</strong> If these match, our Markov model is a good fit. The market's mood cycling has been consistent over time, it hasn't fundamentally changed behavior.</p>
       <p class="reveal"><strong>Finding:</strong> Close match. The market process is approximately stationary.</p>
     </div>
   </div>
@@ -171,7 +171,7 @@
 
 <p class="lead reveal">This is where we test Hypothesis A vs. Hypothesis B at the regime level. If sentiment has power, knowing it should change our predictions about state transitions. If sentiment is just a mirror, conditioning on it should add little information.</p>
 
-<p class="reveal">We measure <strong>information gain</strong> — how much knowing sentiment reduces uncertainty about the next market state. Higher information gain means sentiment is more useful for prediction.</p>
+<p class="reveal">We measure <strong>information gain</strong>: how much knowing sentiment reduces uncertainty about the next market state. Higher information gain means sentiment is more useful for prediction.</p>
 
 <h3>AAII Sentiment</h3>
 
@@ -184,7 +184,7 @@
   </div>
 </figure>
 
-<p class="reveal"><strong>AAII Result:</strong> Information gain of only <strong>0.002 – 0.018 bits</strong>. Very small — knowing investor sentiment barely changes our predictions about the next market state.</p>
+<p class="reveal"><strong>AAII Result:</strong> Information gain of only <strong>0.002 – 0.018 bits</strong>. Very small. Knowing investor sentiment barely changes our predictions about the next market state.</p>
 
 <hr class="section-divider">
 
@@ -199,7 +199,7 @@
   </div>
 </figure>
 
-<p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>. Meaningfully higher than AAII — search behavior is more informative about regime transitions.</p>
+<p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>. Meaningfully higher than AAII. Search behavior is more informative about regime transitions.</p>
 
 <p class="reveal"><strong>Why does Google outperform AAII?</strong> Google captures everyone (not just survey respondents), searches are spontaneous and unfiltered, and they happen in real-time rather than as considered survey responses.</p>
 
@@ -207,7 +207,7 @@
 
 <h2>The Lead-Lag Analysis: The Smoking Gun</h2>
 
-<p class="lead reveal">This is where the case breaks open. We test sentiment at various time lags — not just whether sentiment predicts, but <strong>when</strong> the relationship is strongest.</p>
+<p class="lead reveal">This is where the case breaks open. We test sentiment at various time lags, not just whether sentiment predicts, but <strong>when</strong> the relationship is strongest.</p>
 
 <p class="reveal">We measure information gain at different lags. <strong>Positive lags</strong> mean using sentiment from weeks ago to predict today's market state. <strong>Negative lags</strong> test if sentiment reflects past market states. If sentiment is predictive, positive lags should dominate. If reactive, negative lags should dominate.</p>
 
@@ -230,7 +230,7 @@
 
 <h3>Google Trends: Mixed Signal</h3>
 
-<p class="reveal">Google Trends peaks at <strong>+26 weeks</strong> with information gain of <strong>0.05–0.07 bits</strong> — more symmetric across positive and negative lags. Search behavior captures both response to events and some anticipation of market moves.</p>
+<p class="reveal">Google Trends peaks at <strong>+26 weeks</strong> with information gain of <strong>0.05–0.07 bits</strong>, more symmetric across positive and negative lags. Search behavior captures both response to events and some anticipation of market moves.</p>
 
 <hr class="section-divider">
 
@@ -273,7 +273,7 @@
 <div class="key-insight reveal gradient-border no-box">
   <h4>The 6-Month Mirror Effect</h4>
   <p>When AAII investors are asked <em>"Where will the market be in 6 months?"</em>, they appear to answer <em>"Where has the market been for the past 6 months?"</em></p>
-  <p>This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong> — fundamental concepts in behavioral finance, now quantified in our data.</p>
+  <p>This is classic <strong>recency bias</strong> and <strong>extrapolation behavior</strong>, fundamental concepts in behavioral finance, now quantified in our data.</p>
 </div>
 
 <hr class="section-divider">
@@ -283,7 +283,7 @@
   <div class="summary-points">
     <div class="summary-point">
       <span class="point-number">1</span>
-      <p><strong>Regimes are persistent.</strong> Once in a mood, the market tends to stay there — especially in bull markets.</p>
+      <p><strong>Regimes are persistent.</strong> Once in a mood, the market tends to stay there.</p>
     </div>
     <div class="summary-point">
       <span class="point-number">2</span>
@@ -295,7 +295,7 @@
     </div>
     <div class="summary-point">
       <span class="point-number">4</span>
-      <p><strong>The 6-month mirror effect.</strong> AAII sentiment peaks at -26 weeks lag — investors answer "where will markets go?" by looking at where they've been.</p>
+      <p><strong>The 6-month mirror effect.</strong> AAII sentiment peaks at -26 weeks lag, investors answer "where will markets go?" by looking at where they've been.</p>
     </div>
   </div>
 </div>
