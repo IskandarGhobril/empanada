@@ -121,7 +121,7 @@
 
   <h2>Final Thoughts</h2>
 
-<div class="final-thoughts reveal" style="text-align: left; max-width: 800px; margin: 3rem auto;">
+<div class="final-thoughts reveal">
   
   <blockquote style="border: none; background: transparent; box-shadow: none; padding: 0; margin: 0 0 2rem 0;">
     <p style="font-size: 1.5rem; font-style: italic; color: #2d3748; margin-bottom: 0.5rem; line-height: 1.4;">
