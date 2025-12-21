@@ -291,9 +291,10 @@ We classified Google search queries into three sentiment categories based on the
     <div class="correlation-findings reveal">
     <h4>Key Correlations</h4>
     <ul>
-      <li><strong>Within-category queries correlate strongly</strong> — "Recession" and "Unemployment" move together, as do bullish terms</li>
-      <li><strong>Bearish and Bullish searches show some negative correlation</strong> — when fear rises, optimism falls</li>
-      <li><strong>AAII and Google sentiment are related but distinct</strong> — they capture different aspects of the same underlying psychology</li>
+      <li><strong>Neutral</strong> Displays the highest cohesion (0.71 – 0.97). Search interest in the Dow, S&P 500, and Nasdaq is unified. Users rarely search for one index without checking the others, indicating a unified "market monitoring" behavior.</li>
+      <li><strong>Bearish</strong>Shows fragmented anxiety. Most notably, Inflation and Unemployment have effectively zero correlation (0.01). This suggests public fear is highly specific; users search for either cost-of-living issues *or* job security, but rarely treat them as a singular economic crisis.</li>
+      <li><strong>Bullish</strong> "Stock Market" and "ETF" search volumes are strongly linked (0.65), identifying ETFs as the primary vehicle associated with general market interest. However, the term "Investment" is less correlated, likely due to its broad definition (e.g., real estate, crypto).</li>
+      <li><strong>Sentiment Overlap</strong> There is a strong correlation (0.82) between Neutral and Bullish categories. This implies that general interest in market data (Neutral) is inherently tied to investment intent (Bullish), whereas Bearish search behavior acts as a distinct, isolated outlier.</li>
     </ul>
     </div>
   </div>
