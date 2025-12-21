@@ -4975,3 +4975,42 @@ hr,
   position: relative;
   bottom: -0.2em;
 }
+
+/* Two-column layout */
+.therapy-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 520px) 1fr;
+  gap: 3rem;
+  align-items: start; /* 🔑 prevents text stretching */
+  margin-top: 3rem;
+}
+
+/* Left column */
+.therapy-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Stats stay compact */
+.dramatic-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Right column image */
+.hero-illustration img {
+  width: 100%;
+  height: auto;
+  max-height: 680px;
+  object-fit: contain;
+}
+
+/* Caption style (optional polish) */
+.hero-illustration figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+}

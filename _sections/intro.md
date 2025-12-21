@@ -7,39 +7,40 @@
   <p class="session-subtitle">Meet the Patient</p>
 </div>
 
-<!-- DRAMATIC OPENING STATS -->
-<div class="dramatic-stats reveal">
-  <div class="data-highlight">
-    <span class="value stat-counter">34%</span>
-    <span class="label">Drop in 23 days</span>
-  </div>
-  <div class="data-highlight">
-    <span class="value stat-counter">33</span>
-    <span class="label">Years of data</span>
-  </div>
-  <div class="data-highlight">
-    <span class="value stat-counter">5,884</span>
-    <span class="label">Stocks analyzed</span>
-  </div>
-</div>
-
 <div class="therapy-layout">
-  
-  <div class="therapist-note">
-    <div class="note-header">
-      <span class="note-label">Initial Assessment Notes</span>
+
+  <!-- LEFT COLUMN -->
+  <div class="therapy-text-column">
+    <div class="dramatic-stats reveal">
+      <div class="data-highlight">
+        <span class="value stat-counter">34%</span>
+        <span class="label">Drop in 23 days</span>
+      </div>
+      <div class="data-highlight">
+        <span class="value stat-counter">33</span>
+        <span class="label">Years of data</span>
+      </div>
+      <div class="data-highlight">
+        <span class="value stat-counter">5,884</span>
+        <span class="label">Stocks analyzed</span>
+      </div>
     </div>
-    <div class="note-content">
-      <p><strong>Date:</strong> March 2020. <strong>Presenting symptoms:</strong> Severe mood swings. Patient experienced a 34% decline in just 23 trading days. Investors reported extreme bearish sentiment. Google searches for "market crash" and "recession" spiked to unprecedented levels.</p>
-      <p><strong>Clinical question:</strong> Did the collective anxiety cause the crash, predict it, or simply react to it?</p>
+
+    <div class="therapist-note">
+      <div class="note-header">
+        <span class="note-label">Initial Assessment Notes</span>
+      </div>
+      <div class="note-content">
+        <p><strong>Date:</strong> March 2020. <strong>Presenting symptoms:</strong> Severe mood swings. Patient experienced a 34% decline in just 23 trading days. Investors reported extreme bearish sentiment. Google searches for "market crash" and "recession" spiked to unprecedented levels.</p>
+        <p><strong>Clinical question:</strong> Did the collective anxiety cause the crash, predict it, or simply react to it?</p>
+      </div>
     </div>
   </div>
 
+  <!-- RIGHT COLUMN -->
   <figure class="hero-illustration reveal">
     <img src="{{ site.baseurl }}/assets/img/the-patient-market1.png"
-         alt="The Market personified as a patient on a therapy couch"
-         class="section-image">
-
+         alt="The Market personified as a patient on a therapy couch">
     <figcaption>The Market: our most complex patient</figcaption>
   </figure>
 
