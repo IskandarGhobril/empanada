@@ -56,7 +56,7 @@ They call us when nobody else can figure it out. We're <strong>empanADA</strong>
     <img src="{{ site.baseurl }}/assets/img/daily_market_ret.png"
          alt="Market returns over time"
          class="plot">
-    <figcaption>Weekly NASDAQ returns - The heat beat of the market </figcaption>
+    <figcaption>Weekly NASDAQ returns - The heart beat of the market </figcaption>
     <!-- INTERACTIVE: Zoomable timeline, hover for exact dates/values, brush to select periods -->
   </div>
 </figure>
