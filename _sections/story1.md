@@ -13,7 +13,7 @@
     <span class="note-label">Observation Method</span>
   </div>
   <div class="note-content">
-    <p>To understand our patient, we interview two key witness groups separately. First, the Inner Circle (AAII survey respondents) — investors who explicitly report their expectations. Then, the General Public, whose unconscious fears and hopes are revealed through Google search behavior.</p>
+    <p>To understand our patient, we interview two key witness groups separately. First, the Inner Circle (AAII survey respondents): investors who explicitly report their expectations. Then, the General Public, whose unconscious fears and hopes are revealed through Google search behavior.</p>
   </div>
 </div>
 
@@ -85,7 +85,7 @@
 <h3>Finding 2: Beliefs Are Sticky</h3>
 
 <p class="reveal">
-  <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong> — how sentiment changes from week to week.</p>
+  <p>Levels tell us what investors believe. But to understand behavior, we need to study <strong>transitions</strong>, how sentiment changes from week to week.</p>
 
 <div class="transition-layout">
   <!-- Left side: Plot -->
@@ -138,7 +138,7 @@
 
 <hr class="section-divider">
 
-<h3>Finding 3: Critical Moments — When Beliefs Shift Suddenly</h3>
+<h3>Finding 3: Critical Moments: When Beliefs Shift Suddenly</h3>
 
 <div class="section-intro-text reveal">
   <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps: moments when investors rapidly reassessed their outlook.</p>
@@ -301,7 +301,7 @@ We classified Google search queries into three sentiment categories based on the
 
 
 <div class="key-insight reveal gradient-border no-box">
-  <p>Google Trends does not replace investor surveys — it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
+  <p>Google Trends does not replace investor surveys: it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
 </div>
 
 <hr class="section-divider">
@@ -311,11 +311,11 @@ We classified Google search queries into three sentiment categories based on the
   <div class="summary-points">
     <div class="summary-point">
       <span class="point-number">1</span>
-      <p><strong>Optimism is the baseline.</strong> Investors are bullish more often than bearish — this is their natural state.</p>
+      <p><strong>Optimism is the baseline.</strong> Investors are bullish more often than bearish.</p>
     </div>
     <div class="summary-point">
       <span class="point-number">2</span>
-      <p><strong>Beliefs are sticky.</strong> Once in a sentiment state, investors tend to stay there — but pessimism fades faster than optimism.</p>
+      <p><strong>Beliefs are sticky.</strong> Once in a sentiment state, investors tend to stay there, but pessimism fades faster than optimism.</p>
     </div>
     <div class="summary-point">
       <span class="point-number">3</span>
