@@ -140,9 +140,10 @@
 
 <h3>Finding 3: Critical Moments: When Beliefs Shift Suddenly</h3>
 
-<div class="section-intro-text reveal">
-  <p>If most weeks look similar, the exceptions become revealing. We identified the largest week-to-week sentiment jumps: moments when investors rapidly reassessed their outlook.</p>
-</div>
+
+ 
+<p>To better understand how investor expectations evolve over time, we analyze the sudden week-to-week changes in Bullish, Neutral, and Bearish sentiment. Examining sudden shifts allows us to identify moments when investors rapidly changed their outlook, often in response to new information, market stress, or emerging uncertainty. By visualizing the largest sentiment jumps, we can find the exact dates where these changes occurred and later compare them with movements in the NASDAQ market. This helps us assess whether shifts in sentiment tend to anticipate market developments or react to them.</p>
+
 
 <div class="plot-figure reveal">
   <figure class="interactive-figure" data-plot="sentiment-shifts">
