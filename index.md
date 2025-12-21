@@ -30,19 +30,13 @@ css:
     <p class="therapy-tagline">A behavioral diagnosis of investor sentiment and market dynamics</p>
 
     <!-- Emotion Meter Preview -->
-    <div class="hero-emotion-meter">
-      <div class="emotion-meter">
-        <div class="meter-segment fear"></div>
-        <div class="meter-segment worry"></div>
-        <div class="meter-segment neutral"></div>
-        <div class="meter-segment hope"></div>
-        <div class="meter-segment greed"></div>
+  <div class="hero-animation-container">
+        <canvas id="marketHeartbeatCanvas"></canvas>
+        <div class="heartbeat-labels">
+          <span class="label-fear">Fear</span>
+          <span class="label-greed">Greed</span>
+        </div>
       </div>
-      <div class="meter-labels">
-        <span>Fear</span>
-        <span>Greed</span>
-      </div>
-    </div>
 
     <div class="scroll-indicator">
       <span>Begin Session</span>

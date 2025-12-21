@@ -357,3 +357,113 @@ document.querySelectorAll('.accordion-header').forEach(button => {
   });
 });
 
+
+/* ============================================
+   MARKET HEARTBEAT ANIMATION
+   - Simulates Brownian Motion (Market Volatility)
+   - Overlays a rhythmic Pulse (Heartbeat)
+   ============================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('marketHeartbeatCanvas');
+    if (!canvas) return; // Exit if canvas is not found on this page
+
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    // --- 1. RESIZE HANDLER ---
+    // Ensures the line stays sharp on all screens (mobile vs desktop)
+    function resize() {
+        width = canvas.parentElement.offsetWidth;
+        height = canvas.parentElement.offsetHeight;
+        
+        // Set actual canvas size to match display size * pixel ratio
+        canvas.width = width * window.devicePixelRatio;
+        canvas.height = height * window.devicePixelRatio;
+        
+        // Normalize coordinate system
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    window.addEventListener('resize', resize);
+    resize(); // Call once immediately
+
+    // --- 2. ANIMATION STATE ---
+    const points = [];
+    const maxPoints = 150; // History length (how long the tail is)
+    let currentY = 70;     // Start in the vertical middle (approx)
+    let pulsePhase = 0;    // Tracks where we are in the heartbeat cycle
+
+    // --- 3. ANIMATION LOOP ---
+    function animate() {
+        // Clear previous frame
+        ctx.clearRect(0, 0, width, height);
+
+        // A. CALCULATE NEW POSITION
+        
+        // Noise: Random step up/down (Market Volatility)
+        let noise = (Math.random() - 0.5) * 6; 
+
+        // Pulse: Rhythmic sine waves (Heartbeat)
+        pulsePhase += 0.08; 
+        // A double sine wave creates the "lub-dub" EKG effect
+        const pulse = (Math.sin(pulsePhase) + Math.sin(pulsePhase * 3) * 0.5) * 4;
+
+        // Apply movement + "Gravity" (pull back to center so it doesn't fly off screen)
+        // 70 is roughly the vertical center (140px height / 2)
+        currentY += noise + pulse + (70 - currentY) * 0.05;
+        
+        // Keep inside bounds
+        currentY = Math.max(10, Math.min(130, currentY));
+
+        // Add to history
+        points.push(currentY);
+        if (points.length > maxPoints) {
+            points.shift(); // Remove oldest point
+        }
+
+        // B. DRAW THE LINE
+        if (points.length > 1) {
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Create Gradient: Red (Fear) -> Yellow -> Green (Greed)
+            const gradient = ctx.createLinearGradient(0, 0, width, 0);
+            gradient.addColorStop(0, '#ef4444');   // Red
+            gradient.addColorStop(0.5, '#f59e0b'); // Yellow
+            gradient.addColorStop(1, '#10b981');   // Green
+            ctx.strokeStyle = gradient;
+
+            // Smoothly draw line between points
+            // Calculate step size based on current canvas width
+            const step = width / (maxPoints - 1);
+            
+            ctx.moveTo(0, points[0]);
+            
+            for (let i = 1; i < points.length; i++) {
+                // Use simple lineTo for performance
+                ctx.lineTo(i * step, points[i]);
+            }
+            ctx.stroke();
+
+            // C. DRAW GLOWING HEAD
+            const lastX = (points.length - 1) * step;
+            const lastY = points[points.length - 1];
+            
+            ctx.beginPath();
+            ctx.arc(lastX, lastY, 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#ffffff';
+            // Add glow
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = '#ffffff';
+            ctx.fill();
+            ctx.shadowBlur = 0; // Reset shadow
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    // Start the loop
+    animate();
+});
