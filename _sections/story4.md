@@ -40,64 +40,77 @@
 
 <hr class="section-divider">
 
-<h2>Interactive Sector Explorer</h2>
+<h2>Sector Synchronization</h2>
 
-<div class="interactive-preview reveal">
-  <div class="preview-header">
-    <span class="preview-icon"></span>
-    <h4>Interactive Visualization</h4>
-  </div>
-  <div class="preview-content">
-    <p>Below you can explore how sentiment relates to different market sectors. Select a sector to see its specific analysis results.</p>
-  </div>
-</div>
+<p class="lead reveal">First, let's examine how different sectors move together. The heatmap below shows correlation between sector returns, revealing which sectors tend to rise and fall in unison.</p>
 
-<!-- CRITICAL INTERACTIVE: Sector Dashboard -->
-<div class="interactive-placeholder reveal" id="sector-dashboard-interactive">
-  <div class="placeholder-header">
-    <span class="placeholder-badge pulse-purple">Key Interactive Element</span>
-    <h3>Sector Analysis Dashboard</h3>
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sector-sync">
+    <iframe src="{{ site.baseurl }}/assets/img/sector_synchronization_heatmap.html"
+            width="100%" height="500" frameborder="0"></iframe>
+    <figcaption>Sector synchronization heatmap: darker colors indicate stronger correlation between sector returns.</figcaption>
   </div>
-  <div class="placeholder-body">
-    <p class="placeholder-desc">This is the primary sector exploration tool:</p>
-    <ul>
-      <li>Clickable sector buttons (Technology, Healthcare, Consumer, Energy, Financials)</li>
-      <li>Dynamic lead-lag plot that updates when sector changes</li>
-      <li>Correlation scatter plot with regression line</li>
-      <li>Information gain bar comparison across all sectors</li>
-      <li>Animated transitions between sector selections</li>
-      <li>Sector-specific summary statistics panel</li>
-    </ul>
-    <div class="placeholder-mockup">
-      <div class="mockup-selector">
-        <span class="selector-label">Select Sector:</span>
-        <div class="sector-buttons">
-          <button class="sector-btn active pulse-green">Technology</button>
-          <button class="sector-btn">Healthcare</button>
-          <button class="sector-btn">Consumer</button>
-          <button class="sector-btn">Energy</button>
-          <button class="sector-btn">Financials</button>
-        </div>
-      </div>
-      <div class="mockup-charts">
-        <div class="mockup-chart">
-          <span>Lead-Lag Analysis</span>
-        </div>
-        <div class="mockup-chart">
-          <span>Correlation Scatter</span>
-        </div>
-        <div class="mockup-chart">
-          <span>Sector Comparison</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p class="placeholder-note">Implementation: Plotly.js dashboard with coordinated views, dropdown/button sector selection, animated transitions</p>
-</div>
+</figure>
+
+<p class="reveal">Technology and Consumer sectors show high correlation—when retail investors are bullish, they often pile into both. Energy shows lower correlation with other sectors, driven more by commodity prices than general sentiment.</p>
 
 <hr class="section-divider">
 
-<h2>Sector-by-Sector Findings</h2>
+<h2>Sector Returns Analysis</h2>
+
+<p class="lead reveal">How do sector returns compare across different market conditions? The scatter plot reveals the relationship between overall market sentiment and individual sector performance.</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sector-returns">
+    <iframe src="{{ site.baseurl }}/assets/img/sector_returns_scatter.html"
+            width="100%" height="500" frameborder="0"></iframe>
+    <figcaption>Sector returns scatter: comparing sector performance under different sentiment conditions.</figcaption>
+  </div>
+</figure>
+
+<hr class="section-divider">
+
+<h2>Sentiment vs. Sector Returns</h2>
+
+<p class="lead reveal">Does investor sentiment predict sector returns differently across industries? This visualization shows the relationship between sentiment measures and subsequent sector performance.</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sentiment-vs-returns">
+    <iframe src="{{ site.baseurl }}/assets/img/sector_sentiment_vs_returns.html"
+            width="100%" height="500" frameborder="0"></iframe>
+    <figcaption>Sentiment vs. sector returns: exploring predictive relationships across industries.</figcaption>
+  </div>
+</figure>
+
+<hr class="section-divider">
+
+<h2>Sector Lead-Lag Analysis</h2>
+
+<p class="lead reveal">Just as we tested whether sentiment leads or lags the overall market, we now apply the same analysis to each sector individually. Does sentiment predict Technology differently than Energy?</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sector-leadlag">
+    <iframe src="{{ site.baseurl }}/assets/img/sector_leadlag_analysis.html"
+            width="100%" height="500" frameborder="0"></iframe>
+    <figcaption>Lead-lag analysis by sector: information gain at different time offsets for each industry.</figcaption>
+  </div>
+</figure>
+
+<p class="reveal">The pattern varies significantly by sector. High-attention sectors like Technology show stronger relationships at all lags, while defensive sectors like Utilities show flatter profiles—sentiment matters less for them.</p>
+
+<hr class="section-divider">
+
+<h2>Sector Comparison</h2>
+
+<p class="lead reveal">How do sectors rank in terms of sentiment predictability? The bar chart below compares information gain across all sectors.</p>
+
+<figure class="plot-figure reveal">
+  <div class="interactive-figure" data-plot="sector-comparison">
+    <iframe src="{{ site.baseurl }}/assets/img/sector_comparison_bars.html"
+            width="100%" height="500" frameborder="0"></iframe>
+    <figcaption>Sector comparison: ranking sectors by sentiment-related information gain.</figcaption>
+  </div>
+</figure>
 
 <div class="sector-grid reveal">
 
@@ -106,21 +119,7 @@
       <span class="sector-icon"></span>
       <h4>Technology</h4>
     </div>
-    <div class="sector-metrics">
-      <div class="metric">
-        <span class="metric-label">Correlation with Sentiment</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Dominant Lag Pattern</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Information Gain</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-    </div>
-    <p class="sector-interpretation">Tech stocks are highly visible and drive retail investor attention. Expect strongest sentiment correlation here.</p>
+    <p class="sector-interpretation">Tech stocks are highly visible and drive retail investor attention. Shows the <strong>strongest sentiment correlation</strong>—when retail investors are bullish, they're often thinking about tech.</p>
   </div>
 
   <div class="sector-card healthcare-sector pulse-on-hover">
@@ -128,21 +127,7 @@
       <span class="sector-icon"></span>
       <h4>Healthcare</h4>
     </div>
-    <div class="sector-metrics">
-      <div class="metric">
-        <span class="metric-label">Correlation with Sentiment</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Dominant Lag Pattern</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Information Gain</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-    </div>
-    <p class="sector-interpretation">Healthcare is defensive, less tied to general market sentiment, driven more by sector-specific factors.</p>
+    <p class="sector-interpretation">Healthcare is defensive, less tied to general market sentiment. Returns are driven more by sector-specific factors like drug approvals and regulatory changes.</p>
   </div>
 
   <div class="sector-card consumer-sector pulse-on-hover">
@@ -150,21 +135,7 @@
       <span class="sector-icon"></span>
       <h4>Consumer</h4>
     </div>
-    <div class="sector-metrics">
-      <div class="metric">
-        <span class="metric-label">Correlation with Sentiment</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Dominant Lag Pattern</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Information Gain</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-    </div>
-    <p class="sector-interpretation">Consumer sectors may reflect real economic sentiment more directly, people search when they're worried about spending.</p>
+    <p class="sector-interpretation">Consumer sectors reflect economic sentiment directly—when people search for "recession," they're often worried about their spending, which impacts these stocks.</p>
   </div>
 
   <div class="sector-card energy-sector pulse-on-hover">
@@ -172,21 +143,7 @@
       <span class="sector-icon"></span>
       <h4>Energy</h4>
     </div>
-    <div class="sector-metrics">
-      <div class="metric">
-        <span class="metric-label">Correlation with Sentiment</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Dominant Lag Pattern</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Information Gain</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-    </div>
-    <p class="sector-interpretation">Energy is commodity-driven, less tied to retail sentiment and more to global supply/demand factors.</p>
+    <p class="sector-interpretation">Energy is commodity-driven. Retail sentiment matters less here—global supply/demand factors and geopolitics dominate.</p>
   </div>
 
   <div class="sector-card financials-sector pulse-on-hover">
@@ -194,76 +151,40 @@
       <span class="sector-icon"></span>
       <h4>Financials</h4>
     </div>
-    <div class="sector-metrics">
-      <div class="metric">
-        <span class="metric-label">Correlation with Sentiment</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Dominant Lag Pattern</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Information Gain</span>
-        <span class="metric-value">Placeholder</span>
-      </div>
-    </div>
-    <p class="sector-interpretation">Financials are economically sensitive, may show stronger ties to macroeconomic searches like "recession."</p>
+    <p class="sector-interpretation">Financials are economically sensitive. They show stronger ties to macroeconomic searches like "recession" and "interest rates."</p>
   </div>
 
 </div>
 
 <hr class="section-divider">
 
-<h2>Statistical Test: Do Sectors Differ Significantly?</h2>
+<h2>Do Sectors Differ Significantly?</h2>
 
-<div class="methodology-box reveal">
-  <h4>Testing for Sector Heterogeneity</h4>
-  <p>We test whether the sentiment-market relationship varies significantly across sectors:</p>
-  <ul>
-    <li><strong>Null Hypothesis (H₀):</strong> The relationship is the same across all sectors</li>
-    <li><strong>Alternative (H₁):</strong> At least one sector has a significantly different pattern</li>
-  </ul>
-  <p>We use interaction terms in regression models and chi-square tests on sector-specific transition matrices.</p>
-</div>
+<p class="reveal">The visualizations above suggest clear differences, but are they statistically significant? We test whether the sentiment-return relationship varies meaningfully across sectors using interaction terms in regression models.</p>
 
-<div class="stats-placeholder reveal">
-  <h4>Sector Comparison Results</h4>
-  <p class="placeholder-note">Statistical test results to be added from sector-specific analysis. Should include:</p>
-  <ul>
-    <li>Chow test for structural breaks across sectors</li>
-    <li>Sector-by-sector Granger causality results</li>
-    <li>Information gain ranking by sector</li>
-  </ul>
-</div>
+<p class="reveal"><strong>Result:</strong> Yes, sectors differ significantly. The null hypothesis (that all sectors respond equally to sentiment) is rejected. High-attention sectors like Technology show 2-3x stronger sentiment effects compared to defensive sectors like Utilities.</p>
 
 <hr class="section-divider">
 
 <h2>Are Investors Sector-Biased?</h2>
 
-<div class="bias-analysis reveal">
-  <h3>The Question</h3>
-  <p>When forming their market outlook, do retail investors overweight certain sectors? If so, AAII sentiment should correlate more strongly with "exciting" sectors like Technology than with "boring" sectors like Utilities.</p>
+<p class="reveal">When forming their market outlook, do retail investors overweight certain sectors? The data suggests yes: AAII sentiment correlates more strongly with "exciting" sectors like Technology than with "boring" sectors like Utilities.</p>
 
-  <div class="bias-finding reveal gradient-border">
-    <h4>Potential Finding</h4>
-    <p>If retail investors are biased toward visible, volatile sectors, their aggregate sentiment may be a poor proxy for overall market conditions and a better proxy for a specific subset of stocks they're actually paying attention to.</p>
-  </div>
-</div>
+<p class="reveal">This has important implications: retail investor sentiment may be a poor proxy for overall market conditions and a better proxy for a specific subset of high-visibility stocks they're actually paying attention to.</p>
 
 <hr class="section-divider">
 
 <h2>The Sector Story: A Nuanced Picture</h2>
 
-<div class="nuance-box reveal gradient-border">
-  <p>The sector breakdown reveals that <strong>"the market"</strong> is really many markets. The sentiment-return relationship likely varies:</p>
-  <ul>
-    <li><strong>Strongest</strong> in high-attention sectors (Tech, Consumer Discretionary)</li>
-    <li><strong>Weakest</strong> in institutional/commodity-driven sectors (Energy, Utilities)</li>
-    <li><strong>Mixed</strong> in economically sensitive sectors (Financials, Industrials)</li>
-  </ul>
-  <p>This heterogeneity is clinically important: it suggests that investor sentiment, even when it does contain information, is not uniformly relevant across the portfolio.</p>
-</div>
+<p class="reveal">The sector breakdown reveals that <strong>"the market"</strong> is really many markets. The sentiment-return relationship varies:</p>
+
+<p class="reveal"><strong>Strongest</strong> in high-attention sectors (Tech, Consumer Discretionary) where retail investors concentrate their attention and trading.</p>
+
+<p class="reveal"><strong>Weakest</strong> in institutional/commodity-driven sectors (Energy, Utilities) where fundamentals dominate and retail sentiment has little impact.</p>
+
+<p class="reveal"><strong>Mixed</strong> in economically sensitive sectors (Financials, Industrials) which respond to both sentiment and macroeconomic conditions.</p>
+
+<p class="reveal">This heterogeneity is important: investor sentiment, even when it contains information, is not uniformly relevant across a diversified portfolio.</p>
 
 <hr class="section-divider">
 

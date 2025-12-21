@@ -82,17 +82,17 @@
 
       <div class="matrix-highlights">
         <div class="matrix-stat">
-          <span class="stat-value">High</span>
+          <span class="stat-value">84.0%</span>
           <span class="stat-label">Bull → Bull</span>
           <span class="stat-meaning">Bull markets are self-reinforcing</span>
         </div>
         <div class="matrix-stat">
-          <span class="stat-value">Moderate</span>
+          <span class="stat-value">90.2%</span>
           <span class="stat-label">Neutral → Neutral</span>
-          <span class="stat-meaning">Sideways markets are transitional</span>
+          <span class="stat-meaning">Neutral states are most persistent</span>
         </div>
         <div class="matrix-stat">
-          <span class="stat-value">High</span>
+          <span class="stat-value">87.6%</span>
           <span class="stat-label">Bear → Bear</span>
           <span class="stat-meaning">Downturns are sticky</span>
         </div>
@@ -101,7 +101,7 @@
   </div>
 </div>
 
-<p class="reveal"><strong>Key Pattern:</strong> Market regimes are highly persistent: once established, they tend to continue. But bull markets are typically more persistent than bear markets, reflecting the market's long-term upward drift.</p>
+<p class="reveal"><strong>Key Pattern:</strong> All three regimes show high persistence (84-90%), meaning once established, they tend to continue. Interestingly, neutral regimes are the most persistent at 90.2%, while bull markets persist at 84%. This suggests the market often stays in "wait-and-see" mode before committing to a direction.</p>
 
 <hr class="section-divider">
 
@@ -125,9 +125,9 @@
     <div class="transition-matrix-explanation reveal">
       <h4>What Are We Comparing?</h4>
       <p><strong>Stationary (theoretical):</strong> Given the transition probabilities, math tells us how often the market <em>should</em> be in each state if we ran the process forever.</p>
-      <p><strong>Empirical (observed):</strong> How often the market <em>actually was</em> in each state in our data.</p>
-      <p><strong>Why it matters:</strong> If these match, our Markov model is a good fit. The market's mood cycling has been consistent over time, it hasn't fundamentally changed behavior.</p>
-      <p class="reveal"><strong>Finding:</strong> Close match. The market process is approximately stationary.</p>
+      <p><strong>Empirical (observed):</strong> How often the market <em>actually was</em> in each state. In our data: Neutral (829 weeks), Bullish (413 weeks), Bearish (412 weeks) across 1,654 total observations.</p>
+      <p><strong>Why it matters:</strong> If these match, our Markov model is a good fit. The market's mood cycling has been consistent over time.</p>
+      <p class="reveal"><strong>Finding:</strong> Close match. The market spends roughly half its time in neutral territory, with bullish and bearish periods roughly equal—consistent with the theoretical prediction.</p>
     </div>
   </div>
 </div>
@@ -184,7 +184,7 @@
   </div>
 </figure>
 
-<p class="reveal"><strong>AAII Result:</strong> Information gain of only <strong>0.002 – 0.018 bits</strong>. Very small. Knowing investor sentiment barely changes our predictions about the next market state.</p>
+<p class="reveal"><strong>AAII Result:</strong> Information gain of only <strong>0.002 – 0.018 bits</strong>. This is negligible—for comparison, a coin flip provides 1 bit of information. Knowing investor sentiment barely changes our predictions about the next market state.</p>
 
 <hr class="section-divider">
 
@@ -199,9 +199,9 @@
   </div>
 </figure>
 
-<p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>. Meaningfully higher than AAII. Search behavior is more informative about regime transitions.</p>
+<p class="reveal"><strong>Google Result:</strong> Information gain of <strong>0.05 – 0.07 bits</strong>—roughly 3-5x higher than AAII. Search behavior is more informative about regime transitions.</p>
 
-<p class="reveal"><strong>Why does Google outperform AAII?</strong> Google captures everyone (not just survey respondents), searches are spontaneous and unfiltered, and they happen in real-time rather than as considered survey responses.</p>
+<p class="reveal"><strong>Why does Google outperform AAII?</strong> Google captures everyone (not just the ~1,000 AAII survey respondents), searches are spontaneous and unfiltered, and they happen in real-time rather than as considered weekly survey responses.</p>
 
 <hr class="section-divider">
 
@@ -222,11 +222,11 @@
 
 <h3>AAII: The 6-Month Mirror</h3>
 
-<p class="reveal">AAII shows peak information at <strong>lag = -26 weeks (6 months)</strong>. This is striking and not coincidental.</p>
+<p class="reveal">AAII shows peak information at <strong>lag = -26 weeks (6 months)</strong>. This is striking—and not coincidental.</p>
 
-<p class="reveal">Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em> Investors answering this question appear to be anchoring on <strong>"where has the market been for the past 6 months?"</strong> and extrapolating that experience into their future outlook.</p>
+<p class="reveal">Remember the AAII survey question: <em>"Where do you think the market will be in the next 6 months?"</em> Investors answering this question appear to be anchoring on <strong>"where has the market been for the past 6 months?"</strong> and extrapolating that experience into their future outlook. They're essentially looking in the rearview mirror to predict the road ahead.</p>
 
-<p class="reveal"><strong>AAII sentiment is REACTIVE, not predictive.</strong></p>
+<p class="reveal"><strong>Verdict: AAII sentiment is REACTIVE, not predictive.</strong></p>
 
 <h3>Google Trends: Mixed Signal</h3>
 
