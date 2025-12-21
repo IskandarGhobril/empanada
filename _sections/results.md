@@ -114,7 +114,7 @@
   
   <div class="reveal" style="text-align: center; max-width: 800px; margin: 1.5rem auto;">
     <h3 style="color: #065f46; margin-bottom: 0.5rem;">The Market is Healthy.</h3>
-    <p style="color: #047857; margin: 0; font-size: 1.1rem; line-height: 1.6;">It turns out the patient's "support system" (retail investors) is neither toxic nor therapeutic — it's mostly just a reflection of the patient's own behavior. The Market processes information efficiently; it's the investors who need to catch up.</p>
+    <p style="color: #047857; margin: 0; font-size: 1.1rem; line-height: 1.6;">It turns out the patient's "support system" (retail investors) is neither toxic nor therapeutic, it's mostly just a reflection of the patient's own behavior. The Market processes information efficiently; it's the investors who need to catch up.</p>
   </div>
 
   <hr class="section-divider">
@@ -129,7 +129,7 @@
 
     <p>Our analysis suggests a corollary: <strong>"The four most common words in investor sentiment are: <em>it was like this.</em>"</strong></p>
 
-    <p>Retail investors aren't predicting the future — they're describing the recent past and calling it a forecast. The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
+    <p>Retail investors aren't predicting the future,  they're describing the recent past and calling it a forecast. The market prices information before the crowd catches up. By the time sentiment surveys reflect a trend, the smart money has already moved on.</p>
 
     <p class="closing-statement pulse-purple">The Market doesn't need to listen to investors. <strong>It's already heard them, and moved on.</strong></p>
   </div>

@@ -22,7 +22,7 @@
 
 <h2>Why Sector Analysis Matters</h2>
 
-<p class="lead reveal">Retail investors don't hold "the market" — they hold specific stocks in specific sectors. Their sentiment may be driven by, or influence, particular industries more than others.</p>
+<p class="lead reveal">Retail investors don't hold "the market", they hold specific stocks in specific sectors. Their sentiment may be driven by, or influence, particular industries more than others.</p>
 
 <div class="sector-hypotheses reveal">
   <div class="hypothesis-item pulse-on-hover">
@@ -34,7 +34,7 @@
   <div class="hypothesis-item pulse-on-hover">
     <span class="hypothesis-icon"></span>
     <h4>Hypothesis: Sector Heterogeneity</h4>
-    <p>The sentiment-return relationship may differ structurally across sectors — with some showing lead effects and others showing only reactive patterns.</p>
+    <p>The sentiment-return relationship may differ structurally across sectors, with some showing lead effects and others showing only reactive patterns.</p>
   </div>
 </div>
 
@@ -142,7 +142,7 @@
         <span class="metric-value">Placeholder</span>
       </div>
     </div>
-    <p class="sector-interpretation">Healthcare is defensive — less tied to general market sentiment, driven more by sector-specific factors.</p>
+    <p class="sector-interpretation">Healthcare is defensive, less tied to general market sentiment, driven more by sector-specific factors.</p>
   </div>
 
   <div class="sector-card consumer-sector pulse-on-hover">
@@ -164,7 +164,7 @@
         <span class="metric-value">Placeholder</span>
       </div>
     </div>
-    <p class="sector-interpretation">Consumer sectors may reflect real economic sentiment more directly — people search when they're worried about spending.</p>
+    <p class="sector-interpretation">Consumer sectors may reflect real economic sentiment more directly, people search when they're worried about spending.</p>
   </div>
 
   <div class="sector-card energy-sector pulse-on-hover">
@@ -208,7 +208,7 @@
         <span class="metric-value">Placeholder</span>
       </div>
     </div>
-    <p class="sector-interpretation">Financials are economically sensitive — may show stronger ties to macroeconomic searches like "recession."</p>
+    <p class="sector-interpretation">Financials are economically sensitive, may show stronger ties to macroeconomic searches like "recession."</p>
   </div>
 
 </div>
@@ -247,7 +247,7 @@
 
   <div class="bias-finding reveal gradient-border">
     <h4>Potential Finding</h4>
-    <p>If retail investors are biased toward visible, volatile sectors, their aggregate sentiment may be a poor proxy for overall market conditions — and a better proxy for a specific subset of stocks they're actually paying attention to.</p>
+    <p>If retail investors are biased toward visible, volatile sectors, their aggregate sentiment may be a poor proxy for overall market conditions and a better proxy for a specific subset of stocks they're actually paying attention to.</p>
   </div>
 </div>
 
@@ -272,7 +272,7 @@
   <div class="summary-points">
     <div class="summary-point">
       <span class="point-number">1</span>
-      <p><strong>Sectors differ.</strong> The sentiment-market relationship is not uniform — it varies by industry.</p>
+      <p><strong>Sectors differ.</strong> The sentiment-market relationship is not uniform: it varies by industry.</p>
     </div>
     <div class="summary-point">
       <span class="point-number">2</span>
@@ -284,7 +284,7 @@
     </div>
     <div class="summary-point">
       <span class="point-number">4</span>
-      <p><strong>Implications for trading.</strong> Any sentiment-based strategy needs to be sector-aware — blanket approaches miss important heterogeneity.</p>
+      <p><strong>Implications for trading.</strong> Any sentiment-based strategy needs to be sector-aware, blanket approaches miss important heterogeneity.</p>
     </div>
   </div>
 </div>
