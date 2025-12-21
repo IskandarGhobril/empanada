@@ -152,7 +152,7 @@
   </figure>
 </div>
 
-<p class="reveal">The interactive time-series plots reveal that sentiment typically evolves smoothly from week to week, but sharp discontinuities do occur. These sudden increases correspond to moments when investors rapidly changed their expectations, likely due to major market events or shifts in uncertainty. The difference in the density and magnitude of spikes across the three sentiment states suggests that Bearish sentiment is the most sensitive to shoc</p>
+<p class="reveal">The interactive time-series plots reveal that sentiment typically evolves smoothly from week to week, but sharp discontinuities do occur. These sudden increases correspond to moments when investors rapidly changed their expectations, likely due to major market events or shifts in uncertainty. The difference in the density and magnitude of spikes across the three sentiment states suggests that Bearish sentiment is the most sensitive to shocks.</p>
 
 <hr class="section-divider">
 
@@ -249,7 +249,7 @@ We classified Google search queries into three sentiment categories based on the
 </div>
 <hr class="section-divider">
 
-<h3>Correlation: Do the Two Witnesses Agree?</h3>
+<h3>Correlation: Do Search Behaviors Move Together?</h3>
 
 <div class="correlation-layout">
   <!-- Left side: Plot with buttons -->
@@ -268,11 +268,11 @@ We classified Google search queries into three sentiment categories based on the
           id="correlationImage"
           data-baseurl="{{ site.baseurl }}"
           src="{{ site.baseurl }}/assets/img/sentiment_correlation_all.png"
-          alt="Correlation between sentiment measures"
+          alt="Correlation within and between Google Trends search categories"
           class="plot"
         >
         <figcaption>
-          Correlation matrices showing relationships between search queries and AAII sentiment
+          Correlation matrices showing relationships within and between Google Trends search categories
         </figcaption>
       </div>
     </figure>
@@ -283,22 +283,23 @@ We classified Google search queries into three sentiment categories based on the
   <div class="correlation-explanation">
     <h4 id="explanationTitle">Understanding the Correlations</h4>
     <p id="explanationText">
-      These correlation matrices reveal how different Google search terms align with investor sentiment. 
-      Red cells indicate strong positive correlations, while blue cells show negative correlations. 
-      Click on a category above to explore specific sentiment patterns.
+      These correlation matrices reveal how Google search terms cluster together within and across sentiment categories. 
+      Red cells indicate strong positive correlations, while blue cells show weak or negative correlations. 
+      Click on a category above to explore specific search behavior patterns.
     </p>
 
     <div class="correlation-findings reveal">
-    <h4>Key Correlations</h4>
-    Neutral searches are highly cohesive, reflecting unified market monitoring. Bullish interest links “Stock Market” and “ETF,” while “Investment” remains broader. Bearish searches are fragmented and issue-specific. Neutral and Bullish strongly overlap, with Bearish standing apart.
+      <h4>Key Findings</h4>
+      <p><strong>Neutral (0.71–0.97):</strong> Index searches are highly unified—users checking one index check them all.</p>
+      <p><strong>Bearish (0.01):</strong> Inflation and Unemployment searches are uncorrelated—anxiety is issue-specific, not generalized.</p>
+      <p><strong>Bullish (0.65):</strong> "Stock Market" and "ETF" are linked, but "Investment" remains broader.</p>
+      <p><strong>Cross-category (0.82):</strong> Neutral and Bullish overlap strongly; Bearish stands apart.</p>
     </div>
   </div>
 </div>
 
-
-
 <div class="key-insight reveal gradient-border no-box">
-  <p>Google Trends does not replace investor surveys: it <strong>complements</strong> them. Surveys capture stated expectations about the future; search behavior captures attention in the present. When both move together, sentiment is <strong>strong and coordinated</strong>. When they diverge, it may signal <strong>hesitation, uncertainty, or a transition phase</strong>.</p>
+  <p><strong>Market optimism is broad and interconnected; market anxiety is isolated and threat-specific.</strong> When people feel bullish, their searches span indices, ETFs, and investments in unison. When fear strikes, attention fragments—users fixate on <em>either</em> inflation <em>or</em> unemployment, rarely both. This asymmetry suggests that confidence is a rising tide, while panic is a series of isolated waves.</p>
 </div>
 
 <hr class="section-divider">
