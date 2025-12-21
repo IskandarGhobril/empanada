@@ -5,5 +5,3 @@ Gemfile.lock
 
 /.quarto/
 **/*.quarto_ipynb
-
-.claude/

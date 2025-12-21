@@ -66,7 +66,7 @@
 <figure class="plot-figure reveal">
   <div class="interactive-figure" data-plot="sector-returns">
     <iframe src="{{ site.baseurl }}/assets/img/sector_returns_scatter.html"
-            width="100%" height="500" frameborder="0"></iframe>
+            width="100%" height="500" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe>
     <figcaption>Sector returns scatter: comparing sector performance under different sentiment conditions.</figcaption>
   </div>
 </figure>
