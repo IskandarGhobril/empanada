@@ -2595,7 +2595,7 @@ body.longform-page .longform {
 .final-thoughts > p {
   text-align: left;
   max-width: 650px;
-  margin: 1.25rem auto;
+  margin: 1.25rem 0;
 }
 
 .closing-statement {
