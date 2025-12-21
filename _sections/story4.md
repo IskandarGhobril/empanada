@@ -8,9 +8,9 @@
 </div>
 
 
-<div class="therapist-note reveal">
+<div class="therapist-note reveal no-box">
   <div class="note-header">
-    <span class="note-icon">🔬</span>
+    <span class="note-icon"></span>
     <span class="note-label">Specialized Analysis</span>
   </div>
   <div class="note-content">
@@ -26,13 +26,13 @@
 
 <div class="sector-hypotheses reveal">
   <div class="hypothesis-item pulse-on-hover">
-    <span class="hypothesis-icon">💡</span>
+    <span class="hypothesis-icon"></span>
     <h4>Hypothesis: Sector Bias</h4>
     <p>Investors may overweight certain "exciting" sectors (like Technology) when forming their market outlook, making sentiment more predictive for those sectors.</p>
   </div>
 
   <div class="hypothesis-item pulse-on-hover">
-    <span class="hypothesis-icon">🎭</span>
+    <span class="hypothesis-icon"></span>
     <h4>Hypothesis: Sector Heterogeneity</h4>
     <p>The sentiment-return relationship may differ structurally across sectors — with some showing lead effects and others showing only reactive patterns.</p>
   </div>
@@ -44,7 +44,7 @@
 
 <div class="interactive-preview reveal">
   <div class="preview-header">
-    <span class="preview-icon">📊</span>
+    <span class="preview-icon"></span>
     <h4>Interactive Visualization</h4>
   </div>
   <div class="preview-content">
@@ -81,13 +81,13 @@
       </div>
       <div class="mockup-charts">
         <div class="mockup-chart">
-          <span>📈 Lead-Lag Analysis</span>
+          <span>Lead-Lag Analysis</span>
         </div>
         <div class="mockup-chart">
-          <span>📊 Correlation Scatter</span>
+          <span>Correlation Scatter</span>
         </div>
         <div class="mockup-chart">
-          <span>📉 Sector Comparison</span>
+          <span>Sector Comparison</span>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@
 
   <div class="sector-card tech-sector pulse-on-hover">
     <div class="sector-header">
-      <span class="sector-icon">💻</span>
+      <span class="sector-icon"></span>
       <h4>Technology</h4>
     </div>
     <div class="sector-metrics">
@@ -125,7 +125,7 @@
 
   <div class="sector-card healthcare-sector pulse-on-hover">
     <div class="sector-header">
-      <span class="sector-icon">🏥</span>
+      <span class="sector-icon"></span>
       <h4>Healthcare</h4>
     </div>
     <div class="sector-metrics">
@@ -147,7 +147,7 @@
 
   <div class="sector-card consumer-sector pulse-on-hover">
     <div class="sector-header">
-      <span class="sector-icon">🛒</span>
+      <span class="sector-icon"></span>
       <h4>Consumer</h4>
     </div>
     <div class="sector-metrics">
@@ -169,7 +169,7 @@
 
   <div class="sector-card energy-sector pulse-on-hover">
     <div class="sector-header">
-      <span class="sector-icon">⚡</span>
+      <span class="sector-icon"></span>
       <h4>Energy</h4>
     </div>
     <div class="sector-metrics">
@@ -191,7 +191,7 @@
 
   <div class="sector-card financials-sector pulse-on-hover">
     <div class="sector-header">
-      <span class="sector-icon">🏦</span>
+      <span class="sector-icon"></span>
       <h4>Financials</h4>
     </div>
     <div class="sector-metrics">
