@@ -4780,3 +4780,56 @@ hr,
 .label-comparison { color: #065f46; }
 
 
+/* ============================================
+   RUNNING MASCOT ANIMATIONS
+   ============================================ */
+
+.mascot-container {
+  position: fixed;
+  bottom: 20%; /* Adjust height from bottom */
+  left: 0;
+  width: 100%;
+  height: 0; /* Don't block clicks */
+  z-index: 9999;
+  pointer-events: none; /* Let clicks pass through */
+  display: none; /* Hidden by default */
+}
+
+.running-mascot {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+/* BULL RUN (Left to Right) */
+.animate-bull .mascot-container#bull-animation-container {
+  display: block;
+}
+
+.animate-bull .bull-mascot {
+  animation: run-right 2.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes run-right {
+  0% { transform: translateX(-150px) scaleX(-1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(110vw) scaleX(-1); opacity: 0; }
+}
+
+/* BEAR RUN (Right to Left) */
+.animate-bear .mascot-container#bear-animation-container {
+  display: block;
+}
+
+.animate-bear .bear-mascot {
+  animation: run-left 2.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes run-left {
+  0% { transform: translateX(100vw) scaleX(1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(-150px) scaleX(1); opacity: 0; }
+}

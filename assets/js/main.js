@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     isSubmitted = false;
   }
 
-  // Handle option selection
+  // Handle option selection WITH ANIMATIONS
   document.querySelectorAll('.option').forEach(option => {
     option.addEventListener('click', function(e) {
       e.stopPropagation(); // Prevent triggering box click
@@ -243,8 +243,32 @@ document.addEventListener('DOMContentLoaded', function() {
       if (submitBtn) {
         submitBtn.disabled = false;
       }
+
+      // NEW: Trigger Mascot Animation based on selection
+      if (selectedSentiment === 'bullish') {
+        triggerMascot('bull');
+      } else if (selectedSentiment === 'bearish') {
+        triggerMascot('bear');
+      }
     });
   });
+
+  // NEW: Helper function to run the CSS animation
+  function triggerMascot(type) {
+    // Remove classes first to allow re-triggering if clicked multiple times
+    document.body.classList.remove('animate-bull', 'animate-bear');
+    
+    // Force a browser reflow (magic trick to restart animation)
+    void document.body.offsetWidth;
+    
+    // Add specific animation class to Body (which CSS watches)
+    document.body.classList.add(`animate-${type}`);
+    
+    // Clean up after animation finishes (2.5s matches CSS duration)
+    setTimeout(() => {
+      document.body.classList.remove(`animate-${type}`);
+    }, 2500);
+  }
 
   // Handle submit
   const submitBtn = document.getElementById('submitSentiment');
@@ -270,7 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
   // Search classification switcher
