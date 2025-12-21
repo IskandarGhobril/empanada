@@ -4780,24 +4780,3 @@ hr,
 .label-comparison { color: #065f46; }
 
 
-/* ============================================
-   FIX CORRELATION MATRIX JUMPING
-   ============================================ */
-
-/* 1. Force the image container to have a fixed height */
-.interactive-figure[data-plot="correlation-matrix"] {
-    min-height: 600px;       /* Reserve vertical space */
-    display: flex;
-    align-items: center;     /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    overflow: hidden;        /* Hide anything sticking out */
-}
-
-/* 2. Force the image itself to behave nicely */
-#correlationImage {
-    max-height: 550px;       /* Stop it from getting too tall */
-    width: auto;             /* Let width adjust naturally */
-    object-fit: contain;     /* Ensure the whole square is visible */
-    margin: 0 auto;          /* Center it */
-    display: block;
-}
